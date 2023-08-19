@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect } from 'react';
+import { useEffect , useState} from 'react';
 import Home from '../../Pages/HOme/Home';
 import Slider from '../../Pages/Slider/Slider';
 import Cards from '../../Pages/Cards/Cards';
@@ -12,6 +11,10 @@ import FairsComponent from '../../Pages/FirstPage/FairsArticle/FairsArticle';
 import Footer from '../../Pages/Foooter/Footer';
 import axios from 'axios';
 const MainPage = () => {
+let [user, setUser] = useState(false)
+
+
+
 console.log('Home Page');
 useEffect(() => {
 
@@ -28,8 +31,8 @@ useEffect(() => {
         });
 
       console.log("response: ", response);
+      setUser(true)
     } catch (error) {
-
       console.log("axios error: ", error);
 
 
@@ -46,7 +49,7 @@ useEffect(() => {
 
   return (
     <div>
-<Home/>
+<Home  user={user}   />
   <Slider/>
   <Cards/>
   <About/>

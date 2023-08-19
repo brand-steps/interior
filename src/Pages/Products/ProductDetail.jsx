@@ -76,11 +76,18 @@ const Productdetail = () => {
               </div>
               {/* <Link to={`/PaymentPage/${totalPrice}`} className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg mt-4"> */}
               <button
-                className="bg-red-500 hover:bg-red-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+                className="bg-red-500 mr-4 hover:bg-red-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
                 style={{ backgroundColor: 'rgb(236, 12, 54)' }}
                 onClick={handleAddToCart}
               >
                 Add to Cart
+              </button> 
+              <button
+                className="bg-red-500 hover:bg-red-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+                style={{ backgroundColor: 'rgb(236, 12, 54)' }}
+                onClick={handleAddToCart}
+              >
+                Buy Now
               </button> 
                  {/* </Link> */}
 

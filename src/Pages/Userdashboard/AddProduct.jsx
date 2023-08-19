@@ -1,29 +1,24 @@
-import React, { useState } from 'react'
-// import './Product.css'
-import axios from 'axios'
-import '../../product.css'
-const AddProduct = () => {
-  const [Name, setName] = useState()
-  const [Price, setPrice] = useState()
-  const [Description, setDescription] = useState()
-  const [Input, setInput] = useState()
-  const [category, Setcategory] = useState()
-  const [selectedImages, setSelectedImages] = useState([]);
-  const [imageUrls, setImageUrls] = useState([]);
-  const baseUrl = 'http://localhost:8000/api/v1'
-
-
-  const getInitialState = () => {
-    const value = "Shirt";
-    return value;
-  };
-  const [value, setValue] = useState(getInitialState);
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
+import React from 'react'
+import Sidebaruser from './sidebarUser';
+import { useEffect , useState} from 'react';
+import axios from 'axios';
 
 
 
+const AddProductuser = () => {
+
+    const [Name, setName] = useState()
+    const [Price, setPrice] = useState()
+    const [Description, setDescription] = useState()
+    const [Input, setInput] = useState()
+    const [category, Setcategory] = useState()
+    const [value , setValue] = useState()
+    const [selectedImages, setSelectedImages] = useState([]);
+    const [imageUrls, setImageUrls] = useState([]);
+
+    const handleChange = (e) => {
+        setValue(e.target.value);
+      };
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
@@ -39,7 +34,6 @@ const AddProduct = () => {
     setImageUrls(urls);
 
   };
-
   const handleUpload = async () => {
     console.log(imageUrls);
     console.log(Name);
@@ -74,21 +68,16 @@ const AddProduct = () => {
       }
     }
   };
-  
-
-
-
-
-
 
   return (
-    <div>
-      <div class="bg-slate-200  h-auto	  asddasdasdasdasdas flex items-center">
-        <div class="w-full elokpkk">
-          <h2 class="text-center text-black font-bold text-2xl uppercase dasdsd mb-10">Add Product </h2>
-          <div class="asdasdasdasdasdas  p-6  rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
+    <div className="flex">
+    <Sidebaruser />
+  <div className="flex  justify-center items-center h-screen w-3/4">
+<div className="bg-white p-8  rounded-md shadow-md w-full max-w-md">
+  <h2 className="text-4xl font-bold mb-2">Add Product </h2>
 
-            <div class="mb-5">
+
+  <div class="mb-5">
               <label for="name" class="block mb-2 font-bold text-white">Name</label>
               <input onChange={(e) => {
                 setName(e.target.value)
@@ -123,7 +112,6 @@ const AddProduct = () => {
                 setDescription(e.target.value)
               }} class="border  border-gray-300 shadow p-3 w-full rounded mb-" id="" cols="30" rows="10"></textarea>
             </div>
-
             <div className="image-upload-container">
               <label className="file-label">
                 <input
@@ -147,25 +135,15 @@ const AddProduct = () => {
                   />
                 ))}
               </div>
+
+              <button onClick={handleUpload} class="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Add Product </button>
             </div>
 
+</div>
+</div>
 
-            <div id='img22' className='mkbdsds' >
-
-            </div>
-            <button onClick={handleUpload} class="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Add Product </button>
-
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-    </div>
+  </div>
   )
 }
 
-export default AddProduct
+export default AddProductuser

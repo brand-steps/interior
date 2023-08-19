@@ -23,10 +23,18 @@ import Productdetail from './Pages/Products/ProductDetail';
 import PaymentPage from './Pages/Products/Payment';
 import Dashbord from './Pages/AdminDashboard/Dashboard';
 import AddProduct from './Pages/AdminDashboard/DashboardCrud/AddProduct/Addproduct';
+import UserDashboard from './Pages/Userdashboard/UserDashboard';
+import Profile from './Pages/Userdashboard/Profile';
+import AddProductuser from './Pages/Userdashboard/AddProduct';
+import Allproduct from './Pages/Userdashboard/Allproduct';
+import { Provider } from 'react-redux'
+import Store from './Store';
+
+
 function App() {
   return (
     <div>
-      
+    <Provider store={Store}>
       <BrowserRouter>
         <Routes>
         <Route path={"/"} element={<MainPage />} />
@@ -40,8 +48,13 @@ function App() {
         <Route path="/PaymentPage/:totalPrice"  element={<PaymentPage/>}  />
         <Route path="/Dashbord"  element={<Dashbord/>}  />
         <Route path="/AddProduct"  element={<AddProduct/>}  />
+        <Route path="/UserDashboard"  element={<UserDashboard/>}  />
+        <Route path="/Profile"  element={<Profile/>}  />
+        <Route path="/AddProduct/user"  element={<AddProductuser/>}  />
+        <Route path="/Allproduct"  element={<Allproduct/>}  />
 </Routes>
       </BrowserRouter>
+    </Provider>
     </div>
   
   );
