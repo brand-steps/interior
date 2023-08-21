@@ -8,10 +8,7 @@ const AddProduct = () => {
   const [Description, setDescription] = useState()
   const [Input, setInput] = useState()
   const [category, Setcategory] = useState()
-  const [selectedImages, setSelectedImages] = useState([]);
-  const [imageUrls, setImageUrls] = useState([]);
-  const baseUrl = 'http://localhost:8000/api/v1'
-
+  const [selectedFiles, setSelectedFiles] = useState(null);
 
   const getInitialState = () => {
     const value = "Shirt";
@@ -21,58 +18,52 @@ const AddProduct = () => {
   const handleChange = (e) => {
     setValue(e.target.value);
   };
-
-
-
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
-
-    setSelectedImages(imageFiles);
-
-    const urls = imageFiles.map((file) => {
-      const url = URL.createObjectURL(file);
-      console.log('Image URL:', url); // Add this line to console log the URL
-      return url;
-    });
-
-    setImageUrls(urls);
-
+  const handleFileChange = (event) => {
+    setSelectedFiles(event.target.files);
   };
+  
+
+
+ 
 
   const handleUpload = async () => {
-    console.log(imageUrls);
     console.log(Name);
     console.log(Price);
     console.log(value);
     console.log(Description);
   
-    if (!Name || !imageUrls || !Description || !value || !Price) {
-      alert('Product Not Added');
-    } else {
-      try {
-        alert('Product Added');
-        
-        const formData = new FormData();
-        formData.append("Name", Name);
-        formData.append("Price", Price);
-        formData.append("Description", Description);
-        formData.append("Image", imageUrls);
-        formData.append("category", value);
-  
-        const response = await axios.post(
-          `http://localhost:8000/api/v1/AddProduct`,
-          formData,
-          {
-            headers: { 'Content-Type': 'multipart/form-data' },
-          }
-        );
-  
-        console.log(`Upload Success`, response.data);
-      } catch (error) {
-        console.error("Error:", error.response ? error.response.data : error.message);
-      }
+   
+    if (!selectedFiles || selectedFiles.length === 0) {
+      return;
     }
+
+    const formData = new FormData();
+    for (let i = 0; i < selectedFiles.length; i++) {
+      formData.append('images', selectedFiles[i]);
+    }
+
+    formData.append('name', Name);
+    formData.append('price', Price);
+    formData.append('value', value);
+    formData.append('description', Description);
+    formData.append('category', category);
+
+    try {
+      const response = await axios.post('http://localhost:8000/api/v1/AddProduct', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+console.log(response);
+      // Handle response from backend if needed
+    } catch (error) {
+      console.error('Error uploading data:', error);
+    }
+  
+  
+
+
+   
   };
   
 
@@ -123,36 +114,8 @@ const AddProduct = () => {
                 setDescription(e.target.value)
               }} class="border  border-gray-300 shadow p-3 w-full rounded mb-" id="" cols="30" rows="10"></textarea>
             </div>
+            <input type="file" onChange={handleFileChange} multiple />
 
-            <div className="image-upload-container">
-              <label className="file-label">
-                <input
-                  type="file"
-                  multiple
-                  accept="image/*"
-                  onChange={handleImageChange}
-                  className="file-input"
-                />
-                Choose Images
-              </label>
-
-
-              <div className="selected-images">
-                {imageUrls.map((url, index) => (
-                  <img
-                    key={index}
-                    src={url}
-                    alt={`Image ${index}`}
-                    className="uploaded-image"
-                  />
-                ))}
-              </div>
-            </div>
-
-
-            <div id='img22' className='mkbdsds' >
-
-            </div>
             <button onClick={handleUpload} class="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Add Product </button>
 
           </div>
