@@ -13,7 +13,7 @@ const [responce  , setResponce] = useState("")
 
         const getProfile = async () => {
           try {
-            let response = await axios.get(`http://localhost:8000/api/v1/profile`,
+            let response = await axios.get(`https://busy-lime-cygnet-hem.cyclic.cloud/api/v1/profile`,
               {
                 withCredentials: true,
                 headers: {
@@ -38,10 +38,10 @@ const [responce  , setResponce] = useState("")
       }, [])
     
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       <Sidebaruser />
-    <div className="flex justify-center items-center h-screen w-3/4">
-  <div className="bg-white p-6 border-2 border-red-500 rounded-md shadow-md w-full max-w-md">
+      <div className="flex mt-4 justify-center h-screen w-3/4">
+  <div className="bg-white p-6 border-2  rounded-md shadow-md w-full max-w-md">
     <h2 className="text-4xl font-bold mb-2">User Information</h2>
     <p className='py-4'  ><span className="font-semibold 	">Email :</span> {responce.email}</p>
     <p className='py-4'  ><span className="font-semibold 	">Username:</span> {responce.username}</p>

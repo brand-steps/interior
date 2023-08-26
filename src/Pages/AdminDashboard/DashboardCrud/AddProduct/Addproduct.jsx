@@ -27,6 +27,7 @@ const AddProduct = () => {
  
 
   const handleUpload = async () => {
+    alert('Product Added Suceesfully ')
     console.log(Name);
     console.log(Price);
     console.log(value);
@@ -46,10 +47,9 @@ const AddProduct = () => {
     formData.append('price', Price);
     formData.append('value', value);
     formData.append('description', Description);
-    formData.append('category', category);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/AddProduct', formData, {
+      const response = await axios.post('https://busy-lime-cygnet-hem.cyclic.cloud/api/v1/AddProduct', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -95,7 +95,7 @@ console.log(response);
             </div>
             <div class="mb-5">
 
-              <label for="twitter" class="block mb-2 font-bold text-white">Category</label>
+              {/* <label for="twitter" class="block mb-2 font-bold text-white">Category</label>
               <select class="border  border-gray-300 shadow p-3 w-full rounded mb-" value={value} onChange={handleChange}>
                 <option value="Shirt">Shirt</option>
                 <option value="Trouser">Trouser</option>
@@ -103,8 +103,10 @@ console.log(response);
                 <option value="Shirt">Shirt</option>
                 <option value="Cap">Cap</option>
               </select>
-              <p>{`You selected ${value}`}</p>
-              {/* <input     type="text" required='true'  id="twitter" name="twitter" placeholder="Enter Product Category" class=""/> */}
+              <p>{`You selected ${value}`}</p> */}
+            <input onChange={(e) => {
+                setValue(e.target.value)
+              }} type="text"  placeholder="Enter Product Category" class="border  border-gray-300 shadow p-3 w-full rounded mb-" />
 
             </div>
             <div class="mb-5">
@@ -114,7 +116,7 @@ console.log(response);
                 setDescription(e.target.value)
               }} class="border  border-gray-300 shadow p-3 w-full rounded mb-" id="" cols="30" rows="10"></textarea>
             </div>
-            <input type="file" onChange={handleFileChange} multiple />
+            <input type="file" onChange={handleFileChange}  />
 
             <button onClick={handleUpload} class="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Add Product </button>
 

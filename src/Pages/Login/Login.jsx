@@ -19,24 +19,25 @@ function Login() {
   const navigate = useNavigate(); // Get the navigate function from React Router
 
   const LoginForm = async () => {
-    if (!email || !password ) {
+    if (!email || !password) {
       console.log('Value is not Given');
-      return 
-  }
-else{
-  try {
-    let response = await axios.post(`http://localhost:8000/login`, {
-      email: email,
-      password: password
-    }, {
-      withCredentials: true
-    })
-    console.log("login successful");
-    navigate('/', { replace: true })
-  } catch (error) {
-   console.log(error)
-  }
-}
+      return
+    }
+    else {
+      try {
+        let response = await axios.post(`https://busy-lime-cygnet-hem.cyclic.cloud/login`, {
+          email: email,
+          password: password
+        }, {
+          withCredentials: true
+        })
+        console.log("login successful");
+        navigate('/', { replace: true })
+      } catch (error) {
+        console.log(error)
+        setErrorMessage('Invalid credentials'); 
+      }
+    }
   };
 
 
@@ -58,7 +59,7 @@ else{
     }
     if (email && password && reTypepassword) {
       try {
-        const response = await axios.post('http://localhost:8000/signup', {
+        const response = await axios.post('https://busy-lime-cygnet-hem.cyclic.cloud/signup', {
           email,
           password,
         });
@@ -150,6 +151,8 @@ else{
 
               login
             </button>
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+
             <p>
               <a href="javascript:void(0)">Forgotten account</a>
             </p>

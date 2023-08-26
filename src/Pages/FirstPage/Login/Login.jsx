@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
-    let button = "LOGIN > "
+    let button = "LOGIN  "
   return (
     <div className='my-4 flex justify-center items-center' style={{
       backgroundImage: "url('https://www.osimo.com.tr/assets/images/services-bg.svg')",
@@ -17,8 +17,8 @@ const Login = () => {
         <p className='text-white'>
           You can choose the desired and desired product and send the offer form to our e-mail address You can choose the product you want and send it to our e-mail address.
         </p>
-        <input type="text" className='w-1/5 my-4 p-2 rounded' placeholder='Username' />
-        <input type="text" className='w-1/5 my-4 p-2 rounded' placeholder='Password' />
+        <input type="text" className='w-3/5	 my-4 p-2 rounded' placeholder='Username' />
+        <input type="text" className='w-3/5	 my-4 p-2 rounded' placeholder='Password' />
 
 
         <NavLink

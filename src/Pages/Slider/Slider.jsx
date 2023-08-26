@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import image1 from '../../Images/EQUIPMNT SLIDDER 1.jpg';
-import image2 from '../../Images/EQUIPMNT SLIDDER 2.jpg';
-import image3 from '../../Images/EQUIPMNT SLIDDER 3.jpg';
-import image4 from '../../Images/EQUIPMNT SLIDDER 4.jpg';
+import image1 from '../../Images/SIXES WEB-01.jpg';
+import image2 from '../../Images/SIXES WEB-02.jpg';
+import image3 from '../../Images/SIXES WEB-03.jpg';
+import image4 from '../../Images/SIXES WEB-04.jpg';
 
 const Slider = () => {
   const images = [image1, image2, image3, image4];
-  const headings = ['BENCH TYPE DISHWASHER', 'PLANETARY MIXER ', 'BENCH TYPE REFRIGERATORS', '4 PIECE OVEN'];
+  const headings = [' DISHWASHER', 'PLANETARY MIXER ', 'BENCH  REFRIGERATORS', '4 PIECE OVEN'];
   const paragraphs = [
     'Pure power, ultimate precision!',
-    'Indispensable for professional kitchens!',
+    'Professional kitchens!',
     'Stylish design high quality!',
     'Master of hot dishes!',
   ];
@@ -52,7 +52,7 @@ const Slider = () => {
       <p className="text-white mt-4">{paragraphs[currentParagraphIndex]}</p>
       <button
         style={{ "background": "#EC0C36" }}
-        className="text-white font-semibold px-4 py-2 rounded-lg mt-4 hover:bg-blue-700"
+        className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700"
       >
         Details
       </button>

@@ -29,22 +29,26 @@ import AddProductuser from './Pages/Userdashboard/AddProduct';
 import Allproduct from './Pages/Userdashboard/Allproduct';
 import { Provider } from 'react-redux'
 import Store from './Store';
-
+import { AllProductDashboad } from './Pages/AdminDashboard/DashboardCrud/AddProduct/AllProduct/AllProduct';
+import { MyContextProvider } from './Pages/Context/Context';
+import PrivacyPolicy from './Pages/Policy/Policy';
 
 function App() {
   return (
     <div>
-    <Provider store={Store}>
+      {/* <AllProductDashboad/> */}
+    <MyContextProvider>
       <BrowserRouter>
         <Routes>
         <Route path={"/"} element={<MainPage />} />
         <Route path={"/Corporate"} element={<Corporate/>} />
+        <Route path={"/About"} element={<About/>} />
         <Route path={"/Prducts"} element={<Prducts/>} />
         <Route path={"/OurDocument"} element={<OurDocument/>} />
         <Route path={"/Contact"} element={<Contact/>} />
         <Route path={"/TechnicalService"} element={<Teachnical/>} />
         <Route path={"/Login"} element={<Login/>} />
-        <Route path="/Productdetail/:img/:text/:paragraph/:price"  element={<Productdetail/>}  />
+        <Route path="/Productdetail"  element={<Productdetail/>}  />
         <Route path="/PaymentPage/:totalPrice"  element={<PaymentPage/>}  />
         <Route path="/Dashbord"  element={<Dashbord/>}  />
         <Route path="/AddProduct"  element={<AddProduct/>}  />
@@ -52,9 +56,11 @@ function App() {
         <Route path="/Profile"  element={<Profile/>}  />
         <Route path="/AddProduct/user"  element={<AddProductuser/>}  />
         <Route path="/Allproduct"  element={<Allproduct/>}  />
+        <Route path="/AllProductDashboad"  element={<AllProductDashboad/>}  />
+        <Route path="/PrivacyPolicy"  element={<PrivacyPolicy/>}  />
 </Routes>
       </BrowserRouter>
-    </Provider>
+    </MyContextProvider>
     </div>
   
   );

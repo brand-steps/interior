@@ -5,6 +5,7 @@ import img from '../../Images/mockups.jpg'
 
 const About = () => {
   return (
+    
     <div className='flex flex-col md:flex-row p-4 md:p-20'>
     <div className='w-full md:w-2/5'>
       <img src={img} alt="" className="w-full" />

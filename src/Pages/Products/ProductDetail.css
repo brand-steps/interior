@@ -1,5 +1,55 @@
-/* @layer utilities {
-  .transform-origin-center {
-    transform-origin: center;
-  }
-} */
+.search-container {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  justify-content: center;
+  /* background-color: white; */
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+
+.search-input {
+  border: none;
+  padding: 10px;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.search-button {
+  background-color: rgb(236, 12, 54);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-dropdown-container {
+  display: flex;
+  align-items: start;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.search-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  width: 150px; /* Adjust the width as needed */
+  border: none;
+  background-color: transparent;
+}
+
+.search-input {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+/* Rest of your styles for .search-container, .search-button, etc. */
