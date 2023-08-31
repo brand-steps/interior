@@ -42,37 +42,43 @@ const Allproduct = () => {
 
 
   return (
-    <div className="flex flex-wrap">
-    <Sidebaruser />
+
+
+    <div>
+      <Sidebaruser />
+      <div className="flex flex-wrap justify-center">
+    
     <div className="flex mt-4 justify-center  h-screen w-3/4">
    
 
 
     <div  className='flex flex-col w-full'    >
-    {products.map((value)=>(
-                <>
-            <tr    style={{"display" : "flex  " , "justifyContent" : "space-between"}}    class=" border-b     bgbg-gray-700 dark:bg-gray-800 dark:border-gray-700">
+    {products.map((value) => (
+  <tr className="border-b bg-gray-700 dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-between" key={value._id}>
 
-                <th  style={{"width" : "400px " }}  scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {value.name}
-                </th>
-                <td class="px-6 py-4">
-                ${value.price}
-                </td>
-                <td class="px-6 py-4" style={{"width" : "100px " }}>
-                   {value.category}
-                </td>
-                <td    className='lllololo'   onClick={()=>{
-                    deleteData(value._id)
-                }}  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
-                Delete
-                </td>
-                <td class="px-6 py-4 text-right">
-                    {/* <BasicModal   Image = {value.imageUrl}    id={value._id}    /> */}
-                </td>
-            </tr>
-           </>
-            ))}
+    <th style={{ width: "100%" }} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+      {value.name}
+    </th>
+    
+    <td className="w-full md:w-auto px-6 py-4">
+      ${value.price}
+    </td>
+    
+    <td className="w-full md:w-auto px-6 py-4">
+      {value.category}
+    </td>
+    
+    <td className="w-full md:w-auto px-6 py-4 cursor-pointer text-red-500" onClick={() => { deleteData(value._id) }}>
+      Delete
+    </td>
+    
+    <td className="w-full md:w-auto px-6 py-4 text-right">
+      {/* <BasicModal Image={value.imageUrl} id={value._id} /> */}
+    </td>
+    
+  </tr>
+))}
+
     
 </div>
    
@@ -80,6 +86,8 @@ const Allproduct = () => {
 
 
   </div>
+    </div>
+    
   )
 }
 

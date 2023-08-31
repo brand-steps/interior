@@ -1,27 +1,25 @@
 import React from 'react'
-import { useContext } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import { useContext } from 'react';
 import { MyContext } from '../Context/Context';
-const Cardss = ({ index ,  price , img , text , paragraph   }) => {
-
-console.log("Price" + price);
-console.log("Imdex" + price);
+const Cardss = ({ index ,  price , img , text , paragraph ,   }) => {
+// console.log("Price" + price);
+// console.log("Imdex" + price);
   const {name, setName} = useContext(MyContext);
   const {pricep , setPricep} = useContext(MyContext);
   const {description, setDescription} = useContext(MyContext);
   const {image , setImage } = useContext(MyContext);
   const navigate = useNavigate();
-
   const handleButtonClick = () => {
     setName({ ...name, key: text });
     setPricep({ ...pricep, key: price });
     setDescription({ ...description, key: paragraph });
     setImage({ ...image, key: img });
     navigate(`/Productdetail`);
-    console.log(name.key)
-    console.log(pricep.key)
-    console.log(description.key)
-    console.log(image.key)
+    // console.log(name.key)
+    // console.log(pricep.key)
+    // console.log(description.key)
+    // console.log(image.key)
   };
 
 

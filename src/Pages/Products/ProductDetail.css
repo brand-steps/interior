@@ -1,9 +1,8 @@
 .search-container {
+margin: auto;
   display: flex;
   align-items: center;
-  /* border: 1px solid black; */
   justify-content: center;
-  /* background-color: white; */
   border-radius: 8px;
   margin-bottom: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,7 +14,7 @@
   padding: 10px;
   border-radius: 6px 0 0 6px;
   font-size: 16px;
-  width: 300px;
+  width: 900px;
 }
 
 .search-button {
@@ -52,4 +51,33 @@
   width: 300px;
 }
 
-/* Rest of your styles for .search-container, .search-button, etc. */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.visible {
+  display: block;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

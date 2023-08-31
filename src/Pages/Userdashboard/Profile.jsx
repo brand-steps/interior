@@ -38,8 +38,10 @@ const [responce  , setResponce] = useState("")
       }, [])
     
   return (
-    <div className="flex flex-wrap">
-      <Sidebaruser />
+
+    <div>
+            <Sidebaruser />
+            <div className="flex flex-wrap justify-center">
       <div className="flex mt-4 justify-center h-screen w-3/4">
   <div className="bg-white p-6 border-2  rounded-md shadow-md w-full max-w-md">
     <h2 className="text-4xl font-bold mb-2">User Information</h2>
@@ -50,6 +52,8 @@ const [responce  , setResponce] = useState("")
 </div>
 
     </div>
+    </div>
+    
   )
 }
 

@@ -1,20 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect  } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../Foooter/Footer';
 import Home from '../HOme/Home';
+import ProductDetail from './ProductDetail.css'
 import { useContext } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { MyContext } from '../Context/Context';
+import CartContext from '../Context/CartContext';
 const Productdetail = () => {
   const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
   const {name, setName} = useContext(MyContext);
   const {pricep , setPricep} = useContext(MyContext);
   const {description, setDescription} = useContext(MyContext);
   const {image , setImage } = useContext(MyContext);
-
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(parseFloat(pricep.key));
   const [showCart, setShowCart] = useState(false); // State to control cart slider visibility
+  const allProduct = [name ,  totalPrice , description , image , quantity , totalPrice]
+  const [showPopup, setShowPopup] = useState(false);
+
+
+  // () => 
+  const productCheckOut = ()=>{
+    alert('Product Has Been Add to Card Succesfully ')
+    addToCart(allProduct)
+  }
+
 
   const handleIncrement = () => {
     setQuantity(quantity + 1);
@@ -81,7 +94,7 @@ const Productdetail = () => {
               <button
                 className="bg-red-500 mr-4 hover:bg-red-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
                 style={{ backgroundColor: 'rgb(236, 12, 54)' }}
-                onClick={handleAddToCart}
+                onClick={productCheckOut}
               >
                 Add to Cart
               </button>

@@ -70,8 +70,9 @@ const AddProductuser = () => {
 
 
   return (
-    <div className="flex flex-wrap">
+    <div>
       <Sidebaruser />
+      <div className="flex flex-wrap justify-center">
       <div class="flex flex-col  mt-4 items-center h-screen w-3/4">
           {/* <h2 class="text-center text-black font-bold text-2xl uppercase dasdsd mb-10">Add Product </h2> */}
           <div class="asdasdasdasdasdas  p-6  rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
@@ -113,6 +114,8 @@ const AddProductuser = () => {
         </div>
 
     </div>
+    </div>
+    
   )
 }
 

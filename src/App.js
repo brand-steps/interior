@@ -28,15 +28,19 @@ import Profile from './Pages/Userdashboard/Profile';
 import AddProductuser from './Pages/Userdashboard/AddProduct';
 import Allproduct from './Pages/Userdashboard/Allproduct';
 import { Provider } from 'react-redux'
+import { CartProvider } from './Pages/Context/CartContext';
 import Store from './Store';
 import { AllProductDashboad } from './Pages/AdminDashboard/DashboardCrud/AddProduct/AllProduct/AllProduct';
 import { MyContextProvider } from './Pages/Context/Context';
 import PrivacyPolicy from './Pages/Policy/Policy';
+import Productdetail2 from './Pages/Products/ProductDetail2';
+import CardPage from './Pages/CardPage/CardPage';
 
 function App() {
   return (
     <div>
       {/* <AllProductDashboad/> */}
+      <CartProvider>
     <MyContextProvider>
       <BrowserRouter>
         <Routes>
@@ -58,9 +62,13 @@ function App() {
         <Route path="/Allproduct"  element={<Allproduct/>}  />
         <Route path="/AllProductDashboad"  element={<AllProductDashboad/>}  />
         <Route path="/PrivacyPolicy"  element={<PrivacyPolicy/>}  />
+        <Route path="/Productdetail2"  element={<Productdetail2/>}  />
+        <Route path="/CardPage"  element={<CardPage/>}  />
+       
 </Routes>
       </BrowserRouter>
     </MyContextProvider>
+    </CartProvider>
     </div>
   
   );

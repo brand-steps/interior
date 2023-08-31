@@ -38,7 +38,7 @@ const Prducts = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://busy-lime-cygnet-hem.cyclic.cloud/api/v1/paginatpost?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/api/v1/paginatpost?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -67,7 +67,7 @@ const Prducts = () => {
 
 
         </div>
-        <div class="search-container">
+        {/* <div class="search-container">
           <input
             type="text"
             class="search-input"
@@ -80,7 +80,7 @@ const Prducts = () => {
             Search
           </button>
 
-        </div>
+        </div> */}
 
 
       </div>
@@ -89,7 +89,7 @@ const Prducts = () => {
 
       <div className='flex  flex-wrap justify-center   '>
         {products.map((eachProduct, i) => (
-          <Cardss index={i} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name} paragraph={eachProduct.description} />
+          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name} paragraph={eachProduct.description} />
         ))}
       </div>
 

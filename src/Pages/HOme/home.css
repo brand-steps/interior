@@ -117,3 +117,28 @@
   background-color: #d10f45;
   transform: translateY(-2px);
 }
+.itmsHlo{
+  /* background-color: white; */
+}
+.search-container{
+  display: flex!important;
+  flex-direction: column!important;
+  position: relative;
+  top: 20px;
+}
+.search-container > ul::-webkit-scrollbar 
+{
+  display: none;  /* Safari and Chrome */
+}
+
+
+
+.PrdouctSerchUl{
+  height: 10rem;
+overflow-x: hidden;
+  /* border-radius: 5px; */
+  overflow-y: scroll!important;
+  width: 100%;
+  overflow: scroll;
+  background-color: rgb(228, 225, 225);
+}
