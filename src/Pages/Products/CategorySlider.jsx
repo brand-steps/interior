@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import axios from 'axios';
+import ProductSlider from '../FirstPage/ProductGroup/ProductSlider.jsx/ProductSlider.jsx';
+
+
 const CategorySlider = () => {
     const [products, setProducts] = useState([]);
     const [productsBoolean, setProductsBoolean] = useState(false);
@@ -23,9 +26,13 @@ const CategorySlider = () => {
     const [HygieneandSanitation , setHygieneandSanitation] =  useState(false)
     const [DesktopandPresentationEquiment , setDesktopandPresentationEquiment] = useState(false) 
     const [BeverageandBar , setBeverageandBar ] = useState(false)
+
+   
+
+
     const getAllProducts = async () => {
         try {
-            const response = await axios.get(`https://glorious-hat-bat.cyclic.app/api/v1/products`);
+            const response = await axios.get(`http://localhost:8000/api/v1/products`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);
@@ -951,9 +958,14 @@ const CategorySlider = () => {
 
 
 
+
+
         </div>
+
+
     );
 };
+
 
 export default CategorySlider;
 

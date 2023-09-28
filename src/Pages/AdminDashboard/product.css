@@ -590,6 +590,29 @@ height: 520%;
     margin: 10px;
   }
   
+.AdminPhoto {
+    width: 50%;
+}
+
+.users {
+    width: 40%;
+    border: 1px solid black;
+    height: 20%;
+    margin-top: 20px;
+
+}
+ 
+.adminImage {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0%;
+    padding: 0%;
+}
+
+.admininfo {
+    display: inline-block;
+    justify-content: flex-start;
+}
 
 
 

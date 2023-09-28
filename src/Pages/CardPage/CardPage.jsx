@@ -18,8 +18,8 @@ const CardPage = () => {
 
   const handleIncreaseQuantity = (index) => {
     const newData = [...data];
-    newData[index][4]++; // Increase quantity
-    setData(newData); // Update the state with the new data
+    newData[index][4]++; 
+    setData(newData); 
   };
 
   const handleDecreaseQuantity = (index) => {

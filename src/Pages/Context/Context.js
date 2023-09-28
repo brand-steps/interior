@@ -4,6 +4,7 @@ import React, { createContext, useState } from 'react';
 const MyContext = createContext();
 
 const MyContextProvider = ({ children }) => {
+  const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [pricep , setPricep] = useState('');
   const [description, setDescription] = useState('');
@@ -14,6 +15,7 @@ const MyContextProvider = ({ children }) => {
   return (
     <MyContext.Provider
       value={{
+        email, setEmail,
         name, setName,
         pricep  , setPricep,
         description , setDescription , 
