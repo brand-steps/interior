@@ -28,7 +28,7 @@ const Home = () => {
 
     const getProfile = async () => {
       try {
-        let response = await axios.get(`http://localhost:8000/api/v1/profile`,
+        let response = await axios.get(`https://glorious-hat-bat.cyclic.app/api/v1/profile`,
           {
             withCredentials: true,
             headers: {
@@ -59,7 +59,7 @@ const Home = () => {
   useEffect(() => {
     const delayDebounceFn = setTimeout(async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/search?q=${searchTerm}`);
+        const response = await axios.get(`https://glorious-hat-bat.cyclic.app/api/search?q=${searchTerm}`);
         setSearchResults(response.data);
       } catch (error) {
         console.error('Error fetching search results:', error);

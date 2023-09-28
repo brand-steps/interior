@@ -11,7 +11,7 @@ import img2 from '../../Images/WhatsApp_Image_2022-02-07_at_16.52.42 (1).jpg'
 import BasicPagination from './Pagination'
 import { Link } from 'react-router-dom';
 import ImageFilter from './SearchFilter'
-
+import CategorySlider from './CategorySlider'
 const Prducts = () => {
 
 
@@ -38,7 +38,7 @@ const Prducts = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/paginatpost?page=${page}`);
+      const response = await axios.get(`https://glorious-hat-bat.cyclic.app/api/v1/paginatpost?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -67,25 +67,12 @@ const Prducts = () => {
 
 
         </div>
-        {/* <div class="search-container">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Search..."
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-          />
-
-          <button class="search-button" onClick={performSearch}>
-            Search
-          </button>
-
-        </div> */}
 
 
       </div>
 
       <ProductGroup />
+    <CategorySlider/>
 
       <div className='flex  flex-wrap justify-center   '>
         {products.map((eachProduct, i) => (

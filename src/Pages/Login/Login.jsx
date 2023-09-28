@@ -25,7 +25,7 @@ function Login() {
     }
     else {
       try {
-        let response = await axios.post(`https://busy-lime-cygnet-hem.cyclic.cloud/login`, {
+        let response = await axios.post(`https://glorious-hat-bat.cyclic.app/login`, {
           email: email,
           password: password
         }, {
@@ -59,7 +59,7 @@ function Login() {
     }
     if (email && password && reTypepassword) {
       try {
-        const response = await axios.post('https://busy-lime-cygnet-hem.cyclic.cloud/signup', {
+        const response = await axios.post('https://glorious-hat-bat.cyclic.app/signup', {
           email,
           password,
         });

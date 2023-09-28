@@ -35,10 +35,11 @@ import { MyContextProvider } from './Pages/Context/Context';
 import PrivacyPolicy from './Pages/Policy/Policy';
 import Productdetail2 from './Pages/Products/ProductDetail2';
 import CardPage from './Pages/CardPage/CardPage';
-
+import HoverButton from './HowerAnimation/HowerAnimation';
 function App() {
   return (
     <div>
+      {/* <HoverButton/> */}
       {/* <AllProductDashboad/> */}
       <CartProvider>
     <MyContextProvider>
@@ -53,7 +54,7 @@ function App() {
         <Route path={"/TechnicalService"} element={<Teachnical/>} />
         <Route path={"/Login"} element={<Login/>} />
         <Route path="/Productdetail"  element={<Productdetail/>}  />
-        <Route path="/PaymentPage/:totalPrice"  element={<PaymentPage/>}  />
+        <Route path="/PaymentPage/:totalPrice/:quantity"  element={<PaymentPage/>}  />
         <Route path="/Dashbord"  element={<Dashbord/>}  />
         <Route path="/AddProduct"  element={<AddProduct/>}  />
         <Route path="/UserDashboard"  element={<UserDashboard/>}  />
@@ -63,8 +64,7 @@ function App() {
         <Route path="/AllProductDashboad"  element={<AllProductDashboad/>}  />
         <Route path="/PrivacyPolicy"  element={<PrivacyPolicy/>}  />
         <Route path="/Productdetail2"  element={<Productdetail2/>}  />
-        <Route path="/CardPage"  element={<CardPage/>}  />
-       
+        <Route path="/CardPage"  element={<CardPage/>}  />   
 </Routes>
       </BrowserRouter>
     </MyContextProvider>

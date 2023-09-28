@@ -11,7 +11,7 @@ const Allproduct = () => {
   
     const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://busy-lime-cygnet-hem.cyclic.cloud/api/v1/products`);
+          const response = await axios.get(`https://glorious-hat-bat.cyclic.app/api/v1/products`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -22,7 +22,7 @@ const Allproduct = () => {
     
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://busy-lime-cygnet-hem.cyclic.cloud/api/v1/customer/${id}`)
+          const response = await axios.delete(`https://glorious-hat-bat.cyclic.app/api/v1/customer/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -57,24 +57,25 @@ const Allproduct = () => {
   <tr className="border-b bg-gray-700 dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-between" key={value._id}>
 
     <th style={{ width: "100%" }} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-      {value.name}
+        <span   className='text-red-500'  >Name :</span> {value.name}
     </th>
     
-    <td className="w-full md:w-auto px-6 py-4">
-      ${value.price}
+    <td className="w-full md:w-auto px-6 py-4 text-red-500" >
+        Price :   ${value.price}
     </td>
     
-    <td className="w-full md:w-auto px-6 py-4">
-      {value.category}
+    <td className="w-full text-white md:w-auto px-6 py-4">
+   <span  className='text-red-500'  > Category :</span>   {value.category}
     </td>
     
-    <td className="w-full md:w-auto px-6 py-4 cursor-pointer text-red-500" onClick={() => { deleteData(value._id) }}>
+    <div  className='flex justify-center' >
+    <td    className="w-full md:w-auto px-6 py-4 cursor-pointer text-red-500 text-center " onClick={() => { deleteData(value._id) }}>
       Delete
     </td>
+
+    </div>
     
-    <td className="w-full md:w-auto px-6 py-4 text-right">
-      {/* <BasicModal Image={value.imageUrl} id={value._id} /> */}
-    </td>
+
     
   </tr>
 ))}

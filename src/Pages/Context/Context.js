@@ -7,7 +7,8 @@ const MyContextProvider = ({ children }) => {
   const [name, setName] = useState('');
   const [pricep , setPricep] = useState('');
   const [description, setDescription] = useState('');
-  const [image , setImage ] = useState('');
+  const [image , setImage ] = useState(''); 
+  const [quantityProduct  , setQuantityProduct ] = useState(''); 
   // Add more state variables using useState
 
   return (
@@ -16,7 +17,8 @@ const MyContextProvider = ({ children }) => {
         name, setName,
         pricep  , setPricep,
         description , setDescription , 
-        image , setImage
+        image , setImage, 
+        quantityProduct , setQuantityProduct, 
       }}
     >
       {children}

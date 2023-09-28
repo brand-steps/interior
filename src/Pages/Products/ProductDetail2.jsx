@@ -30,7 +30,7 @@ const Productdetail2 = () => {
 
   const handleAddToCart = () => {
 
-    navigate(`/PaymentPage/${encodeURIComponent(totalPrice)}}`);
+    navigate(`/PaymentPage/${encodeURIComponent(totalPrice)}/${quantity}`);
 
   };
 

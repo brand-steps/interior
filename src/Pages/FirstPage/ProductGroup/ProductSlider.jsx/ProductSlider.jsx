@@ -13,7 +13,7 @@ const [Delete , setdelete] = useState(false);
 
 const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/products`);
+      const response = await axios.get(`https://glorious-hat-bat.cyclic.app/api/v1/products`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);
@@ -66,7 +66,7 @@ const getAllProducts = async () => {
 <Cardss img="https://www.osimo.com.tr/dimg/kategoriler/WhatsApp_Image_2020-12-23_at_14.34.36.jpeg"  price={"1200"} text={'DOUGH ROLLER'}   paragraph={'Effortlessly peel potatoes with our advanced machine.'}  />
 <Cardss img="https://www.osimo.com.tr/dimg/kategoriler/dik-tipi-buzdolabY.jpeg" text={'REFRIGERATORS'}   price={"400"}  paragraph={'Effortlessly peel potatoes with our advanced machine.'}  />
 <Cardss img="https://www.osimo.com.tr/dimg/kategoriler/WhatsApp_Image_2020-12-23_at_14.35.20.jpeg"  price={"1300"} text={'MEAT MINCING MACHİNE'}   paragraph={'Effortlessly peel potatoes with our advanced machine.'}  />
-  
+
     </Carousel>
   );
 };

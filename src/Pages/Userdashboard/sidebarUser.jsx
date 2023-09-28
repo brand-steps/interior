@@ -9,7 +9,7 @@ const Sidebaruser = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://busy-lime-cygnet-hem.cyclic.cloud/logout',  {
+      await axios.post('https://glorious-hat-bat.cyclic.app/logout',  {
         withCredentials: true, // This ensures that cookies are sent with the request
       });
       console.log('Logout successful');
@@ -59,15 +59,14 @@ const Sidebaruser = () => {
   <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
     <Link to="/Allproduct">Products</Link>
   </li>
-  <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-    <Link to="/Logout">Logout</Link>
+  <li  onClick={handleLogout}     className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+     Logout
   </li>
   
 </ul>
 
 
   </nav>
-
   );
 };
 
