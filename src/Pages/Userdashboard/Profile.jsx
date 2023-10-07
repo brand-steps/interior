@@ -30,8 +30,6 @@ const [responce  , setResponce] = useState("")
       
           }
       
-      
-      
         }
         getProfile();
       

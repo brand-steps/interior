@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 // import './Product.css'
 import axios from 'axios'
 import '../../product.css'
+import Sidebar from '../../Sidebar'
+
+
 const AddProduct = () => {
   const [Email, setEmail] = useState()
   const [Name, setName] = useState()
@@ -76,14 +79,19 @@ console.log(response);
 
 
   return (
+    <>
+   
     <div>
+      
       <div class="bg-slate-200  h-auto	  asddasdasdasdasdas flex items-center">
+      <Sidebar />
         <div class="w-full elokpkk">
+        
           <h2 class="text-center text-black font-bold text-2xl uppercase dasdsd mb-10">Add Product </h2>
           <div class="asdasdasdasdasdas  p-6  rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
 
           <div class="mb-5">
-              <label for="name" class="block mb-2 font-bold text-white">email</label>
+              <label for="email" class="block mb-2 font-bold text-white">email</label>
               <input onChange={(e) => {
                 setEmail(e.target.value)
               }} type="text" id="email" name="email" placeholder="Enter registered email" class="border border-gray-300 shadow p-3 w-full rounded mb-" />
@@ -120,6 +128,8 @@ console.log(response);
               }} type="text"  placeholder="Enter Product Category" class="border  border-gray-300 shadow p-3 w-full rounded mb-" />
 
             </div>
+
+            
             <div class="mb-5">
               <label for="twitter" class="block mb-2 font-bold text-white">Description</label>
               {/* <input type="text" id="twitter" name="twitter" placeholder="Put in your fullname." /> */}
@@ -141,6 +151,7 @@ console.log(response);
 
 
     </div>
+    </>
   )
 }
 

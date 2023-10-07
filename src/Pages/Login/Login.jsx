@@ -35,8 +35,16 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
         }, {
           withCredentials: true
         })
+        if (email == "admin123@gmail.com" && password == "admin123") {
+         
         console.log("login successful");
-        navigate('/', { replace: true })
+        navigate('/Dashbord', { replace: true }) 
+        }
+        else {
+
+          console.log("login successful");
+          navigate('/', { replace: true })
+        }
       } catch (error) {
         console.log(error)
         setErrorMessage('Invalid credentials'); 

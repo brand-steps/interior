@@ -13,7 +13,8 @@ const Sidebaruser = () => {
         withCredentials: true, // This ensures that cookies are sent with the request
       });
       console.log("Logout successful");
-    } catch (error) {
+      navigate('/', { replace: true }) 
+        } catch (error) {
       console.error("Error logging out:", error);
     }
   };

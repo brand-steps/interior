@@ -10,3 +10,10 @@ cursor: pointer;
 .lllololo{
     display: none;
 } */
+
+.textfield {
+    text-align: center;
+}
+.topdiv {
+    margin-top: 100px;
+}

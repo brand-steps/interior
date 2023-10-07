@@ -1,0 +1,33 @@
+.centerdiv {
+    align-items: center;
+    padding-left: 160px;
+    margin-bottom: 30px;
+}
+.buttons {
+    border: 2px;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #ffe584;
+    border-color: black;
+    
+}
+.subdiv {
+    align-items: center;
+    margin-left: 250px;
+}
+.Heading {
+    text-decoration: solid;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rootcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+}

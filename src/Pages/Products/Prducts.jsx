@@ -12,6 +12,8 @@ import BasicPagination from './Pagination'
 import { Link } from 'react-router-dom';
 import ImageFilter from './SearchFilter'
 import CategorySlider from './CategorySlider'
+import Sidebar from '../AdminDashboard/Sidebar'
+import SearchBar from '../HOme/SearchBar'
 const Prducts = () => {
 
 
@@ -72,6 +74,7 @@ const Prducts = () => {
       </div>
 
       <ProductGroup />
+      <SearchBar/>
     <CategorySlider/>
 
       <div className='flex  flex-wrap justify-center   '>

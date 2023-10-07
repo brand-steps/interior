@@ -161,53 +161,7 @@ const Home = () => {
         </NavLink>
       </ul>
 
-      <div
-        className="search-container rounded-lg shadow p-4"
-        onBlur={handleBlur}
-      >
-        <div className="flex flex-col sm:flex-row">
-          <input
-            type="text"
-            className="search-input border rounded-l-lg p-2 focus:outline-none mb-2 sm:mb-0 sm:mr-2"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onFocus={handleFocus}
-          />
-          <button
-            type="button"
-            style={{ background: "rgb(236, 12, 54)" }}
-            className="self-end text-white font-medium text-sm px-5 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out"
-          >
-            Search
-          </button>
-        </div>
-        {searchResults.length === 0 ? (
-          <p>No products were found matching your selection.</p>
-        ) : (
-          <ul className={`PrdouctSerchUl ${showList ? "block" : "hidden"}`}>
-            {searchResults.map((item) => (
-              <li
-                key={item._id}
-                onClick={() => handleButtonClick(item)}
-                className="itemHoverEffect cursor-pointer flex items-center p-2 hover:bg-gray-100"
-              >
-                <img
-                  src={item.imageUrl}
-                  alt={item.name}
-                  className="mr-3"
-                  width={70}
-                  height={20}
-                />
-                <div>
-                  <p className="text-md font-semibold">{item.name}</p>
-                  <p className="text-gray-600">£{item.price}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+
     </nav>
   );
 };

@@ -1,14 +1,18 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import "./product.css";
-import Usercard from "../Cards/Usercard";
-import Productcard from "../Cards/productcard";
-
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Dashbord = () => {
+
+  const navigate = useNavigate();
+  const divStyle = {
+    backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20190331/pngtree-vector-white-abstract-background-design-templates-collection-wit-image_94438.jpg')",
+    /* Other styles you might want to apply */
+  };
 
   const containerStyle = {
     display: 'flex',
@@ -30,7 +34,7 @@ const Dashbord = () => {
   };
 
   const buttonStyle = {
-    background: '#EC0C36',
+    background: '#28231d',
     color: 'white',
     fontWeight: 'bold',
     padding: '8px 16px',
@@ -42,56 +46,50 @@ const Dashbord = () => {
   return (
     <>
 
-
-
-
     <div className=" bg-white h-full">
       <div className="flex w-full bg-white h-auto ">
         <Sidebar />
 
         <div className="bg-white w-4/5">
-          <input
-            type="text"
-            placeholder="Search Here "
-            className="pl-4  asjdbasdvijasd"
-          />
-          <div className='flex  justify-evenly flex-wrap my-4'>
+
+<div style={divStyle}>
+        
+        <div className='flex  justify-evenly flex-wrap my-4 topdiv' >
+
+        <div style={containerStyle}>
+        <img src="https://static.thenounproject.com/png/2951113-200.png" alt="Fairs" style={imageStyle} />
+        <h1>APPROVE PRODUCTS</h1>
+        <p>You can approve or disapprove vender products and can edit the products before approving according to your choice</p>
+<button onClick={() =>{navigate("/productrequest")}} style={buttonStyle}>View</button>
+      </div>
+
       <div style={containerStyle}>
-          <div className="user&adminPhoto">
-            <div className="admininfo"> 
-              <h6>Salman</h6>
-            <h6>Male</h6>
-            <h6>23</h6>
-            </div>
-
-            <div
-              style={{  }}
-              className="flex  items-center justify-between adminImage"
-            >
-              <img
-                className="AdminPhoto"
-                src={
-                  "https://thumbs.dreamstime.com/b/portrait-handsome-smiling-young-man-folded-arms-smiling-joyful-cheerful-men-crossed-hands-isolated-studio-shot-172869765.jpg"
-                }
-                alt="Admin"
-              />
-            </div>
-          </div>
-
+        <img src="https://cdn-icons-png.flaticon.com/512/962/962863.png" alt="Fairs" style={imageStyle} />
+        <h1>All PRODUCTS</h1>
+        <p>You can view all the products uploaded and can edit or delete it</p>
+<button onClick={() =>{navigate("/AllProductDashboad")}} style={buttonStyle}>View</button>
       </div>
-      <div >
-        <Usercard/>
-      </div>
-      <div >
-<Productcard/>
-      </div>
-
+      
     </div>
 
+    <div className='flex  justify-evenly flex-wrap my-4 topdiv' style={divStyle}>
+    <div style={containerStyle}>
+        <img src="https://cdn-icons-png.flaticon.com/512/4129/4129437.png" alt="Fairs" style={imageStyle} />
+        <h1>USER PRODUCTS</h1>
+        <p>You can view products are uploaded by a certain user and can edit or delete it</p>
+<button onClick={() =>{navigate("/UserProduct")}} style={buttonStyle}>View</button>
+      </div>
 
-          <div>
-            <h3 className="jasdhiavjf">Admin </h3>
-          </div>
+      <div style={containerStyle}>
+        <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="Fairs" style={imageStyle} />
+        <h1>All USERS</h1>
+        <p>You can view all the vendors and view their profile and can edit or delete it</p>
+<button onClick={() =>{navigate("/AllUser")}} style={buttonStyle}>View</button>
+      </div>
+      
+    </div>
+      </div>
+
           <div class="col-md-12 flex-container">
             {/* <!-- flex-item --> */}
             <div class="flex-item">

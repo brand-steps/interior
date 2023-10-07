@@ -39,7 +39,9 @@ import HoverButton from "./HowerAnimation/HowerAnimation";
 import LoginPage from "./Pages/LoginPage";
 import { AllUser } from "./Pages/AdminDashboard/DashboardCrud/Alluser/AllUser";
 import { Selectuserproduct } from "./Pages/AdminDashboard/DashboardCrud/Alluser/Selectuserproduct";
-
+import Productrequest from "./Pages/AdminDashboard/Productrequests/Productrequest";
+import EdittProduct from "./Pages/Products/Editproduct/editproductcheck";
+import EditUser from "./Pages/AdminDashboard/DashboardCrud/Alluser/EditUser";
 
 function App() {
   return (
@@ -75,7 +77,11 @@ function App() {
               <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
               <Route path="/Productdetail2" element={<Productdetail2 />} />
               <Route path="/CardPage" element={<CardPage />} />
+              <Route path="/productrequest" element={<Productrequest />} />
               <Route path="/UserProduct" element={<Selectuserproduct />} />
+              <Route path="/EditProduct/:id" element={<EdittProduct />} />
+              <Route path="/EditUser/:id" element={<EditUser />} />
+
             </Routes>
           </BrowserRouter>
         </MyContextProvider>

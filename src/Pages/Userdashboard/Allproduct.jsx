@@ -3,41 +3,76 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './Allproduct.css'
 import Sidebaruser from './sidebarUser'
+import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material'
 
 const Allproduct = () => {
     const [products, setProducts] = useState([]);
     const [productsBoolean, setProductsBoolean] = useState(false);
     const [Delete , setdelete] = useState(false);
-  
+    const [email, setEmail] = useState()
+    const [responce  , setResponce] = useState("")
     const getAllProducts = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/api/v1/products`);
+          const response = await axios.get(`http://localhost:8000/productsdisplay/${responce.email}`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
         } catch (error) {
           console.log("error in getting all products", error);
+          console.log(products);
         }
+        console.log("emas", responce.email)
       };
+
+      
     
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`http://localhost:8000/api/v1/customer/${id}`)
+          const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
           console.log("error in getting all products", error);
         }
+        alert("Product Deleted");
+        window.location.reload(false);
+
       }
     
       useEffect(() => {
         console.log('asdasd')
-        getAllProducts()
+       // getAllProducts()
         // return () => {
         //   console.log('Cleanup Function');
         //  }
     }, [Delete , productsBoolean ])
-    
+
+        useEffect(() => {
+
+        const getProfile = async () => {
+          try {
+            let response = await axios.get(`http://localhost:8000/api/v1/profile`,
+              {
+                withCredentials: true,
+                headers: {
+                  'Cache-Control': 'no-cache',
+                  'Pragma': 'no-cache',
+                  'Expires': '0',
+                }
+              });
+              console.log("response: ", response.data);
+              setResponce(response.data)
+          } catch (error) {
+            console.log("axios error: ", error);
+      
+      
+          }
+      
+        }
+        getProfile();
+      
+      }, [])
 
 
 
@@ -46,11 +81,18 @@ const Allproduct = () => {
 
     <div>
       <Sidebaruser />
+
+<div className='justify-center flex mt-4'>
+<TextField className='textfield '  value={responce.email} id="email" name="email" />
+</div>
+<div className='diving justify-center flex mt-4'>
+        <Button  onClick={getAllProducts} variant="contained">Find your Products</Button>
+
+        </div>
       <div className="flex flex-wrap justify-center">
-    
+
     <div className="flex mt-4 justify-center  h-screen w-3/4">
    
-
 
     <div  className='flex flex-col w-full'    >
     {products.map((value) => (

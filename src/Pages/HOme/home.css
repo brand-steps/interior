@@ -142,3 +142,7 @@ overflow-x: hidden;
   overflow: scroll;
   background-color: rgb(228, 225, 225);
 }
+.searchbot {
+  margin-bottom: 40px;
+
+}
