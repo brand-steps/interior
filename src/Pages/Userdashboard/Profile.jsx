@@ -13,7 +13,7 @@ const [responce  , setResponce] = useState("")
 
         const getProfile = async () => {
           try {
-            let response = await axios.get(`http://localhost:8000/api/v1/profile`,
+            let response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/api/v1/profile`,
               {
                 withCredentials: true,
                 headers: {

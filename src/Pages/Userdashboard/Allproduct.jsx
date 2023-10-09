@@ -14,7 +14,7 @@ const Allproduct = () => {
     const [responce  , setResponce] = useState("")
     const getAllProducts = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/productsdisplay/${responce.email}`);
+          const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/productsdisplay/${responce.email}`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -29,7 +29,7 @@ const Allproduct = () => {
     
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
+          const response = await axios.delete(`https://precious-woolens-duck.cyclic.cloud/productreq/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -52,7 +52,7 @@ const Allproduct = () => {
 
         const getProfile = async () => {
           try {
-            let response = await axios.get(`http://localhost:8000/api/v1/profile`,
+            let response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/api/v1/profile`,
               {
                 withCredentials: true,
                 headers: {

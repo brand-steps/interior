@@ -13,7 +13,7 @@ const [Delete , setdelete] = useState(false);
 
 const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/products`);
+      const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/api/v1/products`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

@@ -17,7 +17,7 @@ const EdittProduct = () => {
 
 
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`http://localhost:8000/singleproduct/${id}`);
+        const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/singleproduct/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -46,7 +46,7 @@ const EdittProduct = () => {
 
     const handlesubmit = async () => {
         const productData = { ...singleproduct};
-        const response = await axios.put(`http://localhost:8000/editsProducts/${id}`, productData);
+        const response = await axios.put(`https://precious-woolens-duck.cyclic.cloud/editsProducts/${id}`, productData);
 
 alert("Product Updated");
     }

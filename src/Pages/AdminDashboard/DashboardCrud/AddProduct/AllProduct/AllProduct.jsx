@@ -17,7 +17,7 @@ export const AllProductDashboad = () => {
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/productrequestalltrue`);
+      const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/productrequestalltrue`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);
@@ -28,7 +28,7 @@ export const AllProductDashboad = () => {
 
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
+      const response = await axios.delete(`https://precious-woolens-duck.cyclic.cloud/productreq/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {

@@ -20,7 +20,7 @@ const Email = useParams()
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/selectproducts/${email}`);
+      const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/selectproducts/${email}`);
       console.log("response: ", response);
       console.log(products);
       console.log("ss",Email);
@@ -35,7 +35,7 @@ const Email = useParams()
 
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
+      const response = await axios.delete(`https://precious-woolens-duck.cyclic.cloud/productreq/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {

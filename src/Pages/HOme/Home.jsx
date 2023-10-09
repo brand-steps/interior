@@ -34,7 +34,7 @@ const Home = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `http://localhost:8000/api/v1/profile`,
+          `https://precious-woolens-duck.cyclic.cloud/api/v1/profile`,
           {
             withCredentials: true,
             headers: {
@@ -61,7 +61,7 @@ const Home = () => {
     const delayDebounceFn = setTimeout(async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/search?q=${searchTerm}`
+          `https://precious-woolens-duck.cyclic.cloud/api/search?q=${searchTerm}`
         );
         setSearchResults(response.data);
       } catch (error) {

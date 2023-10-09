@@ -49,7 +49,7 @@ const AddProductuser = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/productrequest",
+        "https://precious-woolens-duck.cyclic.cloud/productrequest",
         formData,
         {
           headers: {
