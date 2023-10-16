@@ -5,8 +5,10 @@ import './Allproduct.css'
 import Sidebaruser from './sidebarUser'
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 const Allproduct = () => {
+  const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [productsBoolean, setProductsBoolean] = useState(false);
     const [Delete , setdelete] = useState(false);
@@ -14,7 +16,7 @@ const Allproduct = () => {
     const [responce  , setResponce] = useState("")
     const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/productsdisplay/${responce.email}`);
+          const response = await axios.get(`http://localhost:8000/productsdisplay/${responce.email}`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -29,7 +31,7 @@ const Allproduct = () => {
     
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://precious-woolens-duck.cyclic.cloud/productreq/${id}`)
+          const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -52,7 +54,7 @@ const Allproduct = () => {
 
         const getProfile = async () => {
           try {
-            let response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/api/v1/profile`,
+            let response = await axios.get(`http://localhost:8000/api/v1/profile`,
               {
                 withCredentials: true,
                 headers: {
@@ -100,6 +102,9 @@ const Allproduct = () => {
 
     <th style={{ width: "100%" }} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
         <span   className='text-red-500'  >Name :</span> {value.name}
+    </th>
+    <th    className="w-full md:w-auto px-6 py-4 cursor-pointer text-red-500 text-center " onClick={()=>{navigate(`/Editproductuser/${value._id}`, { replace: true }) }}>
+      Edit
     </th>
     
     <td className="w-full md:w-auto px-6 py-4 text-red-500" >

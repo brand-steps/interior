@@ -28,13 +28,14 @@ const Home = () => {
   const [isUlVisible, setIsUlVisible] = useState(false);
   const [showList, setShowList] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState();
+  const [responce  , setResponce] = useState("")
 
   // console.log('Home Page');
   useEffect(() => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://precious-woolens-duck.cyclic.cloud/api/v1/profile`,
+          `http://localhost:8000/api/v1/profile`,
           {
             withCredentials: true,
             headers: {
@@ -46,6 +47,7 @@ const Home = () => {
         );
 
         // console.log("response: ", response);
+        setResponce(response.data);
         setUser(true);
       } catch (error) {
         console.log("axios error: ", error);
@@ -57,21 +59,6 @@ const Home = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(async () => {
-      try {
-        const response = await axios.get(
-          `https://precious-woolens-duck.cyclic.cloud/api/search?q=${searchTerm}`
-        );
-        setSearchResults(response.data);
-      } catch (error) {
-        console.error("Error fetching search results:", error);
-      }
-    }, 300); // Debounce time in milliseconds
-
-    return () => clearTimeout(delayDebounceFn);
-  }, [searchTerm]);
-
   const handleBlur = () => {
     setTimeout(() => {
       setShowList(false);
@@ -80,6 +67,24 @@ const Home = () => {
 
   const handleFocus = () => {
     setShowList(true);
+  };
+  const handleLogout = async () => {
+    try {
+      await axios.post("http://localhost:8000/logout", {
+        withCredentials: true, // This ensures that cookies are sent with the request
+      });
+      console.log("Logout successful");
+      setUser(false);
+      setResponce("");
+      alert("You have successfully Logged Out");
+     // navigate('/', { replace: true }) 
+        } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
+  const handleLogin = async () => {
+    setUser(true);
+
   };
 
   const handleButtonClick = (item) => {
@@ -139,7 +144,7 @@ const Home = () => {
           <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
             <Link to="/UserDashboard">
               <span>
-                User<i className="fa fa-user" aria-hidden="true"></i>
+                {responce.username}<i className="fa fa-user" aria-hidden="true"></i>
               </span>
             </Link>
           </li>
@@ -150,7 +155,17 @@ const Home = () => {
           </li>
         </Link>
         {/* */}
-        <NavLink to="/Login">
+        {user ? (
+          <button
+            type="button"
+            onClick={handleLogout}
+            style={{ background: "rgb(236, 12, 54)" }}
+            className="self-end text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out"
+          >
+            Logout
+          </button>
+
+        ) : <NavLink to="/loginform">
           <button
             type="button"
             style={{ background: "rgb(236, 12, 54)" }}
@@ -158,7 +173,8 @@ const Home = () => {
           >
             Login in
           </button>
-        </NavLink>
+        </NavLink> }
+        
       </ul>
 
 

@@ -42,6 +42,9 @@ import { Selectuserproduct } from "./Pages/AdminDashboard/DashboardCrud/Alluser/
 import Productrequest from "./Pages/AdminDashboard/Productrequests/Productrequest";
 import EdittProduct from "./Pages/Products/Editproduct/editproductcheck";
 import EditUser from "./Pages/AdminDashboard/DashboardCrud/Alluser/EditUser";
+import Editproductuser from "./Pages/Products/Editproduct/EditproductUser";
+import Signform from "./Pages/Signinform/Signform";
+import LoginForm from "./Pages/Loginform";
 
 function App() {
   return (
@@ -79,7 +82,10 @@ function App() {
               <Route path="/CardPage" element={<CardPage />} />
               <Route path="/productrequest" element={<Productrequest />} />
               <Route path="/UserProduct" element={<Selectuserproduct />} />
+              <Route path="/signupform" element={<Signform />} />
+              <Route path="/Loginform" element={<LoginForm />} />
               <Route path="/EditProduct/:id" element={<EdittProduct />} />
+              <Route path="/Editproductuser/:id" element={<Editproductuser />} />
               <Route path="/EditUser/:id" element={<EditUser />} />
 
             </Routes>

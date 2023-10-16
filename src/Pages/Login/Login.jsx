@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import './Login.css';
 import Footer from '../Foooter/Footer';
-import Home from '../HOme/Home';
+import Loginbar from '../HOme/Loginbar';
 import axios from 'axios';
+import Home from '../HOme/Home';
 import { useNavigate } from 'react-router-dom';
+import validator from 'validator'
+
+
 function Login() {
   const [username, setUserName] = useState()
   const [email, setemail] = useState()
   const [password, setPassword] = useState()
   const [reTypepassword, setReTypePassword] = useState()
+  const [phone , setPhone] = useState();
+  const [phoneMsg, setPhoneMsg] = useState(false);
   const [showLogin, setShowLogin] = useState(true);
   const [passwordMatchError, setPasswordMatchError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -19,8 +25,9 @@ function Login() {
   const navigate = useNavigate(); // Get the navigate function from React Router
 
   let baseUrl = "http://localhost:3000"
-let BEUrl = "https://precious-woolens-duck.cyclic.cloud"
+let BEUrl = "http://localhost:8000"
 let DeployURL = "https://glorious-hat-bat.cyclic.app"
+let latesturl = "https://precious-woolens-duck.cyclic.cloud";
   const LoginForm = async () => {
     if (!email || !password) {
       console.log('Value is not Given');
@@ -29,7 +36,7 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`https://precious-woolens-duck.cyclic.cloud/login`, {
+        let response = await axios.post(`http://localhost:8000/login`, {
           email: email,
           password: password
         }, {
@@ -51,17 +58,31 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
       }
     }
   };
+  const validateEmail  = async (e) => {
+    setemail(e.target.value);
+    
+    if (validator.isEmail(email)) {
+      setEmailError('Valid Email :)')
+   } else {
+      setEmailError('Enter valid Email!')
+   }
+ }
+  
 
 
   const signupForm = async () => {
 
 
     console.log('Signup Form');
-    if (!email || !password || !reTypepassword) {
+    if (!email || !phone || !password || !reTypepassword) {
       setEmailError(!email);
+      setPhoneMsg(true);
       setPasswordError(!password);
       setReTypePasswordError(!reTypepassword);
       return;
+    }
+    if (!phone) {
+      setPhoneMsg("Enter Phone Number");
     }
 
     if (password !== reTypepassword) {
@@ -69,11 +90,12 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
       setErrorMessage('Passwords do not match');
       return;
     }
-    if (email && password && reTypepassword) {
+    if (email && phone && password && reTypepassword) {
       try {
-        const response = await axios.post('https://precious-woolens-duck.cyclic.cloud/signup', {
+        const response = await axios.post('http://localhost:8000/signup', {
           username,
           email,
+          phone,
           password,
         });
 
@@ -81,6 +103,7 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
         if (response.status === 201) {
           console.log('Signup successful');
           setShowLogin(true);
+          alert("you have successfully registered");
           // Perform any necessary actions on successful signup
         } else {
           console.log('Signup failed');
@@ -91,18 +114,7 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
         // Handle error
       }
 
-
-
     }
-
-
-
-
-
-
-
-
-
 
   };
 
@@ -123,7 +135,7 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
 
   return (
     <div>
-      <Home />
+      <Loginbar />
       <div className="form-modal">
         <div className="form-toggle">
           <button
@@ -153,12 +165,12 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
             <input
               onChange={(event) => { setemail(event.target.value); setEmailError(false); }}
               type="text"
-              placeholder="Enter email or username"
+              placeholder="Enter your email "
               className={emailError ? 'error' : ''}
             />
             {emailError && <p className="error-message">Email is required</p>}
 
-            <input onChange={(event) => { setPassword(event.target.value) }} type="password" placeholder="Enter password" />
+            <input onChange={(event) => { setPassword(event.target.value) }} type="password" placeholder="Enter your password" />
             <button onClick={LoginForm} type="button" className="btn login">
 
 
@@ -188,7 +200,12 @@ let DeployURL = "https://glorious-hat-bat.cyclic.app"
               className={emailError ? 'error' : ''}
             />
             {emailError && <p className="error-message">UserName  is required</p>}
-
+            <input
+              onChange={(event) => { setPhone(event.target.value); setEmailError(false); }}
+              type="number"
+              placeholder="Enter your Phone Number"
+              className={emailError ? 'error' : ''}
+            />
             <input
               onChange={(event) => { setPassword(event.target.value); setPasswordError(false); }}
               type="password"

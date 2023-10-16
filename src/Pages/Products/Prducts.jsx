@@ -40,7 +40,7 @@ const Prducts = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/api/v1/paginatpost?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/api/v1/paginatpost?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -79,7 +79,7 @@ const Prducts = () => {
 
       <div className='flex  flex-wrap justify-center   '>
         {products.map((eachProduct, i) => (
-          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name} paragraph={eachProduct.description} />
+          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name}  />
         ))}
       </div>
 

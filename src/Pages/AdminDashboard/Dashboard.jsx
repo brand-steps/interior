@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import "./product.css";
 import { useNavigate } from "react-router-dom";
-
+import AdminBar from "../HOme/AdminBar";
 
 
 
@@ -26,6 +26,16 @@ const Dashbord = () => {
     width: '300px', // Adjust the width as needed
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
+  const containerStyle2 = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
+    borderRadius: '8px',
+    width: '300px', // Adjust the width as needed
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
 
   const imageStyle = {
     width: '100px',
@@ -45,12 +55,7 @@ const Dashbord = () => {
 
   return (
     <>
-
-    <div className=" bg-white h-full">
-      <div className="flex w-full bg-white h-auto ">
-        <Sidebar />
-
-        <div className="bg-white w-4/5">
+<AdminBar/>
 
 <div style={divStyle}>
         
@@ -69,6 +74,7 @@ const Dashbord = () => {
         <p>You can view all the products uploaded and can edit or delete it</p>
 <button onClick={() =>{navigate("/AllProductDashboad")}} style={buttonStyle}>View</button>
       </div>
+      
       
     </div>
 
@@ -90,9 +96,14 @@ const Dashbord = () => {
     </div>
       </div>
 
-          <div class="col-md-12 flex-container">
-            {/* <!-- flex-item --> */}
-            <div class="flex-item">
+
+
+      
+        
+        <div className='flex  justify-evenly flex-wrap my-4 topdiv' >
+
+        <div style={  containerStyle2}>
+        <div class="flex-item">
               <div class=" ">
                 {/* <!-- card --> */}
                 <a href="#">
@@ -114,10 +125,12 @@ const Dashbord = () => {
                 {/* <!-- /card --> */}
               </div>
             </div>
-            {/* <!-- /flex-item --> */}
 
-            {/* <!-- flex-item --> */}
-            <div class="flex-item">
+      </div>
+
+      <div style={containerStyle2}>
+
+      <div class="flex-item">
               <div class=" ">
                 {/* <!-- card --> */}
                 <a href="#">
@@ -139,10 +152,9 @@ const Dashbord = () => {
                 {/* <!-- /card --> */}
               </div>
             </div>
-            {/* <!-- /flex-item --> */}
-
-            {/* <!-- flex-item --> */}
-            <div class="flex-item">
+      </div>
+      <div style={containerStyle2}>
+      <div class="flex-item">
               <div class=" ">
                 {/* <!-- card --> */}
                 <a href="#">
@@ -164,10 +176,10 @@ const Dashbord = () => {
                 {/* <!-- /card --> */}
               </div>
             </div>
-            {/* <!-- /flex-item --> */}
 
-            {/* <!-- flex-item --> */}
-            <div class="flex-item">
+      </div>
+      <div style={containerStyle2}>
+      <div class="flex-item">
               <div class=" ">
                 {/* <!-- card --> */}
                 <a href="#">
@@ -189,11 +201,16 @@ const Dashbord = () => {
                 {/* <!-- /card --> */}
               </div>
             </div>
-            {/* <!-- flex-item --> */}
-          </div>
 
-          <div className="flex  ml-8  justify-center	">
-            <div class="donut-chart-block block22  ml-4">
+      </div>
+      
+    </div>
+
+
+    <div className='flex  justify-evenly flex-wrap my-4 topdiv' >
+
+<div style={containerStyle2}>
+<div class="donut-chart-block block22  ml-4">
               <h2 class="titular   text-white">OS AUDIENCE STATS</h2>
               <div class="donut-chart">
                 <div id="porcion1" class="recorte">
@@ -242,8 +259,10 @@ const Dashbord = () => {
                 </li>
               </ul>
             </div>
-            {/* <!-- LINE CHART BLOCK (LEFT-CONTAINER) --> */}
-            <div class="line-chart-block block22">
+</div>
+
+<div style={containerStyle2}>
+<div class="line-chart-block block22">
               <div class="line-chart">
                 <div class="grafico">
                   <ul class="eje-y">
@@ -316,8 +335,10 @@ const Dashbord = () => {
                 </li>
               </ul>
             </div>
+</div>
 
-            <div class="bar-chart-block block22">
+<div style={containerStyle2}>
+<div class="bar-chart-block block22">
               <h2 class="titular  text-white">
                 By Country <span>*1000</span>
               </h2>
@@ -354,10 +375,10 @@ const Dashbord = () => {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
+
+
     </>
   );
 };

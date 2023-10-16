@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 // import './Product.css'
 import axios from 'axios'
 import '../../product.css'
-import Sidebar from '../../Sidebar'
-
+import AdminBar from '../../../HOme/AdminBar';
 
 const AddProduct = () => {
   const [Email, setEmail] = useState()
@@ -55,7 +54,7 @@ const AddProduct = () => {
     formData.append('description', Description);
 
     try {
-      const response = await axios.post('https://precious-woolens-duck.cyclic.cloud/api/v1/AddProduct', formData, {
+      const response = await axios.post('http://localhost:8000/api/v1/AddProduct', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -65,29 +64,19 @@ console.log(response);
     } catch (error) {
       console.error('Error uploading data:', error);
     }
-  
-  
-
-
    
   };
   
-
-
-
-
-
-
   return (
     <>
-   
+
     <div>
       
       <div class="bg-slate-200  h-auto	  asddasdasdasdasdas flex items-center">
-      <Sidebar />
         <div class="w-full elokpkk">
+        <AdminBar/>
         
-          <h2 class="text-center text-black font-bold text-2xl uppercase dasdsd mb-10">Add Product </h2>
+          <h2 class="text-center text-black font-bold text-2xl uppercase dasdsd mb-10 zifo">Add Product </h2>
           <div class="asdasdasdasdasdas  p-6  rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
 
           <div class="mb-5">

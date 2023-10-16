@@ -27,12 +27,25 @@ const CategorySlider = () => {
     const [DesktopandPresentationEquiment , setDesktopandPresentationEquiment] = useState(false) 
     const [BeverageandBar , setBeverageandBar ] = useState(false)
 
-   
+   const [category, setCategory] = useState("");
 
 
     const getAllProducts = async () => {
+        
         try {
-            const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/api/v1/products`);
+            const response = await axios.get(`http://localhost:8000/api/v1/products`);
+            console.log("response: ", response);
+            console.log(products);
+            setProducts(response.data.data);
+        } catch (error) {
+            console.log("error in getting all products", error);
+        }
+    };
+    const getCategoryProducts = async (value) => {
+        setCategory(value);
+        console.log("sss",category)
+        try {
+            const response = await axios.get(`http://localhost:8000/api/v1/products`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);
@@ -68,7 +81,7 @@ const CategorySlider = () => {
 
     return (
         <div className='mx-6 my-4' >
-
+<button>find</button>
             <Carousel
                 swipeable={true}
                 arrows={true}
@@ -79,7 +92,7 @@ const CategorySlider = () => {
             >
                 
 <div>
-<div onMouseEnter={() => (setModularkitchens(true))} onMouseLeave={() => (setModularkitchens(false))} className='flex flex-col justify-center items-cente 		'  >
+<div  className='flex flex-col justify-center items-cente 		'  >
                     <img className='w-20 h-12	' src="https://ozti.com/media/hbpeulq3/ada-mutfak.svg" alt="" />
                     <h1>Modular Kitchens </h1>
                 </div>
@@ -90,12 +103,17 @@ const CategorySlider = () => {
 
 
 
+         {/*       <div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
+                    <img className='w-20 h-12	' src="https://ozti.com/media/mhtltgf5/ocak.svg" alt="" />
+                    <h1>Main Kitchen Equiment  </h1>
+
+                </div>
+    */}
                 <div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
                     <img className='w-20 h-12	' src="https://ozti.com/media/mhtltgf5/ocak.svg" alt="" />
                     <h1>Main Kitchen Equiment  </h1>
 
                 </div>
-
                 <div onMouseEnter={() => (setColdUnits(true))} onMouseLeave={() => (setColdUnits(false))} className='flex flex-col justify-center items-center 		'  >
                     <img className='w-20 h-12	' src="https://ozti.com/media/qqdj5bun/buzdolabi_tekkapakli.svg" alt="" />
                     <h1>Cold Units  </h1>
@@ -157,6 +175,7 @@ const CategorySlider = () => {
                 </div>
 
             </Carousel>
+            {/*
             {Modularkitchens ? <div className='w-full '  >
                 <div className='flex '  >
                     <ul className='mr-36'   >
@@ -680,7 +699,7 @@ const CategorySlider = () => {
                         <ul className='mr-36'   >
                             <h1 style={{ "color": "#EC0C36" }} className='text-2xl  my-2'  >Juicing Machines</h1>
                             <h1 style={{ "color": "#EC0C36" }} className='text-2xl  my-2'  >Knives</h1>
-                            {/* <li></li> */}
+                            
                             <li>Chef Knives</li>
                             <li>Decor Tools</li>
                             <h1 style={{ "color": "#EC0C36" }} className='text-2xl  my-2'  >F&B Equipment</h1>
@@ -954,7 +973,7 @@ const CategorySlider = () => {
                 </div>
                 : null}
 
-
+            */}
 
 
 

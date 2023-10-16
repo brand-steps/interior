@@ -12,10 +12,11 @@ const EditUser = () => {
     const [username, setusername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setpassword] = useState("");
+    const [phone, setPhone] = useState("");
 
 
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/edituser/${id}`);
+        const response = await axios.get(`http://localhost:8000/edituser/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -34,7 +35,7 @@ const EditUser = () => {
 
     const handlesubmit = async () => {
         const UserData = { ...singleproduct};
-        const response = await axios.put(`https://precious-woolens-duck.cyclic.cloud/edittedUsers/${id}`, UserData);
+        const response = await axios.put(`http://localhost:8000/edittedUsers/${id}`, UserData);
         alert("User Updated");
     }
     
@@ -49,6 +50,8 @@ const EditUser = () => {
         <TextField fullWidth value={singleproduct.username} onChange={handlecchange} name="username" variant="outlined"  />
         <TextField fullWidth value={singleproduct.email} onChange={handlecchange} name="email" variant="outlined" />
         <TextField fullWidth value={singleproduct.password} onChange={handlecchange} name="password" variant="outlined" />
+        <TextField fullWidth value={singleproduct.phone} onChange={handlecchange} name="phone" type='number' variant="outlined" />
+
         <Button fullWidth onClick={handlesubmit} variant="contained">edit User</Button>
 
         

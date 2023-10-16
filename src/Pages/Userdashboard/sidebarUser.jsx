@@ -9,7 +9,7 @@ const Sidebaruser = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://precious-woolens-duck.cyclic.cloud/logout", {
+      await axios.post("http://localhost:8000/logout", {
         withCredentials: true, // This ensures that cookies are sent with the request
       });
       console.log("Logout successful");
@@ -49,6 +49,9 @@ const Sidebaruser = () => {
         }`}
         id="menu"
       >
+                <li className="md:border-none mt-2    mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+          <Link to="/">Home</Link>
+        </li>
         <li className="md:border-none mt-2    mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           <Link to="/Profile"> Profile</Link>
         </li>
@@ -58,12 +61,7 @@ const Sidebaruser = () => {
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           <Link to="/Allproduct">Products</Link>
         </li>
-        <li
-          onClick={handleLogout}
-          className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out"
-        >
-          Logout
-        </li>
+
       </ul>
     </nav>
   );

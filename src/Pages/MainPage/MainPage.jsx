@@ -10,6 +10,7 @@ import FairsComponent from '../../Pages/FirstPage/FairsArticle/FairsArticle';
 import Footer from '../../Pages/Foooter/Footer';
 import { useEffect , useState} from 'react';
 import axios from 'axios';
+
 const MainPage = () => {
   return (
     <div>

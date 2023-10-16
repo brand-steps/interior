@@ -43,7 +43,7 @@ const Slider = () => {
   }, [nextImage]);
 
   return (
-    <div className="mx-auto relative w-11/12 h-5/6	 py-6">
+    <div className="mx-auto relative w-12/12 h-5/6	">  {/* py-2 */}
     <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} className="max-w-full" />
 
     {/* Centered Heading and Paragraph */}

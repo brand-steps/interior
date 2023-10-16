@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import './productrequest.css';
+import AdminBar from '../../HOme/AdminBar';
 
 
 export const Productrequest = () => {
@@ -16,7 +18,7 @@ export const Productrequest = () => {
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/productrequestall`);
+      const response = await axios.get(`http://localhost:8000/productrequestall`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);
@@ -27,7 +29,7 @@ export const Productrequest = () => {
 
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`https://precious-woolens-duck.cyclic.cloud/productreq/${id}`)
+      const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {
@@ -38,7 +40,7 @@ export const Productrequest = () => {
 
   const approveData = async (id)=>{
     try {
-      const response = await axios.get(`https://precious-woolens-duck.cyclic.cloud/productreqedit/${id}`)
+      const response = await axios.get(`http://localhost:8000/productreqedit/${id}`)
       console.log("response: ", response.data);
     } catch (error) {
       console.log("error in approving all requests", error);
@@ -57,12 +59,16 @@ export const Productrequest = () => {
 
   return (
     <div>
+      <AdminBar/>
         <h1 className='dasfasfkasfhoiasbfbfa'  >Product Approval Requests </h1>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product image
+                </th>
                 <th scope="col" class="px-6 py-3">
                     Product name
                 </th>
@@ -110,6 +116,9 @@ export const Productrequest = () => {
                 <>
             <tr class=" border-b    bgbg-gray-700 dark:bg-gray-800 dark:border-gray-700">
 
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img src={value.imageUrl} className='imagedis' alt='img'/>
+                </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {value.name}
                 </th>
