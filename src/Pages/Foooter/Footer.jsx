@@ -3,8 +3,7 @@ import logo from '../../Images/equipment suppliers logo mini.png';
 import CompanyLogo from '../../Images/bs logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
-import { faFacebook, faTwitter, faInstagram , faLinkedin  } from '@fortawesome/free-brands-svg-icons';
-
+import { faFacebook, faTwitter, faInstagram , faLinkedin, faWhatsapp,  } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
@@ -29,8 +28,8 @@ function Footer() {
       <a href="https://www.instagram.com" className="text-pink-500 hover:text-pink-700">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
-      <a href="https://www.linkedin.com" className="text-blue-700 hover:text-blue-900">
-        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+      <a href="https://wa.me/+447445953220" className="text-blue-700 hover:text-blue-900">
+        <FontAwesomeIcon icon={faWhatsapp} size="2x" />
       </a>
     </div>
 

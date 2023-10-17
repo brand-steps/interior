@@ -45,6 +45,10 @@ import EditUser from "./Pages/AdminDashboard/DashboardCrud/Alluser/EditUser";
 import Editproductuser from "./Pages/Products/Editproduct/EditproductUser";
 import Signform from "./Pages/Signinform/Signform";
 import LoginForm from "./Pages/Loginform";
+import Refrigration from "./Pages/Categorypages/Refrigeration";
+import Dishwashing from "./Pages/Categorypages/Dishwashing";
+import Appliances from "./Pages/Categorypages/Appliances";
+import Stainlesssteel from "./Pages/Categorypages/Stainlesssteel";
 
 function App() {
   return (
@@ -84,6 +88,10 @@ function App() {
               <Route path="/UserProduct" element={<Selectuserproduct />} />
               <Route path="/signupform" element={<Signform />} />
               <Route path="/Loginform" element={<LoginForm />} />
+              <Route path="/Refrigeration" element={<Refrigration />} />
+              <Route path="/Dishwashing" element={<Dishwashing />} />
+              <Route path="/Appliances" element={<Appliances />} />
+              <Route path="/Stainlesssteel" element={<Stainlesssteel />} />
               <Route path="/EditProduct/:id" element={<EdittProduct />} />
               <Route path="/Editproductuser/:id" element={<Editproductuser />} />
               <Route path="/EditUser/:id" element={<EditUser />} />

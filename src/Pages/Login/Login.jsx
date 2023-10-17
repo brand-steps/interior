@@ -27,7 +27,8 @@ function Login() {
   let baseUrl = "http://localhost:3000"
 let BEUrl = "http://localhost:8000"
 let DeployURL = "https://glorious-hat-bat.cyclic.app"
-let latesturl = "https://precious-woolens-duck.cyclic.cloud";
+let latesturl = "http://localhost:8000";
+let newurl = "https://precious-woolens-duck.cyclic.clou d"
   const LoginForm = async () => {
     if (!email || !password) {
       console.log('Value is not Given');

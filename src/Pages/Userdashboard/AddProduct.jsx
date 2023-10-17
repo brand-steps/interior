@@ -207,6 +207,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
         <option value="Glasswashers">Glasswashers</option>
         <option value="Undercounter Dishwashers">Undercounter Dishwashers</option>
         <option value="Pass Through Dishwashers">Pass Through Dishwashers</option>
+        <option value="Dishwasher Tables">Dishwasher Tables</option>
         <option value="Cuttlery & Glass Polishers">Cuttlery & Glass Polishers</option>
         <option value="Shower Unit & Faucets">Shower Unit & Faucets</option>
         <option value="Dishwasher Racks">Dishwasher Racks</option>

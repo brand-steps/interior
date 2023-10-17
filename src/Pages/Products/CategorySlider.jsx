@@ -4,9 +4,11 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import axios from 'axios';
 import ProductSlider from '../FirstPage/ProductGroup/ProductSlider.jsx/ProductSlider.jsx';
+import { useNavigate } from 'react-router-dom';
 
 
 const CategorySlider = () => {
+    const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [productsBoolean, setProductsBoolean] = useState(false);
     const [Delete, setdelete] = useState(false);
@@ -91,38 +93,60 @@ const CategorySlider = () => {
 
             >
                 
-<div>
-<div  className='flex flex-col justify-center items-cente 		'  >
-                    <img className='w-20 h-12	' src="https://ozti.com/media/hbpeulq3/ada-mutfak.svg" alt="" />
-                    <h1>Modular Kitchens </h1>
+                <div onClick={() => {navigate("/Refrigeration")}} onMouseEnter={() => (setOpenBuffet(true))} onMouseLeave={() => (setOpenBuffet(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/vhpberxz/tasima_arabalari.svg" alt="" />
+                    <h1>Refrigeration</h1>
+                </div>
+                <div onClick={() => {navigate("/Dishwashing")}} onMouseEnter={() => (setDishwasherEquipment(true))} onMouseLeave={() => (setDishwasherEquipment(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/vr5npfcg/bulasik_giyotin.svg" alt="" />
+                    <h1>Diswashing</h1>
+                </div>
+                <div onClick={() => {navigate("/Appliances")}} onMouseEnter={() => (setbakeryEqupent(true))} onMouseLeave={() => (setbakeryEqupent(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12' src="https://ozti.com/media/xgipiphp/pastane.svg" alt="" />
+                    <h1>Appliances</h1>
+                </div>
+                <div onMouseEnter={() => (setNeutral(true))} onMouseLeave={() => (setNeutral(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/b1zf4p3m/davlumbaz.svg" alt="" />
+                    <h1>Stainless Steel</h1>
+                </div>
+                <div onMouseEnter={() => (setCountertopKitchen(true))} onMouseLeave={() => (setCountertopKitchen(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/0ezpsikc/mutfak_gerecleri.svg" alt="" />
+                    <h1>Cooking</h1>
+                </div>
+                <div     onMouseEnter={() => (setBeverageandBar(true))} onMouseLeave={() => (setBeverageandBar(false))}    className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/nlbmh4kh/buzlar-portakal.png" alt="" />
+                    <h1>Food prep</h1>
+                </div>
+                <div onMouseEnter={() => (setTeaCoffee(true))} onMouseLeave={() => (setTeaCoffee(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/yrxeybpa/kahve_makinasi.svg" alt="" />
+                    <h1>Beverage Equipment</h1>
                 </div>
 
 
-</div>
-
-
-
-
-         {/*       <div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
-                    <img className='w-20 h-12	' src="https://ozti.com/media/mhtltgf5/ocak.svg" alt="" />
-                    <h1>Main Kitchen Equiment  </h1>
-
-                </div>
-    */}
                 <div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
-                    <img className='w-20 h-12	' src="https://ozti.com/media/mhtltgf5/ocak.svg" alt="" />
-                    <h1>Main Kitchen Equiment  </h1>
+                <img className='w-20 h-12	' src="https://ozti.com/media/hbpeulq3/ada-mutfak.svg" alt="" />
+                    <h1>Pizzeria & Grill</h1>
 
                 </div>
+
+<div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
+                    <img className='w-20 h-12	' src="https://ozti.com/media/mhtltgf5/ocak.svg" alt="" />
+                    <h1>Oven & Steamers</h1>
+
+                </div>
+                <div  onMouseEnter={() => (setDesktopandPresentationEquiment(true))} onMouseLeave={() => (setDesktopandPresentationEquiment(false))} className='flex flex-col justify-center items-center'>
+                    <img className='w-20 h-12	' src="https://ozti.com/media/odhfgpj3/spoon.svg" alt="" />
+                    <h1>Utensils</h1>
+                </div>
+
+{/*
+
                 <div onMouseEnter={() => (setColdUnits(true))} onMouseLeave={() => (setColdUnits(false))} className='flex flex-col justify-center items-center 		'  >
                     <img className='w-20 h-12	' src="https://ozti.com/media/qqdj5bun/buzdolabi_tekkapakli.svg" alt="" />
                     <h1>Cold Units  </h1>
 
                 </div>
-                <div onMouseEnter={() => (setDishwasherEquipment(true))} onMouseLeave={() => (setDishwasherEquipment(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/vr5npfcg/bulasik_giyotin.svg" alt="" />
-                    <h1>Dishwasher Equipment   </h1>
-                </div>
+
                 <div onMouseEnter={() => (setOvens(true))} onMouseLeave={() => (setOvens(false))} className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/w2mfko4s/firin.svg" alt="" />
                     <h1>Ovens    </h1>
@@ -131,31 +155,16 @@ const CategorySlider = () => {
                     <img className='w-20 h-12	' src="https://ozti.com/media/pzqjgiar/hazirlik_makinasi.svg" alt="" />
                     <h1>Prepration Machines     </h1>
                 </div>
-                <div onMouseEnter={() => (setNeutral(true))} onMouseLeave={() => (setNeutral(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/b1zf4p3m/davlumbaz.svg" alt="" />
-                    <h1>Neutral Units     </h1>
-                </div>
-                <div onMouseEnter={() => (setOpenBuffet(true))} onMouseLeave={() => (setOpenBuffet(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/vhpberxz/tasima_arabalari.svg" alt="" />
-                    <h1>Open Buffet and Service  Units    </h1>
-                </div>
-                <div onMouseEnter={() => (setTeaCoffee(true))} onMouseLeave={() => (setTeaCoffee(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/yrxeybpa/kahve_makinasi.svg" alt="" />
-                    <h1>Tea & Coffee Equiment     </h1>
-                </div>
+
+
+
                 <div onMouseEnter={() => (setCACaffeBar(true))} onMouseLeave={() => (setCACaffeBar(false))} className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/dxkph4va/bar_ekipmanlari.svg" alt="" />
                     <h1>Caffe & Bar Equiment      </h1>
                 </div>
-                <div onMouseEnter={() => (setCountertopKitchen(true))} onMouseLeave={() => (setCountertopKitchen(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/0ezpsikc/mutfak_gerecleri.svg" alt="" />
-                    <h1>Countertop & Kitchen    </h1>
-                </div>
-                {/*  */}
-                <div onMouseEnter={() => (setbakeryEqupent(true))} onMouseLeave={() => (setbakeryEqupent(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/xgipiphp/pastane.svg" alt="" />
-                    <h1>Bakery   Equiment      </h1>
-                </div>
+
+
+
                 <div   onMouseEnter={() => (setKitchenUtensil(true))} onMouseLeave={() => (setKitchenUtensil(false))}  className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/e4rf2phl/yard%C4%B1mc%C4%B1.svg" alt="" />
                     <h1>Kitchen     Utensils   </h1>
@@ -164,18 +173,12 @@ const CategorySlider = () => {
                     <img className='w-20 h-12	' src="https://ozti.com/media/xhzjtsmn/temizlik_ekipmanlari.svg" alt="" />
                     <h1>Hygiene and Sanitation Equiment </h1>
                 </div>
-                <div  onMouseEnter={() => (setDesktopandPresentationEquiment(true))} onMouseLeave={() => (setDesktopandPresentationEquiment(false))} className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/odhfgpj3/spoon.svg" alt="" />
-                    <h1>Desktop and Presentation Equiment  </h1>
-                </div>
-                {/*  */}
-                <div     onMouseEnter={() => (setBeverageandBar(true))} onMouseLeave={() => (setBeverageandBar(false))}    className='flex flex-col justify-center items-center'>
-                    <img className='w-20 h-12	' src="https://ozti.com/media/nlbmh4kh/buzlar-portakal.png" alt="" />
-                    <h1>Beverage  and Bar Equiment  </h1>
-                </div>
+
+                  */}
+
 
             </Carousel>
-            {/*
+           {/* 
             {Modularkitchens ? <div className='w-full '  >
                 <div className='flex '  >
                     <ul className='mr-36'   >
