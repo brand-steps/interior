@@ -312,8 +312,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
         <option value="Bread Slicers">Bread Slicers</option>
         <option value="Vacuum Machines">Vacuum Machines</option>
         <option value="Hamburger Presses">Hamburger Presses</option>
-        <option value="Bases & Neutral Units">Bases & Neutral Units</option>
-        <option value="Modular Cooking Ranges">Modular Cooking Ranges</option>
+
         </select>
         )}
 
@@ -321,7 +320,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
                       <select id="subcategory" name='subcategory' onChange={(event) => { SetSubcategory(event.target.value)}} className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 0   ">
 
         <option>Select a Sub category</option>
-        <option value="Ice Cream & Frozen Yoghurt Machines">Ice Cream & Frozen Yoghurt Machines</option>
+        <option value="Ice Cream & Yoghurt Machines">Ice Cream & Yoghurt Machines</option>
         <option value="Juice Dispensers">Juice Dispensers</option>
         <option value="Juicer Machines">Juicer Machines</option>
         <option value="Hand Mixers & immersion Blenders">Hand Mixers & immersion Blenders</option>
@@ -332,7 +331,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
         <option value="Filter Coffee Machines">Filter Coffee Machines</option>
         <option value="Coffee Grinders">Coffee Grinders</option>
         <option value="Percolators & Coffee Urns">Percolators & Coffee Urns</option>
-        <option value="Water Boilers & Hot Water Dispensers">Water Boilers & Hot Water Dispensers</option>
+        <option value="Water Boilers & Water Dispensers">Water Boilers & Water Dispensers</option>
         <option value="Chocolate Machines">Chocolate Machines</option>
         <option value="Cup Warmers">Cup Warmers</option>
         </select>
@@ -349,7 +348,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
         <option value="Planetary Mixers">Planetary Mixers</option>
         <option value="Rotisseries Ovens">Rotisseries Ovens</option>
         <option value="Charcoal Grills">Charcoal Grills</option>
-        <option value="Pita Ovens  / Salamander Grills">Pita Ovens  / Salamander Grills</option>
+        <option value="Pita Ovens / Salamander Grills">Pita Ovens / Salamander Grills</option>
         <option value="Chicken Warmers">Chicken Warmers</option>
         <option value="Dough Rollers & Dough Sheeters">Dough Rollers & Dough Sheeters</option>
         <option value="Pizza Storage & Transport">Pizza Storage & Transport</option>

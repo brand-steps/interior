@@ -41,7 +41,7 @@ const Stainlesssteel = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/Stainlesssteel?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/StainlessSteel?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -67,100 +67,100 @@ const Stainlesssteel = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CEKF28-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Table Top Fryers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/TA710D-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Work Tables</p>
       </div>
 
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/AD5-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Countertop Mixers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SN610DL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Sink Units with 1 & 2 Bowls</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EG720D-1-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Griddles</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HJS1803-6-175x175.JPG" alt="Fairs" style={imageStyle} />
+        <p>Sink Units with 3 Bowls</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/D100N38--175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Microwaves</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DSN610L-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Sink Top Storage Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GX812-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Panini / Contact Grills</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HMS77F-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Sink Tops</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/images/categories/roller-grill-category-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Roller Grills</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SR612DL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Sink Units For Dishwashers</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/TC2-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Food Warming</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DRD305-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Wall Shelves</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HD105-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Hotdog Warmers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THHWR43K-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Wash Basin & Hand Sinks</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa//RTR120-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Heated Merchandisers / Displays</p>
-      </div>
-
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EMO3K5S-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Induction Cookers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BAR2B48LR-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Bar Sinks</p>
       </div>
 
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BN1-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Table Top Bains Marie & Hotpots</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SB6000--175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Soup Kettles</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/rice-cooker-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Rice Cookers</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EB-450-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Salamanders</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ETS6A-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Toasters</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/YBWA10-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Pressure Cookers</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SV100-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Sous Vide & Slow Cookers</p>
-      </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WM2-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Waffle Makers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THASR-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Base Storage Cupboards</p>
       </div>
 
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BST001-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Knife Sterilisers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/IB182408-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Ice Bins</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EGG-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Egg Boilers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THWSR-A-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Plain Top Hot Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PC02-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Popcorn Machines</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ED612D-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Cabinet Storage Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ECF520C-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Candy Floss Machines</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GW2400-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Work Stations</p>
       </div>
       <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GC216-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Insect Killers</p>
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WCR-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Wall Cupboards</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/gantry-2-levels-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Gantries & Chefs Passes</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HKF-HLF-HMF-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Extraction Canopies</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/OS-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Grease Traps & Fat Seperators</p>
+      </div>
+
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SV412C-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Shelving Units</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ES4187660-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Equipment Stands</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WT95-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Waste Bins</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/C102-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Trolleys & Carts</p>
+      </div>
+      <div style={containerStyle} className="subhovers">
+        <img src="https://adexa.co.uk/image/cache/catalog/Misc/tray-stainless-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <p>Stainless Steel GN Pans & Containers</p>
       </div>
      
       

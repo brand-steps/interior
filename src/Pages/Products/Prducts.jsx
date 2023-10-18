@@ -79,7 +79,7 @@ const Prducts = () => {
 
       <div className='flex  flex-wrap justify-center   '>
         {products.map((eachProduct, i) => (
-          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name}  />
+          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name} paragraph={eachProduct.description} />
         ))}
       </div>
 

@@ -105,36 +105,36 @@ const CategorySlider = () => {
                     <img className='w-20 h-12' src="https://ozti.com/media/xgipiphp/pastane.svg" alt="" />
                     <h1>Appliances</h1>
                 </div>
-                <div onMouseEnter={() => (setNeutral(true))} onMouseLeave={() => (setNeutral(false))} className='flex flex-col justify-center items-center'>
+                <div onClick={() => {navigate("/StainlessSteel")}} onMouseEnter={() => (setNeutral(true))} onMouseLeave={() => (setNeutral(false))} className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/b1zf4p3m/davlumbaz.svg" alt="" />
                     <h1>Stainless Steel</h1>
                 </div>
-                <div onMouseEnter={() => (setCountertopKitchen(true))} onMouseLeave={() => (setCountertopKitchen(false))} className='flex flex-col justify-center items-center'>
+                <div onClick={() => {navigate("/Cooking")}} onMouseEnter={() => (setCountertopKitchen(true))} onMouseLeave={() => (setCountertopKitchen(false))} className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/0ezpsikc/mutfak_gerecleri.svg" alt="" />
                     <h1>Cooking</h1>
                 </div>
-                <div     onMouseEnter={() => (setBeverageandBar(true))} onMouseLeave={() => (setBeverageandBar(false))}    className='flex flex-col justify-center items-center'>
+                <div onClick={() => {navigate("/Foodprep")}} onMouseEnter={() => (setBeverageandBar(true))} onMouseLeave={() => (setBeverageandBar(false))}    className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/nlbmh4kh/buzlar-portakal.png" alt="" />
                     <h1>Food prep</h1>
                 </div>
-                <div onMouseEnter={() => (setTeaCoffee(true))} onMouseLeave={() => (setTeaCoffee(false))} className='flex flex-col justify-center items-center'>
+                <div onClick={() => {navigate("/Beverage")}} onMouseEnter={() => (setTeaCoffee(true))} onMouseLeave={() => (setTeaCoffee(false))} className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/yrxeybpa/kahve_makinasi.svg" alt="" />
                     <h1>Beverage Equipment</h1>
                 </div>
 
 
-                <div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
+                <div onClick={() => {navigate("/Pizzeria")}} onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
                 <img className='w-20 h-12	' src="https://ozti.com/media/hbpeulq3/ada-mutfak.svg" alt="" />
                     <h1>Pizzeria & Grill</h1>
 
                 </div>
 
-<div onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
+<div onClick={() => {navigate("/Ovens")}} onMouseEnter={() => (setMainKitchenEquiment(true))} onMouseLeave={() => (setMainKitchenEquiment(false))} className='flex flex-col justify-center items-center'  >
                     <img className='w-20 h-12	' src="https://ozti.com/media/mhtltgf5/ocak.svg" alt="" />
                     <h1>Oven & Steamers</h1>
 
                 </div>
-                <div  onMouseEnter={() => (setDesktopandPresentationEquiment(true))} onMouseLeave={() => (setDesktopandPresentationEquiment(false))} className='flex flex-col justify-center items-center'>
+                <div onClick={() => {navigate("/Utensils")}} onMouseEnter={() => (setDesktopandPresentationEquiment(true))} onMouseLeave={() => (setDesktopandPresentationEquiment(false))} className='flex flex-col justify-center items-center'>
                     <img className='w-20 h-12	' src="https://ozti.com/media/odhfgpj3/spoon.svg" alt="" />
                     <h1>Utensils</h1>
                 </div>

@@ -29,7 +29,7 @@ const Cardss = ({ index ,  price , img , text , paragraph ,   }) => {
       <img src={img} alt="Potato Peeling Machine" className="w-4/5 mx-auto rounded-lg shadow-md" />
       <div className="text-center mt-4">
         <h3 className="text-xl font-semibold">{text}</h3>
-        <p className="text-gray-600 mt-2">{paragraph}</p>
+       {/* <p className="text-gray-600 mt-2">{paragraph}</p> */}
         <p className="text-black font-bold text-2xl mt-2">£{price}</p>
       </div>
       <button

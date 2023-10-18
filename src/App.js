@@ -49,6 +49,12 @@ import Refrigration from "./Pages/Categorypages/Refrigeration";
 import Dishwashing from "./Pages/Categorypages/Dishwashing";
 import Appliances from "./Pages/Categorypages/Appliances";
 import Stainlesssteel from "./Pages/Categorypages/Stainlesssteel";
+import Cooking from "./Pages/Categorypages/Cooking";
+import Foodprep from "./Pages/Categorypages/Foodprep";
+import Beverage from "./Pages/Categorypages/Beverage";
+import Pizzeria from "./Pages/Categorypages/Pizzaria";
+import Ovens from "./Pages/Categorypages/Ovens";
+import Utensils from "./Pages/Categorypages/Utensils";
 
 function App() {
   return (
@@ -76,10 +82,7 @@ function App() {
               <Route path="/Profile" element={<Profile />} />
               <Route path="/AddProduct/user" element={<AddProductuser />} />
               <Route path="/Allproduct" element={<Allproduct />} />
-              <Route
-                path="/AllProductDashboad"
-                element={<AllProductDashboad />}
-              />
+              <Route path="/AllProductDashboad" element={<AllProductDashboad />} />
               <Route path="/AllUser" element={<AllUser />} />
               <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
               <Route path="/Productdetail2" element={<Productdetail2 />} />
@@ -91,7 +94,13 @@ function App() {
               <Route path="/Refrigeration" element={<Refrigration />} />
               <Route path="/Dishwashing" element={<Dishwashing />} />
               <Route path="/Appliances" element={<Appliances />} />
-              <Route path="/Stainlesssteel" element={<Stainlesssteel />} />
+              <Route path="/StainlessSteel" element={<Stainlesssteel />} />
+              <Route path="/Cooking" element={<Cooking />} />
+              <Route path="/Foodprep" element={<Foodprep />} />
+              <Route path="/Beverage" element={<Beverage />} />
+              <Route path="/Pizzeria" element={<Pizzeria />} />
+              <Route path="/Ovens" element={<Ovens />} />
+              <Route path="/Utensils" element={<Utensils />} />
               <Route path="/EditProduct/:id" element={<EdittProduct />} />
               <Route path="/Editproductuser/:id" element={<Editproductuser />} />
               <Route path="/EditUser/:id" element={<EditUser />} />
