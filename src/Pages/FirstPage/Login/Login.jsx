@@ -17,10 +17,10 @@ const Login = () => {
     >
       <div className="flex flex-col">
         <h3 style={{ color: "#EC0C36" }} className="text-2xl py-4">
-          Service
+          Login
         </h3>
-        <h1 className="text-white text-4xl font-bold mb-4">Spare Part</h1>
-        <p className="text-white">
+        {/*<h1 className="text-white text-4xl font-bold mb-4">Login</h1>
+   */}      <p className="text-white">
           You can choose the desired and desired product and send the offer form
           to our e-mail address You can choose the product you want and send it
           to our e-mail address.

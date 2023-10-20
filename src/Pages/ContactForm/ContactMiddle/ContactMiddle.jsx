@@ -111,9 +111,9 @@ const ContactMiddle = () => {
 </div>
 
               <div class="ml-6 grow">
-                <p class="mb-2 font-bold text-black">Press</p>
+                <p class="mb-2 font-bold text-black">Info</p>
                 <p class="text-black  ">
-                  press@equimentSupplier.com
+                  info@equimentSupplier.com
                 </p>
                 <p class="text-black  ">
                   +1 234-567-89

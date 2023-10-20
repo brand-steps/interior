@@ -22,7 +22,7 @@ const MainPage = () => {
   <ProductSlider/>
   <Services/>
   <Login/>
-  <FairsComponent/>
+   {/*<FairsComponent/>*/}
   <Footer/>
     </div>
   )

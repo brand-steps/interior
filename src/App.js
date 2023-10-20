@@ -55,6 +55,7 @@ import Beverage from "./Pages/Categorypages/Beverage";
 import Pizzeria from "./Pages/Categorypages/Pizzaria";
 import Ovens from "./Pages/Categorypages/Ovens";
 import Utensils from "./Pages/Categorypages/Utensils";
+import Subcategorypage from "./Pages/SubCategory/Subcategorypage";
 
 function App() {
   return (
@@ -104,6 +105,7 @@ function App() {
               <Route path="/EditProduct/:id" element={<EdittProduct />} />
               <Route path="/Editproductuser/:id" element={<Editproductuser />} />
               <Route path="/EditUser/:id" element={<EditUser />} />
+              <Route path="/Subcategorypage/:subcat" element={<Subcategorypage />} />
 
             </Routes>
           </BrowserRouter>

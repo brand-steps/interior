@@ -21,7 +21,7 @@ const Cards = () => {
         </Link>
     </div>
     <div class="w-11/12 md:w-1/4 shadow-red transform hover:-translate-y-1 hover:scale-105 hover:transition">
-    <Link to={"/TechnicalService"}>
+    <Link to={"/Contact"}>
     
         <img src={img3} alt="" class="w-full h-auto" />
         </Link>
