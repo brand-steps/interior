@@ -15,7 +15,18 @@ const Pizzeria = () => {
     const [numberOfPages, setnumberOfPages] = useState(9)
     const [StarsArray, setStarsArray] = useState([1, 2, 3])
 
-    
+    const [icecream , Seticecream] = useState("Pizza Ovens");
+    const [juice , Setjuice] = useState("Pizza Prep Counters");
+    const [machine , Setmachine] = useState("Dough Kneaders & Mixers");
+    const [mixers , Setmixers] = useState("Gyros Donar Kebab Grills");
+    const [slush , Setslush] = useState("Planetary Mixers");
+    const [bar , Setbar] = useState("Rotisseries Ovens");
+    const [milshake , Setmilshake] = useState("Charcoal Grills");
+    const [espress , Setespress] = useState("Pita Ovens & Salamander Grills");
+    const [filter , Setfilter] = useState("Chicken Warmers");
+    const [coffee , Setcoffee] = useState("Dough Rollers & Dough Sheeters");
+    const [percol , Setpercol] = useState("Pizza Storage & Transport");
+    const [water , Setwater] = useState("Pizza Utensils");    
 
   const containerStyle = {
     display: 'flex',
@@ -52,7 +63,44 @@ const Pizzeria = () => {
       console.log("Error In Getting All Products ", error);
     }
   };
-
+  const Geticecream = () => {
+    navigate(`/Subcategorypage/${icecream}`)
+  }
+  const Getjuice = () => {
+    navigate(`/Subcategorypage/${juice}`)
+  }
+  const Getmachine = () => {
+    navigate(`/Subcategorypage/${machine}`)
+  }
+  const Getmixers = () => {
+    navigate(`/Subcategorypage/${mixers}`)
+  }
+  const Getslush = () => {
+    navigate(`/Subcategorypage/${slush}`)
+  }
+  const getbar = () => {
+    navigate(`/Subcategorypage/${bar}`)
+  }
+  const getmilshake = () => {
+    navigate(`/Subcategorypage/${milshake}`)
+  }
+    
+  const Getespress = () => {
+    navigate(`/Subcategorypage/${espress}`)
+  }
+  const Getfilter = () => {
+    navigate(`/Subcategorypage/${filter}`)
+  }
+  const Getcoffee = () => {
+    navigate(`/Subcategorypage/${coffee}`)
+  }
+  const Getpercol = () => {
+    navigate(`/Subcategorypage/${percol}`)
+  }
+  const Getwater = () => {
+    navigate(`/Subcategorypage/${water}`)
+  }
+  
   useEffect(() => {
     console.log('asdasd')
     getAllProducts()
@@ -66,56 +114,56 @@ const Pizzeria = () => {
         
         <div className='flex justify-evenly flex-wrap my-4' >
 
-        <div style={containerStyle} className="subhovers">
+        <div style={containerStyle} className="subhovers" onClick={Geticecream}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/LZ-2-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pizza Ovens</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getjuice}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PZ3600-VRX-castors-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pizza Prep Counters</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmachine}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DN50B-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Dough Kneaders & Mixers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmixers}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DONER-EL-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Gyros Donar Kebab Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getslush}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CM10-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Planetary Mixers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbar}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CRG4-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Rotisseries Ovens</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getmilshake}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/MNGL-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Charcoal Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getespress}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/AT-937_938-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Pita Ovens / Salamander Grills</p>
+        <p>Pita Ovens & Salamander Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getfilter}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BBQGN4-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Chicken Warmers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/H30-40-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Dough Rollers & Dough Sheeters</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getpercol}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GPH-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pizza Storage & Transport</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getwater}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SPP9012W-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pizza Utensils</p>
       </div>

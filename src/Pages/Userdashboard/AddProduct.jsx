@@ -183,7 +183,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
         <option value="Serve Over Counters & Deli Display Refrigerators">Serve Over Counters & Deli Display Refrigerators</option>
         <option value="Counter Fridges">Counter Fridges</option>
         <option value="Dry Aging Refrigerators">Dry Aging Refrigerators</option>
-        <option value="Refrigerated COunters / Chef Bases">Low Refrigerated COunters / Chef Bases</option>
+        <option value="Low Refrigerated Counters Chef Bases">Low Low Refrigerated Counters Chef Bases</option>
         <option value="Counter Freezers">Counter Freezers</option>
         <option value="Refrigerated Pizza Tables">Refrigerated Pizza Tables</option>
         <option value="Salad & Sandwitch Preparation Counters">Salad & Sandwitch Preparation Counters</option>
@@ -348,7 +348,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
         <option value="Planetary Mixers">Planetary Mixers</option>
         <option value="Rotisseries Ovens">Rotisseries Ovens</option>
         <option value="Charcoal Grills">Charcoal Grills</option>
-        <option value="Pita Ovens / Salamander Grills">Pita Ovens / Salamander Grills</option>
+        <option value="Pita Ovens & Salamander Grills">Pita Ovens & Salamander Grills</option>
         <option value="Chicken Warmers">Chicken Warmers</option>
         <option value="Dough Rollers & Dough Sheeters">Dough Rollers & Dough Sheeters</option>
         <option value="Pizza Storage & Transport">Pizza Storage & Transport</option>

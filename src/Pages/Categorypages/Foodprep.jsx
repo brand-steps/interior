@@ -15,7 +15,18 @@ const Foodprep = () => {
     const [numberOfPages, setnumberOfPages] = useState(9)
     const [StarsArray, setStarsArray] = useState([1, 2, 3])
 
-    
+    const [icecream , Seticecream] = useState("Planetary Mixers");
+    const [juice , Setjuice] = useState("Spiral Mixers & Dough Kneaders");
+    const [machine , Setmachine] = useState("Vegetable Prep Machines");
+    const [mixers , Setmixers] = useState("Hand Mixers & immersion Blenders");
+    const [slush , Setslush] = useState("Meat Mincers");
+    const [bar , Setbar] = useState("Meat Slicers");
+    const [milshake , Setmilshake] = useState("Bone Saw Machines");
+    const [espress , Setespress] = useState("Sausage Stuffers");
+    const [filter , Setfilter] = useState("Potato peelers");
+    const [coffee , Setcoffee] = useState("Bread Slicers");
+    const [percol , Setpercol] = useState("Vacuum Machines");
+    const [water , Setwater] = useState("Hamburger Presses");
 
   const containerStyle = {
     display: 'flex',
@@ -53,6 +64,44 @@ const Foodprep = () => {
     }
   };
 
+  const Geticecream = () => {
+    navigate(`/Subcategorypage/${icecream}`)
+  }
+  const Getjuice = () => {
+    navigate(`/Subcategorypage/${juice}`)
+  }
+  const Getmachine = () => {
+    navigate(`/Subcategorypage/${machine}`)
+  }
+  const Getmixers = () => {
+    navigate(`/Subcategorypage/${mixers}`)
+  }
+  const Getslush = () => {
+    navigate(`/Subcategorypage/${slush}`)
+  }
+  const getbar = () => {
+    navigate(`/Subcategorypage/${bar}`)
+  }
+  const getmilshake = () => {
+    navigate(`/Subcategorypage/${milshake}`)
+  }
+    
+  const Getespress = () => {
+    navigate(`/Subcategorypage/${espress}`)
+  }
+  const Getfilter = () => {
+    navigate(`/Subcategorypage/${filter}`)
+  }
+  const Getcoffee = () => {
+    navigate(`/Subcategorypage/${coffee}`)
+  }
+  const Getpercol = () => {
+    navigate(`/Subcategorypage/${percol}`)
+  }
+  const Getwater = () => {
+    navigate(`/Subcategorypage/${water}`)
+  }
+  
   useEffect(() => {
     console.log('asdasd')
     getAllProducts()
@@ -66,56 +115,56 @@ const Foodprep = () => {
         
         <div className='flex justify-evenly flex-wrap my-4' >
 
-        <div style={containerStyle} className="subhovers">
+        <div style={containerStyle} className="subhovers" onClick={Geticecream}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CM10-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Planetary Mixers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getjuice}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DN50B-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Spiral Mixers & Dough Kneaders</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmachine}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HLC300-1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Vegetable Prep Machines</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmixers}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HM265-3-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Hand Mixers & immersion Blenders</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getslush}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/G79-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Meat Mincers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbar}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HBS220-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Meat Slicers</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getmilshake}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HLS-202-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Bone Saw Machines</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getespress}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SV-5-1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Sausage Stuffers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getfilter}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HLP20-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Potato peelers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EK4332-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Bread Slicers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getpercol}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/STV030-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Vacuum Machines</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getwater}>
         <img src="https://adexa.co.uk/image/cache/catalog/GGG/HF-100-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Hamburger Presses</p>
       </div>

@@ -15,7 +15,29 @@ const Stainlesssteel = () => {
     const [numberOfPages, setnumberOfPages] = useState(9)
     const [StarsArray, setStarsArray] = useState([1, 2, 3])
 
-    
+    const [icecream , Seticecream] = useState("Work Tables");
+    const [juice , Setjuice] = useState("Sink Units with 1 & 2 Bowls");
+    const [machine , Setmachine] = useState("Sink Units with 3 Bowls");
+    const [mixers , Setmixers] = useState("Sink Top Storage Cupboards");
+    const [slush , Setslush] = useState("Sink Tops");
+    const [bar , Setbar] = useState("Sink Units For Dishwashers");
+    const [milshake , Setmilshake] = useState("Wall Shelves");
+    const [espress , Setespress] = useState("Wash Basin & Hand Sinks");
+    const [filter , Setfilter] = useState("Bar Sinks");
+    const [coffee , Setcoffee] = useState("Base Storage Cupboards");
+    const [percol , Setpercol] = useState("Ice Bins");
+    const [water , Setwater] = useState("Plain Top Hot Cupboards");
+    const [choco , Setchoco] = useState("Cabinet Storage Cupboards");
+    const [cup , Setcup] = useState("Work Stations");    
+    const [Glass , SetGlass] = useState("Wall Cupboards");
+    const [underdish , Setunderdish] = useState("Gantries & Chefs Passes");
+    const [passthrough , Setpassthrough] = useState("Extraction Canopies");
+    const [dishwash , Sedishwash] = useState("Grease Traps & Fat Seperators");
+    const [cuttlery , Setcuttlery] = useState("Shelving Units");
+    const [shower , Setshower] = useState("Equipment Stands");
+    const [racks , Setracks] = useState("Waste Bins");
+    const [candy , Setcandy] = useState("Trolleys & Carts");
+    const [insect , Setinsect] = useState("Stainless Steel GN Pans & Container");    
 
   const containerStyle = {
     display: 'flex',
@@ -53,6 +75,77 @@ const Stainlesssteel = () => {
     }
   };
 
+  const Geticecream = () => {
+    navigate(`/Subcategorypage/${icecream}`)
+  }
+  const Getjuice = () => {
+    navigate(`/Subcategorypage/${juice}`)
+  }
+  const Getmachine = () => {
+    navigate(`/Subcategorypage/${machine}`)
+  }
+  const Getmixers = () => {
+    navigate(`/Subcategorypage/${mixers}`)
+  }
+  const Getslush = () => {
+    navigate(`/Subcategorypage/${slush}`)
+  }
+  const getbar = () => {
+    navigate(`/Subcategorypage/${bar}`)
+  }
+  const getmilshake = () => {
+    navigate(`/Subcategorypage/${milshake}`)
+  }
+    
+  const Getespress = () => {
+    navigate(`/Subcategorypage/${espress}`)
+  }
+  const Getfilter = () => {
+    navigate(`/Subcategorypage/${filter}`)
+  }
+  const Getcoffee = () => {
+    navigate(`/Subcategorypage/${coffee}`)
+  }
+  const Getpercol = () => {
+    navigate(`/Subcategorypage/${percol}`)
+  }
+  const Getwater = () => {
+    navigate(`/Subcategorypage/${water}`)
+  }
+  const getchoco = () => {
+    navigate(`/Subcategorypage/${choco}`)
+  }
+  const getcup = () => {
+    navigate(`/Subcategorypage/${cup}`)
+  }
+  const GetGlass = () => {
+    navigate(`/Subcategorypage/${Glass}`)
+  }
+  const Getunderdish = () => {
+    navigate(`/Subcategorypage/${underdish}`)
+  }
+  const Getpassthrough = () => {
+    navigate(`/Subcategorypage/${passthrough}`)
+  }
+  const Getdishwash = () => {
+    navigate(`/Subcategorypage/${dishwash}`)
+  }
+  const Getcuttlery = () => {
+    navigate(`/Subcategorypage/${cuttlery}`)
+  }
+  const getshower = () => {
+    navigate(`/Subcategorypage/${shower}`)
+  }
+  const getracks = () => {
+    navigate(`/Subcategorypage/${racks}`)
+  }
+  const getcandy = () => {
+    navigate(`/Subcategorypage/${candy}`)
+  }
+  const getinsect = () => {
+    navigate(`/Subcategorypage/${insect}`)
+  }
+
   useEffect(() => {
     console.log('asdasd')
     getAllProducts()
@@ -66,99 +159,99 @@ const Stainlesssteel = () => {
         
         <div className='flex justify-evenly flex-wrap my-4' >
 
-        <div style={containerStyle} className="subhovers">
+        <div style={containerStyle} className="subhovers" onClick={Geticecream}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/TA710D-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Work Tables</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getjuice}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SN610DL-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Sink Units with 1 & 2 Bowls</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmachine}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HJS1803-6-175x175.JPG" alt="Fairs" style={imageStyle} />
         <p>Sink Units with 3 Bowls</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmixers}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DSN610L-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Sink Top Storage Cupboards</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getslush}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HMS77F-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Sink Tops</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbar}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SR612DL-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Sink Units For Dishwashers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getmilshake}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DRD305-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Wall Shelves</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getespress}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THHWR43K-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Wash Basin & Hand Sinks</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getfilter}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BAR2B48LR-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Bar Sinks</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THASR-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Base Storage Cupboards</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getpercol}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/IB182408-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Ice Bins</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getwater}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THWSR-A-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Plain Top Hot Cupboards</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getchoco}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ED612D-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Cabinet Storage Cupboards</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getcup}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GW2400-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Work Stations</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={GetGlass}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WCR-1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Wall Cupboards</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getunderdish}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/gantry-2-levels-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Gantries & Chefs Passes</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getpassthrough}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HKF-HLF-HMF-1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Extraction Canopies</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getdishwash}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/OS-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Grease Traps & Fat Seperators</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcuttlery}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SV412C-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Shelving Units</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getshower}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ES4187660-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Equipment Stands</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getracks}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WT95-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Waste Bins</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getcandy}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/C102-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Trolleys & Carts</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getinsect}>
         <img src="https://adexa.co.uk/image/cache/catalog/Misc/tray-stainless-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Stainless Steel GN Pans & Containers</p>
       </div>

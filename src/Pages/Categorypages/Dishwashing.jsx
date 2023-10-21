@@ -15,6 +15,13 @@ const Dishwashing = () => {
     const [numberOfPages, setnumberOfPages] = useState(9)
     const [StarsArray, setStarsArray] = useState([1, 2, 3])
 
+    const [Glass , SetGlass] = useState("Glasswashers");
+    const [underdish , Setunderdish] = useState("Undercounter Dishwashers");
+    const [passthrough , Setpassthrough] = useState("Pass Through Dishwashers");
+    const [dishwash , Sedishwash] = useState("Dishwasher Tables");
+    const [cuttlery , Setcuttlery] = useState("Cuttlery & Glass Polishers");
+    const [shower , Setshower] = useState("Shower Unit & Faucets");
+    const [racks , Setracks] = useState("Dishwasher Racks");
     
 
   const containerStyle = {
@@ -53,6 +60,27 @@ const Dishwashing = () => {
     }
   };
 
+  const GetGlass = () => {
+    navigate(`/Subcategorypage/${Glass}`)
+  }
+  const Getunderdish = () => {
+    navigate(`/Subcategorypage/${underdish}`)
+  }
+  const Getpassthrough = () => {
+    navigate(`/Subcategorypage/${passthrough}`)
+  }
+  const Getdishwash = () => {
+    navigate(`/Subcategorypage/${dishwash}`)
+  }
+  const Getcuttlery = () => {
+    navigate(`/Subcategorypage/${cuttlery}`)
+  }
+  const getshower = () => {
+    navigate(`/Subcategorypage/${shower}`)
+  }
+  const getracks = () => {
+    navigate(`/Subcategorypage/${racks}`)
+  }
   useEffect(() => {
     console.log('asdasd')
     getAllProducts()
@@ -66,32 +94,32 @@ const Dishwashing = () => {
         
         <div className='flex justify-evenly flex-wrap my-4' >
 
-        <div style={containerStyle} className="subhovers">
+        <div style={containerStyle} className="subhovers" onClick={GetGlass}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BW800-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Glasswashers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getunderdish}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DW500P-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Undercounter Dishwashers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getpassthrough}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DW1040TP-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pass Through Dishwashers</p>
       </div>
-            <div style={containerStyle} className="subhovers">
+            <div style={containerStyle} className="subhovers" onClick={Getdishwash}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SR612DR-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Dishwasher Tables</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcuttlery}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BPR002-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Cuttlery & Glass Polishers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getshower}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/VT04-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Shower Unit & Faucets</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getracks}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/500x500x105-plates_1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Dishwasher Racks</p>
       </div>

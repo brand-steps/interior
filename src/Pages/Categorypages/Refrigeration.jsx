@@ -29,6 +29,23 @@ const Refrigration = () => {
     const [chestfre , Setchestfre] = useState("Chest Freezers");
     const [refdis , Setrefdis] = useState("Refrigerated Displays & Merchandisers");
     const [cakecoun , Setcakecoun] = useState("Cake Counters & Patisserie Showcases");
+    const [serveover , Setserveover] = useState("Serve Over Counters & Deli Display Refrigerators");
+    const [counterfri , Setcounterfri] = useState("Counter Fridges");
+    const [dryagi , Setdryagi] = useState("Dry Aging Refrigerators");
+    const [lowref , Setlowref] = useState("Low Refrigerated Counters Chef Bases");
+    const [counterfre , Setcounterfre] = useState("Counter Freezers");
+    const [pizzatab , Setpizzatab] = useState("Refrigerated Pizza Tables");
+        const [salad , Setsalad] = useState("Salad & Sandwitch Preparation Counters");
+    const [Saladettes , SetSaladettes] = useState("Saladettes");
+    const [displayref , Setdisplayref] = useState("Display Refrigerated Counters");
+    const [bakery , Setbakery] = useState("Bakery Refrigeration");
+    const [preptops , Setpreptops] = useState("Refrigerated Prep Tops");
+    const [sushi , Setsushi] = useState("Sushi & Tapas Display Showcases");   
+     const [multi , Setmulti] = useState("Multi Deck Displays & Refrigerated Wall Cabinets");
+     const [supers , Setsupers] = useState("Supermarket Refrigerators");
+    const [balst , Setbalst] = useState("Blast Chillers & Flash Freezers");
+    const [coldroom , Setcoldroom] = useState("Cold Rooms & Freezer Rooms");
+    const [dis , Setdis] = useState("Display Refrigeration");
 
   const containerStyle = {
     display: 'flex',
@@ -107,6 +124,61 @@ const getrefdis = () => {
 const getcakecoun = () => {
   navigate(`/Subcategorypage/${cakecoun}`)
 }
+const getserveover = () => {
+  navigate(`/Subcategorypage/${serveover}`)
+}
+const getcounterfri = () => {
+  navigate(`/Subcategorypage/${counterfri}`)
+}
+const getdryagi = () => {
+  navigate(`/Subcategorypage/${dryagi}`)
+}
+
+const getlowref = () => {
+  navigate(`/Subcategorypage/${lowref}`)
+}
+const getcounterfre = () => {
+  navigate(`/Subcategorypage/${counterfre}`)
+}
+const getpizzatab = () => {
+  navigate(`/Subcategorypage/${pizzatab}`)
+}
+const getsalad = () => {
+  navigate(`/Subcategorypage/${salad}`)
+}
+const getSaladettes = () => {
+  navigate(`/Subcategorypage/${Saladettes}`)
+}
+const getdisplayref = () => {
+  navigate(`/Subcategorypage/${displayref}`)
+}
+const getbakery = () => {
+  navigate(`/Subcategorypage/${bakery}`)
+}
+const getpreptops = () => {
+  navigate(`/Subcategorypage/${preptops}`)
+}
+const getsushi = () => {
+  navigate(`/Subcategorypage/${sushi}`)
+}
+const getmulti = () => {
+  navigate(`/Subcategorypage/${multi}`)
+}
+const getsupers = () => {
+  navigate(`/Subcategorypage/${supers}`)
+}
+const getbalst = () => {
+  navigate(`/Subcategorypage/${balst}`)
+}
+const getcoldroom = () => {
+  navigate(`/Subcategorypage/${coldroom}`)
+}
+
+const getdis = () => {
+  navigate(`/Subcategorypage/${dis}`)
+}
+
+
   useEffect(() => {
     console.log('asdasd')
     getAllProducts()
@@ -179,72 +251,72 @@ const getcakecoun = () => {
         <img src="https://adexa.co.uk/image/cache/catalog/GGM/CS-1000ER2-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Cake Counters & Patisserie Showcases</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getserveover}>
         <img src="https://adexa.co.uk/image/cache/catalog/Coreco/CVED-10-20-R--175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Serve Over Counters & Deli Display Refrigerators</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getcounterfri}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GN3160TN-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Counter Fridges</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getdryagi}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SW415N-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Dry Aging Refrigerators</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getlowref}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/H1800-175x175.jpg" alt="Fairs" style={imageStyle} />
-        <p>Low Refrigerated COunters / Chef Bases</p>
+        <p>Low Refrigerated Counters Chef Bases</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getcounterfre}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GN3100BT--175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Counter Freezers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getpizzatab}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PZ3600-VRX-castors-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Refrigerated Pizza Tables</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getsalad}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PS200-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Salad & Sandwitch Preparation Counters</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getSaladettes}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/S900-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Saladettes</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getdisplayref}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THSAI188-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Display Refrigerated Counters</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbakery}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GN3100BT--175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Bakery Refrigeration</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getpreptops}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/VRX-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Refrigerated Prep Tops</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getsushi}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/RTS132--175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Sushi & Tapas Display Showcases</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getmulti}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BLF-10-13-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Multi Deck Displays & Refrigerated Wall Cabinets</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getsupers}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/VFCIF250-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Supermarket Refrigerators</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbalst}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BCF40-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Blast Chillers & Flash Freezers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getcoldroom}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/Cold-Room-01-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Cold Rooms & Freezer Rooms</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getdis}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/STP1310-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Display Refrigeration</p>
       </div>

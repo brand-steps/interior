@@ -15,7 +15,20 @@ const Cooking = () => {
     const [numberOfPages, setnumberOfPages] = useState(9)
     const [StarsArray, setStarsArray] = useState([1, 2, 3])
 
-    
+    const [icecream , Seticecream] = useState("Boiling Tops & Hobs");
+    const [juice , Setjuice] = useState("Induction");
+    const [machine , Setmachine] = useState("Range Ovens & Floor Standing Cooker");
+    const [mixers , Setmixers] = useState("Bains Marie & Hotpots");
+    const [slush , Setslush] = useState("Chargrills & Gas Grills");
+    const [bar , Setbar] = useState("BBQ Grills");
+    const [milshake , Setmilshake] = useState("Chip Scuttles");
+    const [espress , Setespress] = useState("Fryers");
+    const [filter , Setfilter] = useState("Griddles");
+    const [coffee , Setcoffee] = useState("Pasta Boilers");
+    const [percol , Setpercol] = useState("Tilting Bratt Pans");
+    const [water , Setwater] = useState("Wok Stoves");
+    const [choco , Setchoco] = useState("Bases & Neutral Units");
+    const [cup , Setcup] = useState("Modular Cooking Ranges");     
 
   const containerStyle = {
     display: 'flex',
@@ -53,6 +66,49 @@ const Cooking = () => {
     }
   };
 
+  const Geticecream = () => {
+    navigate(`/Subcategorypage/${icecream}`)
+  }
+  const Getjuice = () => {
+    navigate(`/Subcategorypage/${juice}`)
+  }
+  const Getmachine = () => {
+    navigate(`/Subcategorypage/${machine}`)
+  }
+  const Getmixers = () => {
+    navigate(`/Subcategorypage/${mixers}`)
+  }
+  const Getslush = () => {
+    navigate(`/Subcategorypage/${slush}`)
+  }
+  const getbar = () => {
+    navigate(`/Subcategorypage/${bar}`)
+  }
+  const getmilshake = () => {
+    navigate(`/Subcategorypage/${milshake}`)
+  }
+    
+  const Getespress = () => {
+    navigate(`/Subcategorypage/${espress}`)
+  }
+  const Getfilter = () => {
+    navigate(`/Subcategorypage/${filter}`)
+  }
+  const Getcoffee = () => {
+    navigate(`/Subcategorypage/${coffee}`)
+  }
+  const Getpercol = () => {
+    navigate(`/Subcategorypage/${percol}`)
+  }
+  const Getwater = () => {
+    navigate(`/Subcategorypage/${water}`)
+  }
+  const getchoco = () => {
+    navigate(`/Subcategorypage/${choco}`)
+  }
+  const getcup = () => {
+    navigate(`/Subcategorypage/${cup}`)
+  }
   useEffect(() => {
     console.log('asdasd')
     getAllProducts()
@@ -66,62 +122,64 @@ const Cooking = () => {
         
         <div className='flex justify-evenly flex-wrap my-4' >
 
-        <div style={containerStyle} className="subhovers">
+        <div style={containerStyle} className="subhovers" onClick={Geticecream}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ER721KS-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Boiling Tops & Hobs</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getjuice}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EMO3K5S-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Induction</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmachine}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GR922-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Range Ovens & Floor Standing Cookers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmixers}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EB606-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Bains Marie & Hotpots</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getslush}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GGL721S-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Chargrills & Gas Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbar}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SE21-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>BBQ Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getmilshake}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EPC711-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Chip Scuttles</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      </div>
+      <div className='flex justify-evenly flex-wrap my-4' >
+      <div style={containerStyle} className="subhovers" onClick={Getespress}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GF912-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Fryers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getfilter}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EG606-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Griddles</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/7ME0102016-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pasta Boilers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getpercol}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EP922-1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Tilting Bratt Pans</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getwater}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THZ2-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Wok Stoves</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getchoco}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/7TS020-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Bases & Neutral Units</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getcup}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/hotmax600-1-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Modular Cooking Ranges</p>
       </div>
