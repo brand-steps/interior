@@ -83,7 +83,6 @@ const CategorySlider = () => {
 
     return (
         <div className='mx-6 my-4' >
-<button>find</button>
             <Carousel
                 swipeable={true}
                 arrows={true}

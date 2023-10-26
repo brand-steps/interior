@@ -144,7 +144,7 @@ const Home = () => {
           <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
             <Link to="/UserDashboard">
               <span>
-                {responce.username}<i className="fa fa-user" aria-hidden="true"></i>
+                {responce.firstname} <i className="fa fa-user" aria-hidden="true"></i>
               </span>
             </Link>
           </li>

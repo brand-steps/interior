@@ -7,6 +7,8 @@ import { useContext } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { MyContext } from '../Context/Context';
 import CartContext from '../Context/CartContext';
+import { Table } from 'flowbite-react';
+
 const Productdetail = () => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
@@ -16,6 +18,7 @@ const Productdetail = () => {
   const {description, setDescription} = useContext(MyContext);
   const {quantityProduct, setQuantityProduct} = useContext(MyContext);
   const {image , setImage } = useContext(MyContext);
+  const {category , setcategory } = useContext(MyContext);
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(parseFloat(pricep.key));
   const [showCart, setShowCart] = useState(false); // State to control cart slider visibility
@@ -24,8 +27,95 @@ const Productdetail = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showDiv, setShowDiv] = useState(false);
   const [neutral , setNeutral ] = useState(false);
+  const [specshow , setSpecshow ] = useState(false);
 
+  const {color , setcolor } = useContext(MyContext);
+  const {material , setmaterial } = useContext(MyContext);
+  const {capacity , setCapacity } = useContext(MyContext);
+  const {shelves , setshelves } = useContext(MyContext);
+  const {lid , setlid } = useContext(MyContext);
+  const {lightening , setlightening } = useContext(MyContext);
+  const {level , setlevel } = useContext(MyContext);
+  const {door , setdoor } = useContext(MyContext);
+  const {Width , setWidth } = useContext(MyContext);
+  const {depth , setDepth } = useContext(MyContext);
+  const {height , setHeight } = useContext(MyContext);
+  const {weight , setWeight } = useContext(MyContext);
+  const {consumption , setconsumption } = useContext(MyContext);
+  const {supply , setsupply } = useContext(MyContext);
+  const {power , setPower } = useContext(MyContext);
+  const {temperature , settemperature } = useContext(MyContext);
+  const {refrigerant , setrefrigerant } = useContext(MyContext);
+  const {cooling , setcooling } = useContext(MyContext);
+  const {warranty , setwarranty } = useContext(MyContext);
+  const {castors , setcastors } = useContext(MyContext);
+  const {tray , settray } = useContext(MyContext);
+  const {pressure , setpressure } = useContext(MyContext);
+  const {production , setproduction } = useContext(MyContext);
+  const {innerheight , setinnerheight } = useContext(MyContext);
+  const {basket , setbasket } = useContext(MyContext);
+  const {programs , setprograms } = useContext(MyContext);
+  const {volume , setvolume } = useContext(MyContext);
+  const {cycles , setcycles } = useContext(MyContext);
+  const {pump , setpump } = useContext(MyContext);
+  const {rinsepower , setrinsepower } = useContext(MyContext);
+  const {dispenser , setdispenser } = useContext(MyContext);
+  const {rinsefunc , setrinsefunc } = useContext(MyContext);
+  const {volumerinse , setvolumerinse } = useContext(MyContext);
+  const {version , setversion } = useContext(MyContext);
+  const {tap , settap } = useContext(MyContext);
+  const {output , setoutput } = useContext(MyContext);
+  const {feet , setfeet } = useContext(MyContext);
+  const {bottomshelf , setbottomshelf } = useContext(MyContext);
+  const {bowlpos , setbowlpos } = useContext(MyContext);
+  const {sinkbowl , setsinkbowl } = useContext(MyContext);
+  const {upstand , setupstand } = useContext(MyContext);
+  const {assembly , setassembly } = useContext(MyContext);
+  const {timer , settimer } = useContext(MyContext);
+  const {controls , setcontrols } = useContext(MyContext);
+  const {rpm , setrpm } = useContext(MyContext);
+  const {speeds , setspeeds } = useContext(MyContext);
+  const {included , setincluded } = useContext(MyContext);
+  const {weldingbar , setweldingbar } = useContext(MyContext);
+  const {bin , setbin } = useContext(MyContext);
+  const {waterconnection , setwaterconnection } = useContext(MyContext);
+  const {type , settype } = useContext(MyContext);
+  const {lock , setlock } = useContext(MyContext);
+  const {worksurface , setworksurface } = useContext(MyContext);
+  const {gasconsumption , setgasconsumption } = useContext(MyContext);
+  const {defrost , setdefrost } = useContext(MyContext);
+  const {steam , setsteam } = useContext(MyContext);
+  const {pieces , setpieces } = useContext(MyContext);
+  const {diameter , setdiameter } = useContext(MyContext);
+  const {length , setlength } = useContext(MyContext);
 
+  const buttonStyle = {
+    background: '#EC0C36',
+    color: 'white',
+    fontWeight: 'bold',
+    padding: '8px 16px',
+    borderRadius: '8px',
+    marginTop: '12px',
+    cursor: 'pointer',
+  };
+  const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
+    borderRadius: '8px',
+    width: '100px', // Adjust the width as needed
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
+  const containerStyle2 = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    borderRadius: '8px',
+    width: '850px', // Adjust the width as needed
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
   const productCheckOut = () => {
     setShowDiv(true);
     addToCart(allProduct)
@@ -139,11 +229,18 @@ Search
             <div  className="md:w-1/2 pl-4 md:pl-6">
               {/* <img src={image.key} alt="" /> */}
               <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 md:mb-4">
-                {name.key}
+                {name.key} 
               </h1>
-              <p className="text-gray-600 mb-4">
-                {description.key}
+              <p className="text-gray-600 text-xs">
+                Brand: Equipment Supplier
               </p>
+              <p className="text-gray-600 text-xs mb-4">
+                Availability: <span className='text-green-600'>In stock</span>
+              </p>
+             {/* <p className="text-gray-600 mb-4">
+                {description.key}
+                </p> 
+  */}
               <p className="text-lg md:text-2xl text-red-600 font-semibold mb-2">
                 ${totalPrice.toFixed(2)} 
               </p>
@@ -209,7 +306,2065 @@ Search
 
 
             </div>
+            
           </div>
+
+          <div className='flex  justify-evenly flex-wrap my-4'>
+      <div style={containerStyle}>
+<button style={buttonStyle} onClick={() => {setSpecshow(false)}}>Description</button>
+      </div>
+      <div style={containerStyle}>
+
+<button style={buttonStyle} onClick={() => {setSpecshow(true)}}>Specification</button>
+      </div>
+
+
+    </div>
+    {specshow ? (<>
+      <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 md:mb-6">
+                Specification
+              </h1>
+      {category.key === "Refrigeration" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                           {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                           {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                           {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         shelves
+                         </Table.Cell>
+                         <Table.Cell>
+                         {shelves.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           No of lids
+                         </Table.Cell>
+                         <Table.Cell>
+                         {lid.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         lightening
+                         </Table.Cell>
+                         <Table.Cell>
+                         {lightening.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Noise level
+                         </Table.Cell>
+                         <Table.Cell>
+                         {level.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         doors
+                         </Table.Cell>
+                         <Table.Cell>
+                         {door.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Cooling
+                         </Table.Cell>
+                         <Table.Cell>
+                         {cooling.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Refrigerant
+                         </Table.Cell>
+                         <Table.Cell>
+                         {refrigerant.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Diswashing" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                         {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Water pressure inlet
+                         </Table.Cell>
+                         <Table.Cell>
+                         {pressure.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           product casters
+                         </Table.Cell>
+                         <Table.Cell>
+                         {castors.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Tray / Grid Size
+                         </Table.Cell>
+                         <Table.Cell>
+                         {tray.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Production
+                         </Table.Cell>
+                         <Table.Cell>
+                         {production.key}
+                         </Table.Cell>
+                       </Table.Row>
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Inner height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {innerheight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Basket size
+                         </Table.Cell>
+                         <Table.Cell>
+                         {basket.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Dishwashing & Rinsing
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Volume wash tank
+                         </Table.Cell>
+                         <Table.Cell>
+                         {volume.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Programs
+                         </Table.Cell>
+                         <Table.Cell>
+                         {programs.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Washing cycles
+                         </Table.Cell>
+                         <Table.Cell>
+                         {cycles.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Drain pump
+                         </Table.Cell>
+                         <Table.Cell>
+                         {pump.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Rinse tank power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {rinsepower.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Rinse aid dispenser
+                         </Table.Cell>
+                         <Table.Cell>
+                         {dispenser.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Rinse Function
+                         </Table.Cell>
+                         <Table.Cell>
+                         {rinsefunc.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Volume rinse tank
+                         </Table.Cell>
+                         <Table.Cell>
+                         {volumerinse.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Appliances" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                         {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Version
+                         </Table.Cell>
+                         <Table.Cell>
+                         {version.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Dranage tap
+                         </Table.Cell>
+                         <Table.Cell>
+                         {tap.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Inner Height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {innerheight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Product Output
+                         </Table.Cell>
+                         <Table.Cell>
+                         {output.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Stainless Steel" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Bottom Shelf
+                         </Table.Cell>
+                         <Table.Cell>
+                         {bottomshelf.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Bowl position
+                         </Table.Cell>
+                         <Table.Cell>
+                         {bowlpos.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Sink Bowls
+                         </Table.Cell>
+                         <Table.Cell>
+                         {sinkbowl.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           feets
+                         </Table.Cell>
+                         <Table.Cell>
+                         {feet.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Upstand size
+                         </Table.Cell>
+                         <Table.Cell>
+                         {upstand.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Assembled
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Assembled
+                         </Table.Cell>
+                         <Table.Cell>
+                         {assembly.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                      
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Cooking" && (
+                     <> 
+                     <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Timer
+                         </Table.Cell>
+                         <Table.Cell>
+                         {timer.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Inner Height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {innerheight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Controls
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Controls
+                         </Table.Cell>
+                         <Table.Cell>
+                         {controls.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Food prep" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           RPM
+                         </Table.Cell>
+                         <Table.Cell>
+                         {rpm.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Speeds
+                         </Table.Cell>
+                         <Table.Cell>
+                         {speeds.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Included
+                         </Table.Cell>
+                         <Table.Cell>
+                         {included.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                     
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Beverage Equipment" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                         {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         bin
+                         </Table.Cell>
+                         <Table.Cell>
+                         {bin.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Water connection
+                         </Table.Cell>
+                         <Table.Cell>
+                         {waterconnection.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Type
+                         </Table.Cell>
+                         <Table.Cell>
+                         {type.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Production
+                         </Table.Cell>
+                         <Table.Cell>
+                         {production.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Noise level
+                         </Table.Cell>
+                         <Table.Cell>
+                         {level.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Cooling
+                         </Table.Cell>
+                         <Table.Cell>
+                         {cooling.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Refrigerant
+                         </Table.Cell>
+                         <Table.Cell>
+                         {refrigerant.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Pizzeria & Grill" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                         {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         lock
+                         </Table.Cell>
+                         <Table.Cell>
+                         {lock.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Shelves
+                         </Table.Cell>
+                         <Table.Cell>
+                         {shelves.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Work surface
+                         </Table.Cell>
+                         <Table.Cell>
+                         {worksurface.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           tray / grid size
+                         </Table.Cell>
+                         <Table.Cell>
+                         {tray.key}
+                         </Table.Cell>
+                       </Table.Row>
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         gas consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {gasconsumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Controls
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           controls
+                         </Table.Cell>
+                         <Table.Cell>
+                         {controls.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Cooling
+                         </Table.Cell>
+                         <Table.Cell>
+                         {cooling.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Refrigerant
+                         </Table.Cell>
+                         <Table.Cell>
+                         {refrigerant.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Defrost
+                         </Table.Cell>
+                         <Table.Cell>
+                         {defrost.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+                      {category.key === "Oven & Steamers" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                         {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         steam / humidification
+                         </Table.Cell>
+                         <Table.Cell>
+                         {steam.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           timer
+                         </Table.Cell>
+                         <Table.Cell>
+                         {timer.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Included
+                         </Table.Cell>
+                         <Table.Cell>
+                         {included.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           tray / grid size
+                         </Table.Cell>
+                         <Table.Cell>
+                         {tray.key}
+                         </Table.Cell>
+                       </Table.Row>
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         weight
+                         </Table.Cell>
+                         <Table.Cell>
+                         {weight.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Power Sypply
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         output
+                         </Table.Cell>
+                         <Table.Cell>
+                         {output.key}
+                         </Table.Cell>
+                       </Table.Row>
+                     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power consumption
+                         </Table.Cell>
+                         <Table.Cell>
+                         {consumption.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power supply
+                         </Table.Cell>
+                         <Table.Cell>
+                         {supply.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Power
+                         </Table.Cell>
+                         <Table.Cell>
+                         {power.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Controls
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           controls
+                         </Table.Cell>
+                         <Table.Cell>
+                         {controls.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Temperature
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Temperature
+                         </Table.Cell>
+                         <Table.Cell>
+                         {temperature.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+              {category.key === "Utensils" && (
+                     <> <div className='flex  justify-evenly flex-wrap my-4'>
+                     <div style={containerStyle2}>
+                    
+                     <Table>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Miscellaneous
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Color
+                         </Table.Cell>
+                         <Table.Cell>
+                         {color.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Material
+                         </Table.Cell>
+                         <Table.Cell>
+                         {material.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Capacity
+                         </Table.Cell>
+                         <Table.Cell>
+                         {capacity.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Pieces
+                         </Table.Cell>
+                         <Table.Cell>
+                         {pieces.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       
+                     </Table.Body>
+                     <Table.Head>
+                       <Table.HeadCell>
+                       Dimensions
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         Width
+                         </Table.Cell>
+                         <Table.Cell>
+                         {Width.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         depth
+                         </Table.Cell>
+                         <Table.Cell>
+                         {depth.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         height
+                         </Table.Cell>
+                         <Table.Cell>
+                         {height.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         length
+                         </Table.Cell>
+                         <Table.Cell>
+                         {length.key}
+                         </Table.Cell>
+                       </Table.Row>
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                         diameter
+                         </Table.Cell>
+                         <Table.Cell>
+                         {diameter.key}
+                         </Table.Cell>
+                       </Table.Row>
+
+                       </Table.Body>
+                     
+                       <Table.Head>
+                       <Table.HeadCell>
+                       Warranty
+                       </Table.HeadCell>
+                       <Table.HeadCell>
+                         
+                       </Table.HeadCell>
+                       
+                     </Table.Head>
+                     <Table.Body className="divide-y">
+                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                           Warranty
+                         </Table.Cell>
+                         <Table.Cell>
+                         {warranty.key}
+                         </Table.Cell>
+                       </Table.Row>
+                      
+                       </Table.Body>
+                   </Table>
+                     </div>
+                     
+                   </div></>
+        )}
+    </>):<>
+    <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 md:mb-4">
+                Description
+              </h1>
+          <p className="text-gray-600 mb-4 mt-7">
+                {description.key}
+              </p>
+    </>}
+
+
+    
         </div>
       </div>
       <Footer />

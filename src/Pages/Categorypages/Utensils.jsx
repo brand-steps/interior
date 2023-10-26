@@ -15,7 +15,17 @@ const Utensils = () => {
     const [numberOfPages, setnumberOfPages] = useState(9)
     const [StarsArray, setStarsArray] = useState([1, 2, 3])
 
-    
+    const [icecream , Seticecream] = useState("Kitchen Utensils");
+    const [juice , Setjuice] = useState("Pots & Pans");
+    const [machine , Setmachine] = useState("Holders & Trays");
+    const [mixers , Setmixers] = useState("Dispensers, Squeeze Bottles & Sauce Boats");
+    const [slush , Setslush] = useState("Jugs & Carafes");
+    const [bar , Setbar] = useState("Cleaning Equipments");
+    const [milshake , Setmilshake] = useState("Food Containers");
+    const [espress , Setespress] = useState("Glass Holders");
+    const [filter , Setfilter] = useState("Tab Grabbers & Bill Holders");
+    const [coffee , Setcoffee] = useState("GN Containers");
+      
 
   const containerStyle = {
     display: 'flex',
@@ -52,6 +62,38 @@ const Utensils = () => {
       console.log("Error In Getting All Products ", error);
     }
   };
+  const Geticecream = () => {
+    navigate(`/Subcategorypage/${icecream}`)
+  }
+  const Getjuice = () => {
+    navigate(`/Subcategorypage/${juice}`)
+  }
+  const Getmachine = () => {
+    navigate(`/Subcategorypage/${machine}`)
+  }
+  const Getmixers = () => {
+    navigate(`/Subcategorypage/${mixers}`)
+  }
+  const Getslush = () => {
+    navigate(`/Subcategorypage/${slush}`)
+  }
+  const getbar = () => {
+    navigate(`/Subcategorypage/${bar}`)
+  }
+  const getmilshake = () => {
+    navigate(`/Subcategorypage/${milshake}`)
+  }
+    
+  const Getespress = () => {
+    navigate(`/Subcategorypage/${espress}`)
+  }
+  const Getfilter = () => {
+    navigate(`/Subcategorypage/${filter}`)
+  }
+  const Getcoffee = () => {
+    navigate(`/Subcategorypage/${coffee}`)
+  }
+
 
   useEffect(() => {
     console.log('asdasd')
@@ -66,47 +108,47 @@ const Utensils = () => {
         
         <div className='flex justify-evenly flex-wrap my-4' >
 
-        <div style={containerStyle} className="subhovers">
+        <div style={containerStyle} className="subhovers" onClick={Geticecream}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WBU-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Kitchen Utensils</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getjuice}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SPC8A-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Pots & Pans</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmachine}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/KFB06B-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Holders & Trays</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getmixers}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/JZS003-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Dispensers, Squeeze Bottles & Sauce Boats</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getslush}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/QY0311004-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Jugs & Carafes</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getbar}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GX101VL-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Cleaning Equipments</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={getmilshake}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GSPP4-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Food Containers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getespress}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WGB58500300G-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Glass Holders</p>
       </div>
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getfilter}>
         <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ABH024-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>Tab Grabbers & Bill Holders</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
+      <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
         <img src="https://adexa.co.uk/image/cache/catalog/Misc/tray-stainless-175x175.jpg" alt="Fairs" style={imageStyle} />
         <p>GN Containers</p>
       </div>
@@ -116,12 +158,29 @@ const Utensils = () => {
       </div>
       <hr/>
 <h1 className="flex  flex-wrap justify-center heads">Products</h1>
-      <div className='flex  flex-wrap justify-center   '>
+<div className='flex  flex-wrap justify-center   '>
         {products.map((eachProduct, i) => (
-          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name}  />
+          <Cardss index={eachProduct._id} price={eachProduct.price} img={eachProduct.imageUrl} text={eachProduct.name} 
+          paragraph={eachProduct.description} cats={eachProduct.category} colors={eachProduct.color}
+          mats={eachProduct.material} capicitys = {eachProduct.capacity} shelf = {eachProduct.shelves} lids = {eachProduct.lid} 
+          lights = {eachProduct.lightening} levels = {eachProduct.noiselevel} doors = {eachProduct.door} widths = {eachProduct.Width}
+          depths = {eachProduct.depth} heights = {eachProduct.height} weights = {eachProduct.weight} consumptions = {eachProduct.powerconsumption}
+          supplys = {eachProduct.powersupply} powers = {eachProduct.power} temps = {eachProduct.temperature} refris = {eachProduct.refrigerant}
+          coolings = {eachProduct.cooling} warrantys = {eachProduct.warranty} castorss = {eachProduct.castors} trays = {eachProduct.tray}
+          pressures = {eachProduct.pressure} productions = {eachProduct.production} innerheights = {eachProduct.innerheight} baskets = {eachProduct.basket}
+          programss = {eachProduct.programs} volumes = {eachProduct.volume} cycless = {eachProduct.watercycles} pumps = {eachProduct.waterpump}
+          rinsepowers = {eachProduct.rinsepower} dispensers = {eachProduct.dispenser} rinsefuncs = {eachProduct.rinsefunc} volumerinses = {eachProduct.volumerinse}
+          versions = {eachProduct.version} taps = {eachProduct.tap} outputs = {eachProduct.output} feets = {eachProduct.productfeet}
+          bottomshelfs = {eachProduct.bottomshelf} bowlposs = {eachProduct.bowlpos} sinkbowls = {eachProduct.sinkbowl} upstands = {eachProduct.upstand}
+          assemblys = {eachProduct.assembled} timers = {eachProduct.timer} controlss = {eachProduct.controls} rpms = {eachProduct.rpm}
+          speedss = {eachProduct.speeds} includeds = {eachProduct.included} weldingbars = {eachProduct.weldingbar} bins = {eachProduct.bin}
+          waterconnections = {eachProduct.waterconnection} types = {eachProduct.type} locks = {eachProduct.lock} worksurfaces = {eachProduct.worksurface}
+          gasconsumptions = {eachProduct.gasconsumption} defrosts = {eachProduct.defrost} steams = {eachProduct.steam} piecess = {eachProduct.pieces}
+          diameters = {eachProduct.diameter} lengths = {eachProduct.length}
+
+          />
         ))}
       </div>
-
 
       <BasicPagination shape="rounded" setPage={setPage} pageNumber={numberOfPages} />
 
