@@ -41,7 +41,7 @@ const Prducts = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/paginatpost?page=${page}`);
+      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/api/v1/paginatpost?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -75,7 +75,7 @@ const Prducts = () => {
       </div>
 
       <ProductGroup2 />
-      <SearchBar/>
+       {/*<SearchBar/>*/}
     <CategorySlider/>
 
       <div className='flex  flex-wrap justify-center   '>

@@ -20,7 +20,7 @@ const LoginForm = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`http://localhost:8000/login`, {
+        let response = await axios.post(`https://sore-cyan-fly-kit.cyclic.app/login`, {
           email: email,
           password: password
         }, {

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate , useParams} from 'react-router';
 import axios from 'axios'
 import './editproduct.css'
+import AdminBar from '../../HOme/AdminBar';
 
 const EdittProduct = () => {
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ const EdittProduct = () => {
 
 
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`http://localhost:8000/singleproduct/${id}`);
+        const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/singleproduct/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -46,7 +47,7 @@ const EdittProduct = () => {
 
     const handlesubmit = async () => {
         const productData = { ...singleproduct};
-        const response = await axios.put(`http://localhost:8000/editsProducts/${id}`, productData);
+        const response = await axios.put(`https://sore-cyan-fly-kit.cyclic.app/editsProducts/${id}`, productData);
 
 alert("Product Updated");
     }
@@ -58,6 +59,8 @@ alert("Product Updated");
     },[]);
 
     return (
+        <>
+        <AdminBar/>
     <div className='rootcontainer'>
         <h1 className='Heading'>EDIT PRODUCT</h1>
         <TextField fullWidth value={singleproduct.email} onChange={handlecchange} name="email" variant="outlined" />
@@ -70,6 +73,7 @@ alert("Product Updated");
 
         
         </div>
+        </>
     )
 }
 

@@ -94,10 +94,6 @@ const Productdetail2 = () => {
               </button>
               {/* </Link> */}
 
-
-
-
-
             </div>
           </div>
         </div>

@@ -5,15 +5,21 @@ import image1 from '../../Images/SIXES WEB-01.jpg';
 import image2 from '../../Images/SIXES WEB-02.jpg';
 import image3 from '../../Images/SIXES WEB-03.jpg';
 import image4 from '../../Images/SIXES WEB-04.jpg';
+import img1 from '../../Images/Equipmwent -01.jpg';
+import img2 from '../../Images/Equipmwent -02.jpg';
+import img3 from '../../Images/Equipmwent -03.jpg';
+import img4 from '../../Images/Equipmwent -04.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Slider = () => {
-  const images = [image1, image2, image3, image4];
-  const headings = [' DISHWASHER', 'PLANETARY MIXER ', 'BENCH  REFRIGERATORS', '4 PIECE OVEN'];
+  const navigate = useNavigate();
+  const images = [img1, img3, img2, img4];
+  const headings = [' OVENS & STEAMERS', 'FOOD PREPARATION ', 'UTENSILS', 'STANLESS STEEL'];
   const paragraphs = [
-    'Pure power, ultimate precision!',
-    'Professional kitchens!',
-    'Stylish design high quality!',
-    'Master of hot dishes!',
+    'Many types of ovens available',
+    'kitchen equipment including planetary mixers and meat mincers',
+    ' kitchen equipment including utensils and kitchenware',
+    'stainless steel equipments for catering, kitchen etc',
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -49,8 +55,9 @@ const Slider = () => {
     {/* Centered Heading and Paragraph */}
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
       <h1 className="text-white text-3xl font-semibold">{headings[currentHeadingIndex]}</h1>
-      <p className="text-white mt-4">{paragraphs[currentParagraphIndex]}</p>
+      <p className="text-white mt-2">{paragraphs[currentParagraphIndex]}</p>
       <button
+      onClick={() => {navigate("/Prducts")}}
         style={{ "background": "#EC0C36" }}
         className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700"
       >

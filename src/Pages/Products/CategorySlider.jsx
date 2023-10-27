@@ -31,11 +31,14 @@ const CategorySlider = () => {
 
    const [category, setCategory] = useState("");
 
-
+   const divStyle = {
+    cursor: "pointer",
+    /* Other styles you might want to apply */
+  };
     const getAllProducts = async () => {
         
         try {
-            const response = await axios.get(`http://localhost:8000/api/v1/products`);
+            const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/api/v1/products`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);
@@ -47,7 +50,7 @@ const CategorySlider = () => {
         setCategory(value);
         console.log("sss",category)
         try {
-            const response = await axios.get(`http://localhost:8000/api/v1/products`);
+            const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/api/v1/products`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);
@@ -73,16 +76,16 @@ const CategorySlider = () => {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 4,
+            items: 3,
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 4,
+            items: 1,
         },
     };
 
     return (
-        <div className='mx-6 my-4' >
+        <div className='mx-6 my-4' style={divStyle}>
             <Carousel
                 swipeable={true}
                 arrows={true}

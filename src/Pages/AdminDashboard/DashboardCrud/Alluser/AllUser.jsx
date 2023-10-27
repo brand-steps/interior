@@ -19,7 +19,7 @@ export const AllUser = () => {
 
   const getAllUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/AllUser`);
+      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/api/v1/AllUser`);
       console.log("response: ", response);
       console.log(alluser);
       setalluser(response.data.data);
@@ -30,7 +30,7 @@ export const AllUser = () => {
 
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`http://localhost:8000/api/v1/user/${id}`)
+      const response = await axios.delete(`https://sore-cyan-fly-kit.cyclic.app/api/v1/user/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {
@@ -60,7 +60,7 @@ export const AllUser = () => {
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    User name
+                    First name
                 </th>
                 <th scope="col" class="px-6 py-3">
                     <div class="flex items-center">
@@ -110,7 +110,7 @@ export const AllUser = () => {
             <tr class=" border-b    bgbg-gray-700 dark:bg-gray-800 dark:border-gray-700">
 
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {value.username}
+                    {value.firstname}
                 </th>
                 <td class="px-6 py-4" onClick={() => {}}>
                 <Link to={`/UserProduct`}> {value.email} </Link>

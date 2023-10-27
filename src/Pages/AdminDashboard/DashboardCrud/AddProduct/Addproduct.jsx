@@ -54,7 +54,7 @@ const AddProduct = () => {
     formData.append('description', Description);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/AddProduct', formData, {
+      const response = await axios.post('https://sore-cyan-fly-kit.cyclic.app/api/v1/AddProduct', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

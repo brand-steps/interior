@@ -35,7 +35,7 @@ const Home = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `http://localhost:8000/api/v1/profile`,
+          `https://sore-cyan-fly-kit.cyclic.app/api/v1/profile`,
           {
             withCredentials: true,
             headers: {
@@ -70,7 +70,7 @@ const Home = () => {
   };
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:8000/logout", {
+      await axios.post("https://sore-cyan-fly-kit.cyclic.app/logout", {
         withCredentials: true, // This ensures that cookies are sent with the request
       });
       console.log("Logout successful");

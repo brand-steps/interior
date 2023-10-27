@@ -87,7 +87,7 @@ const Signform = () => {
 
         if (firstname && email && phone && company && postal && address &&country &&city && password && reTypepassword) {
           try {
-            const response = await axios.post('http://localhost:8000/register', {
+            const response = await axios.post('https://sore-cyan-fly-kit.cyclic.app/register', {
               firstname,
               lastname,
               email,

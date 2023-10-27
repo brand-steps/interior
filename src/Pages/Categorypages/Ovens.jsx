@@ -53,7 +53,7 @@ const Ovens = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/ovens?page=${page}`);
+      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/ovens?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)

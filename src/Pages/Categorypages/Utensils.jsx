@@ -51,7 +51,7 @@ const Utensils = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/Utensils?page=${page}`);
+      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/Utensils?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
