@@ -15,6 +15,8 @@ const MiddleSec = () => {
           <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/Prducts">Products</NavLink> </li>
           <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/Contact">Contact</NavLink> </li>
           <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/OurDocument">Our Documents</NavLink> </li>
+          <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/vendorlogin">Vendor Login</NavLink> </li>
+
         </ul>
       </div>
       {/* Mid Sec */}
@@ -30,7 +32,6 @@ const MiddleSec = () => {
     We offer our innovative and aesthetic products to our customers and produce them, for them and market them over our country and all the world.
   </p>
 </div>
-
 
     </div>
   </div>

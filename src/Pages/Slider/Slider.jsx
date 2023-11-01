@@ -9,17 +9,21 @@ import img1 from '../../Images/Equipmwent -01.jpg';
 import img2 from '../../Images/Equipmwent -02.jpg';
 import img3 from '../../Images/Equipmwent -03.jpg';
 import img4 from '../../Images/Equipmwent -04.jpg';
+import img5 from '../../Images/equiptest.jpg';
+import img6 from '../../Images/equiptest2.jpg';
+
+
 import { useNavigate } from 'react-router-dom';
 
 const Slider = () => {
   const navigate = useNavigate();
-  const images = [img1, img3, img2, img4];
-  const headings = [' OVENS & STEAMERS', 'FOOD PREPARATION ', 'UTENSILS', 'STANLESS STEEL'];
+  const images = [img1, img3, img6, img5];
+  const headings = [' OVENS & STEAMERS', 'FOOD PREPARATION ', 'COOKING EQUIPMENTS', 'BEVERAGE EQUIPMENTS'];
   const paragraphs = [
     'Many types of ovens available',
     'kitchen equipment including planetary mixers and meat mincers',
-    ' kitchen equipment including utensils and kitchenware',
-    'stainless steel equipments for catering, kitchen etc',
+    ' we are experts at supplying cooking equipment',
+    'Commercial beverage equipments available',
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

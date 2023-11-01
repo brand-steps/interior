@@ -5,6 +5,19 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import piz1 from '../../Images/piz1.jpg';
+import piz2 from '../../Images/piz2.jpg';
+import piz3 from '../../Images/piz3.jpg';
+import piz4 from '../../Images/piz4.jpg';
+import piz5 from '../../Images/piz5.jpg';
+import piz6 from '../../Images/piz6.jpg';
+import piz7 from '../../Images/piz7.jpg';
+import piz8 from '../../Images/piz8.jpg';
+import piz9 from '../../Images/piz9.jpg';
+import piz10 from '../../Images/piz10.jpg';
+import piz11 from '../../Images/piz11.jpg';
+import piz12 from '../../Images/piz12.jpg';
+
 
 const Pizzeria = () => {
 
@@ -52,7 +65,7 @@ const Pizzeria = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/pizzeria?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/pizzeria?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -115,56 +128,56 @@ const Pizzeria = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={Geticecream}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/LZ-2-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz1} alt="Fairs" style={imageStyle} />
         <p>Pizza Ovens</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getjuice}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PZ3600-VRX-castors-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz2} alt="Fairs" style={imageStyle} />
         <p>Pizza Prep Counters</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmachine}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DN50B-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz3} alt="Fairs" style={imageStyle} />
         <p>Dough Kneaders & Mixers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmixers}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DONER-EL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz4} alt="Fairs" style={imageStyle} />
         <p>Gyros Donar Kebab Grills</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getslush}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CM10-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz5} alt="Fairs" style={imageStyle} />
         <p>Planetary Mixers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getbar}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CRG4-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz6} alt="Fairs" style={imageStyle} />
         <p>Rotisseries Ovens</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
       <div style={containerStyle} className="subhovers" onClick={getmilshake}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/MNGL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz7} alt="Fairs" style={imageStyle} />
         <p>Charcoal Grills</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getespress}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/AT-937_938-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz8} alt="Fairs" style={imageStyle} />
         <p>Pita Ovens & Salamander Grills</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getfilter}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BBQGN4-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz9} alt="Fairs" style={imageStyle} />
         <p>Chicken Warmers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/H30-40-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz10} alt="Fairs" style={imageStyle} />
         <p>Dough Rollers & Dough Sheeters</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getpercol}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GPH-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz11} alt="Fairs" style={imageStyle} />
         <p>Pizza Storage & Transport</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getwater}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SPP9012W-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={piz12} alt="Fairs" style={imageStyle} />
         <p>Pizza Utensils</p>
       </div>
     </div>

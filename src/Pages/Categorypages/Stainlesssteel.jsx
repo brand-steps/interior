@@ -5,6 +5,29 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import ste1 from '../../Images/ste1.jpg';
+import ste2 from '../../Images/ste2.jpg';
+import ste3 from '../../Images/ste3.jpeg';
+import ste4 from '../../Images/ste4.jpg';
+import ste5 from '../../Images/ste5.jpg';
+import ste6 from '../../Images/ste6.jpg';
+import ste7 from '../../Images/ste7.jpg';
+import ste8 from '../../Images/ste8.jpg';
+import ste9 from '../../Images/ste9.jpg';
+import ste10 from '../../Images/ste10.jpg';
+import ste11 from '../../Images/ste11.jpg';
+import ste12 from '../../Images/ste12.jpg';
+import ste13 from '../../Images/ste13.jpg';
+import ste14 from '../../Images/ste14.jpg';
+import ste15 from '../../Images/ste15.jpg';
+import ste16 from '../../Images/ste16.jpg';
+import ste17 from '../../Images/ste17.jpg';
+import ste18 from '../../Images/ste18.jpg';
+import ste19 from '../../Images/ste19.jpg';
+import ste20 from '../../Images/ste20.jpg';
+import ste21 from '../../Images/ste21.jpg';
+import ste22 from '../../Images/ste22.jpg';
+import ste23 from '../../Images/ste23.jpg';
 
 const Stainlesssteel = () => {
 
@@ -63,7 +86,7 @@ const Stainlesssteel = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/StainlessSteel?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/StainlessSteel?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -160,99 +183,99 @@ const Stainlesssteel = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={Geticecream}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/TA710D-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste1} alt="Fairs" style={imageStyle} />
         <p>Work Tables</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getjuice}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SN610DL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste2} alt="Fairs" style={imageStyle} />
         <p>Sink Units with 1 & 2 Bowls</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmachine}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HJS1803-6-175x175.JPG" alt="Fairs" style={imageStyle} />
+        <img src={ste3} alt="Fairs" style={imageStyle} />
         <p>Sink Units with 3 Bowls</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmixers}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DSN610L-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste4}alt="Fairs" style={imageStyle} />
         <p>Sink Top Storage Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getslush}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HMS77F-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste5} alt="Fairs" style={imageStyle} />
         <p>Sink Tops</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getbar}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SR612DL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste6} alt="Fairs" style={imageStyle} />
         <p>Sink Units For Dishwashers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getmilshake}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DRD305-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste7} alt="Fairs" style={imageStyle} />
         <p>Wall Shelves</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getespress}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THHWR43K-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste8} alt="Fairs" style={imageStyle} />
         <p>Wash Basin & Hand Sinks</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getfilter}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BAR2B48LR-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste9} alt="Fairs" style={imageStyle} />
         <p>Bar Sinks</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THASR-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste10} alt="Fairs" style={imageStyle} />
         <p>Base Storage Cupboards</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getpercol}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/IB182408-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste11} alt="Fairs" style={imageStyle} />
         <p>Ice Bins</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getwater}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THWSR-A-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste12} alt="Fairs" style={imageStyle} />
         <p>Plain Top Hot Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getchoco}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ED612D-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste13} alt="Fairs" style={imageStyle} />
         <p>Cabinet Storage Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getcup}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GW2400-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste14} alt="Fairs" style={imageStyle} />
         <p>Work Stations</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={GetGlass}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WCR-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste15} alt="Fairs" style={imageStyle} />
         <p>Wall Cupboards</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getunderdish}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/gantry-2-levels-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste16} alt="Fairs" style={imageStyle} />
         <p>Gantries & Chefs Passes</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getpassthrough}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HKF-HLF-HMF-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste17} alt="Fairs" style={imageStyle} />
         <p>Extraction Canopies</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getdishwash}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/OS-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste18} alt="Fairs" style={imageStyle} />
         <p>Grease Traps & Fat Seperators</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getcuttlery}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SV412C-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste19} alt="Fairs" style={imageStyle} />
         <p>Shelving Units</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getshower}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ES4187660-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste20} alt="Fairs" style={imageStyle} />
         <p>Equipment Stands</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getracks}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WT95-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste21} alt="Fairs" style={imageStyle} />
         <p>Waste Bins</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getcandy}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/C102-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste22} alt="Fairs" style={imageStyle} />
         <p>Trolleys & Carts</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getinsect}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Misc/tray-stainless-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ste23} alt="Fairs" style={imageStyle} />
         <p>Stainless Steel GN Pans & Containers</p>
       </div>
      

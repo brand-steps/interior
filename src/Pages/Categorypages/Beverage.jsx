@@ -5,6 +5,20 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import bev1 from '../../Images/bev1.jpg';
+import bev2 from '../../Images/bev2.jpg';
+import bev3 from '../../Images/bev3.jpg';
+import bev4 from '../../Images/bev4.jpg';
+import bev5 from '../../Images/bev5.jpg';
+import bev6 from '../../Images/bev6.jpg';
+import bev7 from '../../Images/bev7.jpg';
+import bev8 from '../../Images/bev8.jpg';
+import bev9 from '../../Images/bev9.jpg';
+import bev10 from '../../Images/bev10.jpg';
+import bev11 from '../../Images/bev11.jpg';
+import bev12 from '../../Images/bev12.jpg';
+import bev13 from '../../Images/bev13.jpg';
+import bev14 from '../../Images/bev14.jpg';
 
 const Beverage = () => {
 
@@ -54,7 +68,7 @@ const Beverage = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/Beverage?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/Beverage?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -125,64 +139,64 @@ const Beverage = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={Geticecream}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BJH219SE%20(2)-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev1} alt="Fairs" style={imageStyle} />
         <p>Ice Cream & Yoghurt Machines</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getjuice}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ZB50--175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev2} alt="Fairs" style={imageStyle} />
         <p>Juice Dispensers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmachine}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/LSJ18LX2-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev3} alt="Fairs" style={imageStyle} />
         <p>Juicer Machines</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmixers}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CJ4-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev4} alt="Fairs" style={imageStyle} />
         <p>Hand Mixers & immersion Blenders</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getslush}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/XRJ12LX2-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev5} alt="Fairs" style={imageStyle} />
         <p>Slush Machines</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getbar}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/E5-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev6} alt="Fairs" style={imageStyle} />
         <p>Bar Blenders</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getmilshake}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DMB-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev7} alt="Fairs" style={imageStyle} />
         <p>Milshakes & Bar Mixers</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
       <div style={containerStyle} className="subhovers" onClick={Getespress}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/2EVYO-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev8} alt="Fairs" style={imageStyle} />
         <p>Espresso Coffee Machines</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getfilter}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/RXG2001-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev9} alt="Fairs" style={imageStyle} />
         <p>Filter Coffee Machines</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Cunill/Kenia-tron-2018-bl-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev10} alt="Fairs" style={imageStyle} />
         <p>Coffee Grinders</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getpercol}>
-        <img src="https://adexa.co.uk/image/cache/catalog/GGG/KB120-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev11} alt="Fairs" style={imageStyle} />
         <p>Percolators & Coffee Urns</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getwater}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ENW30-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev12} alt="Fairs" style={imageStyle} />
         <p>Water Boilers & Water Dispensers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getchoco}> 
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CHOCO05-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev13} alt="Fairs" style={imageStyle} />
         <p>Chocolate Machines</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getcup}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CW1-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={bev14} alt="Fairs" style={imageStyle} />
         <p>Cup Warmers</p>
       </div>
       

@@ -12,10 +12,13 @@ const Middlesec = () => {
         <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/Corporate">About Us</NavLink> </li>
         <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/Prducts">Products</NavLink> </li>
           <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/Contact">Contact</NavLink> </li>
+          <li  style={{"box-shadow": "rgba(149, 157, 165, 0.2) 0px 8px 24px"}}  className='px-20 p-2 mb-4'><NavLink to="/vendorlogin">Vendor Login</NavLink> </li>
+
           <li  
           style={{ background: 'red', color: 'white' }}
           className='px-20 p-2 mb-4'>Our Documents</li>
         </ul>
+        
       </div>
       {/* Mid Sec */}
       <div className='w-full md:w-6/12 px-4 md:px-0'>

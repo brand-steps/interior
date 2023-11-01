@@ -35,7 +35,7 @@ const Home = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://sore-cyan-fly-kit.cyclic.app/api/v1/profile`,
+          `http://localhost:8000/api/v1/profile`,
           {
             withCredentials: true,
             headers: {
@@ -70,7 +70,7 @@ const Home = () => {
   };
   const handleLogout = async () => {
     try {
-      await axios.post("https://sore-cyan-fly-kit.cyclic.app/logout", {
+      await axios.post("http://localhost:8000/logout", {
         withCredentials: true, // This ensures that cookies are sent with the request
       });
       console.log("Logout successful");
@@ -122,32 +122,46 @@ const Home = () => {
         }`}
         id="menu"
       >
+        <Link to="/">
         <li className="md:border-none mt-2    mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/">Home</Link>
+          Home
         </li>
+        </Link>
+        <Link to="/Corporate">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/Corporate">Corporate</Link>
+          Corporate
         </li>
+        </Link>
+        <Link to="/Prducts">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/Prducts">Products</Link>
+          Products
         </li>
+        </Link>
+        <Link to="/OurDocument">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/OurDocument">Our Documents</Link>
+          Our Documents
         </li>
+        </Link>
+        <Link to="/TechnicalService">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/TechnicalService">Technical Services</Link>
+          Technical Services
         </li>
+        </Link>
+        <Link to="/Contact">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/Contact">Contact</Link>
+          Contact
         </li>
+        </Link>
         {user ? (
+          <Link to="/UserDashboard">
           <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-            <Link to="/UserDashboard">
+            
               <span>
                 {responce.firstname} <i className="fa fa-user" aria-hidden="true"></i>
               </span>
-            </Link>
+            
           </li>
+          </Link>
         ) : null}
         <Link to={"/CardPage"}>
           <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
@@ -155,7 +169,7 @@ const Home = () => {
           </li>
         </Link>
         {/* */}
-        {user ? (
+        {/*{user ? (
           <button
             type="button"
             onClick={handleLogout}
@@ -165,7 +179,9 @@ const Home = () => {
             Logout
           </button>
 
-        ) : <NavLink to="/loginform">
+        ) :
+        <>
+        <NavLink to="/loginform">
           <button
             type="button"
             style={{ background: "rgb(236, 12, 54)" }}
@@ -173,7 +189,9 @@ const Home = () => {
           >
             Login in
           </button>
-        </NavLink> }
+        </NavLink>
+        </>
+        } */}
         
       </ul>
 

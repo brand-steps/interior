@@ -5,6 +5,16 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import ute1 from '../../Images/ute1.jpg';
+import ute2 from '../../Images/ute2.jpg';
+import ute3 from '../../Images/ute3.jpg';
+import ute4 from '../../Images/ute4.jpg';
+import ute5 from '../../Images/ute5.jpg';
+import ute6 from '../../Images/ute6.jpg';
+import ute7 from '../../Images/ute7.jpg';
+import ute8 from '../../Images/ute8.jpg';
+import ute9 from '../../Images/ute9.jpg';
+import ute10 from '../../Images/ute10.jpg';
 
 const Utensils = () => {
 
@@ -51,7 +61,7 @@ const Utensils = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/Utensils?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/Utensils?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -109,47 +119,47 @@ const Utensils = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={Geticecream}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WBU-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute1} alt="Fairs" style={imageStyle} />
         <p>Kitchen Utensils</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getjuice}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SPC8A-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute2} alt="Fairs" style={imageStyle} />
         <p>Pots & Pans</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmachine}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/KFB06B-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute3} alt="Fairs" style={imageStyle} />
         <p>Holders & Trays</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmixers}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/JZS003-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute4} alt="Fairs" style={imageStyle} />
         <p>Dispensers, Squeeze Bottles & Sauce Boats</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getslush}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/QY0311004-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute5} alt="Fairs" style={imageStyle} />
         <p>Jugs & Carafes</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
       <div style={containerStyle} className="subhovers" onClick={getbar}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GX101VL-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute6} alt="Fairs" style={imageStyle} />
         <p>Cleaning Equipments</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getmilshake}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GSPP4-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute7} alt="Fairs" style={imageStyle} />
         <p>Food Containers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getespress}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WGB58500300G-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute8} alt="Fairs" style={imageStyle} />
         <p>Glass Holders</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getfilter}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ABH024-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute9} alt="Fairs" style={imageStyle} />
         <p>Tab Grabbers & Bill Holders</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Misc/tray-stainless-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={ute10} alt="Fairs" style={imageStyle} />
         <p>GN Containers</p>
       </div>
       

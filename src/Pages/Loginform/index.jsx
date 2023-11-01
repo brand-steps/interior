@@ -1,4 +1,3 @@
-// Signup.js
 import { Link, Router, Routes, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import "./loginform.css";
@@ -20,7 +19,7 @@ const LoginForm = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`https://sore-cyan-fly-kit.cyclic.app/login`, {
+        let response = await axios.post(`http://localhost:8000/login`, {
           email: email,
           password: password
         }, {
@@ -86,7 +85,7 @@ const LoginForm = () => {
 
   return (
     <div className="form-main">
-      <Loginbar/>
+      <Loginbar/> 
               <div className='flex  justify-evenly flex-wrap my-4 mt-8' >
 
               <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 sm:mt-5 md:mt-5 dark:bg-gray-800 dark:border-gray-700 w-2/4">

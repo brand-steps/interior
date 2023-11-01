@@ -5,6 +5,29 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import app1 from '../../Images/app1.jpg';
+import app2 from '../../Images/app2.jpg';
+import app3 from '../../Images/app3.jpg';
+import app4 from '../../Images/app4.jpg';
+import app5 from '../../Images/app5.jpg';
+import app6 from '../../Images/app6.jpg';
+import app7 from '../../Images/app7.jpg';
+import app8 from '../../Images/app8.jpg';
+import app9 from '../../Images/app9.jpg';
+import app10 from '../../Images/app10.jpg';
+import app11 from '../../Images/app11.jpg';
+import app12 from '../../Images/app12.jpg';
+import app13 from '../../Images/app13.jpg';
+import app14 from '../../Images/app14.jpg';
+import app15 from '../../Images/app15.jpg';
+import app16 from '../../Images/app16.jpg';
+import app17 from '../../Images/app17.jpg';
+import app18 from '../../Images/app18.jpg';
+import app19 from '../../Images/app19.jpg';
+import app20 from '../../Images/app20.jpg';
+import app21 from '../../Images/app21.jpg';
+import app22 from '../../Images/app22.jpg';
+import app23 from '../../Images/app23.jpg';
 
 const Appliances = () => {
 
@@ -63,7 +86,7 @@ const Appliances = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/Appliances?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/Appliances?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -156,106 +179,104 @@ const Appliances = () => {
 <Home/>
 <div >
         
-        <div className='flex justify-evenly flex-wrap my-4' >
+        <div className='flex justify-evenly flex-wrap my-4'  >
 
-        <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CEKF28-175x175.jpg" onClick={Geticecream} alt="Fairs" style={imageStyle} />
+        <div style={containerStyle} onClick={Geticecream} className="subhovers">
+        <img src={app1}  alt="Fairs" style={imageStyle} />
         <p>Table Top Fryers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/AD5-175x175.jpg" onClick={Getjuice} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getjuice} className="subhovers">
+        <img src={app2}  alt="Fairs" style={imageStyle} />
         <p>Countertop Mixers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EG720D-1-175x175.jpg" onClick={Getmachine} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getmachine} className="subhovers">
+        <img src={app3}  alt="Fairs" style={imageStyle} />
         <p>Griddles</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/D100N38--175x175.jpg" onClick={Getmixers} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getmixers} className="subhovers">
+        <img src={app4}  alt="Fairs" style={imageStyle} />
         <p>Microwaves</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GX812-175x175.jpg" onClick={Getslush} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getslush} className="subhovers">
+        <img src={app5}  alt="Fairs" style={imageStyle} />
         <p>Panini / Contact Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/images/categories/roller-grill-category-175x175.jpg" onClick={getbar} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={getbar} className="subhovers">
+        <img src={app6}  alt="Fairs" style={imageStyle} />
         <p>Roller Grills</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/TC2-175x175.jpg" onClick={getmilshake} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={getmilshake} className="subhovers">
+        <img src={app7}  alt="Fairs" style={imageStyle} />
         <p>Food Warming</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/HD105-175x175.jpg" onClick={Getespress} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getespress} className="subhovers">
+        <img src={app8} alt="Fairs" style={imageStyle} />
         <p>Hotdog Warmers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa//RTR120-175x175.jpg" onClick={Getfilter} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getfilter} className="subhovers">
+        <img src={app9}  alt="Fairs" style={imageStyle} />
         <p>Heated Merchandisers / Displays</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EMO3K5S-175x175.jpg" onClick={Getcoffee} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getcoffee} className="subhovers">
+        <img src={app10}  alt="Fairs" style={imageStyle} />
         <p>Induction Cookers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BN1-175x175.jpg" onClick={Getpercol} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle}  onClick={Getpercol} className="subhovers">
+        <img src={app11} alt="Fairs" style={imageStyle} />
         <p>Table Top Bains Marie & Hotpots</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SB6000--175x175.jpg" onClick={Getwater} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getwater} className="subhovers">
+        <img src={app12}  alt="Fairs" style={imageStyle} />
         <p>Soup Kettles</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/rice-cooker-175x175.jpg" onClick={getchoco} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={getchoco} className="subhovers">
+        <img src={app13} alt="Fairs" style={imageStyle} />
         <p>Rice Cookers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EB-450-175x175.jpg" onClick={getcup} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={getcup} className="subhovers">
+        <img src={app14} alt="Fairs" style={imageStyle} />
         <p>Salamanders</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ETS6A-175x175.jpg" onClick={GetGlass} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle}  onClick={GetGlass} className="subhovers">
+        <img src={app15} alt="Fairs" style={imageStyle} />
         <p>Toasters</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/YBWA10-175x175.jpg" onClick={Getunderdish} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getunderdish} className="subhovers">
+        <img src={app16} alt="Fairs" style={imageStyle} />
         <p>Pressure Cookers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SV100-175x175.jpg" onClick={Getpassthrough} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle}  onClick={Getpassthrough} className="subhovers">
+        <img src={app17} alt="Fairs" style={imageStyle} />
         <p>Sous Vide & Slow Cookers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/WM2-175x175.jpg" onClick={Getdishwash} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getdishwash} className="subhovers">
+        <img src={app18} alt="Fairs" style={imageStyle} />
         <p>Waffle Makers</p>
       </div>
 
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BST001-175x175.jpg" onClick={Getcuttlery} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={Getcuttlery} className="subhovers">
+        <img src={app19} alt="Fairs" style={imageStyle} />
         <p>Knife Sterilisers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EGG-175x175.jpg" onClick={getshower} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={getshower} className="subhovers">
+        <img src={app20} alt="Fairs" style={imageStyle} />
         <p>Egg Boilers</p>
       </div>
-      <div style={containerStyle} className="subhovers">
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PC02-175x175.jpg" onClick={getracks} alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} onClick={getracks} className="subhovers">
+        <img src={app21} alt="Fairs" style={imageStyle} />
         <p>Popcorn Machines</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getcandy}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ECF520C-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={app22} alt="Fairs" style={imageStyle} />
         <p>Candy Floss Machines</p>
       </div>
-      <div style={containerStyle} className="subhovers" onClick={getinsect}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GC216-175x175.jpg" alt="Fairs" style={imageStyle} />
+      <div style={containerStyle} className="subhovers" onClick={getinsect} >
+        <img src={app23} alt="Fairs" style={imageStyle} />
         <p>Insect Killers</p>
       </div>
-     
-      
     </div>
 
       </div>

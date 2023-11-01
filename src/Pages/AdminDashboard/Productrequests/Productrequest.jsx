@@ -18,7 +18,7 @@ export const Productrequest = () => {
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/productrequestall`);
+      const response = await axios.get(`http://localhost:8000/productrequestall`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);
@@ -29,7 +29,7 @@ export const Productrequest = () => {
 
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`https://sore-cyan-fly-kit.cyclic.app/productreq/${id}`)
+      const response = await axios.delete(`http://localhost:8000/productreq/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {
@@ -40,7 +40,7 @@ export const Productrequest = () => {
 
   const approveData = async (id)=>{
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/productreqedit/${id}`)
+      const response = await axios.get(`http://localhost:8000/productreqedit/${id}`)
       console.log("response: ", response.data);
     } catch (error) {
       console.log("error in approving all requests", error);
@@ -141,10 +141,86 @@ export const Productrequest = () => {
                 <td class="px-6 py-4 text-right">
                     {/* <BasicModal   Image = {value.imageUrl}    id={value._id}    /> */}
                 </td>
-                <td    className='lllololo'   onClick={()=>{navigate(`/EditProduct/${value._id}`, { replace: true }) }}
+                {value.category === "Refrigeration" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editrefrigerator/${value._id}`, { replace: true }) }}
                   style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
                 Edit
-                </td>
+                </td> 
+                    </>
+                )}
+                {value.category === "Diswashing" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editdishwashing/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Appliances" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editappliance/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Stainless Steel" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Stainlesssteels/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Cooking" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editcooking/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Food prep" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/EditFoodprep/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Beverage Equipment" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editbeverage/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Pizzeria & Grill" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editpizza/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Oven & Steamers" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editoven/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                 {value.category === "Utensils" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editutensils/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
             </tr>
            </>
             ))}

@@ -35,7 +35,7 @@ const SearchBar = () => {
     const delayDebounceFn = setTimeout(async () => {
       try {
         const response = await axios.get(
-          `https://sore-cyan-fly-kit.cyclic.app/api/search?q=${searchTerm}`
+          `http://localhost:8000/api/search?q=${searchTerm}`
         );
         setSearchResults(response.data);
       } catch (error) {

@@ -36,7 +36,7 @@ const AdminBar = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://sore-cyan-fly-kit.cyclic.app/api/v1/profile`,
+          `http://localhost:8000/api/v1/profile`,
           {
             withCredentials: true,
             headers: {

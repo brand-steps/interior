@@ -10,16 +10,24 @@ import FairsComponent from '../../Pages/FirstPage/FairsArticle/FairsArticle';
 import Footer from '../../Pages/Foooter/Footer';
 import { useEffect , useState} from 'react';
 import axios from 'axios';
+import { faWhatsapp,  } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import whats from '../../Images/whatss.png'
+import whatss from '../../Images/whatsapp.png'
+import whatsss from '../../Images/whatsapps.webp'
+import Whatsappchat from '../../Components/WhatsappChat/Whatsappchat';
 
 const MainPage = () => {
   return (
     <div>
 <Home />
   <Slider/>
+<Whatsappchat/>
   <Cards/>
-  <About/>
+  
   <ProductGroup/>
   <ProductSlider/>
+  <About/>
   <Services/>
   <Login/>
    {/*<FairsComponent/>*/}

@@ -216,7 +216,7 @@ if (!subcategory || subcategory == "Select a Sub category") {
 
     try {
       const response = await axios.post(
-        "https://sore-cyan-fly-kit.cyclic.app/productrequestnew",
+        "http://localhost:8000/productrequestnew",
         formData,
         {
           headers: {
@@ -2762,6 +2762,20 @@ if (!subcategory || subcategory == "Select a Sub category") {
                              id="output"
                              name="output"
                              placeholder="Enter Product output"
+                             class="border  border-gray-300 shadow p-3 w-full rounded mb-"
+                           />
+                         </div>
+                         <div class="mb-5">
+                           <label for="twitter" class="block mb-2 font-bold text-white">
+                           Power Consumption
+                           </label>
+                           <input
+                             onChange={(e) => {
+                              setconsumption(e.target.value);
+                             }}
+                             id="consumption"
+                             name="consumption"
+                             placeholder="Enter Product Power consumption"
                              class="border  border-gray-300 shadow p-3 w-full rounded mb-"
                            />
                          </div>

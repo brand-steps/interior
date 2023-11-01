@@ -5,6 +5,18 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import oven1 from '../../Images/oven1.jpg';
+import oven2 from '../../Images/oven2.jpg';
+import oven3 from '../../Images/oven3.jpg';
+import oven4 from '../../Images/oven4.jpg';
+import oven5 from '../../Images/oven5.jpg';
+import oven6 from '../../Images/oven6.jpg';
+import oven7 from '../../Images/oven7.jpg';
+import oven8 from '../../Images/oven8.jpg';
+import oven9 from '../../Images/oven9.jpg';
+import oven10 from '../../Images/oven10.jpg';
+import oven11 from '../../Images/oven11.jpg';
+import oven12 from '../../Images/oven12.jpg';
 
 const Ovens = () => {
 
@@ -53,7 +65,7 @@ const Ovens = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/ovens?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/ovens?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -117,56 +129,56 @@ const Ovens = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={Geticecream}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Tecnoeka/EKF423UP--175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven1} alt="Fairs" style={imageStyle} />
         <p>Electric Convection Ovens Manual Controls</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getjuice}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EKF1016UD-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven2} alt="Fairs" style={imageStyle} />
         <p>Electric Combi Steamers Manual Controls</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmachine}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Tecnoeka/EKF1111TC-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven3} alt="Fairs" style={imageStyle} />
         <p>Electric Combi Steamers Digital Controls</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmixers}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/PB2M88-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven4} alt="Fairs" style={imageStyle} />
         <p>Electric Bakery Ovens</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getslush}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ATS25K-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven5} alt="Fairs" style={imageStyle} />
         <p>Air Fryers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getbar}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/TO1601-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven6} alt="Fairs" style={imageStyle} />
         <p>Mini Ovens</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
       <div style={containerStyle} className="subhovers" onClick={getmilshake}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Tecnoeka/EKL864R--175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven7} alt="Fairs" style={imageStyle} />
         <p>Proofers, Proofing Ovens & Dehydrators</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getespress}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/KFE030-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven8} alt="Fairs" style={imageStyle} />
         <p>Potato Ovens</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getfilter}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/CRG4-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven9} alt="Fairs" style={imageStyle} />
         <p>Rotisseries Ovens</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THASR-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven10} alt="Fairs" style={imageStyle} />
         <p>Microwave Ovens</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getpercol}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/7FRE01-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven11} alt="Fairs" style={imageStyle} />
         <p>Modular Cooking Ovens</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getwater}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BR11-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={oven12} alt="Fairs" style={imageStyle} />
         <p>Oven Trays & Grids</p>
       </div>
       

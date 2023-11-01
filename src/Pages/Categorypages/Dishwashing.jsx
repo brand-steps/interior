@@ -5,6 +5,13 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
+import dis1 from '../../Images/dis1.jpg';
+import dis2 from '../../Images/dis2.jpg';
+import dis3 from '../../Images/dis3.jpg';
+import dis4 from '../../Images/dis4.jpg';
+import dis5 from '../../Images/dis5.jpg';
+import dis6 from '../../Images/dis6.jpg';
+import dis7 from '../../Images/dis7.jpg';
 
 const Dishwashing = () => {
 
@@ -48,7 +55,7 @@ const Dishwashing = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/Diswashing?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/Diswashing?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -95,32 +102,32 @@ const Dishwashing = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={GetGlass}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BW800-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis1} alt="Fairs" style={imageStyle} />
         <p>Glasswashers</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getunderdish}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DW500P-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis2} alt="Fairs" style={imageStyle} />
         <p>Undercounter Dishwashers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getpassthrough}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/DW1040TP-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis3} alt="Fairs" style={imageStyle} />
         <p>Pass Through Dishwashers</p>
       </div>
             <div style={containerStyle} className="subhovers" onClick={Getdishwash}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SR612DR-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis4} alt="Fairs" style={imageStyle} />
         <p>Dishwasher Tables</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getcuttlery}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/BPR002-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis5} alt="Fairs" style={imageStyle} />
         <p>Cuttlery & Glass Polishers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getshower}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/VT04-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis6} alt="Fairs" style={imageStyle} />
         <p>Shower Unit & Faucets</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getracks}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/500x500x105-plates_1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={dis7} alt="Fairs" style={imageStyle} />
         <p>Dishwasher Racks</p>
       </div>
       

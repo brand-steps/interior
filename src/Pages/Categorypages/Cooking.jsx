@@ -5,7 +5,20 @@ import React, { useState, useEffect } from 'react'
 import Home from "../HOme/Home";
 import axios from 'axios'
 import './categorypages.css';
-
+import coo1 from '../../Images/coo1.jpg';
+import coo2 from '../../Images/coo2.jpg';
+import coo3 from '../../Images/coo3.jpg';
+import coo4 from '../../Images/coo4.jpg';
+import coo5 from '../../Images/coo5.jpg';
+import coo6 from '../../Images/coo6.jpg';
+import coo7 from '../../Images/coo7.jpg';
+import coo8 from '../../Images/coo8.jpg';
+import coo9 from '../../Images/coo9.jpg';
+import coo10 from '../../Images/coo10.jpg';
+import coo11 from '../../Images/coo11.jpg';
+import coo12 from '../../Images/coo12.jpg';
+import coo13 from '../../Images/coo13.jpg';
+import coo14 from '../../Images/coo14.jpg';
 const Cooking = () => {
 
     const navigate = useNavigate();
@@ -54,7 +67,7 @@ const Cooking = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://sore-cyan-fly-kit.cyclic.app/Cooking?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/Cooking?page=${page}`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -123,64 +136,64 @@ const Cooking = () => {
         <div className='flex justify-evenly flex-wrap my-4' >
 
         <div style={containerStyle} className="subhovers" onClick={Geticecream}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/ER721KS-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo1} alt="Fairs" style={imageStyle} />
         <p>Boiling Tops & Hobs</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getjuice}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EMO3K5S-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo2} alt="Fairs" style={imageStyle} />
         <p>Induction</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmachine}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GR922-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo3} alt="Fairs" style={imageStyle} />
         <p>Range Ovens & Floor Standing Cookers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getmixers}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EB606-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo4} alt="Fairs" style={imageStyle} />
         <p>Bains Marie & Hotpots</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getslush}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GGL721S-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo5} alt="Fairs" style={imageStyle} />
         <p>Chargrills & Gas Grills</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getbar}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/SE21-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo6} alt="Fairs" style={imageStyle} />
         <p>BBQ Grills</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getmilshake}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EPC711-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo7} alt="Fairs" style={imageStyle} />
         <p>Chip Scuttles</p>
       </div>
       </div>
       <div className='flex justify-evenly flex-wrap my-4' >
       <div style={containerStyle} className="subhovers" onClick={Getespress}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/GF912-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo8} alt="Fairs" style={imageStyle} />
         <p>Fryers</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getfilter}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EG606-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo9} alt="Fairs" style={imageStyle} />
         <p>Griddles</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getcoffee}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/7ME0102016-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo10} alt="Fairs" style={imageStyle} />
         <p>Pasta Boilers</p>
       </div>
 
       <div style={containerStyle} className="subhovers" onClick={Getpercol}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/EP922-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo11} alt="Fairs" style={imageStyle} />
         <p>Tilting Bratt Pans</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={Getwater}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/THZ2-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo12} alt="Fairs" style={imageStyle} />
         <p>Wok Stoves</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getchoco}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/7TS020-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo13} alt="Fairs" style={imageStyle} />
         <p>Bases & Neutral Units</p>
       </div>
       <div style={containerStyle} className="subhovers" onClick={getcup}>
-        <img src="https://adexa.co.uk/image/cache/catalog/Adexa/hotmax600-1-175x175.jpg" alt="Fairs" style={imageStyle} />
+        <img src={coo14} alt="Fairs" style={imageStyle} />
         <p>Modular Cooking Ranges</p>
       </div>
       
