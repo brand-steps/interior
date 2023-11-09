@@ -3,10 +3,13 @@
     height: 30px;
 }
 .whatsbtn {
-    width: 140px;
+    width: 160px;
     height: 40px;
     border-radius: 25px;
     background-color: #25d366;
+}
+.whatsbtn:hover {
+    background-color: #1bc75a;
 }
 .txtss {
     text-decoration: none;

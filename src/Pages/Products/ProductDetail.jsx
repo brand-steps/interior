@@ -108,6 +108,7 @@ const Productdetail = () => {
     width: '100px', // Adjust the width as needed
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
+
   const containerStyle2 = {
     display: 'flex',
     flexDirection: 'column',
@@ -242,7 +243,7 @@ Search
                 </p> 
   */}
               <p className="text-lg md:text-2xl text-red-600 font-semibold mb-2">
-                ${totalPrice.toFixed(2)} 
+              £{totalPrice.toFixed(2)} 
               </p>
               <div className="flex items-center mb-4">
                 <button
@@ -365,7 +366,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         shelves
+                         Shelves
                          </Table.Cell>
                          <Table.Cell>
                          {shelves.key}
@@ -381,7 +382,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         lightening
+                         Lightening
                          </Table.Cell>
                          <Table.Cell>
                          {lightening.key}
@@ -397,7 +398,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         doors
+                         Doors
                          </Table.Cell>
                          <Table.Cell>
                          {door.key}
@@ -425,7 +426,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -433,7 +434,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -441,7 +442,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -451,7 +452,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -593,7 +594,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           product casters
+                           Product casters
                          </Table.Cell>
                          <Table.Cell>
                          {castors.key}
@@ -636,7 +637,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -644,7 +645,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -652,7 +653,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -678,7 +679,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -790,7 +791,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           Rinse Function
+                           Rinse function
                          </Table.Cell>
                          <Table.Cell>
                          {rinsefunc.key}
@@ -907,7 +908,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -915,7 +916,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -923,7 +924,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -949,7 +950,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -1059,7 +1060,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           Bottom Shelf
+                           Bottom shelf
                          </Table.Cell>
                          <Table.Cell>
                          {bottomshelf.key}
@@ -1075,7 +1076,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           Sink Bowls
+                           Sink bowls
                          </Table.Cell>
                          <Table.Cell>
                          {sinkbowl.key}
@@ -1083,7 +1084,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           feets
+                           Feets
                          </Table.Cell>
                          <Table.Cell>
                          {feet.key}
@@ -1119,7 +1120,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -1127,7 +1128,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -1135,7 +1136,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -1251,7 +1252,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -1259,7 +1260,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -1267,7 +1268,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -1304,7 +1305,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -1349,7 +1350,7 @@ Search
                      <Table.Body className="divide-y">
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           temperature
+                           Temperature
                          </Table.Cell>
                          <Table.Cell>
                          {temperature.key}
@@ -1459,7 +1460,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -1467,7 +1468,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -1475,7 +1476,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -1484,7 +1485,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -1584,7 +1585,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         bin
+                         Bin
                          </Table.Cell>
                          <Table.Cell>
                          {bin.key}
@@ -1644,7 +1645,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -1652,7 +1653,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -1660,7 +1661,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -1670,7 +1671,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -1796,7 +1797,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         lock
+                         Lock
                          </Table.Cell>
                          <Table.Cell>
                          {lock.key}
@@ -1820,7 +1821,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           tray / grid size
+                           Tray / Grid size
                          </Table.Cell>
                          <Table.Cell>
                          {tray.key}
@@ -1847,7 +1848,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -1855,7 +1856,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -1863,7 +1864,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -1873,7 +1874,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -1883,7 +1884,7 @@ Search
                      <Table.Body className="divide-y">
                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         gas consumption
+                         Gas consumption
                          </Table.Cell>
                          <Table.Cell>
                          {gasconsumption.key}
@@ -1926,7 +1927,7 @@ Search
                      <Table.Body className="divide-y">
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           controls
+                           Controls
                          </Table.Cell>
                          <Table.Cell>
                          {controls.key}
@@ -2043,7 +2044,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         steam / humidification
+                         Steam / Humidification
                          </Table.Cell>
                          <Table.Cell>
                          {steam.key}
@@ -2051,7 +2052,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           timer
+                           Timer
                          </Table.Cell>
                          <Table.Cell>
                          {timer.key}
@@ -2067,7 +2068,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           tray / grid size
+                           Tray / Grid size
                          </Table.Cell>
                          <Table.Cell>
                          {tray.key}
@@ -2094,7 +2095,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -2102,7 +2103,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -2110,7 +2111,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         weight
+                         Weight
                          </Table.Cell>
                          <Table.Cell>
                          {weight.key}
@@ -2120,7 +2121,7 @@ Search
                        </Table.Body>
                        <Table.Head>
                        <Table.HeadCell>
-                       Power Sypply
+                       Power supply
                        </Table.HeadCell>
                        <Table.HeadCell>
                          
@@ -2130,7 +2131,7 @@ Search
                      <Table.Body className="divide-y">
                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         output
+                         Output
                          </Table.Cell>
                          <Table.Cell>
                          {output.key}
@@ -2173,7 +2174,7 @@ Search
                      <Table.Body className="divide-y">
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                           controls
+                           Controls
                          </Table.Cell>
                          <Table.Cell>
                          {controls.key}
@@ -2296,7 +2297,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         depth
+                         Depth
                          </Table.Cell>
                          <Table.Cell>
                          {depth.key}
@@ -2304,7 +2305,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         height
+                         Height
                          </Table.Cell>
                          <Table.Cell>
                          {height.key}
@@ -2312,7 +2313,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         length
+                         Length
                          </Table.Cell>
                          <Table.Cell>
                          {length.key}
@@ -2320,7 +2321,7 @@ Search
                        </Table.Row>
                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                         diameter
+                         Diameter
                          </Table.Cell>
                          <Table.Cell>
                          {diameter.key}
@@ -2355,6 +2356,8 @@ Search
                    </div></>
         )}
     </>):<>
+
+
     <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 md:mb-4">
                 Description
               </h1>

@@ -67,6 +67,19 @@ import EditPizza from "./Pages/Products/Editproductbycategory/EditPizza";
 import EditOven from "./Pages/Products/Editproductbycategory/EditOven";
 import EditUtensils from "./Pages/Products/Editproductbycategory/EditUtensils";
 import VendorLogin from "./Pages/vendorlogin/Vendorlogin";
+import Signupcustomer from "./Pages/SignupCustomer/Signupcustomer";
+import { AllCustomer } from "./Pages/AdminDashboard/Allcustomers/AllCustomer";
+import EditCustomers from "./Pages/AdminDashboard/Allcustomers/EditCustomers";
+import Applianceedit from "./Pages/Userdashboard/Edituserproduct/Applianceedit";
+import Beverageedit from "./Pages/Userdashboard/Edituserproduct/Beverageedit";
+import Cookingedit from "./Pages/Userdashboard/Edituserproduct/Cookingedit";
+import Dishwashingedit from "./Pages/Userdashboard/Edituserproduct/Dishwashingedit";
+import Foodprepedit from "./Pages/Userdashboard/Edituserproduct/Foodprepedit";
+import Ovenedit from "./Pages/Userdashboard/Edituserproduct/Ovenedit";
+import Pizzaedit from "./Pages/Userdashboard/Edituserproduct/Pizzaedit";
+import Refrigeratoredit from "./Pages/Userdashboard/Edituserproduct/Refrigeratoredit";
+import Steeledit from "./Pages/Userdashboard/Edituserproduct/Steeledit";
+import Utensilsedit from "./Pages/Userdashboard/Edituserproduct/Utensilsedit";
 
 function App() {
   return (
@@ -129,6 +142,20 @@ function App() {
               <Route path="/Editpizza/:id" element={<EditPizza />} />
               <Route path="/Editoven/:id" element={<EditOven />} />
               <Route path="/Editutensils/:id" element={<EditUtensils />} />
+              <Route path="/signupCustomer" element={<Signupcustomer />} />
+              <Route path="/Allcustomers" element={<AllCustomer />} />
+              <Route path="/Editcustomers/:id" element={<EditCustomers />} />
+
+              <Route path="/applianceedit/:id" element={<Applianceedit />} />
+              <Route path="/beverageedit/:id" element={< Beverageedit />} />
+              <Route path="/cookingedit/:id" element={<Cookingedit />} />
+              <Route path="/dishwashingedit/:id" element={<Dishwashingedit />} />
+              <Route path="/foodprepedit/:id" element={<Foodprepedit />} />
+              <Route path="/oveneditedit/:id" element={<Ovenedit />} />
+              <Route path="/pizzaedit/:id" element={<Pizzaedit />} />
+              <Route path="/refrigeratoredit/:id" element={<Refrigeratoredit />} />
+              <Route path="/steeledit/:id" element={<Steeledit />} />
+              <Route path="/utensilsedit/:id" element={<Utensilsedit />} />
 
             </Routes>
           </BrowserRouter>

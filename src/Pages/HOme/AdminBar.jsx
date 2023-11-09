@@ -131,7 +131,10 @@ const AdminBar = () => {
           <Link to="/productrequest">Requests</Link>
         </li>
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/AllUser">Users</Link>
+          <Link to="/AllUser">Vendors</Link>
+        </li>
+        <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+          <Link to="/Allcustomers">Customers</Link>
         </li>
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           <Link to="/UserProduct">User product</Link>

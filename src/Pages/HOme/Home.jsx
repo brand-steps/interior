@@ -20,6 +20,9 @@ const Home = () => {
   } = useContext(MyContext);
   const navigate = useNavigate();
   let [user, setUser] = useState(false);
+  let [customeruser, setcustomeruser] = useState(false);
+  let [customerresponse, setcustomerresponse] = useState("");
+
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [searchInput, setSearchInput] = useState("");
   const [products, setProducts] = useState([]);
@@ -49,6 +52,30 @@ const Home = () => {
         // console.log("response: ", response);
         setResponce(response.data);
         setUser(true);
+      } catch (error) {
+        console.log("axios error: ", error);
+      }
+    };
+    getProfile();
+  }, []);
+    useEffect(() => {
+    const getProfile = async () => {
+      try {
+        let response = await axios.get(
+          `http://localhost:8000/api/v1/customerprofile`,
+          {
+            withCredentials: true,
+            headers: {
+              "Cache-Control": "no-cache",
+              Pragma: "no-cache",
+              Expires: "0",
+            },
+          }
+        );
+
+        // console.log("response: ", response);
+        setcustomerresponse(response.data);
+        setcustomeruser(true);
       } catch (error) {
         console.log("axios error: ", error);
       }
@@ -169,29 +196,37 @@ const Home = () => {
           </li>
         </Link>
         {/* */}
-        {/*{user ? (
-          <button
-            type="button"
-            onClick={handleLogout}
-            style={{ background: "rgb(236, 12, 54)" }}
-            className="self-end text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out"
-          >
-            Logout
-          </button>
 
-        ) :
-        <>
-        <NavLink to="/loginform">
+        *{customeruser ? (
+          <>
+            <NavLink to="/loginform">
           <button
             type="button"
             style={{ background: "rgb(236, 12, 54)" }}
             className="self-end text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out"
           >
-            Login in
+            Log in 
+          </button>
+        </NavLink>
+          </>
+        ) : 
+        
+        user ? (
+<>
+</>
+        ): 
+        <>
+                  <NavLink to="/loginform">
+          <button
+            type="button"
+            style={{ background: "rgb(236, 12, 54)" }}
+            className="self-end text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out"
+          >
+            Log in 
           </button>
         </NavLink>
         </>
-        } */}
+        } 
         
       </ul>
 

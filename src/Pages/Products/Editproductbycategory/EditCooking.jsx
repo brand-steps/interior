@@ -50,6 +50,7 @@ const EditCooking = () => {
         const response = await axios.put(`http://localhost:8000/editsProducts/${id}`, productData);
 
 alert("Product Updated");
+
     }
     
 

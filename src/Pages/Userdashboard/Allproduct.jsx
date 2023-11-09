@@ -103,9 +103,86 @@ const Allproduct = () => {
     <th style={{ width: "100%" }} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
         <span   className='text-red-500'  >Name :</span> {value.name}
     </th>
-    <th    className="w-full md:w-auto px-6 py-4 cursor-pointer text-red-500 text-center " onClick={()=>{navigate(`/Editproductuser/${value._id}`, { replace: true }) }}>
-      Edit
-    </th>
+    {value.category === "Refrigeration" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/refrigeratoredit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Diswashing" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/dishwashingedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Appliances" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/applianceedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Stainless Steel" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/steeledit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Cooking" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/cookingedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Food prep" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/foodprepedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Beverage Equipment" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/beverageedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Pizzeria & Grill" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/pizzaedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Oven & Steamers" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/oveneditedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                 {value.category === "Utensils" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/utensilsedit/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
     
     <td className="w-full md:w-auto px-6 py-4 text-red-500" >
         Price :   ${value.price}

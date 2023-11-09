@@ -35,6 +35,7 @@ const EditUser = () => {
         const UserData = { ...singleproduct};
         const response = await axios.put(`http://localhost:8000/edittedUsers/${id}`, UserData);
         alert("User Updated");
+        navigate("/AllUser");
     }
     
     useEffect (()=> {

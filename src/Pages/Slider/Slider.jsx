@@ -12,7 +12,6 @@ import img4 from '../../Images/Equipmwent -04.jpg';
 import img5 from '../../Images/equiptest.jpg';
 import img6 from '../../Images/equiptest2.jpg';
 
-
 import { useNavigate } from 'react-router-dom';
 
 const Slider = () => {
@@ -45,7 +44,7 @@ const Slider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       nextImage();
-    }, 4000);
+    }, 8000);
 
     return () => {
       clearTimeout(timer);
@@ -63,7 +62,7 @@ const Slider = () => {
       <button
       onClick={() => {navigate("/Prducts")}}
         style={{ "background": "#EC0C36" }}
-        className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700"
+        className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700 "
       >
         Details
       </button>

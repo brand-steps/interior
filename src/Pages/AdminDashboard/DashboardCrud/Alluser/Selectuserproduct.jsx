@@ -55,7 +55,16 @@ const Email = useParams()
   return (
     <>
     <AdminBar/>
-            <div className="bg-white w-4/5 centerdiv">
+    <div className='rootcontainerss'>
+    <input
+            type="text"
+            onChange={(event) => { setemail(event.target.value); }}
+            placeholder="Enter User Email "
+            className="pl-4  inputsusers"
+          />
+          <button className=' btsa' onClick={getAllProducts}>Find</button>
+        </div>
+          {/*}  <div className="bg-white w-4/5 centerdiv">
               <div className='subdiv'>
           <input
             type="text"
@@ -65,7 +74,7 @@ const Email = useParams()
           />
           <button className='buttons' onClick={getAllProducts}>Find</button>
           </div>
-          </div>
+  </div> */}
     <div>
         <h1 className='dasfasfkasfhoiasbfbfa'  >User Product Details  </h1>
 
@@ -130,10 +139,86 @@ const Email = useParams()
                 }}  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
                 Delete
                 </td>
-                <td    className='lllololo'   onClick={()=>{navigate(`/EditProduct/${value._id}`, { replace: true }) }}
+                {value.category === "Refrigeration" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editrefrigerator/${value._id}`, { replace: true }) }}
                   style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
                 Edit
-                </td>
+                </td> 
+                    </>
+                )}
+                {value.category === "Diswashing" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editdishwashing/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Appliances" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editappliance/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Stainless Steel" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Stainlesssteels/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Cooking" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editcooking/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                {value.category === "Food prep" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/EditFoodprep/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Beverage Equipment" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editbeverage/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Pizzeria & Grill" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editpizza/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                    {value.category === "Oven & Steamers" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editoven/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
+                 {value.category === "Utensils" && (
+                    <>
+                    <td    className='lllololo'   onClick={()=>{navigate(`/Editutensils/${value._id}`, { replace: true }) }}
+                  style={{"color" : "red" , "cursor" : "pointer" }    } class="px-6 py-4  ">
+                Edit
+                </td> 
+                    </>
+                )}
                 <td class="px-6 py-4 text-right">
                     {/* <BasicModal   Image = {value.imageUrl}    id={value._id}    /> */}
                 </td>

@@ -50,6 +50,7 @@ const EditAppliance = () => {
         const response = await axios.put(`http://localhost:8000/editsProducts/${id}`, productData);
 
 alert("Product Updated");
+
     }
     
 
@@ -65,7 +66,7 @@ alert("Product Updated");
         <TextField fullWidth value={singleproduct.email} onChange={handlecchange} placeholder='Edit Email' name="email" variant="outlined" />
         <TextField fullWidth value={singleproduct.name} onChange={handlecchange} placeholder='Edit Product name' name="name" variant="outlined"  />
         <TextField fullWidth value={singleproduct.price} name="price" variant="outlined" onChange={handlecchange} placeholder='Edit Price' type='number' />
-        
+
         <TextField fullWidth value={singleproduct.color} onChange={handlecchange} placeholder='Edit Product color' name="color" variant="outlined" />
         <TextField fullWidth value={singleproduct.version} onChange={handlecchange} placeholder='Edit version' name="version" variant="outlined" />
         <TextField fullWidth value={singleproduct.material} onChange={handlecchange} placeholder='Edit Product material' name="material" variant="outlined" />

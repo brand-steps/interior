@@ -44,7 +44,10 @@ const [responce  , setResponce] = useState("")
   <div className="bg-white p-6 border-2  rounded-md shadow-md w-full max-w-md">
     <h2 className="text-4xl font-bold mb-2">User Information</h2>
     <p className='py-4'  ><span className="font-semibold 	">Email :</span> {responce.email}</p>
-    <p className='py-4'  ><span className="font-semibold 	">Username:</span> {responce.username}</p>
+    <p className='py-4'  ><span className="font-semibold 	">First name:</span> {responce.firstname}</p>
+    <p className='py-4'  ><span className="font-semibold 	">Last name:</span> {responce.lastname}</p>
+    <p className='py-4'  ><span className="font-semibold 	">phone number:</span> {responce.phone}</p>
+    <p className='py-4'  ><span className="font-semibold 	">company:</span> {responce.company}</p>
     <p className='py-4'  ><span className="font-semibold 	">Password:</span> *******</p>
   </div>
 </div>

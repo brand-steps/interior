@@ -120,13 +120,6 @@ let newurl = "https://sore-cyan-fly-kit.cyclic.ap p"
 
   };
 
-
-
-
-
-
-
-
   const toggleSignup = () => {
     setShowLogin(false);
   };
