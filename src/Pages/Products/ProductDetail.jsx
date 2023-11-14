@@ -21,6 +21,7 @@ const Productdetail = () => {
   const {category , setcategory } = useContext(MyContext);
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(parseFloat(pricep.key));
+  
   const [showCart, setShowCart] = useState(false); // State to control cart slider visibility
   const allProduct = [name ,  totalPrice , description , image , quantity , totalPrice]
   // setQuantityProduct({ ...image, key: img });
@@ -144,7 +145,10 @@ const Productdetail = () => {
   };
 
   const handleAddToCart = () => {
-  navigate(`/PaymentPage/${encodeURIComponent(totalPrice)}/${quantity}`);
+    addToCart(allProduct)
+    console.log("all",cartItems)
+    navigate("/PaymentPage")
+ // navigate(`/PaymentPage/${encodeURIComponent(totalPrice)}/${quantity}`);
   };
   const handleCloseCart = () => {
     setShowCart(false);
@@ -156,67 +160,91 @@ const Productdetail = () => {
       <div className="bg-gray-100 py-6 flex flex-wrap ">
           <div      style={{"border" : "1px solid black"}}    className='mx-12 p-8'  >
 
-<div   >
+{/*<div   >
 <div className='text-md mb-1' >View</div>
          <div    style={{"border" : "1px solid black"}}  className='w-20 px-2	flex justify-between '    >
 
-         <i class="fas fa-th-large text-2xl"></i>
-          <i class="fas fa-th-list text-2xl"></i>
+         <i className="fas fa-th-large text-2xl"></i>
+          <i className="fas fa-th-list text-2xl"></i>
 
          </div>
 </div>
+  
 
-
-<label class="block text-gray-700 text-md  mb-2" for="username">
+<label className="block text-gray-700 text-md  mb-2" for="username">
 Search
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text"/>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text"/>
 
 
 
 
 <div>Width (mm)</div>
 <div className='p-2' style={{"border" : "1px solid black"}}>
-  <div class="flex items-center">
+  <div className="flex items-center">
   <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-    <label for="checked-checkbox-1" class="ml-2 text-sm font-medium text-black">1400</label>
+    <label for="checked-checkbox-1" className="ml-2 text-sm font-medium text-black">1400</label>
   </div>
-  <div class="flex items-center">
+  <div className="flex items-center">
   <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-    <label for="checked-checkbox-2" class="ml-2 text-sm font-medium text-black">800</label>
+    <label for="checked-checkbox-2" className="ml-2 text-sm font-medium text-black">800</label>
   </div>
 </div>
 
 <span>Length (mm)</span>
 <div    className='p-2'  style={{"border" : "1px solid black"}} >
-<div class="flex items-center">
+<div className="flex items-center">
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-    <label for="checked-checkbox" class="ml-2 text-sm font-medium  text-black">1400</label>
+    <label for="checked-checkbox" className="ml-2 text-sm font-medium  text-black">1400</label>
 </div>
-<div class="flex items-center">
+<div className="flex items-center">
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-    <label for="checked-checkbox" class="ml-2 text-sm font-medium  text-black">800</label>
+    <label for="checked-checkbox" className="ml-2 text-sm font-medium  text-black">800</label>
 </div>
 
 </div>
-
 
 <span>height  (mm)</span>
 <div   className='p-2'   style={{"border" : "1px solid black"}} >
 
-<div class="flex items-center">
+<div className="flex items-center">
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-    <label for="checked-checkbox" class="ml-2 text-sm font-medium text-black ">1980</label>
+    <label for="checked-checkbox" className="ml-2 text-sm font-medium text-black ">1980</label>
 </div>
-<div class="flex items-center">
+<div className="flex items-center">
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-    <label for="checked-checkbox" class="ml-2 text-sm font-medium text-black">2050</label>
+    <label for="checked-checkbox" className="ml-2 text-sm font-medium text-black">2050</label>
 </div>
 </div>
+*/}
 
+<div   className='p-6 ' >
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-lg font-bold text-black ">Summary</h1>
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">Color: {color.key}</h1>
 
-
-
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">Material: {material.key}</h1>
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">width: {Width.key} </h1>
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">Height: {height.key} </h1>
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">Depth: {depth.key} </h1>
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">Weight: {weight.key} </h1>
+</div>
+<div className="flex items-center mt-2">
+  <h1 className="ml-2 text-sm font-medium text-black ">Warranty: {warranty.key}</h1>
+</div>
+</div>
           </div>
         <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg w-full md:w-2/3 self-center	">
           <div className="flex flex-col md:flex-row">

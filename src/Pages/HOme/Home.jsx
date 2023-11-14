@@ -164,14 +164,15 @@ const Home = () => {
           Products
         </li>
         </Link>
-        <Link to="/OurDocument">
+       {/*} <Link to="/OurDocument">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           Our Documents
         </li>
         </Link>
+      */}
         <Link to="/TechnicalService">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          Technical Services
+          About Us
         </li>
         </Link>
         <Link to="/Contact">
@@ -189,6 +190,17 @@ const Home = () => {
             
           </li>
           </Link>
+        ) : null}
+                {customeruser ? (
+         
+          <li onClick={() => {navigate(`/CustomerOrders`)}} className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+            
+              <span>
+                Orders 
+              </span>
+            
+          </li>
+
         ) : null}
         <Link to={"/CardPage"}>
           <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">

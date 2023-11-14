@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div>
 <Home/>
-<Second  name="OUR DOCUMENTS" text="Home  > Corporate >  Our Documents"/>
+<Second  name="Contact Us" text="Home  >   Contact"/>
 <ContactMiddle/>
 <Footer/>
     </div>

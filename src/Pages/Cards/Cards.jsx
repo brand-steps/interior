@@ -15,7 +15,7 @@ const Cards = () => {
     </div>
     
     <div class="w-11/12 md:w-1/4 mb-4 md:mb-0 shadow-red transform hover:-translate-y-1 hover:scale-105 hover:transition">
-    <Link to={"/OurDocument"}>
+    <Link to={"/eCatalogue"}>
 
         <img src={img2} alt="" class="w-full h-auto" />
         </Link>

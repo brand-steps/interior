@@ -2,12 +2,23 @@ import React, { useContext, useState, useEffect } from 'react';
 import CartContext from '../Context/CartContext';
 import Home from '../HOme/Home';
 import Footer from '../Foooter/Footer';
-
+import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../Context/Context';
 const CardPage = () => {
+  const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
   const { cartItems } = useContext(CartContext);
   const [data, setData] = useState(cartItems);
   const [total, setTotal] = useState(0);
-
+  const {name, setName} = useContext(MyContext);
+  const {pricep , setPricep} = useContext(MyContext);
+  const {description, setDescription} = useContext(MyContext);
+  const {quantityProduct, setQuantityProduct} = useContext(MyContext);
+  const {image , setImage } = useContext(MyContext);
+  const {category , setcategory } = useContext(MyContext);
+  const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(parseFloat(pricep.key));
+  const allProduct = [name ,  totalPrice , description , image , quantity , totalPrice]
   useEffect(() => {
     // Calculate the total price whenever data changes
     const newTotal = data.reduce((acc, innerArray) => {
@@ -28,6 +39,15 @@ const CardPage = () => {
       newData[index][4]--; // Decrease quantity
       setData(newData); // Update the state with the new data
     }
+  };
+  const productCheckOut = () => {
+    console.log("asd",cartItems)
+navigate("/PaymentPage");
+ //   setShowDiv(true);
+  //  addToCart(allProduct)
+
+    // Automatically hide the div after 5 seconds (5000 milliseconds)
+
   };
 
   return (
@@ -61,7 +81,7 @@ const CardPage = () => {
                           </span>
                         </div>
                       </td>
-                      <td className="py-4">${innerArray[5]}</td>
+                      <td className="py-4">£{innerArray[5]}</td>
                       <td className="py-4">
                         <div className="flex items-center">
                           <button
@@ -90,22 +110,22 @@ const CardPage = () => {
               <h2 className="text-lg font-semibold mb-4">Summary</h2>
               <div className="flex justify-between mb-2">
                 <span>Subtotal</span>
-                <span>${total}</span>
+                <span>£{total}</span>
               </div>
               <div className="flex justify-between mb-2">
                 <span>Taxes</span>
-                <span>{total ? "$1.99" : null}</span>
+                <span>{total ? "£1.99" : null}</span>
               </div>
               <div className="flex justify-between mb-2">
                 <span>Shipping</span>
-                <span>$0.00</span>
+                <span>£0.00</span>
               </div>
               <hr className="my-2" />
               <div className="flex justify-between mb-2">
                 <span className="font-semibold">Total</span>
-                <span className="font-semibold">${total}</span>
+                <span className="font-semibold">£{total}</span>
               </div>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
+              <button onClick={productCheckOut} className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
             </div>
           </div>
         </div>

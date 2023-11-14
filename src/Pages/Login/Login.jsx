@@ -194,7 +194,7 @@ let newurl = "https://sore-cyan-fly-kit.cyclic.ap p"
               placeholder="Enter your UserName"
               className={emailError ? 'error' : ''}
             />
-            {emailError && <p className="error-message">UserName  is required</p>}
+            {emailError && <p className="error-message">UserName is required</p>}
             <input
               onChange={(event) => { setPhone(event.target.value); setEmailError(false); }}
               type="number"

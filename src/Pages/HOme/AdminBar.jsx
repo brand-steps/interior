@@ -112,38 +112,50 @@ const AdminBar = () => {
         }`}
         id="menu"
       >
+        <Link to="/">
         <li className="md:border-none mt-2    mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/">Home</Link>
+          Home
         </li>
+        </Link>
+        <Link to="/Prducts">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/Prducts">Product</Link>
+          Product
         </li>
+        </Link>
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           <Link to="/AddProduct">Add Product</Link>
         </li>
+        <Link to="/AllProductDashboad">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/AllProductDashboad">All Products</Link>
+          All Products
         </li>
+        </Link>
+        <Link to="/productrequest">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="">Payments</Link>
+          Requests
         </li>
+        </Link>
+        <Link to="/AllUser">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/productrequest">Requests</Link>
+          Vendors
         </li>
+        </Link>
+        <Link to="/Allcustomers">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/AllUser">Vendors</Link>
+          Customers
         </li>
+        </Link>
+        <Link to="/allOrders">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/Allcustomers">Customers</Link>
+          Payments
         </li>
+        </Link>
+        <Link to="/UserProduct">
         <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
-          <Link to="/UserProduct">User product</Link>
+          User Product
         </li>
-
+        </Link>
        
-        {/* */}
-        
-        
       </ul>
 
 

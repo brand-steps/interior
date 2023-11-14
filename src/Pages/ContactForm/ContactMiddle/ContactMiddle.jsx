@@ -12,7 +12,7 @@ const ContactMiddle = () => {
   <section class="mb-32">
     <div class="flex justify-center">
       <div class="text-center md:max-w-xl lg:max-w-3xl">
-        <h2 class="mb-12 px-6 text-3xl font-bold">Contact us</h2>
+        <h2 class="mb-12 px-6 text-3xl font-bold">Contact Us</h2>
       </div>
     </div>
 
@@ -61,14 +61,14 @@ const ContactMiddle = () => {
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold text-black">
                   <Link to={'/Dashbord'}  >
-                  Technical support
+                  Technical Support
                   </Link>
                 </p>
                 <p class="text-black  ">
                   support@equimentSupplier.com
                 </p>
                 <p class="text-black  ">
-                  +1 234-567-89
+                01273 569355
                 </p>
               </div>
             </div>
@@ -87,13 +87,13 @@ const ContactMiddle = () => {
 
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold text-black">
-                  Sales questions
+                  Sales Questions
                 </p>
                 <p class="text-black  ">
                   sales@equimentSupplier.com
                 </p>
                 <p class="text-black  ">
-                  +1 234-567-89
+                01273 569355
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ const ContactMiddle = () => {
                   info@equimentSupplier.com
                 </p>
                 <p class="text-black  ">
-                  +1 234-567-89
+                01273 569355
                 </p>
               </div>
             </div>
@@ -134,12 +134,12 @@ const ContactMiddle = () => {
 </div>
 
               <div class="ml-6 grow">
-                <p class="mb-2 font-bold text-black">Bug report</p>
+                <p class="mb-2 font-bold text-black">Bug Report</p>
                 <p class="text-black  ">
                   bugs@equimentSupplier.com
                 </p>
                 <p class="text-black  ">
-                  +1 234-567-89
+                01273 569355
                 </p>
               </div>
             </div>

@@ -80,6 +80,9 @@ import Pizzaedit from "./Pages/Userdashboard/Edituserproduct/Pizzaedit";
 import Refrigeratoredit from "./Pages/Userdashboard/Edituserproduct/Refrigeratoredit";
 import Steeledit from "./Pages/Userdashboard/Edituserproduct/Steeledit";
 import Utensilsedit from "./Pages/Userdashboard/Edituserproduct/Utensilsedit";
+import Catalog from "./Pages/Catalogue/Catalog";
+import Customerorder from "./Pages/Orders/Customerorder";
+import { Allorder } from "./Pages/AdminDashboard/Allorders/Allorder";
 
 function App() {
   return (
@@ -99,6 +102,10 @@ function App() {
               <Route path="/Productdetail" element={<Productdetail />} />
               <Route
                 path="/PaymentPage/:totalPrice/:quantity"
+                element={<PaymentPage />}
+              />
+                            <Route
+                path="/PaymentPage"
                 element={<PaymentPage />}
               />
               <Route path="/Dashbord" element={<Dashbord />} />
@@ -127,6 +134,9 @@ function App() {
               <Route path="/Ovens" element={<Ovens />} />
               <Route path="/Utensils" element={<Utensils />} />
               <Route path="/vendorlogin" element={<VendorLogin />} />
+              <Route path="/eCatalogue" element={<Catalog />} />
+              <Route path="/CustomerOrders" element={<Customerorder />} />
+              <Route path="/allOrders" element={<Allorder />} />
               <Route path="/EditProduct/:id" element={<EdittProduct />} />
               <Route path="/Editproductuser/:id" element={<Editproductuser />} />
               <Route path="/EditUser/:id" element={<EditUser />} />

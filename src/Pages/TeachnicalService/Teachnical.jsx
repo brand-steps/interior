@@ -7,7 +7,7 @@ const Teachnical = () => {
   return (
     <div>
 <Home/>
-<Second   name="TECHNICAL SERVICE" text="Home  > Technical Service"  />
+<Second   name="About Us" text="Home  > About Us"  />
 <MiddleSecTeachnical/>
 
 <Footer/>
