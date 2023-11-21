@@ -11,8 +11,8 @@ import { useNavigate } from 'react-router-dom';
 const MainSlider = () => {
   const navigate = useNavigate();
   const images = [image1, image2, image3, image1];
-  const headings = [' Welcome to Japanese MPV Specialist', 'Welcome to Japanese MPV Specialist ', 
-  'Welcome to Japanese MPV Specialist', 'Welcome to Japanese MPV Specialist'];
+  const headings = [' Welcome to Brighton Cars', 'Welcome to Brighton Cars ', 
+  'Welcome to Brighton Cars', 'Welcome to Brighton Cars'];
   const paragraphs = [
     'Browse Our Collection',
     'Browse Our Collection',
@@ -53,7 +53,7 @@ const MainSlider = () => {
     {/* Centered Heading and Paragraph */}
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
       <h1 className="text-white text-3xl font-semibold">{headings[currentHeadingIndex]}</h1>
-      <p className="text-white mt-2">{paragraphs[currentParagraphIndex]}</p>
+     {/*} <p className="text-white mt-2">{paragraphs[currentParagraphIndex]}</p> */}
       <button
       onClick={() => {navigate("/Prducts")}}
         style={{ "background": "#00072d" }}
