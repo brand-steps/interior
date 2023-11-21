@@ -11,8 +11,8 @@ import { useNavigate } from 'react-router-dom';
 const MainSlider = () => {
   const navigate = useNavigate();
   const images = [image1, image2, image3, image1];
-  const headings = [' Welcome to Brighton Cars', 'Welcome to Brighton Cars ', 
-  'Welcome to Brighton Cars', 'Welcome to Brighton Cars'];
+  const headings = [' Brighton Cars Sales', 'Brighton Cars Sales', 
+  'Brighton Cars Sales', 'Brighton Cars Sales'];
   const paragraphs = [
     'Browse Our Collection',
     'Browse Our Collection',
