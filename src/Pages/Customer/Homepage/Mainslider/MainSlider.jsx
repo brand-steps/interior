@@ -4,7 +4,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import image1 from '../../../../Assests/car1.jpg';
 import image2 from '../../../../Assests/car2.jpg';
 import image3 from '../../../../Assests/car3.jpg';
-
+import './mainslider.css';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -56,8 +56,8 @@ const MainSlider = () => {
      {/*} <p className="text-white mt-2">{paragraphs[currentParagraphIndex]}</p> */}
       <button
       onClick={() => {navigate("/Prducts")}}
-        style={{ "background": "#00072d" }}
-        className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700 "
+       
+        className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700 btntext"
       >
         Browse Our Collections
       </button>

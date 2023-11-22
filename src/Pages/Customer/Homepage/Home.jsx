@@ -3,8 +3,11 @@ import AboutHeading from '../../../Components/Body/Home/MainpgHeading/AboutHeadi
 import CarHeading from '../../../Components/Body/Home/MainpgHeading/CarHeading';
 import MainHead from '../../../Components/Body/Home/MainpgHeading/MainHead';
 import Footer from '../../../Components/Footer/Footer';
+import Footer2 from '../../../Components/Footer/Footer2';
 import Navbar from '../../../Components/Header/Navbar';
+import Navbar2 from '../../../Components/Header/Navbar2';
 import MainSlider from './Mainslider/MainSlider';
+import MainSub from './Mainsub/MainSub';
 import MainTypes from './Maintypes/MainTypes';
 import Productdisplay from './Productmain/Productdisplay';
 import './home.css';
@@ -12,15 +15,17 @@ import './home.css';
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar2/>
       <MainSlider/>
+     {/*} <MainHead/> */}
+      <MainSub/>
       <MainHead/>
       <MainTypes/>
       <CarHeading/>
       <Productdisplay/>
       <AboutHeading/>
       <About/>
-      <Footer/>
+      <Footer2/>
     </div>
   )
 }

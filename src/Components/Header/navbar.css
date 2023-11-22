@@ -73,7 +73,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffffff;
+    background: yellow;
     transform-origin: top right;
     transform: scaleX(0);
     transition: transform 0.3s ease;
@@ -147,5 +147,8 @@
   
   }
   .headerbg {
-    background-color: #00072d;
+    background-color: black;
+  }
+  .headcolor {
+    color: yellow;
   }

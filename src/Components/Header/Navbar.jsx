@@ -1,6 +1,6 @@
 import "./navbar.css";
 import logo from "../../Assests/car1.jpg";
-import logos from "../../Assests/logo-1.png";
+import logos from "../../Assests/logo-5.png";
 import { Link } from "react-router-dom";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
         <div style={{ width: "220px" }} class="logo ">
           <Link to={"/"}>
-            <img src={logos} alt="" />
+            <img src={logos} alt="" style={{ height: "100px" }} />
           </Link>
         </div>
       </div>
@@ -54,23 +54,23 @@ const Navbar = () => {
       </label>
 
       <ul
-        className={`menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto ${
+        className={`menu border-b md:border-none flex justify-center list-reset m-0 w-full md:w-auto ${
           isMenuOpen ? "" : "hidden"
         }`}
         id="menu"
       >
         <Link to="/">
-        <li className="md:border-none mt-2    mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+        <li className="md:border-none mt-2    mr-4 headcolor font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           Home
         </li>
         </Link>
         <Link to="/Corporate">
-        <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+        <li className="border-t md:border-none mt-2 mr-4 headcolor font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           Current Stock
         </li>
         </Link>
         <Link to="/Prducts">
-        <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+        <li className="border-t md:border-none mt-2 mr-4 headcolor font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           Sold
         </li>
         </Link>
@@ -81,12 +81,12 @@ const Navbar = () => {
         </Link>
       */}
         <Link to="/TechnicalService">
-        <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+        <li className="border-t md:border-none mt-2 mr-4 headcolor font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           Finance
         </li>
         </Link>
         <Link to="/Contact">
-        <li className="border-t md:border-none mt-2 mr-4 text-white font-bold hover:text-blue-500 transition duration-300 ease-in-out">
+        <li className="border-t md:border-none mt-2 mr-4 headcolor font-bold hover:text-blue-500 transition duration-300 ease-in-out">
           Contact
         </li>
         </Link>
