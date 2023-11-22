@@ -9,7 +9,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 import './footer2.css';
 function Footer2() {
   return (
-    <Footer container className='bgcolors '>
+    <Footer container className='bg-black '>
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>

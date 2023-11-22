@@ -37,7 +37,7 @@ const Navbar2 = () => {
 
   return (
    
-<Navbar fluid rounded className="bgcolor">
+<Navbar fluid rounded className="bg-black">
       <Navbar.Brand href="https://flowbite-react.com">
         <img src={logos} className="mr-3  h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
