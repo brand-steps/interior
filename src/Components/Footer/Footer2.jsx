@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../Assests/logo-5.png';
+import logo from '../../Assests/logo-6.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 import './footer2.css';
 function Footer2() {
   return (
-    <Footer container className='bg-black '>
+    <Footer container className='bg-gray-700 '>
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
