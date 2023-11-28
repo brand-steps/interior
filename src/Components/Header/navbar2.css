@@ -4,3 +4,6 @@
 .headcolor {
     color: #E5A317;
 }
+.headcolor:hover {
+    color: black;
+}

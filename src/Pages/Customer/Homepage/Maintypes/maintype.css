@@ -5,8 +5,19 @@
 
 }
 .buttonstyle {
-    background-color:#00072d ;
+    background-color:black ;
     color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    height: 60px;
+    
+}
+.buttonstyle:hover {
+    background-color:#E5A317 ;
+    color: black;
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 8px;

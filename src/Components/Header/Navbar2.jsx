@@ -65,8 +65,8 @@ const Navbar2 = () => {
          </Navbar.Link>
         <Navbar.Link href="/stock"><span className="headcolor text-base">Current Stock</span></Navbar.Link>
         <Navbar.Link href="#"><span className="headcolor text-base">Sold</span></Navbar.Link>
-        <Navbar.Link href="#"><span className="headcolor text-base">Finance</span></Navbar.Link>
-        <Navbar.Link href="#"><span className="headcolor text-base">Contact</span></Navbar.Link>
+        <Navbar.Link href="/finance"><span className="headcolor text-base">Finance</span></Navbar.Link>
+        <Navbar.Link href="/contact"><span className="headcolor text-base">Contact</span></Navbar.Link>
 
       </Navbar.Collapse>
     </Navbar>

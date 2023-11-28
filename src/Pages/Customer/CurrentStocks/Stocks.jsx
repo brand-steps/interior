@@ -20,6 +20,7 @@ const Stocks = () => {
   const [page, setPage] = useState(1)
   const [numberOfPages, setnumberOfPages] = useState(9)
   const [StarsArray, setStarsArray] = useState([1, 2, 3])
+  
   let text = "Home  > Product Groups "
   let name = "PRODUCT GROUPS"
 

@@ -55,7 +55,7 @@ const MainSlider = () => {
       <h1 className="text-white text-3xl font-semibold">{headings[currentHeadingIndex]}</h1>
      {/*} <p className="text-white mt-2">{paragraphs[currentParagraphIndex]}</p> */}
       <button
-      onClick={() => {navigate("/Prducts")}}
+      onClick={() => {navigate("/stock")}}
        
         className="text-white font-semibold px-4 py-2 -2  rounded-lg mt-4 hover:bg-blue-700 btntext"
       >

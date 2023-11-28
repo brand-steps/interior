@@ -1,8 +1,8 @@
 import React from "react"
 
-const StockHeader = () => {
+const FinanceHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://schmohl.ch/wp-content/uploads/2021/03/mclaren-600lt-header.jpg')",
+        backgroundImage: "url('https://superstreet-thegame.com/assets/uploads/images/news/SuperStreet-News-JaguarXESVProject8.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
 
@@ -39,7 +39,7 @@ const StockHeader = () => {
   return (
     <div className='flex  justify-evenly flex-wrap my-4 opacity-90' style={divStyle}>
       <div style={containerStyle}>
-        <h1 className="text-7xl font-extrabold opacity-100">NEW STOCK</h1>
+        <h1 className="text-7xl font-extrabold opacity-100">Vehicle Finance</h1>
 
       </div>
 
@@ -51,4 +51,4 @@ const StockHeader = () => {
   )
 }
 
-export default StockHeader;
+export default FinanceHeader;

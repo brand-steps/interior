@@ -17,13 +17,13 @@ const Home = () => {
     <div>
       <Navbar2/>
       <MainSlider/>
-     {/*} <MainHead/> */}
+     {/*} <MainHead/> <AboutHeading/> */}
       <MainSub/>
-      <MainHead/>
+      
       <MainTypes/>
       <CarHeading/>
       <Productdisplay/>
-      <AboutHeading/>
+      <MainHead/>
       <About/>
       <Footer2/>
     </div>

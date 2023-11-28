@@ -44,10 +44,12 @@ const MainSub = () => {
       <div style={containerStyle} >
 <h1 className='text-3xl lg:text-9xl md:text-7xl sm:text-5xl font-extrabold mb-9 txtcolor'>Welcome To </h1>
 <h1 className='text-6xl font-bold text-white'>Brighton Car Sales</h1>
+
       </div>
       <div style={containerStyle} className='imgback'>
 
-<button className='buttonstyles text-2xl opacity-90'>Browse Our Latest Cars</button>
+<button className='buttonstyles text-2xl opacity-90 txthover'>Browse Our Latest Cars</button>
+
 
       </div>
 

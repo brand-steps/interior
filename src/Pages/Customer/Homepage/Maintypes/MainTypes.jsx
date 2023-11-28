@@ -6,10 +6,10 @@ import carback2 from '../../../../Assests/carback6.jpg'
 import carback4 from '../../../../Assests/carback5.avif'
 
 import './maintype.css';
-
+import { useNavigate } from 'react-router-dom';
 const MainTypes = () => {
 
-
+const navigate = useNavigate();
 
   const divStyle = {
     backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
@@ -88,7 +88,7 @@ const MainTypes = () => {
   };
 
   const buttonStyle = {
-    background: '#00072d',
+    background: '#E5A317',
     color: 'white',
     fontWeight: 'bold',
     padding: '8px 16px',
@@ -100,19 +100,19 @@ const MainTypes = () => {
   return (
     <div className='flex d-flex justify-evenly flex-wrap my-12'>
       <div style={containerStyle} className='imgback'>
-<button className='buttonstyle text-2xl opacity-90'>Showroom</button>
+<button onClick={()=> {navigate("/stock")}} className='buttonstyle text-2xl opacity-80'>Showroom</button>
       </div>
       <div style={containerStyle2} className='imgback'>
 
-<button className='buttonstyle text-2xl opacity-90'>Finance</button>
+<button onClick={()=> {navigate("/finance")}} className='buttonstyle text-2xl opacity-80'>Finance</button>
       </div>
 
       <div style={containerStyle3} className='imgback'>
-<button className='buttonstyle text-2xl opacity-90'>Previously Sold</button>
+<button className='buttonstyle text-2xl opacity-80'>Previously Sold</button>
       </div>
       <div style={containerStyle4} className='imgback'>
 
-<button className='buttonstyle text-2xl opacity-90'>Contact Us</button>
+<button onClick={()=> {navigate("/contact")}} className='buttonstyle text-2xl opacity-80'>Contact Us</button>
       </div>
 
       

@@ -1,15 +1,19 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom';
 import { useContext } from 'react';
+import './cards.css';
 
 const Cardss = ({ index ,  price , img , text , paragraph 
 }) => {
 
   
+  const textcolor = {
+    color: '#E5A317',
 
+  };
   const navigate = useNavigate();
   const handleButtonClick = () => {
-
+navigate("/stockdetails")
   };
 
 
@@ -20,10 +24,10 @@ const Cardss = ({ index ,  price , img , text , paragraph
       <div className="text-center mt-4 ">
         <h3 className="text-xl font-semibold">{text}</h3>
        {/* <p className="text-gray-600 mt-2">{paragraph}</p> */}
-        <p className="text-black font-bold text-2xl mt-2">£{price}</p>
+        <p className=" font-bold text-2xl mt-2" style={textcolor}>£{price}</p>
       </div>
      <div className='ml-9 justify-between'>
-        <span className='ml-5 border-2 p-1'>2015</span> <span className='ml-5  border-2 p-1'>Automatic</span><span className='ml-5  border-2 p-1'>1400 miles</span>
+        <span className='ml-8 border-2 p-1'>2015</span> <span className='ml-5  border-2 p-1'>Automatic</span><span className='ml-5  border-2 p-1'>1400 miles</span>
         
       </div>
 

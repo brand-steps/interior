@@ -5,3 +5,7 @@
     background-color: #E5A317;
     color: black;
 }
+.btntext:hover {
+    background-color: black;
+    color: #E5A317;
+}
