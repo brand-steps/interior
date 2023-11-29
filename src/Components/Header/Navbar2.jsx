@@ -37,7 +37,7 @@ const Navbar2 = () => {
 
   return (
    
-<Navbar fluid rounded className="bg-gray-700">
+<Navbar fluid rounded className="bg-white">
       <Navbar.Brand href="https://flowbite-react.com">
         <img src={logos} className="mr-3  h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
@@ -61,12 +61,12 @@ const Navbar2 = () => {
       </div>
       <Navbar.Collapse>
         <Navbar.Link href="/" active className=""> 
-         <span className="headcolor text-base"> Home </span>
+         <span className="headcolor text-lg"> Home </span>
          </Navbar.Link>
-        <Navbar.Link href="/stock"><span className="headcolor text-base">Current Stock</span></Navbar.Link>
-        <Navbar.Link href="#"><span className="headcolor text-base">Sold</span></Navbar.Link>
-        <Navbar.Link href="/finance"><span className="headcolor text-base">Finance</span></Navbar.Link>
-        <Navbar.Link href="/contact"><span className="headcolor text-base">Contact</span></Navbar.Link>
+        <Navbar.Link href="/stock"><span className="headcolor text-lg">Current Stock</span></Navbar.Link>
+        <Navbar.Link href="#"><span className="headcolor text-lg">Sold</span></Navbar.Link>
+        <Navbar.Link href="/finance"><span className="headcolor text-lg">Finance</span></Navbar.Link>
+        <Navbar.Link href="/contact"><span className="headcolor text-lg">Contact</span></Navbar.Link>
 
       </Navbar.Collapse>
     </Navbar>

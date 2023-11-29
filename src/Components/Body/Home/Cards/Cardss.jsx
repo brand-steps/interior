@@ -37,7 +37,7 @@ navigate("/stockdetails")
         style={{ background: "rgb(18, 140, 126)", width: "30%", margin: "0 auto" }}
         className="text-white font-semibold px-4 py-2  mt-4 hover:bg-blue-700 transition-colors duration-300 ease-in-out"
       >
-        Details 
+        Contact 
       </button>
       <button
         onClick={handleButtonClick}
