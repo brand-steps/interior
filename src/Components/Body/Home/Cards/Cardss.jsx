@@ -27,29 +27,26 @@ navigate("/stockdetails")
         <p className=" font-bold text-2xl mt-2" style={textcolor}>£{price}</p>
       </div>
      <div className='ml-9 justify-between'>
-        <span className='ml-8 border-2 p-1'>2015</span> <span className='ml-5  border-2 p-1'>Automatic</span><span className='ml-5  border-2 p-1'>1400 miles</span>
+        <span className='ml-8 txtbg font-semibold border-2 rounded-lg p-1'>2015</span> <span className='ml-5 txtbg font-semibold border-2 rounded-lg p-1'>Automatic</span><span className='ml-5 txtbg font-semibold border-2 rounded-lg p-1'>1400 miles</span>
         
       </div>
 
       <div className='items-center ml-9'>
       <button
         onClick={handleButtonClick}
-        style={{ background: "rgb(18, 140, 126)", width: "30%", margin: "0 auto" }}
-        className="text-white font-semibold px-4 py-2  mt-4 hover:bg-blue-700 transition-colors duration-300 ease-in-out"
+        className="btn1 text-white font-semibold px-4 py-2  mt-4 transition-colors duration-300 ease-in-out"
       >
         Contact 
       </button>
       <button
         onClick={handleButtonClick}
-        style={{ background: "#00072d", width: "30%", margin: "0 auto" }}
-        className="text-white font-semibold px-4 py-2  mt-4 hover:bg-blue-700 transition-colors duration-300 ease-in-out"
+        className="btn2 text-white font-semibold px-4 py-2  mt-4 transition-colors duration-300 ease-in-out"
       >
         View 
       </button>
       <button
         onClick={handleButtonClick}
-        style={{ background: "#FC0204", width: "30%", margin: "0 auto" }}
-        className="text-white font-semibold px-4 py-2  mt-4 hover:bg-blue-700 transition-colors duration-300 ease-in-out"
+        className="btn3 text-white font-semibold px-4 py-2  mt-4 transition-colors duration-300 ease-in-out"
       >
         Finance 
       </button>

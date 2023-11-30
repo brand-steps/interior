@@ -2,8 +2,9 @@ import React from 'react';
 import carback1 from '../../../../Assests/aboutimg.jpg'
 
 import './mainsub.css';
+import { useNavigate } from 'react-router-dom';
 const MainSub = () => {
-
+const navigate = useNavigate()
 
 
   const divStyle = {
@@ -48,7 +49,7 @@ const MainSub = () => {
       </div>
       <div style={containerStyle} className='imgback'>
 
-<button className='buttonstyles text-2xl opacity-90 txthover'>Browse Our Latest Cars</button>
+<button className='buttonstyles text-2xl opacity-90 txthover' onClick={()=> {navigate("/stock")}}>Browse Our Latest Cars</button>
 
 
       </div>

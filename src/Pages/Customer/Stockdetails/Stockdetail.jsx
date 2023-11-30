@@ -58,9 +58,9 @@ const Stockdetail = () => {
       </div>
       <div style={containerStyle2} className='ml-2'>
         <h1 className='text-4xl font-bold' style={txtclr}>Toyota Land Cruiser</h1>
-        <p className='text-lg mt-3'>3.5 V6 TWIN TURBO ZX AWD</p>
+        <p className='text-lg mt-3 uppercase'>3.5 V6 TWIN TURBO ZX AWD</p>
         <div className='ml-5 mt-4 '>
-        <span className='ml-8 text-xl font-bold ' style={txtclr}>Our Price:</span> 
+        <span className='ml-24 text-xl font-bold ' style={txtclr}>Our Price:</span> 
         <span className='ml-2 '>£109,995</span> 
         
       </div>
@@ -125,7 +125,7 @@ const Stockdetail = () => {
       <Accordion.Panel>
         <Accordion.Title>Vehicle Description</Accordion.Title>
         <Accordion.Content>
-            <h1 className='text-3xl text-bold mb-10' style={txtclr}> Toyota Land Cruiser</h1>
+            <h1 className='text-3xl text-bold mb-10 uppercase' style={txtclr}> Toyota Land Cruiser</h1>
           <p className="mb-2 text-white ">
           2023 (23) TOYOTA LAND CRUISER ZX - 3.0 V6 TURBO PETROL AUTOMATIC - *FULLY LOADED EVERY OPTIONAL EXTRA 
           FROM NEW* - 900 MILES - SUNROOF - MODELLISTA BODYKIT - BEIGE LEATHER INTERIOR - PEARLESCENT WHITE PAINTWORK -
@@ -149,7 +149,7 @@ const Stockdetail = () => {
 
         <Table.Body className="divide-y">
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
             Year
             </Table.Cell>
             <Table.Cell className='text-white'>2023</Table.Cell>
@@ -157,37 +157,37 @@ const Stockdetail = () => {
      
           </Table.Row>
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
             Odometer
             </Table.Cell>
             <Table.Cell className='text-white'>900 miles</Table.Cell>
           </Table.Row>
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>Transmission</Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>Transmission</Table.Cell>
             <Table.Cell className='text-white'>Automatic</Table.Cell>
   
      
           </Table.Row>
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
             Fuel Type
             </Table.Cell>
             <Table.Cell className='text-white'>Petrol</Table.Cell>
           </Table.Row>
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>Colour</Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>Colour</Table.Cell>
             <Table.Cell className='text-white'>Black</Table.Cell>
   
      
           </Table.Row>
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
             Doors
             </Table.Cell>
             <Table.Cell className='text-white'>4 Doors</Table.Cell>
           </Table.Row>
           <Table.Row className=" ">
-            <Table.Cell className="whitespace-nowrap font-bold text-white " style={txtclr}>
+            <Table.Cell className="whitespace-nowrap font-bold " style={txtclr}>
             Engine Size
             </Table.Cell>
             <Table.Cell className='text-white'>3.0L</Table.Cell>
@@ -200,11 +200,57 @@ const Stockdetail = () => {
       <Accordion.Panel>
         <Accordion.Title>Vehicle Finance</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-white ">
-            The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-            Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-            components, whereas Tailwind UI offers sections of pages.
-          </p>
+        <div className="overflow-x-auto mt-5">
+      <Table >
+
+        <Table.Body className="divide-y">
+          <Table.Row className=" bg-slate-950">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
+            Term
+            </Table.Cell>
+            <Table.Cell className='text-white'>12 Months</Table.Cell>
+ 
+     
+          </Table.Row>
+          <Table.Row className="bg-slate-900 ">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
+            First Payment
+            </Table.Cell>
+            <Table.Cell className='text-white'>£2,234.00</Table.Cell>
+          </Table.Row>
+          <Table.Row className="bg-slate-950 ">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>Monthly Payments</Table.Cell>
+            <Table.Cell className='text-white'>£2,234.00</Table.Cell>
+  
+     
+          </Table.Row>
+          <Table.Row className="bg-slate-900 ">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
+            Cash Price
+            </Table.Cell>
+            <Table.Cell className='text-white'>£109,995.00</Table.Cell>
+          </Table.Row>
+          <Table.Row className=" bg-slate-950">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>Cash Deposit</Table.Cell>
+            <Table.Cell className='text-white'>£2,234.00</Table.Cell>
+  
+     
+          </Table.Row>
+          <Table.Row className=" bg-slate-900">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
+            Total Deposit
+            </Table.Cell>
+            <Table.Cell className='text-white'>£2,234.00</Table.Cell>
+          </Table.Row>
+          <Table.Row className=" bg-slate-950">
+            <Table.Cell className="whitespace-nowrap font-bold  " style={txtclr}>
+            Admin Fee
+            </Table.Cell>
+            <Table.Cell className='text-white'>£2,234.00</Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+      </div>
          
         </Accordion.Content>
       </Accordion.Panel>

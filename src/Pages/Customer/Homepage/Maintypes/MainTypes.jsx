@@ -108,7 +108,7 @@ const navigate = useNavigate();
       </div>
 
       <div style={containerStyle3} className='imgback'>
-<button className='buttonstyle text-2xl opacity-80'>Previously Sold</button>
+<button onClick={()=> {navigate("/sold")}} className='buttonstyle text-2xl opacity-80'>Previously Sold</button>
       </div>
       <div style={containerStyle4} className='imgback'>
 

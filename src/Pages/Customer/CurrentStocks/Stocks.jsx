@@ -8,8 +8,8 @@ import BasicPagination from './Pagination'
 import { Link } from 'react-router-dom';
 import Navbar2 from '../../../Components/Header/Navbar2'
 import CarHeading from '../../../Components/Body/Home/MainpgHeading/CarHeading'
-import SearchBar from '../../../Components/Body/Stockcomponents/SearchBar'
 import StockHeader from '../../../Components/Body/Stockcomponents/StockHeader'
+import SearchBar from '../../../Components/Body/Stockcomponents/SearchBar'
 
 const Stocks = () => {
 
@@ -60,7 +60,6 @@ const Stocks = () => {
       <Navbar2 />
 {/*<SearchBar/> <CarHeading/> */}
 <StockHeader/>
-
 
       <div className='flex  flex-wrap justify-center   '>
       <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" text={'Porsche Macan'}  price={"600"}  paragraph={'Effortlessly peel potatoes with our advanced machine.'} />

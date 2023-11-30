@@ -49,7 +49,7 @@ const About = () => {
       </div>
       <div style={containerStyle} className='imgback'>
 
-<p>We Source The Best Specialist Vehicles, We Source Latest Models, Minimum Of 60 Cars Available For Viewings At One Whole Time, Hand Picked Purchased Vehicles, Provide An Excellent After Sale, We Accept Part Exchanges, Nationwide Delivery Available At An Extra Cost, Family Run Business, We Are Very Highly Rated And Have A Very Loyal Customer Base.
+<p className='text-lg'>We Source The Best Specialist Vehicles, We Source Latest Models, Minimum Of 60 Cars Available For Viewings At One Whole Time, Hand Picked Purchased Vehicles, Provide An Excellent After Sale, We Accept Part Exchanges, Nationwide Delivery Available At An Extra Cost, Family Run Business, We Are Very Highly Rated And Have A Very Loyal Customer Base.
 
 We also offer a value your vehicle and part exchange service. Where we can offer a quick and easy valuation for your current vehicle or trade directly with us for a part exchange.</p>
       </div>

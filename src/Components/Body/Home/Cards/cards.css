@@ -1,5 +1,42 @@
 .btn1 {
     background-color: rgb(18, 140, 126);
-    width: "30%";
+    width: 30%;
     margin: "0 auto"
+}
+.btn1:hover {
+    background-color: rgb(23, 179, 160);
+    width: 30%;
+    margin: "0 auto"
+}
+.btn2 {
+    background-color: #00072d;
+    width: 30%;
+    margin: 0 auto
+}
+.btn2:hover {
+    background-color: #0a1347;
+    width: 30%;
+    margin: 0 auto
+}
+.btn3 {
+    background-color: #FC0204;
+    width: 30%;
+    margin: 0 auto
+}
+.btn3:hover {
+    background-color: #f52626;
+    width: 30%;
+    margin: 0 auto
+}
+.txtbg {
+    background-color: black;
+    color: #E5A317;
+    padding: 5px 5px 5px 5px;
+    border: 0;
+}
+.txtbg:hover {
+    background-color: #E5A317;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    border: 0;
 }
