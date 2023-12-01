@@ -1,6 +1,6 @@
 import "./navbar2.css";
 import logo from "../../Assests/car1.jpg";
-import logos from "../../Assests/logo-6.png";
+import logos from "../../Assests/logo-04.png";
 import { Link } from "react-router-dom";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -37,7 +37,7 @@ const Navbar2 = () => {
 
   return (
    
-<Navbar fluid rounded className="bg-gray-700">
+<Navbar fluid rounded className="bg-sky-950">
       <Navbar.Brand href="https://flowbite-react.com">
         <img src={logos} className="mr-3  h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
