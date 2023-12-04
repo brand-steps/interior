@@ -43,7 +43,7 @@ const Contactus = () => {
             
           </div>
           <button  onClick={datasend}   type="button" data-te-ripple-init data-te-ripple-color="light"
-            class="buttonclr px-12 py-2 text-white font-bold">
+            class="buttonclr px-12 py-2 font-bold">
             Submit
           </button>
         </form>
@@ -64,7 +64,7 @@ const Contactus = () => {
 
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold textclr">
-                  Technical Support
+                  After Sales
 
                 </p>
                 <p class="text-white  ">
@@ -90,7 +90,7 @@ const Contactus = () => {
 
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold textclr">
-                  Sales Questions
+                  Sales
                 </p>
                 <p class="text-white  ">
                   sales@equimentSupplier.com
@@ -137,7 +137,7 @@ const Contactus = () => {
 </div>
 
               <div class="ml-6 grow">
-                <p class="mb-2 font-bold textclr">Bug Report</p>
+                <p class="mb-2 font-bold textclr">Enquiries</p>
                 <p class="text-white  ">
                   bugs@equimentSupplier.com
                 </p>

@@ -8,6 +8,7 @@ import face from '../../Assests/face.png'
 import insta from '../../Assests/insta.webp'
 import addr from '../../Assests/addr.png'
 import phone from '../../Assests/phone.png'
+import goog from '../../Assests/goog.png'
 
 const NavContact2 = () => {
 
@@ -57,7 +58,7 @@ backgroundColor: '#00b0db'    /* Other styles you might want to apply */
 
     <Navbar.Brand href="https://flowbite-react.com">
         
-    <img src={addr} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
+    <img src={goog} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
      <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Unit 19 Beach Cl, Newhaven BN9 0BY</span>
     </Navbar.Brand>
 

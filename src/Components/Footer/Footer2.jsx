@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import { faFacebook, faTwitter, faInstagram , faLinkedin, faWhatsapp, } from '@fortawesome/free-brands-svg-icons';
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import face from '../../Assests/face2.png'
+import insta from '../../Assests/insta.webp'
+import phone from '../../Assests/phone.png'
+
 import './footer2.css';
 function Footer2() {
   return (
@@ -49,11 +53,16 @@ function Footer2() {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright href="#" by="Flowbite™" year={2022} className='text-black' />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} className='headcolors'/>
+           {/*} <Footer.Icon href="#" icon={BsFacebook} className='headcolors'/>
             <Footer.Icon href="#" icon={BsInstagram} className='headcolors' />
             <Footer.Icon href="#" icon={BsTwitter} className='headcolors' />
             <Footer.Icon href="#" icon={BsGithub} className='headcolors'/>
-            <Footer.Icon href="#" icon={BsDribbble} className='headcolors'/>
+<Footer.Icon href="#" icon={BsDribbble} className='headcolors'/> */}
+        <img src={insta} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
+        <img src={phone} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
+        <img src={face} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
+
+
           </div>
         </div>
       </div>
