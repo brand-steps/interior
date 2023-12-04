@@ -4,6 +4,10 @@ import { faFacebook, faTwitter, faInstagram , faLinkedin, faWhatsapp, } from '@f
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import { Button, Navbar } from 'flowbite-react';
 import './navbar2.css';
+import face from '../../Assests/face.png'
+import insta from '../../Assests/insta.webp'
+import addr from '../../Assests/addr.png'
+import phone from '../../Assests/phone.png'
 
 const NavContact2 = () => {
 
@@ -37,14 +41,15 @@ backgroundColor: '#00b0db'    /* Other styles you might want to apply */
   };
 
   return (
-    <Navbar fluid rounded className='bg-transparent border-b-2 border-rose-500 headcolors'>
+    <Navbar fluid rounded className=' border-b-2 border-rose-500 text-black bg-slate-200'>
     <Navbar.Brand href="https://flowbite-react.com">
-    <FontAwesomeIcon icon={faWhatsapp} size="2x" className='headcolori mr-2' />
+    <img src={phone} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
       <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">01273 569355</span>
     </Navbar.Brand>
     <div className="flex md:order-2">
-      <p className='text-black'>        <FontAwesomeIcon icon={faInstagram} size="2x" className='headcolori' />
-      <FontAwesomeIcon icon={faFacebook} size="2x" className='ml-2 headcolori'/>
+      <p className='text-black'>      
+        <img src={insta} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
+        <img src={face} className="mr-3 inline h-8 " alt="Flowbite React Logo" />
 </p>
       <Navbar.Toggle />
     </div>
@@ -52,7 +57,7 @@ backgroundColor: '#00b0db'    /* Other styles you might want to apply */
 
     <Navbar.Brand href="https://flowbite-react.com">
         
-    <FontAwesomeIcon icon={faWhatsapp} size="2x" className='headcolori mr-2' />
+    <img src={addr} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
      <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Unit 19 Beach Cl, Newhaven BN9 0BY</span>
     </Navbar.Brand>
 
