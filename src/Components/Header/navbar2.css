@@ -1,9 +1,23 @@
 .bgcolor {
     background-color: black;
 }
-.headcolor {
-    color: #E5A317;
+.headcolorss {
+    color: black;
 }
-.headcolor:hover {
+.headcolorss:hover {
     color: #00b0db;
+
+
 }
+.headcolors {
+   color: #00b0db;
+}
+.headcolori {
+    color: #E5A317;
+ }
+ .divhead:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: translateY(-2px);
+
+
+ }

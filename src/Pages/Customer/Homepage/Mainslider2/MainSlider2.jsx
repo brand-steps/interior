@@ -8,6 +8,9 @@ import image4 from '../../../../Assests/png-04.png';
 import back from '../../../../Assests/back.avif';
 
 import { useNavigate } from 'react-router-dom';
+import Navbar2 from '../../../../Components/Header/Navbar2';
+import NavContact from '../../../../Components/Header/NavContact';
+import NavContact2 from '../../../../Components/Header/NavContact2';
 
 const MainSlider2 = () => {
 
@@ -77,14 +80,15 @@ const MainSlider2 = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       nextImage();
-    }, 8000);
+    }, 4000);
 
     return () => {
       clearTimeout(timer);
     };
   }, [nextImage]);
   return (
-    <div className='flex  justify-evenly flex-wrap my-4' style={divStyle}>
+    <div>
+    <div className='flex  justify-evenly flex-wrap mb-4' style={divStyle}>
       <div style={containerStyle}>
       <div className="mx-auto relative w-12/12 h-5/6	">  {/* py-2 */}
       <h1 className='text-xl lg:text-7xl md:text-5xl sm:text-3xl font-extrabold mb-9 txtcolor'>{headings[currentHeadingIndex]} </h1>
@@ -124,6 +128,7 @@ const MainSlider2 = () => {
 
 
       
+    </div>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../../Assests/logo-6.png';
+import logo from '../../Assests/logo-04.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
-import { faFacebook, faTwitter, faInstagram , faLinkedin, faWhatsapp,  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram , faLinkedin, faWhatsapp, } from '@fortawesome/free-brands-svg-icons';
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import './footer2.css';

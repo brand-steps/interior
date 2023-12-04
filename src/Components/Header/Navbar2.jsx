@@ -1,6 +1,6 @@
 import "./navbar2.css";
 import logo from "../../Assests/car1.jpg";
-import logos from "../../Assests/logo-04.png";
+import logos from "../../Assests/logo-6.png";
 import { Link } from "react-router-dom";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -37,7 +37,7 @@ const Navbar2 = () => {
 
   return (
    
-<Navbar fluid rounded className="bg-sky-950">
+<Navbar fluid rounded className="bg-slate-200">
       <Navbar.Brand href="https://flowbite-react.com">
         <img src={logos} className="mr-3  h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
@@ -60,13 +60,13 @@ const Navbar2 = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active className=""> 
-         <span className="headcolor text-lg"> Home </span>
+        <Navbar.Link href="/" active className="divhead "> 
+         <span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" /> Home </span>
          </Navbar.Link>
-        <Navbar.Link href="/stock"><span className="headcolor text-lg">Current Stock</span></Navbar.Link>
-        <Navbar.Link href="/sold"><span className="headcolor text-lg">Sold</span></Navbar.Link>
-        <Navbar.Link href="/finance"><span className="headcolor text-lg">Finance</span></Navbar.Link>
-        <Navbar.Link href="/contact"><span className="headcolor text-lg">Contact</span></Navbar.Link>
+        <Navbar.Link href="/stock" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Current Stock</span></Navbar.Link>
+        <Navbar.Link href="/sold" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Sold</span></Navbar.Link>
+        <Navbar.Link href="/finance" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Finance</span></Navbar.Link>
+        <Navbar.Link href="/contact" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Contact</span></Navbar.Link>
 
       </Navbar.Collapse>
     </Navbar>
