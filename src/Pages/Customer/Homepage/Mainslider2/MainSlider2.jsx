@@ -8,9 +8,7 @@ import image4 from '../../../../Assests/png-04.png';
 import back from '../../../../Assests/back.avif';
 
 import { useNavigate } from 'react-router-dom';
-import Navbar2 from '../../../../Components/Header/Navbar2';
-import NavContact from '../../../../Components/Header/NavContact';
-import NavContact2 from '../../../../Components/Header/NavContact2';
+
 
 const MainSlider2 = () => {
 
