@@ -7,6 +7,10 @@ import Finance from "./Pages/Customer/Finance/Finance";
 import Contactus from "./Pages/Customer/Contact/Contactus";
 import Stockdetail from "./Pages/Customer/Stockdetails/Stockdetail";
 import SoldStock from "./Pages/Customer/Sold/SoldStock";
+import AddStock from "./Pages/Admin/Addstock/AddStock";
+import DisplayStock from "./Pages/Admin/Displaystock/DisplayStock";
+import DetailStock from "./Pages/Admin/Detailstock/DetailStock";
+import EditStock from "./Pages/Admin/Editstock/EditStock";
 function App() {
   return (
     <div>
@@ -19,6 +23,10 @@ function App() {
               <Route path={"/contact"} element={<Contactus />} />
               <Route path={"/stockdetails"} element={<Stockdetail />} />
               <Route path={"/sold"} element={<SoldStock />} />
+              <Route path={"/Addstocks"} element={<AddStock />} />
+              <Route path={"/displaystock"} element={<DisplayStock />} />
+              <Route path={"/detailstock/:id"} element={<DetailStock />} />
+              <Route path={"/editstock/:id"} element={<EditStock />} />
 
 
             </Routes>

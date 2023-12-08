@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import { useContext } from 'react';
 import './cards.css';
 
-const Cardss = ({ index ,  price , img , text , paragraph 
+const Cardss = ({ index ,  price , img , text , paragraph , ids , year, milagee, gear
 }) => {
 
   
@@ -27,7 +27,7 @@ navigate("/stockdetails")
         <p className=" font-bold text-2xl mt-2" style={textcolor}>£{price}</p>
       </div>
      <div className='ml-9 justify-between'>
-        <span className='ml-8 txtbg font-semibold border-2 rounded-lg p-1'>2015</span> <span className='ml-5 txtbg font-semibold border-2 rounded-lg p-1'>Automatic</span><span className='ml-5 txtbg font-semibold border-2 rounded-lg p-1'>1400 miles</span>
+        <span className='ml-8 txtbg font-semibold border-2 rounded-lg p-1'>{year}</span> <span className='ml-5 txtbg font-semibold border-2 rounded-lg p-1'>{gear}</span><span className='ml-5 txtbg font-semibold border-2 rounded-lg p-1'>{milagee} miles</span>
         
       </div>
 
@@ -39,7 +39,7 @@ navigate("/stockdetails")
         Contact 
       </button>
       <button
-        onClick={handleButtonClick}
+        onClick={()=>{navigate(`/detailstock/${ids}`, { replace: true }) }}
         className="btn2 text-white font-semibold px-4 py-2  mt-4 transition-colors duration-300 ease-in-out"
       >
         View 

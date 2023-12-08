@@ -36,7 +36,7 @@ const SoldStock = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/paginatpost?page=${page}`);
+      const response = await axios.get(`http://localhost:8000/stocksdisplaytrue`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
@@ -52,15 +52,17 @@ const SoldStock = () => {
     console.log('asdasd')
     getAllProducts()
   }, [page])
-
   return (
     <div>
       <Navbar2 />
 {/*<SearchBar/> <CarHeading/> */}
 <Soldheader/>
+<div className='flex  flex-wrap justify-center  bg-black '>
+        {products.map((value, i) => (
+                <SoldCards img={value.imageUrl1} text={value.carname}  price={value.price}  paragraph={value.description} />
 
+        ))}
 
-      <div className='flex  flex-wrap justify-center  bg-black '>
       <SoldCards img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" text={'Porsche Macan'}  price={"600"}  paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
       <SoldCards img="https://smgmedia.blob.core.windows.net/images/129726/640/porsche-macan-suv-petrol-2b7959af383d.jpg" price={"700"}  text={'BMW M135i'} paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
   <SoldCards img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" price={"800"}  text={'Toyota Land Cruiser'} paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
