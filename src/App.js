@@ -12,6 +12,7 @@ import DisplayStock from "./Pages/Admin/Displaystock/DisplayStock";
 import DetailStock from "./Pages/Admin/Detailstock/DetailStock";
 import EditStock from "./Pages/Admin/Editstock/EditStock";
 function App() {
+  let url = "https://drab-tan-sheep-fez.cyclic.ap p";
   return (
     <div>
 

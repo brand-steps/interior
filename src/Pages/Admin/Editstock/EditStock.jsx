@@ -18,7 +18,7 @@ const EditStock = () => {
 
 
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`http://localhost:8000/singlestock/${id}`);
+        const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/singlestock/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -47,7 +47,7 @@ const EditStock = () => {
 
     const handlesubmit = async () => {
         const productData = { ...singleproduct};
-        const response = await axios.put(`http://localhost:8000/edittedstock/${id}`, productData);
+        const response = await axios.put(`https://drab-tan-sheep-fez.cyclic.app/edittedstock/${id}`, productData);
 
 alert("Product Updated");
 

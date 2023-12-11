@@ -16,3 +16,26 @@
         margin-top: 12px;
         cursor: pointer;
         }
+        .PrdouctSerchUls{
+            height: 10rem;
+          overflow-x: hidden;
+            /* border-radius: 5px; */
+            overflow-y: scroll!important;
+            width: 100%;
+            overflow: scroll;
+            background-color: black;
+          }
+          
+.searchbot {
+    margin-bottom: 40px;
+}
+.lsthov:hover {
+    background-color: rgb(226 232 240);
+    color: black;
+}
+.tzxt {
+    color: #E5A317;
+}  
+.tzxtprice {
+    color: #00b0db;
+}  

@@ -51,7 +51,7 @@ const DisplayStock = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/stocksdisplay`);
+          const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/stocksdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -61,7 +61,7 @@ const DisplayStock = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`http://localhost:8000/stockdel/${id}`)
+          const response = await axios.delete(`https://drab-tan-sheep-fez.cyclic.app/stockdel/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -72,7 +72,7 @@ const DisplayStock = () => {
       
   const approveData = async (id)=>{
     try {
-      const response = await axios.get(`http://localhost:8000/soldmark/${id}`)
+      const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/soldmark/${id}`)
       console.log("response: ", response.data);
     } catch (error) {
       console.log("error in approving all requests", error);

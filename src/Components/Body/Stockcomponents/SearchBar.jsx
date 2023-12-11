@@ -4,10 +4,32 @@ import { useState } from "react";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import './stockSlider/searchbar.css'
-const SearchBar = () => {
-    const [values, setvalues] = useState("")
-    const [prices, setprices] = useState("")
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
+const SearchBar = () => {
+  const navigate = useNavigate();
+    const [model, setmodel] = useState("")
+    const [make, setmake] = useState("")
+    const [price, setprices] = useState("")
+    const [results, setResults] = useState([]);
+    const [resultbool, setresultbool] = useState(false);
+    const [showbool, setshowbool] = useState(false)
+
+    const performSearch = async () => {
+      try {
+        const response = await axios.get(
+          `https://drab-tan-sheep-fez.cyclic.app/api/search?make=${model}&year=${make}&price=${price}`
+        );
+        console.log("Search results: ", response.data);
+        setResults(response.data);
+        console.log("res", results);
+        setresultbool(true);
+        setshowbool(true);
+      } catch (error) {
+        console.log("Error in performing search: ", error);
+      }
+    };
     const containerStyle = {
         display: 'flex',
         flexDirection: 'column',
@@ -35,7 +57,7 @@ const SearchBar = () => {
 
   <div className="grid md:grid-cols-4 md:gap-6">
     <div className="relative z-0 w-full mb-6 group">
-    <select id="country" name='country' onChange={(event) => { setvalues(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
+    <select id="country" name='country' onChange={(event) => { setmodel(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
         <option>Any Model</option>
         <option value="Albarth">Albarth</option>
         <option value="Alpha Romeo">Alpha Romeo</option>
@@ -88,7 +110,7 @@ const SearchBar = () => {
 </select>
  </div>
     <div className="relative z-0 w-full mb-6 group">
-    <select id="country" name='country' onChange={(event) => { setvalues(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
+    <select id="country" name='country' onChange={(event) => { setmake(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
         <option>Any Make</option>
         <option value="2023">2023</option>
         <option value="2022">2022</option>
@@ -140,13 +162,40 @@ const SearchBar = () => {
     </Box>
      </div>
      <div className="relative z-0 w-full mb-6 group">
-     <button  className="btnstylo ml-5 w-56 h-14 mb-2 text-2xl">Search</button>
+     <button onClick={performSearch} className="btnstylo ml-5 w-56 h-14 mb-2 text-2xl">Search</button>
  </div>
+
   </div>
+  {results.length === 0 ? (
+          <></>
+        ) : (
+          <ul className={`PrdouctSerchUls`} onMouseLeave={()=> {setshowbool(false)}}>
+            {results.map((item) => (
+              <li
+                key={item._id}
+                onClick={() => {navigate(`/detailstock/${item._id}`)}}
+                className="itemHoverEffect lsthov cursor-pointer flex items-center p-2  "
+              >
+                <img
+                  src={item.imageUrl1}
+                  alt={item.carname}
+                  className="mr-3"
+                  width={70}
+                  height={20}
+                />
+                <div>
+                  <p className="text-md tzxt font-semibold">{item.carname}</p>
+                  <p className="tzxtprice">£{item.price}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
 </div>
 
 
-   {/*}  <div className='flex  justify-evenly flex-wrap my-4 ' >
+
+  {/*}  <div className='flex  justify-evenly flex-wrap my-4 ' >
       <div style={containerStyle}>
       <form>
     <div className="flex bg-black h-20 ">

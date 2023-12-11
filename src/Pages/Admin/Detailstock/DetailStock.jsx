@@ -72,7 +72,7 @@ const [image6 , setimage6] = useState(false);
   };
 
   const fetchSingleProduct = async() => {
-    const response = await axios.get(`http://localhost:8000/singlestock/${id}`);
+    const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/singlestock/${id}`);
     console.log("response: ", response);
   console.log(singleproduct);
   setsingleproduct(response.data.Product);

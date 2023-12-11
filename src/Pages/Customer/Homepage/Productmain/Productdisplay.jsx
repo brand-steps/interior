@@ -10,6 +10,25 @@ const [products, setProducts] = useState([]);
 const [productsBoolean, setProductsBoolean] = useState(false);
 const [Delete , setdelete] = useState(false);
 
+const getAllProducts = async () => {
+  try {
+    const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/stocksdisplay`);
+    console.log("response: ", response);
+    console.log(response.data);
+    setProducts(response.data.data);
+    console.log("Products" + response.data.data);
+  } catch (error) {
+    console.log("Error In Getting All Products ", error);
+  }
+};
+
+ useEffect(() => {
+        console.log('asdasd')
+        getAllProducts()
+        // return () => {
+        //   console.log('Cleanup Function');
+        //  }
+    }, [Delete , productsBoolean ])
 
 
   const responsive = {
@@ -38,7 +57,11 @@ const [Delete , setdelete] = useState(false);
     draggable={true} 
     autoPlay={true}
     responsive={responsive}>
-      <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" text={'Porsche Macan'}  price={"600"}  paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
+        {products.map((value, i) => (
+                <Cardss img={value.imageUrl1} text={value.carname}  price={value.price}  paragraph={value.description} ids={value._id} year={value.year} milagee={value.milage} gear={value.gearbox} />
+
+        ))}
+    {/*<Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" text={'Porsche Macan'}  price={"600"}  paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
       <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/porsche-macan-suv-petrol-2b7959af383d.jpg" price={"700"}  text={'BMW M135i'} paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
   <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" price={"800"}  text={'Toyota Land Cruiser'} paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
   <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/porsche-cayenne-estate-petrol-d331b2e5a1ff.jpg" price={"900"}  text={'Oven'} paragraph={'Effortlessly peel potatoes with our advanced machine.'} />
@@ -47,7 +70,7 @@ const [Delete , setdelete] = useState(false);
 <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/bmw-440i-coupe-petrol-69aa018634fa.jpg" text={'REFRIGERATORS'}   price={"400"}  paragraph={'Effortlessly peel potatoes with our advanced machine.'}  />
 <Cardss img="https://smgmedia.blob.core.windows.net/images/129726/640/porsche-cayenne-estate-petrol-d331b2e5a1ff.jpg"  price={"1300"} text={'Toyota Land Cruiser'}   paragraph={'Effortlessly peel potatoes with our advanced machine.'}  />
   
-         
+        */}
     </Carousel>
   );
 };

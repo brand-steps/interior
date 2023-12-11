@@ -36,7 +36,7 @@ const SoldStock = () => {
   };
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/stocksdisplaytrue`);
+      const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/stocksdisplaytrue`);
       console.log("response: ", response);
       console.log(response.data);
       setnumberOfPages(response.data.pages)
