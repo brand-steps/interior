@@ -6,7 +6,6 @@ import WhatsappIcon from '../../../Components/Body/Home/Whatsapp/WhatsappIcon';
 import SearchBar from '../../../Components/Body/Stockcomponents/SearchBar';
 import Footer from '../../../Components/Footer/Footer';
 import Footer2 from '../../../Components/Footer/Footer2';
-import NavContact from '../../../Components/Header/NavContact';
 import NavContact2 from '../../../Components/Header/NavContact2';
 import Navbar2 from '../../../Components/Header/Navbar2';
 import MainSlider from './Mainslider/MainSlider';

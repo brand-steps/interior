@@ -35,7 +35,7 @@ backgroundColor: '#00b0db'    /* Other styles you might want to apply */
   };
 
   return (
-    <div className='flex  justify-end flex-wrap ' style={divStyle} >
+    <div className='flex  justify-end flex-wrap ' >
       <div style={containerStyle}>
         <span className='text-black font-semibold'><span className='ml-4'> 91 Park View Road, Uxbridge, UB8 3GA</span> <span className='ml-2 mr-3'>sales@japmpv.co.uk</span></span>
       </div>
