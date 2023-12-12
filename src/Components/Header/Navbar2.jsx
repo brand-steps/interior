@@ -38,7 +38,7 @@ const Navbar2 = () => {
   return (
    
 <Navbar fluid rounded className="bg-slate-200">
-      <Navbar.Brand href="https://flowbite-react.com">
+      <Navbar.Brand href="https://brightoncars.vercel.app/" > 
         <img src={logos} className="mr-3  h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
       <div className="flex md:order-2">

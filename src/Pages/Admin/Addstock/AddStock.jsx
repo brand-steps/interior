@@ -3,9 +3,11 @@ import './addstock.css';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AddStock = () => {
 
+  const navigate = useNavigate();
     const [carname, setcarname] = useState()
     const [make, setmake] = useState()
     const [model, setmodel] = useState()
@@ -81,6 +83,14 @@ const AddStock = () => {
     const [image5, setimage5] = useState();
     const [image6, setimage6] = useState();
 
+    const buttonStyle2 = {
+      background: 'red',
+      color: 'black',
+      fontWeight: 'bold',
+      padding: '8px 16px',
+      marginTop: '12px',
+      cursor: 'pointer',
+    };
     const handleChange = (e) => {
       setimage1({ ...image1, [e.target.name]: e.target.files });
       };
@@ -214,6 +224,8 @@ if (!make || make == "Any Model") {
   };
   return (
         <>
+                <button style={buttonStyle2} onClick={()=>{navigate(`/displaystock`, { replace: true }) }} className='inline-block'>Edit your Stock</button>
+
 <h1 className='text-3xl font-bold text-white text-center mt-5'>Add Stock</h1>
         <div className='mx-10 my-6 '>
         <div className="grid md:grid-cols-2 md:gap-6">
@@ -566,7 +578,8 @@ if (!make || make == "Any Model") {
 
   </div>
   </div>
-       <TextField fullWidth multiline maxRows={6}  onChange={(event) => { setdescription(event.target.value);  }} placeholder='Edit Product Description' name="description" variant="outlined" className='block py-2.5 px-0 w-full focus:text-white text-sm text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer'/>
+
+       <TextField fullWidth multiline maxRows={6}  onChange={(event) => { setdescription(event.target.value);  }} placeholder='Edit Product Description' name="description" variant="outlined" className='block py-2.5 px-0 w-full focus:text-white text-sm text-white  border-0 border-b-2 border-white bg-slate-200 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer'/>
 
 
 

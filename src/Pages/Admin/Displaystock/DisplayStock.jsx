@@ -21,6 +21,7 @@ const DisplayStock = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: '10px',
 
         width: '300px', // Adjust the width as needed
         // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
@@ -51,7 +52,7 @@ const DisplayStock = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/stocksdisplay`);
+          const response = await axios.get(`https://drab-tan-sheep-fez.cyclic.app/stocksdisplayall`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -98,10 +99,10 @@ const DisplayStock = () => {
       className="max-w-sm"
     >
         <img src={value.imageUrl1} alt="img" style={imageStyle}/>
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 ">
       {value.carname}
       </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
+      <p className="font-normal text-gray-700 ">
        Make: {value.make} , Model: {value.model}, Color: {value.color}  <br/>
         <button style={buttonStyle} onClick={()=>{navigate(`/detailstock/${value._id}`, { replace: true }) }} className='inline-block'>View</button>
         <button style={buttonStyle} onClick={()=>{navigate(`/editstock/${value._id}`, { replace: true }) }} className='inline-block'>Edit</button>
