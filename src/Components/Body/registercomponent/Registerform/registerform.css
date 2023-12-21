@@ -1,0 +1,10 @@
+.maindiv {
+    margin-top: -100px;
+}
+.rootcontainers {
+    display: inline;
+    width: 90%;
+    gap: 20px;
+    text-align: center;
+    margin: 20px auto;
+  }
