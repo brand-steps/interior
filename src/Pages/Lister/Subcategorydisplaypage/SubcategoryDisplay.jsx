@@ -65,7 +65,7 @@ const SubcategoryDisplay = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`http://localhost:8000/listdisplaysubcategories/${name}`);
+            const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listdisplaysubcategories/${name}`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

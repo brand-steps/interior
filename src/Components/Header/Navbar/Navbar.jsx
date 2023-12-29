@@ -52,7 +52,7 @@ const Navbars = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`http://localhost:8000/listerlogin`, {
+        let response = await axios.post(`https://easy-erin-clownfish-ring.cyclic.app/listerlogin`, {
           email: email,
           password: password
         }, {
@@ -71,7 +71,7 @@ const Navbars = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `http://localhost:8000/api/v1/listerprofile`,
+          `https://easy-erin-clownfish-ring.cyclic.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

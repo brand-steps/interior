@@ -156,7 +156,7 @@ console.log("img",imageUrl1)
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/addlist",
+        "https://easy-erin-clownfish-ring.cyclic.app/addlist",
         formData,
         {
           headers: {
@@ -179,7 +179,7 @@ console.log("img",imageUrl1)
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `http://localhost:8000/api/v1/listerprofile`,
+          `https://easy-erin-clownfish-ring.cyclic.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {
@@ -237,15 +237,7 @@ console.log("img",imageUrl1)
     height: '120px',
     marginBottom: '16px',
   };
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
+
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -254,7 +246,6 @@ console.log("img",imageUrl1)
    <>
    <Navbars/>
    <AddListHeader/>
-
    <div className='flex  justify-evenly  flex-wrap bg-white pt-5' >
               <div style={containerStyle2} className={categorybool ? 'bg-slate-200' : 'bg-white'}>
         <img src="https://cdn-icons-png.flaticon.com/512/5485/5485853.png" alt="Fairs" style={imageStyle2} />

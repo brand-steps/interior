@@ -80,7 +80,7 @@ const RegisterForm = () => {
 
     if (firstname && email && phone && postal && address &&city && packagename && password && reTypepassword) {
       try {
-        const response = await axios.post('http://localhost:8000/listerregister', {
+        const response = await axios.post('https://easy-erin-clownfish-ring.cyclic.app/listerregister', {
           firstname,
           lastname,
           email,

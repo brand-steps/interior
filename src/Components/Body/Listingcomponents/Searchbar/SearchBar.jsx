@@ -46,7 +46,7 @@ const SearchBar = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/searchlist?location=${location}&price=${price}&productname=${productname}`
+        `https://easy-erin-clownfish-ring.cyclic.app/api/searchlist?location=${location}&price=${price}&productname=${productname}`
       );
       console.log("Search results: ", response.data);
       setResults(response.data);
