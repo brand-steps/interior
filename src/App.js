@@ -17,6 +17,15 @@ import Pricing from "./Pages/Customer/Pricing/Pricing";
 import Contact from "./Pages/Customer/Contact/Contact";
 import AddList from "./Pages/Lister/Addlistuser/AddList";
 import ListDetails from "./Pages/Customer/Listdetails/ListDetails";
+import HrApp from "./Pages/Admin/dashboard/HrApp";
+import AllListingDisplay from "./Pages/Admin/Alllistingsdisplay/AlllListingDisplay";
+import ApprovalPage from "./Pages/Admin/ApprovalPage/ApprovalPage";
+import AllUserPage from "./Pages/Admin/AllUserspage/AllUserPage";
+import ManageListDisplay from "./Pages/Admin/Managelistdisplay/ManageListDisplay";
+import EditListing from "./Pages/Admin/Editlisting/EditListing";
+import ViewLister from "./Pages/Admin/Viewlister/ViewLister";
+import EditLister from "./Pages/Admin/Editlister/EditLister";
+import SubcategoryDisplay from "./Pages/Lister/Subcategorydisplaypage/SubcategoryDisplay";
 
 function App() {
   return (
@@ -41,6 +50,15 @@ function App() {
               <Route path={"/contact"} element={<Contact />} />
               <Route path={"/Addlisting"} element={<AddList />} />
               <Route path={"/listdetails/:id"} element={<ListDetails />} />
+              <Route path={"/dashboardadmin"} element={<HrApp />} />
+              <Route path={"/listdisplayadmin"} element={<AllListingDisplay />} />
+              <Route path={"/approvelistadmin"} element={<ApprovalPage />} />
+              <Route path={"/alluseradmin"} element={<AllUserPage />} />
+              <Route path={"/bestsellermanage"} element={<ManageListDisplay />} />
+              <Route path={"/editlisting/:id"} element={<EditListing />} />
+              <Route path={"/userlistview/:id"} element={<ViewLister />} />
+              <Route path={"/edituserlister/:id"} element={<EditLister />} />
+              <Route path={"/subcategories/:name"} element={<SubcategoryDisplay />} />
 
 
 

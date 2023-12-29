@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'flowbite-react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import AdminNAvbar from '../../../Components/Header/Adminnavbar/AdminNavbar';
 
 
-const UserListProduct = () => {
+const ViewLister = () => {
   const navigate = useNavigate();
-const {name} = useParams();
+const {id} = useParams();
   const [products, setProducts] = useState([]);
+  const [singleuser, setsingleuser] = useState([]);
   const [loadProduct, setLoadProduct] = useState(false)
   const [page, setPage] = useState(1)
   const [numberOfPages, setnumberOfPages] = useState(9)
@@ -17,7 +19,7 @@ const {name} = useParams();
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/listdisplayuser/${name}`);
+      const response = await axios.get(`http://localhost:8000/listdisplayuserid/${id}`);
       console.log("response: ", response);
       console.log(response.data);
       setProducts(response.data.data);
@@ -26,6 +28,13 @@ const {name} = useParams();
       console.log("Error In Getting All Products ", error);
     }
   };
+  const fetchSingleProduct = async() => {
+    const response = await axios.get(`http://localhost:8000/singleuser/${id}`);
+    console.log("response: ", response);
+  setsingleuser(response.data.Product);
+  console.log(singleuser);
+
+        }
   const deleteData = async (id)=>{
     try {
       const response = await axios.delete(`http://localhost:8000/deletelist/${id}`)
@@ -38,6 +47,7 @@ const {name} = useParams();
   };
   useEffect(() => {
     console.log('asdasd')
+    fetchSingleProduct()
     getAllProducts()
   }, [Delete])
 
@@ -73,7 +83,11 @@ const {name} = useParams();
   };
 
   return (
-    
+    <>
+    <AdminNAvbar/>
+    <h1 className='mx-5 my-5 text-3xl font-bold text-center'>{singleuser.firstname}</h1>
+    <h1 className='mx-5 my-5 text-xl font-semibold text-center'>package: {singleuser.packagename}</h1>
+    <br/>
     <div className='flex  justify-center flex-wrap my-4' >
       
  {products.map((eachProduct, i) => (
@@ -82,37 +96,27 @@ const {name} = useParams();
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {eachProduct.productname}
       </h5>
-      {eachProduct.isApproved === false ? (
-        <>
-              <p className="font-normal text-gray-700 text-red-500">
-        Your Listing is being reviewed by Admin
-           </p>
-           <span className='ml-4 text-black'>Price: ${eachProduct.price}<button className='font-bold ml-2 text-purple-600' onClick={() => {navigate(`/listdetails/${eachProduct._id}`)}} >View</button></span> 
-
-        </>
-      ) : (
-        <p className="font-normal text-gray-700 ">
-        Your Listing Is Approved
+      <p className="font-normal text-gray-700 dark:text-gray-400">
+        You can view your product
         <p className='mt-2'> <span className='font-bold'>
         Status: </span>
           {eachProduct.Deactive === false ? (
             <>
-            Active
+            <span className='text-green-500'> Active</span>
             </>
           ): (<>
-          DisActive
+          <span className='text-red-500'>DisActive</span>
           </>)}
              <span className='ml-4'>Price: ${eachProduct.price}</span> <button className='font-bold ml-2 text-red-500' onClick={()=>{deleteData(eachProduct._id)}}>Delete</button><button className='font-bold ml-2 text-purple-600' onClick={() => {navigate(`/listdetails/${eachProduct._id}`)}} >View</button></p>
       </p>
-      )}
-
     </Card> 
 
       </div>
 
 ))}
     </div>
+    </>
   );
 }
 
-export default UserListProduct;
+export default ViewLister;

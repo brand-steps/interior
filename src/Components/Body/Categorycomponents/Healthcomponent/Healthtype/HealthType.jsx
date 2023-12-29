@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './healthtype.css'
+import { useNavigate } from 'react-router-dom';
+
 const HealthType = () => {
-
-
-
+  const navigate = useNavigate();
   const divStyle = {
     width: '900px',
     flexDirection: 'row',
@@ -42,32 +42,32 @@ const HealthType = () => {
   return (
     <div className=' flex justify-evenly mb-6'>
     <div className='maindiv flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
-              <div style={containerStyle}>
+              <div style={containerStyle} onClick={() => {navigate(`/subcategories/Clinics`)}}>
         <img src="https://cdn-icons-png.flaticon.com/512/745/745435.png" alt="Fairs" style={imageStyle} />
         <h1>Clinics</h1>
 
       </div>
-      <div style={containerStyle}>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Dentistry`)}}>
         <img src="https://static.vecteezy.com/system/resources/previews/007/925/792/original/tooth-in-circle-icon-isolated-on-white-background-free-vector.jpg" alt="Fairs" style={imageStyle} />
         <h1>Dentistry</h1>
       </div>
 
-      <div style={containerStyle}>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Doctor`)}}>
         <img src="https://cdn-icons-png.flaticon.com/512/504/504061.png" alt="Fairs" style={imageStyle} />
         <h1>Doctor</h1>
 
       </div>
-      <div style={containerStyle}>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Nursing`)}}>
         <img src="https://cdn-icons-png.flaticon.com/512/194/194924.png" alt="Fairs" style={imageStyle} />
         <h1>Nursing</h1>
 
       </div>
-      <div style={containerStyle}>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Day Care`)}}>
         <img src="https://static.vecteezy.com/system/resources/previews/030/943/864/original/daycare-center-icon-vector.jpg" alt="Fairs" style={imageStyle} />
         <h1>Day Care</h1>
 
       </div>
-      <div style={containerStyle}>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Diagnostics`)}}>
         <img src="https://cdn3.iconfinder.com/data/icons/medical-round-metaphors/150/MedicalIconSetCollection11-512.png" alt="Fairs" style={imageStyle} />
         <h1>Diagnostics</h1>
 

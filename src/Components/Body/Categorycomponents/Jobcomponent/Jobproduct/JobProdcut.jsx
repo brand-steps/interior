@@ -44,7 +44,7 @@ const JobProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`http://localhost:8000/listdisplay`);
+            const response = await axios.get(`http://localhost:8000/jobproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

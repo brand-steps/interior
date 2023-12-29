@@ -12,7 +12,9 @@ import furniture from '../../../Assets/furniture.png'
 import FashionType from '../../../Components/Body/Categorycomponents/Fashioncomponents/Fashiontype/FashionType'
 import { TextField } from '@mui/material'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 const AddList = () => {
+  const navigate = useNavigate();
   let [customeruser, setcustomeruser] = useState(false);
   let [customerresponse, setcustomerresponse] = useState("");
 
@@ -53,6 +55,7 @@ const AddList = () => {
   const [mobile, setmobile] = useState()
   const [location, setlocation] = useState()
   const [listername, setlistername] = useState()
+  const [listerid, setlisterid] = useState()
   const [description, setdescription] = useState()
   const [price, setprice] = useState()
   const [imageUrl1, setimageUrl1] = useState()
@@ -84,7 +87,6 @@ const AddList = () => {
   };
 
   const handleUpload = async () => {
-    alert("Product Added Suceesfully ");
 console.log("img",imageUrl1)
 
 
@@ -146,6 +148,7 @@ console.log("img",imageUrl1)
     formData.append("mobile", mobile);
     formData.append("location", location);
     formData.append("listername", listername);
+    formData.append("listerid", listerid);
     formData.append("description", description);
     formData.append("price", price);
 
@@ -162,6 +165,10 @@ console.log("img",imageUrl1)
         }
       );
       console.log(response);
+      alert("Product Added Suceesfully ");
+      window.location.reload(false);
+
+      
       // Handle response from backend if needed
     } catch (error) {
       console.error("Error uploading data:", error);
@@ -187,7 +194,7 @@ console.log("img",imageUrl1)
         setcustomerresponse(response.data);
         setcustomeruser(true);
         setlistername(customerresponse.firstname);
-
+        setlisterid(customerresponse._id);
       } catch (error) {
         console.log("axios error: ", error);
       }
@@ -205,6 +212,7 @@ console.log("img",imageUrl1)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    cursor: 'pointer',
 
     width: '100px', // Adjust the width as needed
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
@@ -322,6 +330,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+ 
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
    </div>
 <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -365,6 +375,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -418,6 +430,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -483,6 +497,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -534,6 +550,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -570,6 +588,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -613,6 +633,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -665,6 +687,8 @@ console.log("img",imageUrl1)
 <>
 <div className='font-bold text-3xl text-violet-500 ml-4 mb-1 mt-62'>
     <h1>Choose A SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
    </div>
    <div className=' flex justify-evenly mb-6'>
     <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
@@ -809,7 +833,9 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button onTouchStart={() => {setlistername(customerresponse.firstname);setlisterid(customerresponse._id);}}
+   onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -920,7 +946,11 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+  onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -1030,7 +1060,11 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+  onTouchStart={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -1124,7 +1158,11 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+  onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -1231,7 +1269,11 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+  onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -1341,7 +1383,10 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+    onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -1423,7 +1468,10 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+    onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 
@@ -1530,7 +1578,10 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
-  <button onMouseEnter={() => {setlistername(customerresponse.firstname)}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+  <button
+    onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
 </div>
 
 

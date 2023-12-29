@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'flowbite-react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import Navbars from '../../../Components/Header/Navbar/Navbar';
 
 
-const BeautyProduct = () => {
+const SubcategoryDisplay = () => {
   const navigate = useNavigate();
+  const { name } = useParams();
+
   const [products, setProducts] = useState([]);
   const [loadProduct, setLoadProduct] = useState(false)
   const [page, setPage] = useState(1)
@@ -23,6 +26,25 @@ const BeautyProduct = () => {
     justifyContent: 'center',
 
     width: '320px', // Adjust the width as needed
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
+  const divStyle2 = {
+    backgroundImage: "url('https://media.licdn.com/dms/image/D4D1BAQF8Mquu7nig0Q/company-background_10000/0/1657724460110/hairtex_sia_cover?e=2147483647&v=beta&t=x5waWK8FbQWR3QenzJqMkPTBe5SlmJdqDmpUuLIvQVM')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+
+    /* Other styles you might want to apply */
+  };
+
+  const containerStyle2 = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
+    width: '1000px', // Adjust the width as needed
+    height: '250px',
+    paddingBottom: '100px'
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
 
@@ -43,7 +65,7 @@ const BeautyProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`http://localhost:8000/beautyproducts`);
+            const response = await axios.get(`http://localhost:8000/listdisplaysubcategories/${name}`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);
@@ -56,6 +78,15 @@ const BeautyProduct = () => {
           getAllProducts()
         }, [page])
   return (
+    <>
+    <Navbars/>
+        <div className='flex  justify-evenly flex-wrap my-4' style={divStyle2}>
+      <div style={containerStyle2} className="text-white">
+        <h1 className="text-6xl font-extrabold opacity-100">{name}</h1>
+
+      </div>
+      
+    </div>
     <div className='flex  justify-center flex-wrap my-4' >
  {products.map((eachProduct, i) => (
       <div style={containerStyle}>
@@ -133,7 +164,9 @@ const BeautyProduct = () => {
 
 
     </div>
+    </>
   );
 }
 
-export default BeautyProduct;
+export default SubcategoryDisplay;
+
