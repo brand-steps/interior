@@ -114,12 +114,42 @@ const [image6 , setimage6] = useState(false);
         <div className='flex  mx-5 flex-wrap ' >
       <div style={containerStyle3}>
        <span> 
+        {singleproduct.imageUrl1 && (
+        <>
         <span onClick={() => {setimage1(true); setimage2(false); setimage3(false); setimage4(false); setimage5(false); setimage6(false)}}> <img src={singleproduct.imageUrl1} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
+
+        </>
+       )}
+       {singleproduct.imageUrl2 && (
+        <>
        <span onClick={() => {setimage1(false); setimage2(true); setimage3(false); setimage4(false); setimage5(false); setimage6(false)}}><img src={singleproduct.imageUrl2} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
+
+        </>
+       )}
+       {singleproduct.imageUrl3 && (
+        <>
        <span onClick={() => {setimage1(false); setimage2(false); setimage3(true); setimage4(false); setimage5(false); setimage6(false)}}> <img src={singleproduct.imageUrl3} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
+
+        </>
+       )}
+       {singleproduct.imageUrl4 && (
+        <>
        <span onClick={() => {setimage1(false); setimage2(false); setimage3(false); setimage4(true); setimage5(false); setimage6(false)}}> <img src={singleproduct.imageUrl4} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
+
+        </>
+       )}
+       {singleproduct.imageUrl5 && (
+        <>
        <span onClick={() => {setimage1(false); setimage2(false); setimage3(false); setimage4(false); setimage5(true); setimage6(false)}}>   <img src={singleproduct.imageUrl5} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
-       <span onClick={() => {setimage1(false); setimage2(false); setimage3(false); setimage4(false); setimage5(false); setimage6(true)}}><img src={singleproduct.imageUrl6} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
+
+        </>
+       )}
+       {singleproduct.imageUrl6 && (
+        <>
+               <span onClick={() => {setimage1(false); setimage2(false); setimage3(false); setimage4(false); setimage5(false); setimage6(true)}}><img src={singleproduct.imageUrl6} alt="carimg" style={imageStyle2} className='inline ml-2'/></span>
+
+        </>
+       )}
 
       </span>
 

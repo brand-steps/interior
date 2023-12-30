@@ -26,6 +26,7 @@ import EditListing from "./Pages/Admin/Editlisting/EditListing";
 import ViewLister from "./Pages/Admin/Viewlister/ViewLister";
 import EditLister from "./Pages/Admin/Editlister/EditLister";
 import SubcategoryDisplay from "./Pages/Lister/Subcategorydisplaypage/SubcategoryDisplay";
+import AddList2 from "./Pages/Lister/Addlistuser/AddList2";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.app/"
@@ -44,12 +45,13 @@ function App() {
               <Route path={"/beauty"} element={<BeautyPage />} />
               <Route path={"/jobs"} element={<JobPage />} />
               <Route path={"/listings"} element={<ListingPage />} />
-              <Route path={"/listings"} element={<ListingPage />} />
               <Route path={"/register"} element={<RegisterUser />} />
               <Route path={"/listdisplay/:name"} element={<UserListDisplay />} />
               <Route path={"/pricing"} element={<Pricing />} />
               <Route path={"/contact"} element={<Contact />} />
-              <Route path={"/Addlisting"} element={<AddList />} />
+          {/*    <Route path={"/Addlisting"} element={<AddList />} /> */}
+              <Route path={"/Addlisting"} element={<AddList2 />} />
+
               <Route path={"/listdetails/:id"} element={<ListDetails />} />
               <Route path={"/dashboardadmin"} element={<HrApp />} />
               <Route path={"/listdisplayadmin"} element={<AllListingDisplay />} />

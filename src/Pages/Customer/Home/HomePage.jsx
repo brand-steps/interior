@@ -34,8 +34,7 @@ const HomePage = () => {
 <Corosel/>
 <CategoryHead/>
 <HomeCategory/>
-<Listingheading/>
-<NewListing/>
+
 <BestListHeading/>
 <BestListingSlider/>
 <PropertyHeading/>
@@ -54,6 +53,8 @@ const HomePage = () => {
 <EventSlider/>
 <BeautyHeading/>
 <BeautySlider/>
+<Listingheading/>
+<NewListing/>
 <Footers/>
     </div>
   )

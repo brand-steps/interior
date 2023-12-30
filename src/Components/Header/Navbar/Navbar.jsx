@@ -112,8 +112,8 @@ const Navbars = () => {
           }
         >
           <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+            <span className="block text-sm">{customerresponse.firstname}</span>
+            <span className="block truncate text-sm font-medium">{customerresponse.email}</span>
           </Dropdown.Header>
           <Dropdown.Item onMouseEnter={() =>{setcustomerbring(customerresponse.firstname);}} href={`/listdisplay/${customerresponse.firstname}`}>Your Listings</Dropdown.Item>
           <Dropdown.Item href='/Addlisting'>Add Listings</Dropdown.Item>
