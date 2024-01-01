@@ -27,6 +27,8 @@ import ViewLister from "./Pages/Admin/Viewlister/ViewLister";
 import EditLister from "./Pages/Admin/Editlister/EditLister";
 import SubcategoryDisplay from "./Pages/Lister/Subcategorydisplaypage/SubcategoryDisplay";
 import AddList2 from "./Pages/Lister/Addlistuser/AddList2";
+import ChoosePricing from "./Pages/Customer/Pricing/ChoosePricing";
+import Signin from "./Pages/Lister/Signin/Signin";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.app/"
@@ -62,6 +64,8 @@ function App() {
               <Route path={"/userlistview/:id"} element={<ViewLister />} />
               <Route path={"/edituserlister/:id"} element={<EditLister />} />
               <Route path={"/subcategories/:name"} element={<SubcategoryDisplay />} />
+              <Route path={"/choosepricing/:id"} element={<ChoosePricing />} />
+              <Route path={"/signin"} element={<Signin />} />
 
 
 

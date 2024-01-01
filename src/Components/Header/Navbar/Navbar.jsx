@@ -24,6 +24,7 @@ const Navbars = () => {
   let [customeruser, setcustomeruser] = useState(false);
   let [customerresponse, setcustomerresponse] = useState("");
   let [customerbring, setcustomerbring] = useState(false);
+  let [packagename, setpackagename] = useState();
 
   const [login, setlogin] = useState(false)
 
@@ -59,10 +60,11 @@ const Navbars = () => {
           withCredentials: true
         })
           console.log("login successful");
-          alert("login successfull")
+          //alert("login successfull")
           window.location.reload(false);
       } catch (error) {
         console.log(error)
+        alert("Invalid Email or Password")
         setErrorMessage('Invalid Email or Password'); 
       }
     }
@@ -86,7 +88,9 @@ const Navbars = () => {
         setcustomerresponse(response.data);
         setcustomeruser(true);
         setcustomerbring(customerresponse.firstname);
-
+        setpackagename(response.data.packagename)
+        console.log("prof",response.data)
+        console.log("pac",response.data.packagename)
 
       } catch (error) {
         console.log("axios error: ", error);
@@ -116,7 +120,14 @@ const Navbars = () => {
             <span className="block truncate text-sm font-medium">{customerresponse.email}</span>
           </Dropdown.Header>
           <Dropdown.Item onMouseEnter={() =>{setcustomerbring(customerresponse.firstname);}} href={`/listdisplay/${customerresponse.firstname}`}>Your Listings</Dropdown.Item>
+          
+          {!customerresponse.packagename ? (<>
+            <Dropdown.Item href={`/choosepricing/${customerresponse._id}`}>Add Listings</Dropdown.Item>
+
+          </>) : <>
           <Dropdown.Item href='/Addlisting'>Add Listings</Dropdown.Item>
+
+          </>}
           <Dropdown.Item>Earnings</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item>Sign out</Dropdown.Item>
