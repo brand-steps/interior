@@ -98,6 +98,32 @@ const Navbars = () => {
     };
     getProfile();
   }, []);
+
+  const handleLogout = async () => {
+    if (!customerresponse.email || !customerresponse.password) {
+      console.log('Value is not Given');
+      alert("Please enter Missing Fields")
+      return
+    }
+    // https://glorious-hat-bat.cyclic.app      // old url
+    else {
+      try {
+        let response = await axios.post(`https://easy-erin-clownfish-ring.cyclic.app/listerlogout`, {
+          email: customerresponse.email,
+          password: customerresponse.password
+        }, {
+          withCredentials: true
+        })
+          console.log("login successful");
+          //alert("login successfull")
+          window.location.reload(false);
+      } catch (error) {
+        console.log(error)
+        alert("Invalid Email or Password")
+        setErrorMessage('Invalid Email or Password'); 
+      }
+    }
+  };
   return (
     <div>
       
@@ -119,7 +145,7 @@ const Navbars = () => {
             <span className="block text-sm">{customerresponse.firstname}</span>
             <span className="block truncate text-sm font-medium">{customerresponse.email}</span>
           </Dropdown.Header>
-          <Dropdown.Item onMouseEnter={() =>{setcustomerbring(customerresponse.firstname);}} href={`/listdisplay/${customerresponse.firstname}`}>Your Listings</Dropdown.Item>
+          <Dropdown.Item onMouseEnter={() =>{setcustomerbring(customerresponse._id);}} href={`/listdisplay/${customerresponse._id}`}>Your Listings</Dropdown.Item>
           
           {!customerresponse.packagename ? (<>
             <Dropdown.Item href={`/choosepricing/${customerresponse._id}`}>Add Listings</Dropdown.Item>
@@ -128,9 +154,9 @@ const Navbars = () => {
           <Dropdown.Item href='/Addlisting'>Add Listings</Dropdown.Item>
 
           </>}
-          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Item href={`/packages/${customerresponse._id}`}>Packages</Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Item>Sign out</Dropdown.Item>
+          <Dropdown.Item onClick={handleLogout}>Sign out</Dropdown.Item>
         </Dropdown>
         </>) : <>
         <button style={buttonStyle} onClick={handleDialogOpen} className='rounded-2xl text-xl border-4 border-t-violet-500 border-e-teal-700 border-s-amber-500 border-b-red-500'>Sell</button>
@@ -140,12 +166,12 @@ const Navbars = () => {
           <DialogContentText>
     <div className="space-y-6">
         <div>
-            <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-            <input type="email" onChange={(event) => { setemail(event.target.value); }} name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required/>
+            <label for="email" className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+            <input type="email" onChange={(event) => { setemail(event.target.value); }} name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 " placeholder="name@company.com" required/>
         </div>
         <div>
-            <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-            <input type="password" onChange={(event) => { setPassword(event.target.value); }} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required/>
+            <label for="password" className="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+            <input type="password" onChange={(event) => { setPassword(event.target.value); }} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 " required/>
         </div>
   {/*     <div className="flex items-start">
             <div className="flex items-start">

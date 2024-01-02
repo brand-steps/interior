@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const UserListProduct = () => {
   const navigate = useNavigate();
-const {name} = useParams();
+const {id} = useParams();
   const [products, setProducts] = useState([]);
   const [loadProduct, setLoadProduct] = useState(false)
   const [page, setPage] = useState(1)
@@ -17,7 +17,7 @@ const {name} = useParams();
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listdisplayuser/${name}`);
+      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listdisplayuserid/${id}`);
       console.log("response: ", response);
       console.log(response.data);
       setProducts(response.data.data);

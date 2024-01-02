@@ -83,7 +83,7 @@ const Signin = () => {
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
   </div> */}
-        <Button className='bg-violet-500' onClick={LoginForm} type="submit">Submit</Button>
+        <Button className='bg-violet-500' onClick={LoginForm} type="submit">Login</Button>
       </div>
     </Card>
     

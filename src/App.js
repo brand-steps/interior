@@ -29,6 +29,7 @@ import SubcategoryDisplay from "./Pages/Lister/Subcategorydisplaypage/Subcategor
 import AddList2 from "./Pages/Lister/Addlistuser/AddList2";
 import ChoosePricing from "./Pages/Customer/Pricing/ChoosePricing";
 import Signin from "./Pages/Lister/Signin/Signin";
+import Packages from "./Pages/Lister/Packages/Packages";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.app/"
@@ -48,7 +49,7 @@ function App() {
               <Route path={"/jobs"} element={<JobPage />} />
               <Route path={"/listings"} element={<ListingPage />} />
               <Route path={"/register"} element={<RegisterUser />} />
-              <Route path={"/listdisplay/:name"} element={<UserListDisplay />} />
+              <Route path={"/listdisplay/:id"} element={<UserListDisplay />} />
               <Route path={"/pricing"} element={<Pricing />} />
               <Route path={"/contact"} element={<Contact />} />
           {/*    <Route path={"/Addlisting"} element={<AddList />} /> */}
@@ -66,6 +67,7 @@ function App() {
               <Route path={"/subcategories/:name"} element={<SubcategoryDisplay />} />
               <Route path={"/choosepricing/:id"} element={<ChoosePricing />} />
               <Route path={"/signin"} element={<Signin />} />
+              <Route path={"/packages/:id"} element={<Packages />} />
 
 
 
