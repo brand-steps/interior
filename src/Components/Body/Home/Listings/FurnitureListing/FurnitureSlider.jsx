@@ -15,7 +15,7 @@ const FurnitureSlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/listfurnituremain`);
+      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listfurnituremain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

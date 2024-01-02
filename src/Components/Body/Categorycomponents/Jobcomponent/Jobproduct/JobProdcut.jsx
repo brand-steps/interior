@@ -44,7 +44,7 @@ const JobProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`http://localhost:8000/jobproducts`);
+            const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/jobproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

@@ -47,7 +47,7 @@ const AdminNAvbar = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `http://localhost:8000/api/v1/listerprofile`,
+          `https://easy-erin-clownfish-ring.cyclic.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

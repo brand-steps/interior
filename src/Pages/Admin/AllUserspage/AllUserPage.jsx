@@ -56,7 +56,7 @@ const AllUserPage = () => {
       };
       const getAllUsers = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/userdisplay`);
+          const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/userdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -66,7 +66,7 @@ const AllUserPage = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`http://localhost:8000/deletelisteruser/${id}`)
+          const response = await axios.delete(`https://easy-erin-clownfish-ring.cyclic.app/deletelisteruser/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -77,7 +77,7 @@ const AllUserPage = () => {
       
   const activateData = async (id)=>{
     try {
-      const response = await axios.get(`http://localhost:8000/activatelisting/${id}`)
+      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/activatelisting/${id}`)
       console.log("response: ", response.data);
       setactivatebool(true)
       alert("Listing is now Active");
