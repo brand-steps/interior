@@ -15,7 +15,7 @@ const EventSlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listeventsmain`);
+      const response = await axios.get(`http://localhost:8000/listeventsmain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

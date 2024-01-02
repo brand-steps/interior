@@ -144,7 +144,7 @@ const formData = new FormData();
 
     try {
       const response = await axios.post(
-        "https://easy-erin-clownfish-ring.cyclic.app/addlist",
+        "http://localhost:8000/addlist",
         formData,
         {
           headers: {
@@ -167,7 +167,7 @@ const formData = new FormData();
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://easy-erin-clownfish-ring.cyclic.app/api/v1/listerprofile`,
+          `http://localhost:8000/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

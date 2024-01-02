@@ -56,7 +56,7 @@ const AllListingDisplay = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listdisplay`);
+          const response = await axios.get(`http://localhost:8000/listdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -66,7 +66,7 @@ const AllListingDisplay = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://easy-erin-clownfish-ring.cyclic.app/deletelist/${id}`)
+          const response = await axios.delete(`http://localhost:8000/deletelist/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -77,7 +77,7 @@ const AllListingDisplay = () => {
       
   const activateData = async (id)=>{
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/activatelisting/${id}`)
+      const response = await axios.get(`http://localhost:8000/activatelisting/${id}`)
       console.log("response: ", response.data);
       setactivatebool(true)
       alert("Listing is now Active");
@@ -88,7 +88,7 @@ const AllListingDisplay = () => {
   };
   const deactivateData = async (id)=>{
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/deactivatelisting/${id}`)
+      const response = await axios.get(`http://localhost:8000/deactivatelisting/${id}`)
       console.log("response: ", response.data);
       setdeactivatebool(true)
       alert("Listing is now Deactivated");

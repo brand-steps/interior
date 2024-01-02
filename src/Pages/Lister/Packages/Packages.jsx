@@ -15,7 +15,7 @@ const Packages = () => {
     const [name, setName] = useState("");
     
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/singleuser/${id}`);
+        const response = await axios.get(`http://localhost:8000/singleuser/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -37,7 +37,7 @@ const Packages = () => {
             };
           });
         const productData = { ...singleproduct};
-        const response = await axios.put(`https://easy-erin-clownfish-ring.cyclic.app/editteduser/${id}`, productData);
+        const response = await axios.put(`http://localhost:8000/editteduser/${id}`, productData);
 
 alert("new Package selected")
     }

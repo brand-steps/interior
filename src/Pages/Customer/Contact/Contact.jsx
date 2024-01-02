@@ -73,7 +73,7 @@ const Contact = () => {
             
           </div>
           <button   type="button" data-te-ripple-init data-te-ripple-color="light"
-            class="bg-red-600 px-12 py-2 text-white font-bold">
+            class="bg-black px-12 py-2 text-white font-bold">
             Submit
           </button>
         </form>
@@ -83,7 +83,7 @@ const Contact = () => {
           <div      class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
             <div class="flex items-start">
             <div class="shrink-0">
-  <div class="inline-block rounded-md bg-red-600 p-4 text-white">
+  <div class="inline-block rounded-md bg-black p-4 text-white">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
       stroke="currentColor" class="h-6 w-6">
       <path stroke-linecap="round" stroke-linejoin="round"
@@ -99,10 +99,10 @@ const Contact = () => {
                   </Link>
                 </p>
                 <p class="text-black  ">
-                  support@equimentSupplier.com
+                  info@listit.pk
                 </p>
                 <p class="text-black  ">
-                01273 569355
+                +44 7978 337634
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Contact = () => {
           <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
             <div class="flex items-start">
             <div class="shrink-0">
-  <div class="inline-block rounded-md bg-red-600 p-4 text-white">
+  <div class="inline-block rounded-md bg-black p-4 text-white">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
       stroke="currentColor" class="h-6 w-6">
       <path stroke-linecap="round" stroke-linejoin="round"
@@ -124,10 +124,10 @@ const Contact = () => {
                   Sales Questions
                 </p>
                 <p class="text-black  ">
-                  sales@equimentSupplier.com
-                </p>
+                info@listit.pk
+                                </p>
                 <p class="text-black  ">
-                01273 569355
+                +44 7978 337634
                 </p>
               </div>
             </div>
@@ -135,7 +135,7 @@ const Contact = () => {
           <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
             <div class="align-start flex">
             <div class="shrink-0">
-  <div class="inline-block rounded-md bg-red-600 p-4 text-white">
+  <div class="inline-block rounded-md bg-black p-4 text-white">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
       stroke="currentColor" class="h-6 w-6">
       <path stroke-linecap="round" stroke-linejoin="round"
@@ -147,10 +147,10 @@ const Contact = () => {
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold text-black">Info</p>
                 <p class="text-black  ">
-                  info@equimentSupplier.com
-                </p>
+                info@listit.pk
+                                </p>
                 <p class="text-black  ">
-                01273 569355
+                +44 7978 337634
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ const Contact = () => {
           <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
             <div class="align-start flex">
             <div class="shrink-0">
-  <div class="inline-block rounded-md bg-red-600 p-4 text-white">
+  <div class="inline-block rounded-md bg-black p-4 text-white">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
       stroke="currentColor" class="h-6 w-6">
       <path stroke-linecap="round" stroke-linejoin="round"
@@ -170,10 +170,10 @@ const Contact = () => {
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold text-black">Bug Report</p>
                 <p class="text-black  ">
-                  bugs@equimentSupplier.com
-                </p>
+                info@listit.pk
+                                </p>
                 <p class="text-black  ">
-                01273 569355
+                +44 7978 337634
                 </p>
               </div>
             </div>

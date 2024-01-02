@@ -32,7 +32,7 @@ import Signin from "./Pages/Lister/Signin/Signin";
 import Packages from "./Pages/Lister/Packages/Packages";
 
 function App() {
-  let backendurl = "https://easy-erin-clownfish-ring.cyclic.app/"
+  let backendurl = "http://localhost:8000/"
   return (
     <div>
 

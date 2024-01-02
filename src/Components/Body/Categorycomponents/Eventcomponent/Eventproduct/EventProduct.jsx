@@ -44,7 +44,7 @@ const EventProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/eventproducts`);
+            const response = await axios.get(`http://localhost:8000/eventproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

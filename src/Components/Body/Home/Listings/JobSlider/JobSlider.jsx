@@ -15,7 +15,7 @@ const JobSlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listjobsmain`);
+      const response = await axios.get(`http://localhost:8000/listjobsmain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

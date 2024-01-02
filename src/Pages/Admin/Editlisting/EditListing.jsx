@@ -18,7 +18,7 @@ const EditListing = () => {
 
 
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/singlelist/${id}`);
+        const response = await axios.get(`http://localhost:8000/singlelist/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -47,7 +47,7 @@ const EditListing = () => {
 
     const handlesubmit = async () => {
         const productData = { ...singleproduct};
-        const response = await axios.put(`https://easy-erin-clownfish-ring.cyclic.app/edittedlisting/${id}`, productData);
+        const response = await axios.put(`http://localhost:8000/edittedlisting/${id}`, productData);
 
 alert("Product Updated");
 navigate('/listdisplayadmin')
