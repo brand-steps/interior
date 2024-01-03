@@ -1,8 +1,9 @@
 import React from "react"
+import propertyhead from '../../../../../Assets/propertyhead.jpg'
 
 const PropertyHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://wallpaperaccess.com/full/458308.jpg')",
+        backgroundImage: `url(${propertyhead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

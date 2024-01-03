@@ -2,6 +2,14 @@ import React from 'react';
 import { useEffect } from 'react';
 import './eventtype.css'
 import { useNavigate } from 'react-router-dom';
+import wed from '../../../../../Assets/wed.png'
+import birth from '../../../../../Assets/birth.png'
+import catering from '../../../../../Assets/catering.jpg'
+import anniversary from '../../../../../Assets/anniversary.jpg'
+import festival from '../../../../../Assets/festival.png'
+import exibition from '../../../../../Assets/exibition.png'
+import seminar from '../../../../../Assets/seminar.png'
+import music from '../../../../../Assets/music.png'
 
 const EventType = () => {
   const navigate = useNavigate();
@@ -46,42 +54,42 @@ const EventType = () => {
     <div className=' flex justify-evenly mb-6'>
     <div className='maindiv flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
               <div style={containerStyle} onClick={() => {navigate(`/subcategories/Wedding`)}}>
-        <img src="https://cdn-icons-png.flaticon.com/512/290/290018.png" alt="Fairs" style={imageStyle} />
+        <img src={wed} alt="Fairs" style={imageStyle} />
         <h1>Wedding</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Birthday`)}}>
-        <img src="https://cdn-icons-png.flaticon.com/512/168/168532.png" alt="Fairs" style={imageStyle} />
+        <img src={birth} alt="Fairs" style={imageStyle} />
         <h1>Birthday</h1>
       </div>
 
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Catering`)}}>
-        <img src="https://static.vecteezy.com/system/resources/previews/016/045/126/original/concession-catering-glyph-circle-icon-vector.jpg" alt="Fairs" style={imageStyle} />
+        <img src={catering} alt="Fairs" style={imageStyle} />
         <h1>Catering</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Anniversary`)}}>
-        <img src="https://i.pinimg.com/564x/1f/7a/1c/1f7a1c41e2940c4e74779b6cf7fe6190.jpg" alt="Fairs" style={imageStyle} />
+        <img src={anniversary} alt="Fairs" style={imageStyle} />
         <h1>Anniversary</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Festival`)}}>
-        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784589.png" alt="Fairs" style={imageStyle} />
+        <img src={festival} alt="Fairs" style={imageStyle} />
         <h1>Festival</h1>
 
       </div>
 
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Exibition`)}}>
-        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784615.png" alt="Fairs" style={imageStyle} />
+        <img src={exibition} alt="Fairs" style={imageStyle} />
         <h1>Exibition</h1>
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Seminar`)}}>
-        <img src="https://www.iconbunny.com/icons/media/catalog/product/cache/2/thumbnail/600x/1b89f2fc96fc819c2a7e15c7e545e8a9/3/9/3926.9-presenting-icon-iconbunny.jpg" alt="Fairs" style={imageStyle} />
+        <img src={seminar} alt="Fairs" style={imageStyle} />
         <h1>Seminar</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Entertainment`)}}>
-        <img src="https://i.pinimg.com/564x/02/99/62/029962604b992c5ba477e94cc9f12a5a.jpg" alt="Fairs" style={imageStyle} />
+        <img src={music} alt="Fairs" style={imageStyle} />
         <h1>Entertainment</h1>
 
       </div>

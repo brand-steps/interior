@@ -1,8 +1,9 @@
 import React from "react"
+import eventhead from '../../../../../Assets/eventhead.jpg'
 
 const EventHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://bathurstgoldfields.com.au/wp-content/uploads/2016/07/DSC_0265-1500x500.jpg')",
+        backgroundImage: `url(${eventhead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

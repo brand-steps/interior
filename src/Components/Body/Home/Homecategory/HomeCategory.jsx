@@ -4,6 +4,10 @@ import fashion from '../../../../Assets/fashion.png'
 import jobs from '../../../../Assets/jobs.png'
 import service from '../../../../Assets/service.png'
 import furniture from '../../../../Assets/furniture.png'
+import health from '../../../../Assets/health.png'
+import event from '../../../../Assets/event.png'
+import beauty from '../../../../Assets/beauty.jpg'
+
 import { Link } from 'react-router-dom';
 const HomeCategory = () => {
 
@@ -45,7 +49,7 @@ const HomeCategory = () => {
       <Link to="/fashion">
               <div style={containerStyle}>
         <img src={fashion} alt="Fairs" style={imageStyle} />
-        <h1>Fashion & Appreal</h1>
+        <h1>Fashion & Apparel</h1>
       </div>
       </Link>
       <Link to="/property">
@@ -78,22 +82,22 @@ const HomeCategory = () => {
       </Link>
       <Link to="/health">
       <div style={containerStyle}>
-        <img src="https://icons.veryicon.com/png/o/business/circular-multi-color-function-icon/health-health.png" alt="Fairs" style={imageStyle} />
+        <img src={health} alt="Fairs" style={imageStyle} />
         <h1>Health</h1>
 
       </div>
       </Link>
       <Link to="/event">
       <div style={containerStyle}>
-        <img src="https://cdn3.iconfinder.com/data/icons/basic-icons-5/64/EVENTS_CALENDAR-512.png" alt="Fairs" style={imageStyle} />
-        <h1>Event Planner</h1>
+        <img src={event} alt="Fairs" style={imageStyle} />
+        <h1>Events & Planners</h1>
 
       </div>
       </Link>
       <Link to="/beauty">
 
       <div style={containerStyle}>
-        <img src="https://www.iconbunny.com/icons/media/catalog/product/1/5/1587.9-hairdresser-icon-iconbunny.jpg" alt="Fairs" style={imageStyle} />
+        <img src={beauty} alt="Fairs" style={imageStyle} />
         <h1>Beauty </h1>
 
       </div>

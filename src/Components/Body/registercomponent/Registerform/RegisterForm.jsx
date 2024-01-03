@@ -443,7 +443,7 @@ onMouseEnter={()=> {setpackagename("Free Plan");}}
 </div>
 <div style={containerStyle2}>
 <Card className='max-w-sm'>
-<h5 className="mb-4 text-xl font-medium text-gray-500 ">Weekly plan</h5>
+<h5 className="mb-4 text-xl font-medium text-gray-500 ">Basic Plan</h5>
 <div className="flex items-baseline text-gray-900">
   <span className="text-3xl font-semibold">$</span>
   <span className="text-5xl font-extrabold tracking-tight">49</span>
@@ -558,8 +558,8 @@ onMouseEnter={()=> {setpackagename("Free Plan");}}
     <span className="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
   </li>
 </ul>
-<button onTouchStart={()=> {setpackagename("Weekly Plan");}}
- onMouseEnter={()=> {setpackagename("Weekly Plan");}}
+<button onTouchStart={()=> {setpackagename("Basic Plan");}}
+ onMouseEnter={()=> {setpackagename("Basic Plan");}}
   onClick={()=> { signupForm()}}
   className="inline-flex w-full justify-center rounded-lg bg-cyan-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
 >
@@ -572,7 +572,7 @@ onMouseEnter={()=> {setpackagename("Free Plan");}}
 </div>
 <div style={containerStyle2}>
 <Card className='max-w-sm'>
-<h5 className="mb-4 text-xl font-medium text-gray-500 ">Monthly plan</h5>
+<h5 className="mb-4 text-xl font-medium text-gray-500 ">Standard Plan</h5>
 <div className="flex items-baseline text-gray-900">
   <span className="text-3xl font-semibold">$</span>
   <span className="text-5xl font-extrabold tracking-tight">49</span>
@@ -687,8 +687,8 @@ onMouseEnter={()=> {setpackagename("Free Plan");}}
     <span className="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
   </li>
 </ul>
-<button onTouchStart={()=> {setpackagename("Monthly Plan");}}
-onMouseEnter={()=> {setpackagename("Monthly Plan");}}
+<button onTouchStart={()=> {setpackagename("Standard Plan");}}
+onMouseEnter={()=> {setpackagename("Standard Plan");}}
   onClick={()=> { signupForm()}}
   className="inline-flex w-full justify-center rounded-lg bg-cyan-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
 >
@@ -701,7 +701,7 @@ onMouseEnter={()=> {setpackagename("Monthly Plan");}}
 </div>
 <div style={containerStyle2}>
 <Card className='max-w-sm'>
-<h5 className="mb-4 text-xl font-medium text-gray-500 ">Yearly plan</h5>
+<h5 className="mb-4 text-xl font-medium text-gray-500 ">Premium Plan</h5>
 <div className="flex items-baseline text-gray-900">
   <span className="text-3xl font-semibold">$</span>
   <span className="text-5xl font-extrabold tracking-tight">49</span>
@@ -817,8 +817,8 @@ onMouseEnter={()=> {setpackagename("Monthly Plan");}}
   </li>
 </ul>
 <button
-onTouchStart={()=> {setpackagename("Yearly Plan");}}
- onMouseEnter={()=> {setpackagename("Yearly Plan");}}
+onTouchStart={()=> {setpackagename("Premium Plan");}}
+ onMouseEnter={()=> {setpackagename("Premium Plan");}}
   onClick={()=> { signupForm()}}
   className="inline-flex w-full justify-center rounded-lg bg-cyan-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
 >

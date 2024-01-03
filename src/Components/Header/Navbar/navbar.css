@@ -1,4 +1,5 @@
 .divhead {
+  color: white;
     margin: 0;
     padding: 0.5rem 0.5rem;
     position: relative;
@@ -22,7 +23,7 @@
   }
   
   .divhead:hover {
-    color: black;
+    color: white;
     transform: translateY(-2px);
   }
   

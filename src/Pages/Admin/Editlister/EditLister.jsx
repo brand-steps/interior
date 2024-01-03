@@ -124,9 +124,9 @@ navigate('/alluseradmin')
     <select id="packagename" name='packagename' value={singleproduct.packagename} onChange={handlecchange} className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 0   ">
         <option>Select Plan</option>
         <option value="Free Plan">Free Plan</option>
-        <option value="Weekly Plan">Weekly Plan</option>
-        <option value="Monthly Plan">Monthly Plan</option>
-        <option value="Yearly Plan">Yearly Plan</option>
+        <option value="Basic Plan">Basic Plan</option>
+        <option value="Standard Plan">Standard Plan</option>
+        <option value="Premium Plan">Premium Plan</option>
 
 </select>    </div>
   </div>

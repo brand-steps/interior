@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../Assets/logos.png';
+import logo from '../../Assets/logomains.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import { faFacebook, faTwitter, faInstagram , faLinkedin, faWhatsapp, } from '@fortawesome/free-brands-svg-icons';
@@ -11,11 +11,11 @@ import phone from '../../Assets/phone.png'
 
 function Footers() {
   return (
-    <Footer container className='bg-slate-200 '>
+    <Footer container className='bg-black '>
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className='h-9 sm:h-32' />
          {/*}   <Footer.Brand
               href="#"
               src={logo}
@@ -25,31 +25,31 @@ function Footers() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 ">
             <div>
-              <Footer.Title title="about" className='headcolors'/>
+              <Footer.Title title="about" className='text-white'/>
               <Footer.LinkGroup col>
-                <Footer.Link href="#" className='text-black'>About Us</Footer.Link>
-                <Footer.Link href="#" className='text-black'>Home</Footer.Link>
+                <Footer.Link href="#" className='text-white'>About Us</Footer.Link>
+                <Footer.Link href="#" className='text-white'>Home</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Follow us" className='headcolors'/>
+              <Footer.Title title="Follow us" className='text-white'/>
               <Footer.LinkGroup col>
-                <Footer.Link href="#"className='text-black'>Github</Footer.Link>
-                <Footer.Link href="#" className='text-black'>Discord</Footer.Link>
+                <Footer.Link href="#"className='text-white'>Instagram</Footer.Link>
+                <Footer.Link href="#" className='text-white'>Facebook</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Legal" className='headcolors' />
+              <Footer.Title title="Legal" className='text-white' />
               <Footer.LinkGroup col>
-                <Footer.Link href="#" className='text-black'>Privacy Policy</Footer.Link>
-                <Footer.Link href="#" className='text-black'>Terms &amp; Conditions</Footer.Link>
+                <Footer.Link href="#" className='text-white'>Privacy Policy</Footer.Link>
+                <Footer.Link href="#" className='text-white'>Terms &amp; Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Flowbite™" year={2022} className='text-black' />
+          <Footer.Copyright href="https://londonlogodesigners.co.uk/" by="LondonLogoDesigners" year={2024} className='text-white' />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
            {/*} <Footer.Icon href="#" icon={BsFacebook} className='headcolors'/>
             <Footer.Icon href="#" icon={BsInstagram} className='headcolors' />

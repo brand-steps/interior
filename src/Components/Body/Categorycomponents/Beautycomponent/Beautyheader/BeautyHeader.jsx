@@ -1,8 +1,9 @@
 import React from "react"
+import beautyhead from '../../../../../Assets/Beautyhead.jpg'
 
 const BeautyHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://elacosmetics.com.au/cdn/shop/files/9_dd4c313e-0838-46e7-b488-60d939d4c287.png?v=1697516219&width=3840')",
+        backgroundImage: `url(${beautyhead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

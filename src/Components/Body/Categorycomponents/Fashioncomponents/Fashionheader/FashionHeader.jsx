@@ -1,8 +1,9 @@
 import React from "react"
+import fashionhead from '../../../../../Assets/fashionhead.jpg'
 
 const FashionHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://c1.wallpaperflare.com/preview/336/692/939/shirt-colour-clothing-fashion.jpg')",
+        backgroundImage: `url(${fashionhead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 
@@ -39,7 +40,7 @@ const FashionHeader = () => {
   return (
     <div className='flex  justify-evenly flex-wrap my-4' style={divStyle}>
       <div style={containerStyle} className="text-white">
-        <h1 className="text-6xl font-extrabold opacity-100">Fashion & Appreal</h1>
+        <h1 className="text-6xl font-extrabold opacity-100">Fashion & Apparel</h1>
 
       </div>
 

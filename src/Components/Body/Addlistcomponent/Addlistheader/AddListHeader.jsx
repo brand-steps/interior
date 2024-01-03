@@ -1,8 +1,9 @@
 import React from "react"
+import inner2 from '../../../../Assets/inner2.jpg'
 
 const AddListHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://alko-garden.uk/out/pictures/ddmedia/Oxid_Headerbanner_Produktinformationen.webp')",
+        backgroundImage: `url(${inner2})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

@@ -1,8 +1,9 @@
 import React from "react"
+import healthhead from '../../../../../Assets/healthhead.jpg'
 
 const HealthHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://chamberbusinessnews.com/wp-content/uploads/2021/03/pexels-pixabay-40568-1500x500.jpg')",
+        backgroundImage: `url(${healthhead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

@@ -3,6 +3,7 @@ import { Card } from 'flowbite-react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import Navbars from '../../../Components/Header/Navbar/Navbar';
+import inner2 from '../../../Assets/inner2.jpg'
 
 
 const SubcategoryDisplay = () => {
@@ -29,7 +30,7 @@ const SubcategoryDisplay = () => {
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
   const divStyle2 = {
-    backgroundImage: "url('https://media.licdn.com/dms/image/D4D1BAQF8Mquu7nig0Q/company-background_10000/0/1657724460110/hairtex_sia_cover?e=2147483647&v=beta&t=x5waWK8FbQWR3QenzJqMkPTBe5SlmJdqDmpUuLIvQVM')",
+    backgroundImage: `url(${inner2})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
 
@@ -149,7 +150,7 @@ const SubcategoryDisplay = () => {
         <span className="text-3xl font-bold text-gray-900 dark:text-white">${eachProduct.price}</span>
         <button
           onClick={() => {navigate(`/listdetails/${eachProduct._id}`)}}
-          className="rounded-lg bg-violet-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          className="rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
         >
           View More
         </button>

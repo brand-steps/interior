@@ -1,8 +1,9 @@
 import React from "react"
+import pricinghead2 from '../../../../Assets/pricinghead2.jpg'
 
 const PricingHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/598632b58419c22ddf229bbc/1604513967680-U31MNY2XSA6RS3VGNFF1/2020+Finalists+Banner.jpg?format=2500w')",
+        backgroundImage: `url(${pricinghead2})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

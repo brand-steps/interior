@@ -13,6 +13,7 @@ import FashionType from '../../../Components/Body/Categorycomponents/Fashioncomp
 import { TextField } from '@mui/material'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+
 const AddList2 = () => {
   const navigate = useNavigate();
   let [customeruser, setcustomeruser] = useState(false);

@@ -1,8 +1,9 @@
 import React from "react"
+import regishead from '../../../../Assets/regishead.jpg'
 
 const RegisterHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20221104/pngtree-abstract-digital-technology-ui-futuristic-hud-virtual-interface-elements-sci-image_1457282.jpg')",
+        backgroundImage: `url(${regishead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

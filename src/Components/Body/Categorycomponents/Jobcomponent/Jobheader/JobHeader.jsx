@@ -1,8 +1,9 @@
 import React from "react"
+import jobshead from '../../../../../Assets/jobshead.jpg'
 
 const JobHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://blog.talent500.co/wp-content/uploads/2020/03/you-x-ventures-Oalh2MojUuk-unsplash-1500x500.jpg')",
+        backgroundImage: `url(${jobshead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

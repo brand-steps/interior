@@ -1,6 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './fashiontype.css'
+import men from '../../../../../Assets/men.jpg'
+import women from '../../../../../Assets/women.png'
+import kids from '../../../../../Assets/kids.png'
+import wedding from '../../../../../Assets/wedding.png'
+import party from '../../../../../Assets/party.png'
+import night from '../../../../../Assets/night.png'
+
 const FashionType = () => {
   const navigate = useNavigate();
 
@@ -44,32 +51,32 @@ const FashionType = () => {
     <div className=' flex justify-evenly mb-6'>
     <div className='maindiv flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
               <div style={containerStyle} onClick={() => {navigate(`/subcategories/Men Wear`)}}>
-        <img src="https://static.vecteezy.com/system/resources/previews/006/747/449/original/a-hanging-t-shirt-icon-in-flat-design-mens-wear-vector.jpg" alt="Fairs" style={imageStyle} />
+        <img src={men} alt="Fairs" style={imageStyle} />
         <h1>Men Wear</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Women Wear`)}}>
-        <img src="https://cdn1.iconfinder.com/data/icons/clothes-13/512/dress-512.png" alt="Fairs" style={imageStyle} />
+        <img src={women} alt="Fairs" style={imageStyle} />
         <h1>Women Wear</h1>
       </div>
 
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Kids Wear`)}}>
-        <img src="https://cdn-icons-png.flaticon.com/512/196/196466.png" alt="Fairs" style={imageStyle} />
+        <img src={kids} alt="Fairs" style={imageStyle} />
         <h1>Kids Wear</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Wedding Wear`)}}>
-        <img src="https://cdn4.iconfinder.com/data/icons/love-and-romance-2-9/128/53-512.png" alt="Fairs" style={imageStyle} />
+        <img src={wedding} alt="Fairs" style={imageStyle} />
         <h1>Wedding Wear</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Party Wear`)}}>
-        <img src="https://cdn-icons-png.flaticon.com/512/189/189580.png" alt="Fairs" style={imageStyle} />
+        <img src={party} alt="Fairs" style={imageStyle} />
         <h1>Party Wear</h1>
 
       </div>
       <div style={containerStyle} onClick={() => {navigate(`/subcategories/Night Wear`)}}>
-        <img src="https://www.iconbunny.com/icons/media/catalog/product/cache/2/thumbnail/600x/1b89f2fc96fc819c2a7e15c7e545e8a9/1/3/1301.9-pyjamas-suit-icon-iconbunny.jpg" alt="Fairs" style={imageStyle} />
+        <img src={night} alt="Fairs" style={imageStyle} />
         <h1>Night Wear</h1>
 
       </div>

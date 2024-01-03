@@ -1,8 +1,9 @@
 import React from "react"
+import inner from '../../../../Assets/inner.jpg'
 
 const UserListHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://emservicesllc.com/wp-content/uploads/2021/05/Industrial_500.jpg')",
+        backgroundImage: `url(${inner})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

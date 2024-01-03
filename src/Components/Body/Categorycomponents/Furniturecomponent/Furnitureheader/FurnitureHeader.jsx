@@ -1,8 +1,9 @@
 import React from "react"
+import fyrnaturehead from '../../../../../Assets/fyrniturehead.jpg'
 
 const FurnitureHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://www.stancehealthcare.com/userContent/images/Blog%20Manager/Blog%20post%20image%20-%20kalarne%20-%202.png')",
+        backgroundImage: `url(${fyrnaturehead})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

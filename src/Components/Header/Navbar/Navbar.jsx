@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './navbar.css';
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import logo from '../../../Assets/logo1.jpg'
+import logomain from '../../../Assets/logomains.png'
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -14,8 +16,9 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import LinearProgress from '@mui/material/CircularProgress';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Navbars = () => {
+  const navigate = useNavigate();
   const [email, setemail] = useState()
   const [password, setPassword] = useState()
   const [errorMessage, setErrorMessage] = useState('');
@@ -36,7 +39,7 @@ const Navbars = () => {
     setOpenDialog(false);
   };
   const buttonStyle = {
-    background: 'white',
+    background: '#00A9A0',
     color: 'black',
     fontWeight: 'bold',
     padding: '8px 16px',
@@ -114,9 +117,11 @@ const Navbars = () => {
         }, {
           withCredentials: true
         })
-          console.log("login successful");
+          console.log("logout successful");
           //alert("login successfull")
+          navigate("/")
           window.location.reload(false);
+
       } catch (error) {
         console.log(error)
         alert("Invalid Email or Password")
@@ -127,9 +132,9 @@ const Navbars = () => {
   return (
     <div>
       
-      <Navbar fluid rounded>
+      <Navbar fluid rounded className='bg-black'>
       <Navbar.Brand href="https://flowbite-react.com">
-        <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        <img src={logomain} className="mr-3 h-6 sm:h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
       <div className="flex md:order-2">
 
@@ -159,7 +164,7 @@ const Navbars = () => {
           <Dropdown.Item onClick={handleLogout}>Sign out</Dropdown.Item>
         </Dropdown>
         </>) : <>
-        <button style={buttonStyle} onClick={handleDialogOpen} className='rounded-2xl text-xl border-4 border-t-violet-500 border-e-teal-700 border-s-amber-500 border-b-red-500'>Sell</button>
+        <button style={buttonStyle} onClick={handleDialogOpen} className=' rounded-2xl text-xl border-4 border-t-violet-500 border-e-teal-700 border-s-amber-500 border-b-red-500'>Sell</button>
         <Dialog open={openDialog} onClose={handleDialogClose}  >
         <DialogTitle>Sign in to our platform</DialogTitle>
         <DialogContent>
