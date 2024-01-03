@@ -204,13 +204,13 @@ const Navbars = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active className='text-lg divhead'> 
+        <Navbar.Link href="/" active className='text-lg divhead text-white'> 
           Home
         </Navbar.Link>
-        <Navbar.Link href="/listings" className='text-lg divhead'> Listings</Navbar.Link>
-        <Navbar.Link href="#" className='text-lg divhead'> Services</Navbar.Link>
-        <Navbar.Link href="/pricing" className='text-lg divhead'> Pricing</Navbar.Link>
-        <Navbar.Link href="/contact" className='text-lg divhead'> Contact</Navbar.Link>
+        <Navbar.Link href="/listings" className='text-lg divhead text-white'> Listings</Navbar.Link>
+        <Navbar.Link href="#" className='text-lg divhead text-white'> Services</Navbar.Link>
+        <Navbar.Link href="/pricing" className='text-lg divhead text-white'> Pricing</Navbar.Link>
+        <Navbar.Link href="/contact" className='text-lg divhead text-white'> Contact</Navbar.Link>
 
       </Navbar.Collapse>
     </Navbar>
