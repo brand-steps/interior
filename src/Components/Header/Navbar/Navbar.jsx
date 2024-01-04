@@ -39,7 +39,7 @@ const Navbars = () => {
     setOpenDialog(false);
   };
   const buttonStyle = {
-    background: '#00A9A0',
+    background: 'white',
     color: 'black',
     fontWeight: 'bold',
     padding: '8px 16px',
