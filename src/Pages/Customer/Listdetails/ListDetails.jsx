@@ -69,7 +69,7 @@ const [image6 , setimage6] = useState(false);
   };
 
   const fetchSingleProduct = async() => {
-    const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/singlelist/${id}`);
+    const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/singlelist/${id}`);
     console.log("response: ", response);
   console.log(singleproduct);
   setsingleproduct(response.data.Product);

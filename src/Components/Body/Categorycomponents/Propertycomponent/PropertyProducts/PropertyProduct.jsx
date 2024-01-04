@@ -44,7 +44,7 @@ const PropertyProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/propertyproducts`);
+            const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/propertyproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

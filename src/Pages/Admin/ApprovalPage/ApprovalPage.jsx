@@ -53,7 +53,7 @@ const ApprovalPage = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listdisplayfalse`);
+          const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listdisplayfalse`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -63,7 +63,7 @@ const ApprovalPage = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://easy-erin-clownfish-ring.cyclic.app/deletelist/${id}`)
+          const response = await axios.delete(`https://nice-tan-bullfrog-slip.cyclic.app/deletelist/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -74,7 +74,7 @@ const ApprovalPage = () => {
       
   const approveData = async (id)=>{
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/approvelisting/${id}`)
+      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/approvelisting/${id}`)
       console.log("response: ", response.data);
       setapprovebool(true)
       alert("Listing is now Approved");

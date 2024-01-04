@@ -156,7 +156,7 @@ console.log("img",imageUrl1)
 
     try {
       const response = await axios.post(
-        "https://easy-erin-clownfish-ring.cyclic.app/addlist",
+        "https://nice-tan-bullfrog-slip.cyclic.app/addlist",
         formData,
         {
           headers: {
@@ -179,7 +179,7 @@ console.log("img",imageUrl1)
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://easy-erin-clownfish-ring.cyclic.app/api/v1/listerprofile`,
+          `https://nice-tan-bullfrog-slip.cyclic.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

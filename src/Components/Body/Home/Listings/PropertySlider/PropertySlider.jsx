@@ -15,7 +15,7 @@ const PropertySlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listpropertymain`);
+      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listpropertymain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

@@ -85,7 +85,7 @@ const RegisterForm = () => {
       { 
         if (/^[A-Za-z]\w{7,14}$/.test(password)) { 
       try {
-        const response = await axios.post('https://easy-erin-clownfish-ring.cyclic.app/listerregister', {
+        const response = await axios.post('https://nice-tan-bullfrog-slip.cyclic.app/listerregister', {
           firstname,
           lastname,
           email,

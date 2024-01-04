@@ -43,7 +43,7 @@ const BeautyProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/beautyproducts`);
+            const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/beautyproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

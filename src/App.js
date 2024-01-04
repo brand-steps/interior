@@ -33,7 +33,7 @@ import Packages from "./Pages/Lister/Packages/Packages";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
-  let newurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
+  let newurl = "https://nice-tan-bullfrog-slip.cyclic.ap p"
 
   return (
     <div>

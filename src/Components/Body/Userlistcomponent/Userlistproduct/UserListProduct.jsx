@@ -17,7 +17,7 @@ const {id} = useParams();
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://easy-erin-clownfish-ring.cyclic.app/listdisplayuserid/${id}`);
+      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listdisplayuserid/${id}`);
       console.log("response: ", response);
       console.log(response.data);
       setProducts(response.data.data);
@@ -28,7 +28,7 @@ const {id} = useParams();
   };
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`https://easy-erin-clownfish-ring.cyclic.app/deletelist/${id}`)
+      const response = await axios.delete(`https://nice-tan-bullfrog-slip.cyclic.app/deletelist/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {
