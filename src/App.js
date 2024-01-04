@@ -32,7 +32,9 @@ import Signin from "./Pages/Lister/Signin/Signin";
 import Packages from "./Pages/Lister/Packages/Packages";
 
 function App() {
-  let backendurl = "https://easy-erin-clownfish-ring.cyclic.app/"
+  let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
+  let newurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
+
   return (
     <div>
 

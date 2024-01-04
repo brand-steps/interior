@@ -53,8 +53,9 @@ const HomePage = () => {
 <EventSlider/>
 <BeautyHeading/>
 <BeautySlider/>
+{/*
 <Listingheading/>
-<NewListing/>
+  <NewListing/> */}
 <Footers/>
     </div>
   )

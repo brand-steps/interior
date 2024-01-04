@@ -65,6 +65,8 @@ const AddList = () => {
   const [imageUrl5, setimageUrl5] = useState()
   const [imageUrl6, setimageUrl6] = useState()
 
+    const [packagename, setpackagename] = useState()
+
   const handleFileChange = (event) => {
     // Ensure only up to 8 files are selected
     setimageUrl1(event.target.files);
@@ -193,6 +195,7 @@ console.log("img",imageUrl1)
         setcustomeruser(true);
         setlistername(customerresponse.firstname);
         setlisterid(customerresponse._id);
+        setpackagename(customerresponse.packagename);
       } catch (error) {
         console.log("axios error: ", error);
       }
@@ -270,7 +273,7 @@ console.log("img",imageUrl1)
     <h1>Choose A Category</h1>
    </div>
 <div className='flex  justify-evenly flex-wrap my-4' >
-              <div style={containerStyle} onClick={() => {setcategory("Fashion & Appreal"); setsubcategorybool(true); setcategorybool(false); setfashionbool(true)}}>
+              <div style={containerStyle} onClick={() => {setpackagename(customerresponse.packagename); setcategory("Fashion & Appreal"); setsubcategorybool(true); setcategorybool(false); setfashionbool(true)}}>
         <img src={fashion} alt="Fairs" style={imageStyle} />
         <h1>Fashion & Appreal</h1>
       </div>
@@ -794,9 +797,39 @@ console.log("img",imageUrl1)
   </div>
 
 
+{packagename === "Free Plan" && (
+  <>
+    <div className="grid md:grid-cols-1 md:gap-6">
 
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange} />
 
-  <div className="grid md:grid-cols-6 md:gap-6">
+  </div>
+  </div>
+  </>
+)}
+{packagename === "Basic Plan" && (
+  <>
+    <div className="grid md:grid-cols-3 md:gap-6">
+
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange} />
+
+  </div>
+    <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange2} />
+
+  </div>
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange3} />
+
+  </div>
+  </div>
+  </>
+)}
+{packagename === "Standard Plan" && (
+  <>
+    <div className="grid md:grid-cols-6 md:gap-6">
   <div className="relative z-0 w-full mb-6 group">
   <input type="file" name="images" onChange={handleFileChange}  />
 
@@ -822,6 +855,65 @@ console.log("img",imageUrl1)
 
   </div>
   </div>
+  </>
+)}
+{packagename === "Premium Plan" && (
+  <>
+    <div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange}  />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange2} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange3} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange4} />
+
+  </div>
+    <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange5} />
+
+  </div>
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange6} />
+
+  </div>
+  </div>
+  </>
+)}
+{/*
+  <div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange}  />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange2} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange3} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange4} />
+
+  </div>
+    <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange5} />
+
+  </div>
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange6} />
+
+  </div>
+  </div> */}
   <button onTouchStart={() => {setlistername(customerresponse.firstname);setlisterid(customerresponse._id);}}
    onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
 }} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>

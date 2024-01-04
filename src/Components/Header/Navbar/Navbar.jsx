@@ -204,7 +204,7 @@ const Navbars = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active className='text-lg divhead text-white'> 
+        <Navbar.Link href="/" className='text-lg divhead text-white'> 
           Home
         </Navbar.Link>
         <Navbar.Link href="/listings" className='text-lg divhead text-white'> Listings</Navbar.Link>
