@@ -102,7 +102,7 @@ const Contact = () => {
                   info@listit.pk
                 </p>
                 <p class="text-black  ">
-                +44 7978 337634
+                
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                 info@listit.pk
                                 </p>
                 <p class="text-black  ">
-                +44 7978 337634
+                
                 </p>
               </div>
             </div>
@@ -150,7 +150,7 @@ const Contact = () => {
                 info@listit.pk
                                 </p>
                 <p class="text-black  ">
-                +44 7978 337634
+                
                 </p>
               </div>
             </div>
@@ -173,7 +173,7 @@ const Contact = () => {
                 info@listit.pk
                                 </p>
                 <p class="text-black  ">
-                +44 7978 337634
+                
                 </p>
               </div>
             </div>
