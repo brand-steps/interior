@@ -30,6 +30,7 @@ import AddList2 from "./Pages/Lister/Addlistuser/AddList2";
 import ChoosePricing from "./Pages/Customer/Pricing/ChoosePricing";
 import Signin from "./Pages/Lister/Signin/Signin";
 import Packages from "./Pages/Lister/Packages/Packages";
+import OthersPage from "./Pages/Customer/Home/CategoryPages/Otherspage/OthersPage";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
@@ -49,6 +50,7 @@ function App() {
               <Route path={"/event"} element={<EventPage />} />
               <Route path={"/beauty"} element={<BeautyPage />} />
               <Route path={"/jobs"} element={<JobPage />} />
+              <Route path={"/others"} element={<OthersPage />} />
               <Route path={"/listings"} element={<ListingPage />} />
               <Route path={"/register"} element={<RegisterUser />} />
               <Route path={"/listdisplay/:id"} element={<UserListDisplay />} />

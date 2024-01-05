@@ -12,6 +12,7 @@ import furniture2 from '../../../../Assets/furniture2.png'
 import health from '../../../../Assets/health.png'
 import event from '../../../../Assets/event.png'
 import beauty from '../../../../Assets/beauty.jpg'
+import others from '../../../../Assets/others.png'
 
 import { Link } from 'react-router-dom';
 const HomeCategory = () => {
@@ -106,8 +107,17 @@ const HomeCategory = () => {
         <h1>Beauty </h1>
 
       </div>
+      
       </Link>
+      <Link to="/others">
 
+      <div style={containerStyle}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others </h1>
+
+      </div>
+      
+      </Link>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import './navbar.css';
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import logo from '../../../Assets/logo1.jpg'
 import logomain from '../../../Assets/logomains.png'
+import facenav from '../../../Assets/facenav.png'
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -133,7 +134,7 @@ const Navbars = () => {
     <div>
       
       <Navbar fluid rounded className='bg-black'>
-      <Navbar.Brand href="https://flowbite-react.com">
+      <Navbar.Brand href="https://listit.pk">
         <img src={logomain} className="mr-3 h-6 sm:h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
       <div className="flex md:order-2">
@@ -143,23 +144,28 @@ const Navbars = () => {
           arrowIcon={false}
           inline
           label={
-            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+            <Avatar alt="User settings" img={facenav} rounded />
           }
         >
           <Dropdown.Header>
             <span className="block text-sm">{customerresponse.firstname}</span>
             <span className="block truncate text-sm font-medium">{customerresponse.email}</span>
           </Dropdown.Header>
-          <Dropdown.Item onMouseEnter={() =>{setcustomerbring(customerresponse._id);}} href={`/listdisplay/${customerresponse._id}`}>Your Listings</Dropdown.Item>
-          
+          <Link to={`/listdisplay/${customerresponse._id}`}>
+          <Dropdown.Item onMouseEnter={() =>{setcustomerbring(customerresponse._id);}} >Your Listings</Dropdown.Item>
+          </Link>
           {!customerresponse.packagename ? (<>
-            <Dropdown.Item href={`/choosepricing/${customerresponse._id}`}>Add Listings</Dropdown.Item>
-
+          <Link to={`/choosepricing/${customerresponse._id}`}>
+            <Dropdown.Item >Add Listings</Dropdown.Item>
+            </Link>
           </>) : <>
-          <Dropdown.Item href='/Addlisting'>Add Listings</Dropdown.Item>
-
+          <Link to={'/Addlisting'}>
+          <Dropdown.Item >Add Listings</Dropdown.Item>
+          </Link>
           </>}
-          <Dropdown.Item href={`/packages/${customerresponse._id}`}>Packages</Dropdown.Item>
+          <Link to={`/packages/${customerresponse._id}`}>
+          <Dropdown.Item >Packages</Dropdown.Item>
+          </Link>
           <Dropdown.Divider />
           <Dropdown.Item onClick={handleLogout}>Sign out</Dropdown.Item>
         </Dropdown>
@@ -190,7 +196,7 @@ const Navbars = () => {
   */}
         <button type="submit" onClick={() => {LoginForm(); setlogin(true); handleDialogClose(); }} className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
         <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-            Not registered? <a href="/register" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+            Not registered? <Link to={"/register"}> <span  className="text-blue-700 hover:underline dark:text-blue-500">Create account</span> </Link>
         </div>
     </div>
 
@@ -204,13 +210,18 @@ const Navbars = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" className='text-lg divhead text-white'> 
+        <Link to={"/"}>
+        <Navbar.Link className='text-lg divhead text-white'> 
           Home
         </Navbar.Link>
-        <Navbar.Link href="/listings" className='text-lg divhead text-white'> Listings</Navbar.Link>
-        <Navbar.Link href="#" className='text-lg divhead text-white'> Services</Navbar.Link>
-        <Navbar.Link href="/pricing" className='text-lg divhead text-white'> Pricing</Navbar.Link>
-        <Navbar.Link href="/contact" className='text-lg divhead text-white'> Contact</Navbar.Link>
+        </Link>
+        <Link to={"/listings"}>
+        <Navbar.Link  className='text-lg divhead text-white'> Listings</Navbar.Link> </Link>
+       {/*} <Navbar.Link href="#" className='text-lg divhead text-white'> Services</Navbar.Link> */}
+       <Link to={"/pricing"}>
+        <Navbar.Link className='text-lg divhead text-white'> Pricing</Navbar.Link></Link>
+        <Link to={"/contact"}>
+        <Navbar.Link className='text-lg divhead text-white'> Contact</Navbar.Link> </Link>
 
       </Navbar.Collapse>
     </Navbar>

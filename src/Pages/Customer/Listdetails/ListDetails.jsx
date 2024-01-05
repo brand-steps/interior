@@ -11,6 +11,8 @@ import axios from 'axios';
 const ListDetails = () => {
   const { id } = useParams();
   const [singleproduct, setsingleproduct] = useState([]);
+  const [views, setviews] = useState();
+
 const [image1 , setimage1] = useState(true);
 const [image2 , setimage2] = useState(false);
 const [image3 , setimage3] = useState(false);
@@ -74,13 +76,19 @@ const [image6 , setimage6] = useState(false);
   console.log(singleproduct);
   setsingleproduct(response.data.Product);
         }
+
+        const fetchviews = async() => {
+          const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/productviews/${id}`);
+          console.log("response: ", response);
+        console.log(singleproduct);
+        setviews(response.data.views);
+              }
         useEffect (()=> {
             fetchSingleProduct()
-    
+
         },[]);
-        useEffect(() => {
-          window.scrollTo(0, 0)
-        }, [])
+
+
   return (
     <>
     <Navbars/>

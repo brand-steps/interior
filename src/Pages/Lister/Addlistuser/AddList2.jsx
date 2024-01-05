@@ -31,6 +31,7 @@ const AddList2 = () => {
   const [healthbool, sethealthbool] = useState(false)
   const [eventbool, seteventbool] = useState(false)
   const [beautybool, setbeautybool] = useState(false)
+  const [othersbool, setothersbool] = useState(false)
 
   const [fashionformbool, setfashionformbool] = useState(false)
   const [propertyformbool, setpropertyformbool] = useState(false)
@@ -40,6 +41,7 @@ const AddList2 = () => {
   const [healthformbool, sethealthformbool] = useState(false)
   const [eventformbool, seteventformbool] = useState(false)
   const [beautyformbool, setbeautyformbool] = useState(false)
+  const [othersformbool, setothersformbool] = useState(false)
 
   const [productname, setproductname] = useState()
   const [category, setcategory] = useState()
@@ -241,7 +243,15 @@ const formData = new FormData();
     width: '250px', // Adjust the width as needed
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
+  const containerStyle3 = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
 
+    width: '700px', // Adjust the width as needed
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
   const imageStyle = {
     width: '80px',
     height: '80px',
@@ -327,7 +337,11 @@ const formData = new FormData();
         <h1>Beauty </h1>
 
       </div>
+      <div style={containerStyle} onClick={() => {setcategory("Others"); setsubcategorybool(true); setcategorybool(false); setothersbool(true)}}>
+        <img src="https://icons.veryicon.com/png/o/miscellaneous/category-icon-set/category-56.png" alt="Fairs" style={imageStyle} />
+        <h1>Others </h1>
 
+      </div>
     </div>
 
 </>
@@ -732,6 +746,34 @@ const formData = new FormData();
         <img src="https://cdn-icons-png.flaticon.com/512/1802/1802475.png" alt="Fairs" style={imageStyle} />
         <h1>Manicures</h1>
       </div>
+      
+
+      </div>      
+    </div>
+
+</>
+        )}
+                                {othersbool && (
+<>
+<div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
+    <h1>Write Your SubCategory</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back" className='h-12 w-12 ml-16 mt-6' onClick={()=> {window.location.reload(false);}} />
+ 
+   </div>
+   <div className="flex w-full mb-6 group w-2/4 items-center justify-evenly">
+
+  </div>
+
+  <div className=' flex justify-evenly mb-6'>
+    <div className=' flex  justify-evenly  flex-wrap bg-white w-5/6 pt-5' >
+              <div style={containerStyle3} >
+              <TextField multiline onChange={(event) => { setsubcategory(event.target.value); }} placeholder='Enter Your SubCategory' name="description" variant="outlined" className='block py-2.5 px-0 w-full focus:text-white text-sm text-white  border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer'/>
+  <button className='mt-6 bg-violet-500 text-white w-20 rounded-xl h-10' onClick={() => {setsubcategorybool(false); setothersbool(false); setothersformbool(true); setpublishbool(true)}}>Next</button>
+
+
+      </div>
+
+
       
 
       </div>      
@@ -2939,6 +2981,289 @@ const formData = new FormData();
 
 </select>   
 </div>
+
+  </div>
+  <div className="grid md:grid-cols-1 md:gap-6">
+
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setprice(event.target.value); }} name="postal" type='number' id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Set Price</label>
+
+  </div>
+  </div>
+  <div className="grid md:grid-cols-3 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setwhatsapp(event.target.value); }} name="postal" type='number' id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Whatsapp Number</label>
+ </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setmobile(event.target.value); }} name="postal" type='number' id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Mobile Number</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setlocation(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Set Location</label>
+
+  </div>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <TextField fullWidth multiline maxRows={10} onChange={(event) => { setdescription(event.target.value); }} placeholder='Your Ad Description' name="description" variant="outlined" className='block py-2.5 px-0 w-full focus:text-white text-sm text-white  border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer'/>
+
+  </div>
+
+   {customerresponse.packagename === "Free Plan" && (
+  <>
+    <div className="grid md:grid-cols-1 md:gap-6">
+
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange} />
+
+  </div>
+  </div>
+  </>
+)}
+{customerresponse.packagename === "Basic Plan" && (
+  <>
+    <div className="grid md:grid-cols-3 md:gap-6">
+
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange} />
+
+  </div>
+    <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange2} />
+
+  </div>
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange3} />
+
+  </div>
+  </div>
+  </>
+)}
+{customerresponse.packagename === "Standard Plan" && (
+  <>
+    <div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange}  />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange2} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange3} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange4} />
+
+  </div>
+    <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange5} />
+
+  </div>
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange6} />
+
+  </div>
+  </div>
+  </>
+)}
+{customerresponse.packagename === "Premium Plan" && (
+  <>
+    <div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange}  />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange2} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange3} />
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input type="file" name="images" onChange={handleFileChange4} />
+
+  </div>
+    <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange5} />
+
+  </div>
+      <div className="relative z-0 w-full mb-6 group">
+    <input type="file" name="images" onChange={handleFileChange6} />
+
+  </div>
+  </div>
+  </>
+)}
+{customerresponse.packagename === "Free Plan" && (
+<>
+<div className="grid md:grid-cols-3 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword1(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 1</label>
+ </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword2(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 2</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword3(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 3</label>
+
+  </div>
+
+  </div>
+</>
+)}
+{customerresponse.packagename === "Basic Plan" && (
+<>
+<div className="grid md:grid-cols-3 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword1(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 1</label>
+ </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword2(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 2</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword3(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 3</label>
+
+  </div>
+
+  </div>
+</>
+)}
+{customerresponse.packagename === "Standard Plan" && (
+<>
+<div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword1(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 1</label>
+ </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword2(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 2</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword3(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 3</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword4(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 4</label>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword5(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 5</label>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword6(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 6</label>
+ </div>
+  </div>
+</>
+)}
+{customerresponse.packagename === "Premium Plan" && (
+<>
+<div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword1(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 1</label>
+ </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword2(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 2</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword3(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 3</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword4(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 4</label>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword5(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 5</label>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword6(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 6</label>
+ </div>
+  </div>
+  <div className="grid md:grid-cols-6 md:gap-6">
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword7(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 7</label>
+ </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword8(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 8</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+      <input onChange={(event) => { setkeyword8(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 9</label>
+
+  </div>
+  <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword10(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 10</label>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword11(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 11</label>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+  <input onChange={(event) => { setkeyword12(event.target.value); }} name="postal" id="postal" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="postal" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">keyword 12</label>
+ </div>
+  </div>
+</>
+)}
+  <button
+    onTouchStart={()=> {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);}}
+  onMouseEnter={() => {setlistername(customerresponse.firstname);         setlisterid(customerresponse._id);
+}} type="submit" onClick={handleUpload} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">List</button>
+</div>
+
+
+
+
+
+  
+
+</>
+        )}
+                                                               {othersformbool && (
+<>
+<div className='font-bold text-3xl text-violet-500 ml-4 mb-12 mt-6'>
+    <h1>Add your Listing</h1>
+   </div>
+
+
+<div className='mx-10 my-6 '>
+        <div className="grid md:grid-cols-1 md:gap-6">
+    <div className="relative z-0 w-full mb-6 group">
+        <input type="text" name="firstname" onChange={(event) => { setproductname(event.target.value); }} id="firstname" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="firstname" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ad Title</label>
+    </div>
 
   </div>
   <div className="grid md:grid-cols-1 md:gap-6">

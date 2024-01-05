@@ -4,10 +4,11 @@ import Navbars from '../../../Components/Header/Navbar/Navbar';
 import Footers from '../../../Components/Footer/Footers';
 import PricingHeader from '../../../Components/Body/pricingcomponent/Pricingheader/PricingHeader';
 import pricinghead from '../../../Assets/pricinghead.jpg'
+import { useNavigate } from 'react-router-dom';
 
 
 const Pricing = () => {
-
+const navigate = useNavigate();
 
 
   const divStyle = {
@@ -165,7 +166,7 @@ const Pricing = () => {
         </li>
       </ul>
       <button
-        type="button"
+        type="button" onClick={()=> navigate("/signin")}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
@@ -293,7 +294,7 @@ const Pricing = () => {
         </li>
       </ul>
       <button
-        type="button"
+        type="button" onClick={()=> navigate("/signin")}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
@@ -422,7 +423,7 @@ const Pricing = () => {
 
       </ul>
       <button
-        type="button"
+        type="button" onClick={()=> navigate("/signin")}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
@@ -552,7 +553,7 @@ const Pricing = () => {
 
       </ul>
       <button
-        type="button"
+        type="button" onClick={()=> navigate("/signin")}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
