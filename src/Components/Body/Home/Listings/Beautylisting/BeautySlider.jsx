@@ -15,7 +15,7 @@ const BeautySlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listbeautymain`);
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listbeautymain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

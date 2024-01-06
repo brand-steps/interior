@@ -16,7 +16,7 @@ const ChoosePricing = () => {
     const [name, setName] = useState("");
     
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/singleuser/${id}`);
+        const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/singleuser/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -38,7 +38,7 @@ const ChoosePricing = () => {
             };
           });
         const productData = { ...singleproduct};
-        const response = await axios.put(`https://nice-tan-bullfrog-slip.cyclic.app/editteduser/${id}`, productData);
+        const response = await axios.put(`https://quaint-pocketbook-bat.cyclic.app/editteduser/${id}`, productData);
 
 navigate('/Addlisting')
     }

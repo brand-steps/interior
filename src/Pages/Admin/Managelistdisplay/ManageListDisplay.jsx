@@ -58,7 +58,7 @@ const ManageListDisplay = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listdisplay`);
+          const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -68,7 +68,7 @@ const ManageListDisplay = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://nice-tan-bullfrog-slip.cyclic.app/deletelist/${id}`)
+          const response = await axios.delete(`https://quaint-pocketbook-bat.cyclic.app/deletelist/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -79,7 +79,7 @@ const ManageListDisplay = () => {
       
   const BestData = async (id)=>{
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/bestlistingactive/${id}`)
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/bestlistingactive/${id}`)
       console.log("response: ", response.data);
       setactivatebestbool(true)
       alert("Listing is set as best listing");
@@ -90,7 +90,7 @@ const ManageListDisplay = () => {
   };
   const DisapprovebestData = async (id)=>{
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/bestlisterdeactive/${id}`)
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/bestlisterdeactive/${id}`)
       console.log("response: ", response.data);
       setdeactivatebestbool(true)
       alert("Listing is now removed as best listing");
@@ -102,7 +102,7 @@ const ManageListDisplay = () => {
 
   const TopData = async (id)=>{
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/topsellingactive/${id}`)
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/topsellingactive/${id}`)
       console.log("response: ", response.data);
       setactivatetopbool(true)
       alert("Listing is now set as top Listing");
@@ -113,7 +113,7 @@ const ManageListDisplay = () => {
   };
   const DisapprovetopData = async (id)=>{
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/toplisterdeactive/${id}`)
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/toplisterdeactive/${id}`)
       console.log("response: ", response.data);
       setdeactivatetopbool(true)
 

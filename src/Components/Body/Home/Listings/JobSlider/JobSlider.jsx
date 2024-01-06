@@ -15,7 +15,7 @@ const JobSlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listjobsmain`);
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listjobsmain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

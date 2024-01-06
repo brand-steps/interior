@@ -37,7 +37,7 @@ import AboutUs from "./Pages/Customer/Aboutus/AboutUs";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
-  let newurl = "https://nice-tan-bullfrog-slip.cyclic.ap p"
+  let newurl = "https://quaint-pocketbook-bat.cyclic.a pp"
 
   return (
     <div>

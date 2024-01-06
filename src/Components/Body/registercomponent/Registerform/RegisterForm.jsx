@@ -83,9 +83,8 @@ const RegisterForm = () => {
         if (/^([0-9]{5})$/.test(postal)) {
       if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(email))
       { 
-        if (/^[A-Za-z]\w{7,14}$/.test(password)) { 
       try {
-        const response = await axios.post('https://nice-tan-bullfrog-slip.cyclic.app/listerregister', {
+        const response = await axios.post('https://quaint-pocketbook-bat.cyclic.app/listerregister', {
           firstname,
           lastname,
           email,
@@ -113,7 +112,7 @@ const RegisterForm = () => {
         alert("User with this Email ID already exist!")
         // Handle error
       }
-    }     else {alert("Password must Contain a Capital letter, a number and a capital letter ")}
+   
 
     }//
     else {alert("Invalid Email")}

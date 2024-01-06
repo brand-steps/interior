@@ -172,12 +172,12 @@ const formData = new FormData();
     formData.append("keyword12", keyword12);
 
 
-    if (/^[A-Za-z]{15,50}$/.test(productname)) {
+    if (/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]{10,50}$/.test(productname)) {
       if (/^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/gm.test(whatsapp)) {
         if (/^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/gm.test(mobile)) {
     try {
       const response = await axios.post(
-        "https://nice-tan-bullfrog-slip.cyclic.app/addlist",
+        "https://quaint-pocketbook-bat.cyclic.app/addlist",
         formData,
         {
           headers: {
@@ -206,7 +206,7 @@ const formData = new FormData();
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://nice-tan-bullfrog-slip.cyclic.app/api/v1/listerprofile`,
+          `https://quaint-pocketbook-bat.cyclic.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

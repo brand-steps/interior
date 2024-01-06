@@ -45,7 +45,7 @@ const ListingProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listdisplaytrueactive`);
+            const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listdisplaytrueactive`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

@@ -19,7 +19,7 @@ const {id} = useParams();
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listdisplayuserid/${id}`);
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listdisplayuserid/${id}`);
       console.log("response: ", response);
       console.log(response.data);
       setProducts(response.data.data);
@@ -29,7 +29,7 @@ const {id} = useParams();
     }
   };
   const fetchSingleProduct = async() => {
-    const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/singleuser/${id}`);
+    const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/singleuser/${id}`);
     console.log("response: ", response);
   setsingleuser(response.data.Product);
   console.log(singleuser);
@@ -37,7 +37,7 @@ const {id} = useParams();
         }
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`https://nice-tan-bullfrog-slip.cyclic.app/deletelist/${id}`)
+      const response = await axios.delete(`https://quaint-pocketbook-bat.cyclic.app/deletelist/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {

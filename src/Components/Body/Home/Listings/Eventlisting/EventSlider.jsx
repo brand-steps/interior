@@ -15,7 +15,7 @@ const EventSlider = () => {
   const [numberOfPages, setnumberOfPages] = useState(9)
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/listeventsmain`);
+      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listeventsmain`);
       console.log("response: ", response);
       console.log(products);
       setProducts(response.data.data);

@@ -44,7 +44,7 @@ const EventProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/eventproducts`);
+            const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/eventproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

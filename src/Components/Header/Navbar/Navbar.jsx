@@ -57,7 +57,7 @@ const Navbars = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`https://nice-tan-bullfrog-slip.cyclic.app/listerlogin`, {
+        let response = await axios.post(`https://quaint-pocketbook-bat.cyclic.app/listerlogin`, {
           email: email,
           password: password
         }, {
@@ -77,7 +77,7 @@ const Navbars = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://nice-tan-bullfrog-slip.cyclic.app/api/v1/listerprofile`,
+          `https://quaint-pocketbook-bat.cyclic.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {
@@ -112,7 +112,7 @@ const Navbars = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`https://nice-tan-bullfrog-slip.cyclic.app/listerlogout`, {
+        let response = await axios.post(`https://quaint-pocketbook-bat.cyclic.app/listerlogout`, {
           email: customerresponse.email,
           password: customerresponse.password
         }, {

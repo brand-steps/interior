@@ -71,14 +71,14 @@ const [image6 , setimage6] = useState(false);
   };
 
   const fetchSingleProduct = async() => {
-    const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/singlelist/${id}`);
+    const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/singlelist/${id}`);
     console.log("response: ", response);
   console.log(singleproduct);
   setsingleproduct(response.data.Product);
         }
 
         const fetchviews = async() => {
-          const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/productviews/${id}`);
+          const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/productviews/${id}`);
           console.log("response: ", response);
         console.log(singleproduct);
         setviews(response.data.views);

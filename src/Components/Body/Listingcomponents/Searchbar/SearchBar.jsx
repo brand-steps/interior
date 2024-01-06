@@ -69,7 +69,7 @@ const SearchBar = () => {
     }
     try {
       const response = await axios.get(
-        `https://nice-tan-bullfrog-slip.cyclic.app/api/searchlist?location=${location}&price=${price}&productname=${productname}`
+        `https://quaint-pocketbook-bat.cyclic.app/api/searchlist?location=${location}&price=${price}&productname=${productname}`
       );
       console.log("Search results: ", response.data);
       setResults(response.data);

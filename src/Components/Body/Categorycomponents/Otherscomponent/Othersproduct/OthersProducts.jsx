@@ -44,7 +44,7 @@ const OthersProducts = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://nice-tan-bullfrog-slip.cyclic.app/othersproducts`);
+            const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/othersproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);
