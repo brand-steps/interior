@@ -31,6 +31,9 @@ import ChoosePricing from "./Pages/Customer/Pricing/ChoosePricing";
 import Signin from "./Pages/Lister/Signin/Signin";
 import Packages from "./Pages/Lister/Packages/Packages";
 import OthersPage from "./Pages/Customer/Home/CategoryPages/Otherspage/OthersPage";
+import Privacy from "./Pages/Customer/Additionals/Privacy";
+import Terms from "./Pages/Customer/Additionals/Terms";
+import AboutUs from "./Pages/Customer/Aboutus/AboutUs";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
@@ -72,6 +75,9 @@ function App() {
               <Route path={"/choosepricing/:id"} element={<ChoosePricing />} />
               <Route path={"/signin"} element={<Signin />} />
               <Route path={"/packages/:id"} element={<Packages />} />
+              <Route path={"/privacypolicy"} element={<Privacy />} />
+              <Route path={"/terms&conditon"} element={<Terms />} />
+              <Route path={"/aboutus"} element={<AboutUs />} />
 
 
 

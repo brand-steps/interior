@@ -10,6 +10,7 @@ import mechanic from '../../../../../Assets/mechanic.png'
 import technition from '../../../../../Assets/technition.png'
 import cleaner from '../../../../../Assets/cleaner.png'
 import driver from '../../../../../Assets/driver.jpg'
+import others from '../../../../../Assets/others.png'
 
 const ServiceType = () => {
   const navigate = useNavigate();
@@ -89,7 +90,10 @@ const ServiceType = () => {
         <img src={driver} alt="Fairs" style={imageStyle} />
         <h1>Driver</h1>
       </div>
-
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Service Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+      </div>
       </div>      
     </div>
   );

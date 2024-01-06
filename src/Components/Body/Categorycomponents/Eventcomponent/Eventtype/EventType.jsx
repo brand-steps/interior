@@ -10,6 +10,7 @@ import festival from '../../../../../Assets/festival.png'
 import exibition from '../../../../../Assets/exibition.png'
 import seminar from '../../../../../Assets/seminar.png'
 import music from '../../../../../Assets/music.png'
+import others from '../../../../../Assets/others.png'
 
 const EventType = () => {
   const navigate = useNavigate();
@@ -92,6 +93,10 @@ const EventType = () => {
         <img src={music} alt="Fairs" style={imageStyle} />
         <h1>Entertainment</h1>
 
+      </div>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Event Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
       </div>
       </div>      
     </div>

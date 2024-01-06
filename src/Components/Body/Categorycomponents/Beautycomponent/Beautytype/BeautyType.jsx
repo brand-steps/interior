@@ -9,6 +9,7 @@ import makeup from '../../../../../Assets/makeup.png'
 import massage from '../../../../../Assets/massage.jpg'
 import spa from '../../../../../Assets/spa.png'
 import mani from '../../../../../Assets/mani.png'
+import others from '../../../../../Assets/others.png'
 
 const BeautyType = () => {
   const navigate = useNavigate();
@@ -86,7 +87,10 @@ const BeautyType = () => {
         <img src={mani} alt="Fairs" style={imageStyle} />
         <h1>Manicures</h1>
       </div>
-      
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Beauty Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+      </div>
 
       </div>      
     </div>

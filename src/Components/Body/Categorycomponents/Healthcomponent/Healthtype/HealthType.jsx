@@ -8,6 +8,7 @@ import doctor from '../../../../../Assets/doctor.png'
 import nurse from '../../../../../Assets/nurse.png'
 import day from '../../../../../Assets/day.jpg'
 import diag from '../../../../../Assets/diag.png'
+import others from '../../../../../Assets/others.png'
 
 const HealthType = () => {
   const navigate = useNavigate();
@@ -78,7 +79,10 @@ const HealthType = () => {
         <h1>Diagnostics</h1>
 
       </div>
-
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Health Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+      </div>
       </div>      
     </div>
   );

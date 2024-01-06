@@ -6,6 +6,7 @@ import office from '../../../../../Assets/office.jpg'
 import household from '../../../../../Assets/household.png'
 import outdoor from '../../../../../Assets/outdoor.png'
 import decoration from '../../../../../Assets/decoration.png'
+import others from '../../../../../Assets/others.png'
 
 const FurnitureType = () => {
   const navigate = useNavigate();
@@ -67,7 +68,10 @@ const FurnitureType = () => {
         <h1>Decorations</h1>
 
       </div>
-
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Furniture Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+      </div>
 
       
 

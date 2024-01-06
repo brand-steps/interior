@@ -7,6 +7,7 @@ import kids from '../../../../../Assets/kids.png'
 import wedding from '../../../../../Assets/wedding.png'
 import party from '../../../../../Assets/party.png'
 import night from '../../../../../Assets/night.png'
+import others from '../../../../../Assets/others.png'
 
 const FashionType = () => {
   const navigate = useNavigate();
@@ -80,7 +81,10 @@ const FashionType = () => {
         <h1>Night Wear</h1>
 
       </div>
-    
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Fashion Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+      </div>
       </div>      
     </div>
   );

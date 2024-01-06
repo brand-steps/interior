@@ -94,9 +94,7 @@ const Contact = () => {
 
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold text-black">
-                  <Link to={'/Dashbord'}  >
                   Technical Support
-                  </Link>
                 </p>
                 <p class="text-black  ">
                   info@listit.pk

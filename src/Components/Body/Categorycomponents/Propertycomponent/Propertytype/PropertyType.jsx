@@ -10,6 +10,7 @@ import comm from '../../../../../Assets/comm.png'
 import project from '../../../../../Assets/project.png'
 import room from '../../../../../Assets/room.png'
 import agents from '../../../../../Assets/agents.jpg'
+import others from '../../../../../Assets/others.png'
 
 const PropertyType = () => {
   const navigate = useNavigate();
@@ -94,6 +95,10 @@ const PropertyType = () => {
         <img src={agents} alt="Fairs" style={imageStyle} />
         <h1>Agents </h1>
 
+      </div>
+      <div style={containerStyle} onClick={() => {navigate(`/subcategories/Property Others`)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
       </div>
       </div>      
     </div>

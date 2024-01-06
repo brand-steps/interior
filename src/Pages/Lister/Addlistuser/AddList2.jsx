@@ -9,6 +9,8 @@ import fashion from '../../../Assets/fashion.png'
 import jobs from '../../../Assets/jobs.png'
 import service from '../../../Assets/service.png'
 import furniture from '../../../Assets/furniture.png'
+import others from '../../../Assets/others.png'
+
 import FashionType from '../../../Components/Body/Categorycomponents/Fashioncomponents/Fashiontype/FashionType'
 import { TextField } from '@mui/material'
 import axios from 'axios'
@@ -170,7 +172,9 @@ const formData = new FormData();
     formData.append("keyword12", keyword12);
 
 
-
+    if (/^[A-Za-z]{15,50}$/.test(productname)) {
+      if (/^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/gm.test(whatsapp)) {
+        if (/^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/gm.test(mobile)) {
     try {
       const response = await axios.post(
         "https://nice-tan-bullfrog-slip.cyclic.app/addlist",
@@ -190,6 +194,12 @@ const formData = new FormData();
     } catch (error) {
       console.error("Error uploading data:", error);
     }
+  } else {alert("Please enter a valid mobile Number")}
+  } else {alert("Please enter a valid Whatsapp Number")}
+  }//
+   else {
+    alert("title must contain only letter between 15 to 50 characters")
+  }
   };
 
   useEffect(() => {
@@ -385,7 +395,11 @@ const formData = new FormData();
         <h1>Night Wear</h1>
 
       </div>
-    
+      <div style={containerStyle} onClick={() => {setsubcategory("Fashion Others"); setsubcategorybool(false); setfashionbool(false); setfashionformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+
+      </div>
       </div>      
     </div>
 
@@ -439,6 +453,11 @@ const formData = new FormData();
       <div style={containerStyle} onClick={() => {setsubcategory("Agents"); setsubcategorybool(false); setpropertybool(false); setpropertyformbool(true); setpublishbool(true)}}>
         <img src="https://www.iconbunny.com/icons/media/catalog/product/2/9/2915.9-support-agent-icon-iconbunny.jpg" alt="Fairs" style={imageStyle} />
         <h1>Agents </h1>
+
+      </div>
+      <div style={containerStyle} onClick={() => {setsubcategory("Property Others"); setsubcategorybool(false); setpropertybool(false); setpropertyformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
 
       </div>
       </div>      
@@ -560,6 +579,11 @@ const formData = new FormData();
         <img src="https://www.iconbunny.com/icons/media/catalog/product/2/1/2133.9-driving-icon-iconbunny.jpg" alt="Fairs" style={imageStyle} />
         <h1>Driver</h1>
       </div>
+      <div style={containerStyle} onClick={() => {setsubcategory("Service Others"); setsubcategorybool(false); setservicesbool(false); setservicesformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+
+      </div>
 
       </div>      
     </div>
@@ -595,7 +619,11 @@ const formData = new FormData();
         <h1>Decorations</h1>
 
       </div>
+      <div style={containerStyle} onClick={() => {setsubcategory("Furniture Others"); setsubcategorybool(false); setfurniturebool(false); setfurnitureformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
 
+      </div>
 
       
 
@@ -643,7 +671,11 @@ const formData = new FormData();
         <h1>Diagnostics</h1>
 
       </div>
+      <div style={containerStyle} onClick={() => {setsubcategory("Health Others"); setsubcategorybool(false); sethealthbool(false); sethealthformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
 
+      </div>
       </div>      
     </div>
 
@@ -698,6 +730,11 @@ const formData = new FormData();
         <h1>Entertainment</h1>
 
       </div>
+      <div style={containerStyle} onClick={() => {setsubcategory("Event Others"); setsubcategorybool(false); seteventbool(false); seteventformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+
+      </div>
       </div>      
     </div>
 
@@ -746,7 +783,11 @@ const formData = new FormData();
         <img src="https://cdn-icons-png.flaticon.com/512/1802/1802475.png" alt="Fairs" style={imageStyle} />
         <h1>Manicures</h1>
       </div>
-      
+      <div style={containerStyle} onClick={() => {setsubcategory("Beauty Others"); setsubcategorybool(false); setbeautybool(false); setbeautyformbool(true); setpublishbool(true)}}>
+        <img src={others} alt="Fairs" style={imageStyle} />
+        <h1>Others</h1>
+
+      </div>
 
       </div>      
     </div>

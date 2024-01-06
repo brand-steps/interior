@@ -5,14 +5,14 @@ import { Accordion } from 'flowbite-react';
 import Navbars from '../../../Components/Header/Navbar/Navbar';
 import Footers from '../../../Components/Footer/Footers';
 import { Card } from 'flowbite-react';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const ListDetails = () => {
   const { id } = useParams();
   const [singleproduct, setsingleproduct] = useState([]);
   const [views, setviews] = useState();
-
+const navigate = useNavigate()
 const [image1 , setimage1] = useState(true);
 const [image2 , setimage2] = useState(false);
 const [image3 , setimage3] = useState(false);
@@ -211,10 +211,11 @@ const [image6 , setimage6] = useState(false);
         </Table.Body>
       </Table>
     </div>
-
-    <button className='btnstyle'>
+   <Link to={`https://wa.me/+92${singleproduct.whatsapp}`} target='_blank'>
+ <button className='btnstyle w-full' >
     <img src="https://www.iconarchive.com/download/i83640/pelfusion/long-shadow-media/Contact.ico" className="mr-3 inline h-7 " alt="Flowbite React Logo" />
       Contact Owner</button>
+      </Link>
       </div>
 
     </div>

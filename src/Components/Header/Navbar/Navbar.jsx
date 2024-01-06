@@ -217,9 +217,12 @@ const Navbars = () => {
         </Link>
         <Link to={"/listings"}>
         <Navbar.Link  className='text-lg divhead text-white'> Listings</Navbar.Link> </Link>
-       {/*} <Navbar.Link href="#" className='text-lg divhead text-white'> Services</Navbar.Link> */}
+
        <Link to={"/pricing"}>
         <Navbar.Link className='text-lg divhead text-white'> Pricing</Navbar.Link></Link>
+        <Link to={"/aboutus"}>
+        <Navbar.Link className='text-lg divhead text-white'> About Us</Navbar.Link>
+        </Link>
         <Link to={"/contact"}>
         <Navbar.Link className='text-lg divhead text-white'> Contact</Navbar.Link> </Link>
 
