@@ -84,7 +84,7 @@ const RegisterForm = () => {
       if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(email))
       { 
       try {
-        const response = await axios.post('https://quaint-pocketbook-bat.cyclic.app/listerregister', {
+        const response = await axios.post('https://list-back-gn1y.vercel.app/listerregister', {
           firstname,
           lastname,
           email,

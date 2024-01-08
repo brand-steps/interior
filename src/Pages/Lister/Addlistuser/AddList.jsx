@@ -156,7 +156,7 @@ console.log("img",imageUrl1)
 
     try {
       const response = await axios.post(
-        "https://quaint-pocketbook-bat.cyclic.app/addlist",
+        "https://list-back-gn1y.vercel.app/addlist",
         formData,
         {
           headers: {
@@ -179,7 +179,7 @@ console.log("img",imageUrl1)
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://quaint-pocketbook-bat.cyclic.app/api/v1/listerprofile`,
+          `https://list-back-gn1y.vercel.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

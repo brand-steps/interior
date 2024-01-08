@@ -57,7 +57,7 @@ const Navbars = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`https://quaint-pocketbook-bat.cyclic.app/listerlogin`, {
+        let response = await axios.post(`https://list-back-gn1y.vercel.app/listerlogin`, {
           email: email,
           password: password
         }, {
@@ -77,7 +77,7 @@ const Navbars = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://quaint-pocketbook-bat.cyclic.app/api/v1/listerprofile`,
+          `https://list-back-gn1y.vercel.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {
@@ -112,7 +112,7 @@ const Navbars = () => {
     // https://glorious-hat-bat.cyclic.app      // old url
     else {
       try {
-        let response = await axios.post(`https://quaint-pocketbook-bat.cyclic.app/listerlogout`, {
+        let response = await axios.post(`https://list-back-gn1y.vercel.app/listerlogout`, {
           email: customerresponse.email,
           password: customerresponse.password
         }, {

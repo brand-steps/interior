@@ -44,7 +44,7 @@ const JobProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/jobproducts`);
+            const response = await axios.get(`https://list-back-gn1y.vercel.app/jobproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

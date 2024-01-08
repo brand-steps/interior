@@ -44,7 +44,7 @@ const HealthProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/healthproducts`);
+            const response = await axios.get(`https://list-back-gn1y.vercel.app/healthproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

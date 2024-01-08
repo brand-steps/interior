@@ -178,7 +178,7 @@ const formData = new FormData();
           if (productname && category && subcategory && listername && listerid && price && whatsapp ) {
     try {
       const response = await axios.post(
-        "https://quaint-pocketbook-bat.cyclic.app/addlist",
+        "https://list-back-gn1y.vercel.app/addlist",
         formData,
         {
           headers: {
@@ -209,7 +209,7 @@ const formData = new FormData();
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://quaint-pocketbook-bat.cyclic.app/api/v1/listerprofile`,
+          `https://list-back-gn1y.vercel.app/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

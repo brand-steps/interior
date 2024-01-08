@@ -18,7 +18,7 @@ const EditListing = () => {
 
 
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/singlelist/${id}`);
+        const response = await axios.get(`https://list-back-gn1y.vercel.app/singlelist/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -47,7 +47,7 @@ const EditListing = () => {
 
     const handlesubmit = async () => {
         const productData = { ...singleproduct};
-        const response = await axios.put(`https://quaint-pocketbook-bat.cyclic.app/edittedlisting/${id}`, productData);
+        const response = await axios.put(`https://list-back-gn1y.vercel.app/edittedlisting/${id}`, productData);
 
 alert("Product Updated");
 navigate('/listdisplayadmin')

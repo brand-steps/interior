@@ -56,7 +56,7 @@ const AllListingDisplay = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/listdisplay`);
+          const response = await axios.get(`https://list-back-gn1y.vercel.app/listdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -66,7 +66,7 @@ const AllListingDisplay = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://quaint-pocketbook-bat.cyclic.app/deletelist/${id}`)
+          const response = await axios.delete(`https://list-back-gn1y.vercel.app/deletelist/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -77,7 +77,7 @@ const AllListingDisplay = () => {
       
   const activateData = async (id)=>{
     try {
-      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/activatelisting/${id}`)
+      const response = await axios.get(`https://list-back-gn1y.vercel.app/activatelisting/${id}`)
       console.log("response: ", response.data);
       setactivatebool(true)
       alert("Listing is now Active");
@@ -88,7 +88,7 @@ const AllListingDisplay = () => {
   };
   const deactivateData = async (id)=>{
     try {
-      const response = await axios.get(`https://quaint-pocketbook-bat.cyclic.app/deactivatelisting/${id}`)
+      const response = await axios.get(`https://list-back-gn1y.vercel.app/deactivatelisting/${id}`)
       console.log("response: ", response.data);
       setdeactivatebool(true)
       alert("Listing is now Deactivated");
