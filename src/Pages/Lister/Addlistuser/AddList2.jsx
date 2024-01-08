@@ -175,6 +175,7 @@ const formData = new FormData();
     if (/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]{10,50}$/.test(productname)) {
       if (/^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/gm.test(whatsapp)) {
         if (/^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/gm.test(mobile)) {
+          if (productname && category && subcategory && listername && listerid && price && whatsapp ) {
     try {
       const response = await axios.post(
         "https://quaint-pocketbook-bat.cyclic.app/addlist",
@@ -194,7 +195,9 @@ const formData = new FormData();
     } catch (error) {
       console.error("Error uploading data:", error);
     }
-  } else {alert("Please enter a valid mobile Number")}
+  } else {alert("Please Fill the missing fields")} 
+  }//
+   else {alert("Please enter a valid mobile Number")}
   } else {alert("Please enter a valid Whatsapp Number")}
   }//
    else {
