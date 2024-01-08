@@ -39,7 +39,7 @@ function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
   let newurl = "https://quaint-pocketbook-bat.cyclic.a pp"
   let vercelurl = "https://list-back-gn1y.vercel.ap p"
-  let newurl = "http://localhost:800 0"
+  let locals = "http://localhost:800 0"
 
   return (
     <div>
