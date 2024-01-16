@@ -58,7 +58,7 @@ const ManageListDisplay = () => {
       };
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://list-back-gn1y.vercel.app/listdisplay`);
+          const response = await axios.get(`http://localhost:8000/listdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -68,7 +68,7 @@ const ManageListDisplay = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://list-back-gn1y.vercel.app/deletelist/${id}`)
+          const response = await axios.delete(`http://localhost:8000/deletelist/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -79,7 +79,7 @@ const ManageListDisplay = () => {
       
   const BestData = async (id)=>{
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/bestlistingactive/${id}`)
+      const response = await axios.get(`http://localhost:8000/bestlistingactive/${id}`)
       console.log("response: ", response.data);
       setactivatebestbool(true)
       alert("Listing is set as best listing");
@@ -90,7 +90,7 @@ const ManageListDisplay = () => {
   };
   const DisapprovebestData = async (id)=>{
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/bestlisterdeactive/${id}`)
+      const response = await axios.get(`http://localhost:8000/bestlisterdeactive/${id}`)
       console.log("response: ", response.data);
       setdeactivatebestbool(true)
       alert("Listing is now removed as best listing");
@@ -102,7 +102,7 @@ const ManageListDisplay = () => {
 
   const TopData = async (id)=>{
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/topsellingactive/${id}`)
+      const response = await axios.get(`http://localhost:8000/topsellingactive/${id}`)
       console.log("response: ", response.data);
       setactivatetopbool(true)
       alert("Listing is now set as top Listing");
@@ -113,7 +113,7 @@ const ManageListDisplay = () => {
   };
   const DisapprovetopData = async (id)=>{
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/toplisterdeactive/${id}`)
+      const response = await axios.get(`http://localhost:8000/toplisterdeactive/${id}`)
       console.log("response: ", response.data);
       setdeactivatetopbool(true)
 

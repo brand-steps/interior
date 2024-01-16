@@ -1,20 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card } from 'flowbite-react';
 import Navbars from '../../../Components/Header/Navbar/Navbar';
 import Footers from '../../../Components/Footer/Footers';
 import PricingHeader from '../../../Components/Body/pricingcomponent/Pricingheader/PricingHeader';
 import pricinghead from '../../../Assets/pricinghead.jpg'
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 
 const Pricing = () => {
 const navigate = useNavigate();
+let [customeruser, setcustomeruser] = useState(false);
+let [customerresponse, setcustomerresponse] = useState("");
 
 
-  const divStyle = {
-    backgroundImage: `url(${pricinghead})`,
-    /* Other styles you might want to apply */
+useEffect(() => {
+  const getProfile = async () => {
+    try {
+      let response = await axios.get(
+        `http://localhost:8000/api/v1/listerprofile`,
+        {
+          withCredentials: true,
+          headers: {
+            "Cache-Control": "no-cache",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        }
+      );
+
+      // console.log("response: ", response);
+      setcustomerresponse(response.data);
+      setcustomeruser(true);
+      
+    
+      console.log("prof",response.data)
+      console.log("pac",response.data.packagename)
+
+    } catch (error) {
+      console.log("axios error: ", error);
+    }
   };
+  getProfile();
+}, []);
+
 
   const containerStyle = {
     display: 'flex',
@@ -24,22 +52,6 @@ const navigate = useNavigate();
 
     width: '320px', // Adjust the width as needed
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
-  };
-
-  const imageStyle = {
-    width: '80px',
-    height: '80px',
-    marginBottom: '16px',
-  };
-
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
   };
 
   return (
@@ -165,12 +177,21 @@ const navigate = useNavigate();
           <span className="text-base font-normal leading-tight text-gray-500">Front Page Listings</span>
         </li>
       </ul>
-      <button
-        type="button" onClick={()=> navigate("/signin")}
+      {customerresponse ? (   
+           <button
+        type="button" onClick={()=> navigate(`/packages/${customerresponse._id}`)}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
-      </button>
+      </button>) : (
+              <button
+              type="button" onClick={()=> navigate("/signin")}
+              className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
+            >
+              Choose Plan
+            </button>
+      )}
+
     </Card>
 
 
@@ -293,12 +314,20 @@ const navigate = useNavigate();
           <span className="text-base font-normal leading-tight text-gray-500">Front Page Listings</span>
         </li>
       </ul>
-      <button
-        type="button" onClick={()=> navigate("/signin")}
+      {customerresponse ? (   
+           <button
+        type="button" onClick={()=> navigate(`/packages/${customerresponse._id}`)}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
-      </button>
+      </button>) : (
+              <button
+              type="button" onClick={()=> navigate("/signin")}
+              className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
+            >
+              Choose Plan
+            </button>
+      )}
     </Card>
 
 
@@ -422,12 +451,20 @@ const navigate = useNavigate();
         </li>
 
       </ul>
-      <button
-        type="button" onClick={()=> navigate("/signin")}
+      {customerresponse ? (   
+           <button
+        type="button" onClick={()=> navigate(`/packages/${customerresponse._id}`)}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
-      </button>
+      </button>) : (
+              <button
+              type="button" onClick={()=> navigate("/signin")}
+              className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
+            >
+              Choose Plan
+            </button>
+      )}
     </Card>
 
 
@@ -552,12 +589,20 @@ const navigate = useNavigate();
 
 
       </ul>
-      <button
-        type="button" onClick={()=> navigate("/signin")}
+      {customerresponse ? (   
+           <button
+        type="button" onClick={()=> navigate(`/packages/${customerresponse._id}`)}
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
         Choose Plan
-      </button>
+      </button>) : (
+              <button
+              type="button" onClick={()=> navigate("/signin")}
+              className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
+            >
+              Choose Plan
+            </button>
+      )}
     </Card>
 
 

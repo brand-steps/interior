@@ -1,8 +1,8 @@
 import React from "react"
-
+import banners from '../../../../Assets/banner4.jpg'
 const ListingHeader = () => {
     const divStyle = {
-        backgroundImage: "url('https://cdn.shopify.com/s/files/1/0070/7032/files/private-products.jpg?v=1697629088')",
+        backgroundImage:  `url(${banners})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
 

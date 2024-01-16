@@ -43,7 +43,7 @@ const BeautyProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://list-back-gn1y.vercel.app/beautyproducts`);
+            const response = await axios.get(`http://localhost:8000/beautyproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

@@ -69,7 +69,7 @@ const SearchBar = () => {
     }
     try {
       const response = await axios.get(
-        `https://list-back-gn1y.vercel.app/api/searchlist?location=${location}&price=${price}&productname=${productname}`
+        `http://localhost:8000/api/searchlist?location=${location}&price=${price}&productname=${productname}`
       );
       console.log("Search results: ", response.data);
       setResults(response.data);

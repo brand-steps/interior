@@ -15,13 +15,7 @@ import others from '../../../../../Assets/others.png'
 const ServiceType = () => {
   const navigate = useNavigate();
 
-  const divStyle = {
-    width: '900px',
-    flexDirection: 'row',
 
-
-    /* Other styles you might want to apply */
-  };
 
   const containerStyle = {
     display: 'flex',
@@ -39,15 +33,7 @@ const ServiceType = () => {
     marginBottom: '16px',
   };
 
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
+
 
   return (
     <div className=' flex justify-evenly mb-6'>

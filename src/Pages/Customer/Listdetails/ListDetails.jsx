@@ -71,14 +71,14 @@ const [image6 , setimage6] = useState(false);
   };
 
   const fetchSingleProduct = async() => {
-    const response = await axios.get(`https://list-back-gn1y.vercel.app/singlelist/${id}`);
+    const response = await axios.get(`http://localhost:8000/singlelist/${id}`);
     console.log("response: ", response);
   console.log(singleproduct);
   setsingleproduct(response.data.Product);
         }
 
         const fetchviews = async() => {
-          const response = await axios.get(`https://list-back-gn1y.vercel.app/productviews/${id}`);
+          const response = await axios.get(`http://localhost:8000/productviews/${id}`);
           console.log("response: ", response);
         console.log(singleproduct);
         setviews(response.data.views);

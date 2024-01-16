@@ -16,7 +16,7 @@ const ChoosePricing = () => {
     const [name, setName] = useState("");
     
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://list-back-gn1y.vercel.app/singleuser/${id}`);
+        const response = await axios.get(`http://localhost:8000/singleuser/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -38,7 +38,7 @@ const ChoosePricing = () => {
             };
           });
         const productData = { ...singleproduct};
-        const response = await axios.put(`https://list-back-gn1y.vercel.app/editteduser/${id}`, productData);
+        const response = await axios.put(`http://localhost:8000/editteduser/${id}`, productData);
 
 navigate('/Addlisting')
     }
@@ -63,21 +63,7 @@ navigate('/Addlisting')
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
 
-  const imageStyle = {
-    width: '80px',
-    height: '80px',
-    marginBottom: '16px',
-  };
 
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
 
   return (
     <>

@@ -47,7 +47,7 @@ const AdminNAvbar = () => {
     const getProfile = async () => {
       try {
         let response = await axios.get(
-          `https://list-back-gn1y.vercel.app/api/v1/listerprofile`,
+          `http://localhost:8000/api/v1/listerprofile`,
           {
             withCredentials: true,
             headers: {

@@ -34,6 +34,7 @@ import OthersPage from "./Pages/Customer/Home/CategoryPages/Otherspage/OthersPag
 import Privacy from "./Pages/Customer/Additionals/Privacy";
 import Terms from "./Pages/Customer/Additionals/Terms";
 import AboutUs from "./Pages/Customer/Aboutus/AboutUs";
+import CheckoutBasic from "./Pages/Lister/CheckoutPages/CheckoutBasic";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
@@ -80,6 +81,7 @@ function App() {
               <Route path={"/privacypolicy"} element={<Privacy />} />
               <Route path={"/terms&conditon"} element={<Terms />} />
               <Route path={"/aboutus"} element={<AboutUs />} />
+              <Route path={"/checkoutbasic/:price"} element={<CheckoutBasic />} />
 
 
 

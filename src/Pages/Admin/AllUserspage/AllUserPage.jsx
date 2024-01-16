@@ -15,10 +15,6 @@ const AllUserPage = () => {
   const [deactivatebool, setdeactivatebool] = useState(false);
 
   const [Delete , setdelete] = useState(false);
-    const divStyle = {
-        backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-        /* Other styles you might want to apply */
-      };
     
       const containerStyle = {
         display: 'flex',
@@ -31,32 +27,13 @@ const AllUserPage = () => {
         // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
       };
     
-      const imageStyle = {
-        width: '250px',
-        height: '200px',
-        marginBottom: '16px',
-      };
+
     
-      const buttonStyle = {
-        background: 'black',
-        color: 'white',
-        fontWeight: 'bold',
-        padding: '8px 16px',
-        marginTop: '12px',
-        cursor: 'pointer',
-        width: '80px'
-      };
-      const buttonStyle2 = {
-        background: 'red',
-        color: 'black',
-        fontWeight: 'bold',
-        padding: '8px 16px',
-        marginTop: '12px',
-        cursor: 'pointer',
-      };
+
+
       const getAllUsers = async () => {
         try {
-          const response = await axios.get(`https://list-back-gn1y.vercel.app/userdisplay`);
+          const response = await axios.get(`http://localhost:8000/userdisplay`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -66,7 +43,7 @@ const AllUserPage = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://list-back-gn1y.vercel.app/deletelisteruser/${id}`)
+          const response = await axios.delete(`http://localhost:8000/deletelisteruser/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -77,7 +54,7 @@ const AllUserPage = () => {
       
   const activateData = async (id)=>{
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/activatelisting/${id}`)
+      const response = await axios.get(`http://localhost:8000/activatelisting/${id}`)
       console.log("response: ", response.data);
       setactivatebool(true)
       alert("Listing is now Active");

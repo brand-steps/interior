@@ -11,11 +11,11 @@ import phone from '../../Assets/phone.png'
 
 function Footers() {
   return (
-    <Footer container className='bg-black '>
+    <Footer container className='bg-black dark:bg-black '>
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
-            <img src={logo} alt="logo" className='h-9 sm:h-32' />
+            <img src={logo} alt="logo" className='h-9 sm:h-32 h-24' />
          {/*}   <Footer.Brand
               href="#"
               src={logo}
@@ -23,7 +23,37 @@ function Footers() {
               name="" 
   /> */}
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 ">
+          
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-5 sm:gap-6 ">
+          <div>
+              <Footer.Title title="Popular" className='text-white'/>
+              <Footer.LinkGroup col>
+                <Link to={'/Services'}>
+                <Footer.Link className='text-white'>Services</Footer.Link>
+                </Link>
+                <Link to={'/fashion'}>
+                <Footer.Link className='text-white'>Fashion</Footer.Link>
+                </Link>
+                <Link to={'/property'}>
+                <Footer.Link className='text-white'>Property</Footer.Link>
+                </Link>
+              </Footer.LinkGroup>
+            </div>
+          <div>
+
+              <Footer.Title title="Trending" className='text-white'/>
+              <Footer.LinkGroup col>
+                <Link to={'/jobs'}>
+                <Footer.Link className='text-white'>Jobs</Footer.Link>
+                </Link>
+                <Link to={'/event'}>
+                <Footer.Link className='text-white'>Events & Planners</Footer.Link>
+                </Link>
+                <Link to={'/beauty'}>
+                <Footer.Link className='text-white'>Beauty</Footer.Link>
+                </Link>
+              </Footer.LinkGroup>
+            </div>
             <div>
               <Footer.Title title="about" className='text-white'/>
               <Footer.LinkGroup col>
@@ -32,6 +62,9 @@ function Footers() {
                 </Link>
                 <Link to={'/'}>
                 <Footer.Link className='text-white'>Home</Footer.Link>
+                </Link>
+                <Link to={'/pricing'}>
+                <Footer.Link className='text-white'>Pricing</Footer.Link>
                 </Link>
               </Footer.LinkGroup>
             </div>

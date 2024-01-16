@@ -44,7 +44,7 @@ const JobProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://list-back-gn1y.vercel.app/jobproducts`);
+            const response = await axios.get(`http://localhost:8000/jobproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

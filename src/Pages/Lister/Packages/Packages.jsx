@@ -15,7 +15,7 @@ const Packages = () => {
     const [name, setName] = useState("");
     
     const fetchSingleProduct = async() => {
-        const response = await axios.get(`https://list-back-gn1y.vercel.app/singleuser/${id}`);
+        const response = await axios.get(`http://localhost:8000/singleuser/${id}`);
         console.log("response: ", response);
       console.log(singleproduct);
       setsingleproduct(response.data.Product);
@@ -37,9 +37,10 @@ const Packages = () => {
             };
           });
         const productData = { ...singleproduct};
-        const response = await axios.put(`https://list-back-gn1y.vercel.app/editteduser/${id}`, productData);
+        const response = await axios.put(`http://localhost:8000/editteduser/${id}`, productData);
 
-alert("new Package selected")
+//alert("new Package selected")
+//window.location.reload(false);
     }
     
 
@@ -47,10 +48,10 @@ alert("new Package selected")
         fetchSingleProduct()
 
     },[]);
-  const divStyle = {
-    backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-    /* Other styles you might want to apply */
-  };
+
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
 
   const containerStyle = {
     display: 'flex',
@@ -62,21 +63,9 @@ alert("new Package selected")
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
 
-  const imageStyle = {
-    width: '80px',
-    height: '80px',
-    marginBottom: '16px',
-  };
 
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
+
+
 
   return (
     <>
@@ -212,7 +201,7 @@ alert("new Package selected")
               ...prevEmployee,
               packagename: "Free Plan",
             };
-          });}} onClick={handlesubmit}
+          });}} onClick={() => {handlesubmit(); alert("Free Plan Selected")}}
         type="button"
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
@@ -351,7 +340,7 @@ alert("new Package selected")
               ...prevEmployee,
               packagename: "Basic Plan",
             };
-          });}} onClick={handlesubmit}
+          });}} onClick={() => {handlesubmit(); navigate("/checkoutbasic/1000")}}
         type="button"
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
@@ -491,7 +480,7 @@ alert("new Package selected")
               ...prevEmployee,
               packagename: "Standard Plan",
             };
-          });}} onClick={handlesubmit}
+          });}} onClick={() => {handlesubmit(); navigate("/checkoutbasic/2000")}}
         type="button"
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >
@@ -632,7 +621,7 @@ alert("new Package selected")
               ...prevEmployee,
               packagename: "Premium Plan",
             };
-          });}} onClick={handlesubmit}
+          });}} onClick={() => {handlesubmit(); navigate("/checkoutbasic/5000")}}
         type="button"
         className="inline-flex w-full justify-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-violet-500 focus:outline-none focus:ring-4 focus:ring-cyan-200 "
       >

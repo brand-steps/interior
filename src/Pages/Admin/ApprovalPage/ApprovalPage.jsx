@@ -13,10 +13,6 @@ const ApprovalPage = () => {
   const [productsBoolean, setProductsBoolean] = useState(false);
   const [approvebool, setapprovebool] = useState(false);
   const [Delete , setdelete] = useState(false);
-    const divStyle = {
-        backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-        /* Other styles you might want to apply */
-      };
     
       const containerStyle = {
         display: 'flex',
@@ -43,17 +39,10 @@ const ApprovalPage = () => {
         marginTop: '12px',
         cursor: 'pointer',
       };
-      const buttonStyle2 = {
-        background: 'red',
-        color: 'black',
-        fontWeight: 'bold',
-        padding: '8px 16px',
-        marginTop: '12px',
-        cursor: 'pointer',
-      };
+
       const getAllProducts = async () => {
         try {
-          const response = await axios.get(`https://list-back-gn1y.vercel.app/listdisplayfalse`);
+          const response = await axios.get(`http://localhost:8000/listdisplayfalse`);
           console.log("response: ", response);
           console.log(products);
           setProducts(response.data.data);
@@ -63,7 +52,7 @@ const ApprovalPage = () => {
       };
       const deleteData = async (id)=>{
         try {
-          const response = await axios.delete(`https://list-back-gn1y.vercel.app/deletelist/${id}`)
+          const response = await axios.delete(`http://localhost:8000/deletelist/${id}`)
           console.log("response: ", response.data);
           setdelete(!Delete)
         } catch (error) {
@@ -74,7 +63,7 @@ const ApprovalPage = () => {
       
   const approveData = async (id)=>{
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/approvelisting/${id}`)
+      const response = await axios.get(`http://localhost:8000/approvelisting/${id}`)
       console.log("response: ", response.data);
       setapprovebool(true)
       alert("Listing is now Approved");

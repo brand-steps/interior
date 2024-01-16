@@ -12,11 +12,6 @@ const OthersProducts = () => {
   const [page, setPage] = useState(1)
   const [numberOfPages, setnumberOfPages] = useState(9)
 
-  const divStyle = {
-    backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-    /* Other styles you might want to apply */
-  };
-
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -27,24 +22,10 @@ const OthersProducts = () => {
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
 
-  const imageStyle = {
-    width: '80px',
-    height: '80px',
-    marginBottom: '16px',
-  };
 
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://list-back-gn1y.vercel.app/othersproducts`);
+            const response = await axios.get(`http://localhost:8000/othersproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

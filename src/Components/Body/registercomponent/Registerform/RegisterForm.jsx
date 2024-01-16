@@ -84,7 +84,7 @@ const RegisterForm = () => {
       if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(email))
       { 
       try {
-        const response = await axios.post('https://list-back-gn1y.vercel.app/listerregister', {
+        const response = await axios.post('http://localhost:8000/listerregister', {
           firstname,
           lastname,
           email,

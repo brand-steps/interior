@@ -19,7 +19,7 @@ const {id} = useParams();
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`https://list-back-gn1y.vercel.app/listdisplayuserid/${id}`);
+      const response = await axios.get(`http://localhost:8000/listdisplayuserid/${id}`);
       console.log("response: ", response);
       console.log(response.data);
       setProducts(response.data.data);
@@ -29,7 +29,7 @@ const {id} = useParams();
     }
   };
   const fetchSingleProduct = async() => {
-    const response = await axios.get(`https://list-back-gn1y.vercel.app/singleuser/${id}`);
+    const response = await axios.get(`http://localhost:8000/singleuser/${id}`);
     console.log("response: ", response);
   setsingleuser(response.data.Product);
   console.log(singleuser);
@@ -37,7 +37,7 @@ const {id} = useParams();
         }
   const deleteData = async (id)=>{
     try {
-      const response = await axios.delete(`https://list-back-gn1y.vercel.app/deletelist/${id}`)
+      const response = await axios.delete(`http://localhost:8000/deletelist/${id}`)
       console.log("response: ", response.data);
       setdelete(!Delete)
     } catch (error) {
@@ -51,12 +51,6 @@ const {id} = useParams();
     getAllProducts()
   }, [Delete])
 
- 
-  const divStyle = {
-    backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-    /* Other styles you might want to apply */
-  };
-
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -66,21 +60,7 @@ const {id} = useParams();
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
 
-  const imageStyle = {
-    width: '80px',
-    height: '80px',
-    marginBottom: '16px',
-  };
 
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
 
   return (
     <>

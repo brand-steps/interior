@@ -3,7 +3,7 @@ import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbars from '../../../Components/Header/Navbar/Navbar';
 import Footers from '../../../Components/Footer/Footers';
 
@@ -15,21 +15,7 @@ const Signin = () => {
   const [login, setlogin] = useState(false)
 
   const [Delete , setdelete] = useState(false);
-    const divStyle = {
-        backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-        /* Other styles you might want to apply */
-      };
-    
-      const containerStyle = {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: '10px',
 
-        width: '900px', // Adjust the width as needed
-        // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
-      };
     
 
       const LoginForm = async () => {
@@ -41,7 +27,7 @@ const Signin = () => {
         // https://glorious-hat-bat.cyclic.app      // old url
         else {
           try {
-            let response = await axios.post(`https://list-back-gn1y.vercel.app/listerlogin`, {
+            let response = await axios.post(`http://localhost:8000/listerlogin`, {
               email: email,
               password: password
             }, {
@@ -79,10 +65,16 @@ const Signin = () => {
           </div>
           <TextInput id="password" onChange={(event) => { setPassword(event.target.value); }} type="password" placeholder='******' required />
         </div>
+        
     {/*}    <div className="flex items-center gap-2">
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
   </div> */}
+  
+  <div className="text-sm font-medium text-right text-gray-500 ">
+            Not registered? <Link to={"/register"}> <span  className="text-blue-700 hover:underline ">Create account</span> </Link>
+        </div>
+
         <Button className='bg-violet-500' onClick={LoginForm} type="submit">Login</Button>
       </div>
     </Card>

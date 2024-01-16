@@ -44,7 +44,7 @@ const FashionProduct = () => {
   };
         const getAllProducts = async () => {
           try {
-            const response = await axios.get(`https://list-back-gn1y.vercel.app/fashionproducts`);
+            const response = await axios.get(`http://localhost:8000/fashionproducts`);
             console.log("response: ", response);
             console.log(products);
             setProducts(response.data.data);

@@ -4,41 +4,8 @@ import Footers from "../../../Components/Footer/Footers";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
-    const divStyle = {
-        backgroundImage: "url('https://emservicesllc.com/wp-content/uploads/2021/05/Industrial_500.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
 
-        /* Other styles you might want to apply */
-      };
     
-      const containerStyle = {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-        width: '1000px', // Adjust the width as needed
-        height: '250px',
-        paddingBottom: '100px'
-        // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
-      };
-    
-      const imageStyle = {
-        width: '100px',
-        height: '900px',
-        marginBottom: '16px',
-      };
-    
-      const buttonStyle = {
-        background: '#EC0C36',
-        color: 'white',
-        fontWeight: 'bold',
-        padding: '8px 16px',
-        borderRadius: '8px',
-        marginTop: '12px',
-        cursor: 'pointer',
-      };
   return (
     <>
     <Navbars/>
