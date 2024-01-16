@@ -213,20 +213,20 @@ const Navbars = () => {
       </div>
       <Navbar.Collapse>
         <Link to={"/"}>
-        <Navbar.Link className='text-lg divhead text-white p-2'> 
+        <Navbar.Link className='text-lg divhead text-white hover:text-white p-2'> 
           Home
         </Navbar.Link>
         </Link>
         <Link to={"/listings"}>
-        <Navbar.Link  className='text-lg divhead text-white p-2'> Listings</Navbar.Link> </Link>
+        <Navbar.Link  className='text-lg divhead text-white hover:text-white p-2'> Listings</Navbar.Link> </Link>
 
        <Link to={"/pricing"}>
-        <Navbar.Link className='text-lg divhead text-white p-2'> Pricing</Navbar.Link></Link>
+        <Navbar.Link className='text-lg divhead text-white hover:text-white p-2'> Pricing</Navbar.Link></Link>
         <Link to={"/aboutus"}>
-        <Navbar.Link className='text-lg divhead text-white p-2'> About Us</Navbar.Link>
+        <Navbar.Link className='text-lg divhead text-white hover:text-white p-2'> About Us</Navbar.Link>
         </Link>
         <Link to={"/contact"}>
-        <Navbar.Link className='text-lg divhead text-white p-2'> Contact</Navbar.Link> </Link>
+        <Navbar.Link className='text-lg divhead text-white hover:text-white p-2'> Contact</Navbar.Link> </Link>
 
       </Navbar.Collapse>
     </Navbar>
