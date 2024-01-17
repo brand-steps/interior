@@ -15,7 +15,6 @@ import RegisterUser from "./Pages/Lister/Register/RegisterUser";
 import UserListDisplay from "./Pages/Lister/UserlistDisplay/UserListDisplay";
 import Pricing from "./Pages/Customer/Pricing/Pricing";
 import Contact from "./Pages/Customer/Contact/Contact";
-import AddList from "./Pages/Lister/Addlistuser/AddList";
 import ListDetails from "./Pages/Customer/Listdetails/ListDetails";
 import HrApp from "./Pages/Admin/dashboard/HrApp";
 import AllListingDisplay from "./Pages/Admin/Alllistingsdisplay/AlllListingDisplay";
@@ -35,6 +34,10 @@ import Privacy from "./Pages/Customer/Additionals/Privacy";
 import Terms from "./Pages/Customer/Additionals/Terms";
 import AboutUs from "./Pages/Customer/Aboutus/AboutUs";
 import CheckoutBasic from "./Pages/Lister/CheckoutPages/CheckoutBasic";
+import Karachi from "./Pages/Lister/Citypages/Karachi";
+import Lahore from "./Pages/Lister/Citypages/Lahore";
+import Islamabad from "./Pages/Lister/Citypages/Islamabad";
+import Multan from "./Pages/Lister/Citypages/Multan";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
@@ -83,6 +86,10 @@ function App() {
               <Route path={"/aboutus"} element={<AboutUs />} />
               <Route path={"/checkoutbasic/:price"} element={<CheckoutBasic />} />
 
+              <Route path={"/karachi"} element={<Karachi />} />
+              <Route path={"/lahore"} element={<Lahore />} />
+              <Route path={"/islamabad"} element={<Islamabad />} />
+              <Route path={"/multan"} element={<Multan />} />
 
 
             </Routes>

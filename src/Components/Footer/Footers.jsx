@@ -15,7 +15,7 @@ function Footers() {
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
-            <img src={logo} alt="logo" className='h-9 sm:h-32 h-24' />
+            <img src={logo} alt="logo" className=' sm:h-32 h-24' />
          {/*}   <Footer.Brand
               href="#"
               src={logo}
@@ -24,7 +24,7 @@ function Footers() {
   /> */}
           </div>
           
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-5 sm:gap-6 ">
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-6 sm:gap-6 ">
           <div>
               <Footer.Title title="Popular" className='text-white'/>
               <Footer.LinkGroup col>
@@ -36,6 +36,9 @@ function Footers() {
                 </Link>
                 <Link to={'/property'}>
                 <Footer.Link className='text-white'>Property</Footer.Link>
+                </Link>
+                <Link to={'/furnitures'}>
+                <Footer.Link className='text-white'>Furniture</Footer.Link>
                 </Link>
               </Footer.LinkGroup>
             </div>
@@ -52,6 +55,9 @@ function Footers() {
                 <Link to={'/beauty'}>
                 <Footer.Link className='text-white'>Beauty</Footer.Link>
                 </Link>
+                <Link to={'/health'}>
+                <Footer.Link className='text-white'>Health</Footer.Link>
+                </Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -65,6 +71,23 @@ function Footers() {
                 </Link>
                 <Link to={'/pricing'}>
                 <Footer.Link className='text-white'>Pricing</Footer.Link>
+                </Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="about" className='text-white'/>
+              <Footer.LinkGroup col>
+                <Link to={'/karachi'}>
+                <Footer.Link className='text-white'>Karachi</Footer.Link>
+                </Link>
+                <Link to={'/lahore'}>
+                <Footer.Link className='text-white'>Lahore</Footer.Link>
+                </Link>
+                <Link to={'/islamabad'}>
+                <Footer.Link className='text-white'>Islamabad</Footer.Link>
+                </Link>
+                <Link to={'/multan'}>
+                <Footer.Link className='text-white'>Multan</Footer.Link>
                 </Link>
               </Footer.LinkGroup>
             </div>

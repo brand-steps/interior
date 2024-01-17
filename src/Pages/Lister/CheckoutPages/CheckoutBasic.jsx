@@ -45,20 +45,7 @@ const CheckoutBasic = () => {
         height: '100px',
         marginBottom: '16px',
       };
-      const imageStyle2 = {
-        width: '250px',
-        height: '100px',
-        marginBottom: '16px',
-      };
-      const buttonStyle = {
-        background: '#EC0C36',
-        color: 'white',
-        fontWeight: 'bold',
-        padding: '8px 16px',
-        borderRadius: '8px',
-        marginTop: '12px',
-        cursor: 'pointer',
-      };
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

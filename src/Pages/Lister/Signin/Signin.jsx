@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -12,9 +11,7 @@ const Signin = () => {
   const [email, setemail] = useState()
   const [password, setPassword] = useState()
   const [errorMessage, setErrorMessage] = useState('');
-  const [login, setlogin] = useState(false)
 
-  const [Delete , setdelete] = useState(false);
 
     
 
@@ -43,7 +40,6 @@ const Signin = () => {
           }
         }
       };
-
 
   return (
         <>

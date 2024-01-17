@@ -22,25 +22,11 @@ const FurnitureHeader = () => {
         // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
       };
     
-      const imageStyle = {
-        width: '100px',
-        height: '900px',
-        marginBottom: '16px',
-      };
     
-      const buttonStyle = {
-        background: '#EC0C36',
-        color: 'white',
-        fontWeight: 'bold',
-        padding: '8px 16px',
-        borderRadius: '8px',
-        marginTop: '12px',
-        cursor: 'pointer',
-      };
   return (
     <div className='flex  justify-evenly flex-wrap my-4' style={divStyle}>
       <div style={containerStyle} className="text-white">
-        <h1 className="text-6xl font-extrabold opacity-100">Furnitures</h1>
+        <h1 className="text-6xl font-extrabold opacity-100">Furniture</h1>
 
       </div>
       

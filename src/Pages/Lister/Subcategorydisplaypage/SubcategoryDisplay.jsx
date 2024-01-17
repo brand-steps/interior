@@ -15,11 +15,6 @@ const SubcategoryDisplay = () => {
   const [page, setPage] = useState(1)
   const [numberOfPages, setnumberOfPages] = useState(9)
 
-  const divStyle = {
-    backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
-    /* Other styles you might want to apply */
-  };
-
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -49,21 +44,6 @@ const SubcategoryDisplay = () => {
     // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
   };
 
-  const imageStyle = {
-    width: '80px',
-    height: '80px',
-    marginBottom: '16px',
-  };
-
-  const buttonStyle = {
-    background: '#EC0C36',
-    color: 'white',
-    fontWeight: 'bold',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    marginTop: '12px',
-    cursor: 'pointer',
-  };
         const getAllProducts = async () => {
           try {
             const response = await axios.get(`http://localhost:8000/listdisplaysubcategories/${name}`);
