@@ -72,7 +72,7 @@ const CardsMain = (index, title, price, imgs) => {
         </a>
       </div>
     </Card>
-   </>
+   </> 
   );
 }
 

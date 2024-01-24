@@ -75,7 +75,7 @@ function Footers() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="about" className='text-white'/>
+              <Footer.Title title="Top Cities" className='text-white'/>
               <Footer.LinkGroup col>
                 <Link to={'/karachi'}>
                 <Footer.Link className='text-white'>Karachi</Footer.Link>

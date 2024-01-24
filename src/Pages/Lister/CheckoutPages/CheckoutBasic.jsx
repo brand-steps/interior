@@ -111,13 +111,16 @@ const CheckoutBasic = () => {
       
       <div style={containerStyle2}>
         <img src={easy} alt="Fairs" style={imageStyle} />
-        <h1 className='mb-6'><span className='font-bold'>Number: </span>+92 313 2160816</h1>
-        <p>Pay conveniently with <span className='font-bold'> EasyPaisa </span>and send a screenshot via WhatsApp on the same number</p>
-      </div>
+        <h1 className='mb-6'><span className='font-bold'>Number: </span>+92 343 0212412</h1>
+        <p>Pay conveniently with <span className=''> EasyPaisa </span></p> <p className='mt-2'> <span className='font-bold '> <a href="https://wa.me/+923430212412" target='_blank'> send a screenshot on <span className='text-blue-500 underline'> WhatsApp</span> </a> </span></p>
+{/*}
+        <p>Pay conveniently with <span className='font-bold'> EasyPaisa </span>and send a screenshot via <a href="https://wa.me/+923430212412"> <span className='font-bold text-blue-500'> WhatsApp</span> </a> on the same number</p>
+      */}
+        </div>
       <div style={containerStyle2}>
         <img src={jazz} alt="Fairs" style={imageStyle} />
-        <h1 className='mb-6'><span className='font-bold'>Number: </span>+92 313 2160816</h1>
-        <p>Pay conveniently with <span className='font-bold'> JazzCash </span>and send a screenshot via WhatsApp on the same number</p>
+        <h1 className='mb-6'><span className='font-bold'>Number: </span>+92 343 0212412</h1>
+        <p>Pay conveniently with <span className=''> JazzCash </span></p> <p className='mt-2'> <span className='font-bold'> <a href="https://wa.me/+923430212412" target='_blank'> send a screenshot on <span className='text-blue-500 underline'> WhatsApp</span> </a> </span></p>
       </div>
     </div>
    <Footers/>

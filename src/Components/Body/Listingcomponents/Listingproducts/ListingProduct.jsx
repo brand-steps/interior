@@ -16,7 +16,7 @@ const ListingProduct = () => {
   const divStyle = {
     backgroundImage: "url('https://www.osimo.com.tr/assets/images/media-bg.jpg')",
     /* Other styles you might want to apply */
-  };
+  }; 
 
   const containerStyle = {
     display: 'flex',
@@ -43,7 +43,7 @@ const ListingProduct = () => {
     marginTop: '12px',
     cursor: 'pointer',
   };
-        const getAllProducts = async () => {
+        const getAllProducts = async () => {  
           try {
             const response = await axios.get(`http://localhost:8000/listdisplaytrueactive`);
             console.log("response: ", response);
