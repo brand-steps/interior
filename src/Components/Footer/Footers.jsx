@@ -21,42 +21,9 @@ function Footers() {
   /> */}
           </div>
           
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-6 sm:gap-6 ">
-          <div>
-              <Footer.Title title="Popular" className='text-white'/>
-              <Footer.LinkGroup col>
-                <Link to={'/Services'}>
-                <Footer.Link className='text-white'>Services</Footer.Link>
-                </Link>
-                <Link to={'/fashion'}>
-                <Footer.Link className='text-white'>Fashion</Footer.Link>
-                </Link>
-                <Link to={'/property'}>
-                <Footer.Link className='text-white'>Property</Footer.Link>
-                </Link>
-                <Link to={'/furnitures'}>
-                <Footer.Link className='text-white'>Furniture</Footer.Link>
-                </Link>
-              </Footer.LinkGroup>
-            </div>
-          <div>
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 ">
+ 
 
-              <Footer.Title title="Trending" className='text-white'/>
-              <Footer.LinkGroup col>
-                <Link to={'/jobs'}>
-                <Footer.Link className='text-white'>Jobs</Footer.Link>
-                </Link>
-                <Link to={'/event'}>
-                <Footer.Link className='text-white'>Events & Planners</Footer.Link>
-                </Link>
-                <Link to={'/beauty'}>
-                <Footer.Link className='text-white'>Beauty</Footer.Link>
-                </Link>
-                <Link to={'/health'}>
-                <Footer.Link className='text-white'>Health</Footer.Link>
-                </Link>
-              </Footer.LinkGroup>
-            </div>
             <div>
               <Footer.Title title="about" className='text-white'/>
               <Footer.LinkGroup col>
@@ -71,23 +38,7 @@ function Footers() {
                 </Link>
               </Footer.LinkGroup>
             </div>
-            <div>
-              <Footer.Title title="Top Cities" className='text-white'/>
-              <Footer.LinkGroup col>
-                <Link to={'/karachi'}>
-                <Footer.Link className='text-white'>Karachi</Footer.Link>
-                </Link>
-                <Link to={'/lahore'}>
-                <Footer.Link className='text-white'>Lahore</Footer.Link>
-                </Link>
-                <Link to={'/islamabad'}>
-                <Footer.Link className='text-white'>Islamabad</Footer.Link>
-                </Link>
-                <Link to={'/multan'}>
-                <Footer.Link className='text-white'>Multan</Footer.Link>
-                </Link>
-              </Footer.LinkGroup>
-            </div>
+
             <div>
               <Footer.Title title="Follow us" className='text-white'/>
               <Footer.LinkGroup col>

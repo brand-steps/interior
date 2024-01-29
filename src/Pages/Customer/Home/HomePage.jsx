@@ -8,10 +8,16 @@ import Section3 from '../../../components/Body/Section3/Section3';
 import Footers from '../../../components/Footer/Footers';
 
 const HomePage = () => {
+  const containerStyle = {
+ // Adjust the width as needed
+    Animation:""
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
   return (
     <div>
         <Navbarhead/>
-        <Corousel/>
+
+        <Corousel2/>
         <Section1/>
         <Section2/>
         <Section3/>

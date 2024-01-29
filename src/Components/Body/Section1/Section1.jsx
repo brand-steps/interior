@@ -40,10 +40,7 @@ const Section1 = () => {
 <p>We are located in Karachi among best interior design companies. If you want to give your ideas a realistic perception, then we are the right people to contact. We are a team that does not believe in compromising on quality. Our team believes in thinking out of the box and we go the extra mile to achieve our objectives.</p>
       </div>
  
-
-
-
-      
+  
     </div>
   );
 }

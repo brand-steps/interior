@@ -6,9 +6,12 @@ const [hover, sethover] = useState(false)
 
 
   const divStyle = {
-    backgroundImage: "url('https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg')",
+    backgroundImage: `url('https://img.freepik.com/premium-photo/large-luxury-modern-bright-interiors-room-illustration-3d-rendering_653967-4111.jpg')`,
     /* Other styles you might want to apply */
-  };
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed"
+    };
 
   const divStyleimage = {
     backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNMdSv1SKgloyVeqRrTk7ksR8hE0juNJpTg&usqp=CAU')",
@@ -99,7 +102,13 @@ const [hover, sethover] = useState(false)
   };
 
 
+  const containerStyles = {
+    display: 'flex',
+    flexDirection: 'column',
 
+    width: '400px', // Adjust the width as needed
+    // background: 'url("https://www.osimo.com.tr/assets/images/media-bg.jpg") center/cover no-repeat',
+  };
   return (
     <>
         <div className='ml-4 md:ml-16 p-4 mb-8'>
@@ -109,26 +118,29 @@ const [hover, sethover] = useState(false)
     {/* Content for the inner div */}
   </div>
 </div>
-    <div className='flex  justify-evenly flex-wrap my-4'>
+
+
+
+    <div className='flex  justify-evenly flex-wrap my-4' >
     <div className="container">
    <div className="row">
     <div className="col-lg-12">
        <div className="featuredPropBox">
         <ul>
            <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp1"/></div>
+             <div className="fplogo"><p className='font-bold text-lg text-white sm:text-2xl lg:text-4xl text-center'>Residential</p></div>
              <div className="fptext">
               <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
             </div>
              </a> </li>
            <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp2"/></div>
+             <div className="fplogo"><p className='font-bold text-white text-lg sm:text-2xl lg:text-4xl text-center'>Corporate</p></div>
              <div className="fptext">
               <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
             </div>
              </a> </li>
            <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp3"/></div>
+             <div className="fplogo"><p className='font-bold text-white text-lg sm:text-2xl lg:text-4xl text-center'>Commercial</p></div>
              <div className="fptext">
               <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
             </div>
@@ -136,43 +148,24 @@ const [hover, sethover] = useState(false)
           
           
              <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp1"/></div>
+             <div className="fplogo"><p className='font-bold text-white text-lg sm:text-2xl lg:text-4xl text-center'>Retail/Shops</p></div>
              <div className="fptext">
               <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
             </div>
              </a> </li>
            <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp2"/></div>
+             <div className="fplogo"><p className='font-bold text-white text-lg sm:text-2xl lg:text-4xl text-center'>Studios</p></div>
              <div className="fptext">
               <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
             </div>
              </a> </li>
            <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp3"/></div>
+             <div className="fplogo"><p className='font-bold text-white text-lg sm:text-2xl lg:text-4xl text-center'>Rooms</p></div>
              <div className="fptext">
               <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
             </div>
              </a> </li>
           
-          
-             <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp1"/></div>
-             <div className="fptext">
-              <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
-            </div>
-             </a> </li>
-           <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp2"/></div>
-             <div className="fptext">
-              <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
-            </div>
-             </a> </li>
-           <li> <a href="#">
-             <div className="fplogo"><img src="https://i.ibb.co/3MZXqZC/logo.png" alt="fp3"/></div>
-             <div className="fptext">
-              <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
-            </div>
-             </a> </li>
              
          </ul>
       </div>

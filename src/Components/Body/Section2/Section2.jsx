@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Section2 = () => {
 const [hover, sethover] = useState(false)
 
 
-  const divStyle = {
-    backgroundImage: "url('https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg')",
-    /* Other styles you might want to apply */
+const divStyle = {
+  backgroundImage: `url('https://t3.ftcdn.net/jpg/03/73/51/06/360_F_373510690_cQQLplLNbi0l84A7sftZq8dSvdKOGCcj.jpg')`,
+  /* Other styles you might want to apply */
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundAttachment: "fixed"
   };
 
   const divStyleimage = {
@@ -17,7 +21,7 @@ const [hover, sethover] = useState(false)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: "url('https://media.designcafe.com/wp-content/uploads/2023/01/31151510/contemporary-interior-design-ideas-for-your-home.jpg')",
+    backgroundImage: "url('https://i.pinimg.com/736x/8e/96/5e/8e965eccc96a868ddfd0bf77b365f168.jpg')",
     width: '400px', // Adjust the width as needed
     height: '200px',
     backgroundSize: 'cover',
@@ -30,7 +34,7 @@ const [hover, sethover] = useState(false)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: "url('https://www.grihakon.com/wp-content/uploads/2019/11/exterior-designing-service-500x500.jpg')",
+    backgroundImage: "url('https://i.pinimg.com/736x/64/41/b9/6441b994edbd71f2754c17fb733af948.jpg')",
     width: '400px', // Adjust the width as needed
     height: '200px',
     backgroundSize: 'cover',
@@ -43,7 +47,7 @@ const [hover, sethover] = useState(false)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: "url('https://static.asianpaints.com/content/dam/asian_paints/idea-gallery/regional/Striking-Exterior-Home-Design-Idea.jpg')",
+    backgroundImage: "url('https://img.freepik.com/premium-photo/modern-house-exterior-with-garage-design-dark-gray-color_124507-22179.jpg')",
     width: '400px', // Adjust the width as needed
     height: '200px',
     backgroundSize: 'cover',
@@ -56,7 +60,7 @@ const [hover, sethover] = useState(false)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: "url('https://foyr.com/learn/wp-content/uploads/2019/06/furniture-design-software.jpg')",
+    backgroundImage: "url('https://img.freepik.com/premium-photo/dark-living-room-interior-design-with-sofa-plant-3d-rendering-background_517102-221.jpg')",
     width: '400px', // Adjust the width as needed
     height: '200px',
     backgroundSize: 'cover',
@@ -69,7 +73,7 @@ const [hover, sethover] = useState(false)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: "url('https://images.landscapingnetwork.com/pictures/images/331x255Exact/fountain_96/custom-sheer-descent-fountain-simple-elegance_9787.jpg')",
+    backgroundImage: "url('https://dhb3yazwboecu.cloudfront.net/1384/home/Home_Kubik_slide_1000x947.webp')",
     width: '400px', // Adjust the width as needed
     height: '200px',
     backgroundSize: 'cover',
@@ -82,7 +86,7 @@ const [hover, sethover] = useState(false)
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: "url('https://media.designcafe.com/wp-content/uploads/2020/10/30191814/studio-apartment-design.jpg')",
+    backgroundImage: "url('https://img.pikbest.com/ai/illus_our/20230428/9c9d8d8ac74298b98d5981dadda1ce62.jpg!w700wp')",
     width: '400px', // Adjust the width as needed
     height: '200px',
     backgroundSize: 'cover',
@@ -100,6 +104,7 @@ const [hover, sethover] = useState(false)
 
   return (
     <>
+    <div style={divStyle}>
         <div className='ml-4 md:ml-16 p-4 mb-8'>
   <div style={{ "textTransform": "uppercase" }} className='text-3xl md:text-3xl font-bold mt-6'>Services We Do </div>
 
@@ -107,32 +112,33 @@ const [hover, sethover] = useState(false)
     {/* Content for the inner div */}
   </div>
 </div>
-    <div className='flex  justify-evenly flex-wrap my-4'>
-    <div style={containerStyle} className='hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
-<p className='text-2xl font-bold'> Interior Design</p>
+    <div className='flex  justify-evenly flex-wrap my-4 pt-12 py-16' >
+      <Link to={'/interiordesign'}>
+    <div style={containerStyle} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
+<p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Interior Design</p>
 </div>
-
+</Link>
      
-<div style={containerStyle2} className='hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
-        <p className='text-xl font-bold'>Exterior Design</p>
+<div style={containerStyle2} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
+        <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'>Exterior Design</p>
       </div>
-      <div style={containerStyle3} className='hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
-        <p className='text-xl font-bold'>Architecture & Construction</p>
-      </div>
-
-    </div>
-    <div className='flex  justify-evenly flex-wrap my-4'>
-    <div style={containerStyle4} className='hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
-        <p className='text-xl font-bold'> Custom Made Furniture</p>
-      </div>
-      <div style={containerStyle5} className='hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
-        <p className='text-xl font-bold'> Landscaping & Fountains</p>
-      </div>
-      <div style={containerStyle6} className='hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
-        <p className='text-xl font-bold'> 3D Studio Gallery</p>
+      <div style={containerStyle3} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
+        <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'>Architecture & Construction</p>
       </div>
 
-    </div>
+    
+    
+    <div style={containerStyle4} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
+        <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Custom Made Furniture</p>
+      </div>
+      <div style={containerStyle5} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
+        <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Landscaping & Fountains</p>
+      </div>
+      <div style={containerStyle6} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
+        <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> 3D Studio</p>
+      </div>
+      </div>
+      </div>
     </>
   );
 }
