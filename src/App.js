@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InteriorDetails from "./pages/Customer/Details/Interiordetails/InteriorDetails";
+import HomePg from "./pages/Homepg/Homepg";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
@@ -14,7 +15,8 @@ function App() {
 
           <BrowserRouter>
             <Routes>
-              <Route path={"/"} element={<InteriorDetails />} />
+              <Route path={"/"} element={<HomePg />} />
+              <Route path={"/interiordesign"} element={<InteriorDetails />} />
 
             </Routes>
           </BrowserRouter>
