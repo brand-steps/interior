@@ -117,7 +117,7 @@ const divStyle = {
     <div style={containerStyle} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
 <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Interior Design</p>
 </div>
-</Link>
+</Link> 
      
 <div style={containerStyle2} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
         <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'>Exterior Design</p>
