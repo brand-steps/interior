@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/Customer/Home/HomePage";
 import InteriorDetails from "./pages/Customer/Details/Interiordetails/InteriorDetails";
+import HomePage from "./pages/Customer/Home/HomePage";
 
 function App() {
   let backendurl = "https://easy-erin-clownfish-ring.cyclic.ap p/"
