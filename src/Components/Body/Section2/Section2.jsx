@@ -118,25 +118,33 @@ const divStyle = {
 <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Interior Design</p>
 </div>
 </Link> 
-     
+<Link to={"/exteriordetails"}>
 <div style={containerStyle2} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
         <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'>Exterior Design</p>
       </div>
+      </Link>
+      <Link to={"/Architecturedetails"}>
       <div style={containerStyle3} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
         <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'>Architecture & Construction</p>
       </div>
+      </Link>
 
     
-    
+      <Link to={"/Furnituredetails"}>
     <div style={containerStyle4} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
         <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Custom Made Furniture</p>
       </div>
+      </Link>
+      <Link to={"/Landscapingdetails"}>
       <div style={containerStyle5} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
         <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> Landscaping & Fountains</p>
       </div>
+      </Link>
+      <Link to={"/Studiodetails"}>
       <div style={containerStyle6} className='mt-4 hover:opacity-80 hover:scale-x-110 transition duration-500 cursor-pointer object-cover ' onMouseEnter={()=> {sethover(true)}} onMouseLeave={()=> {sethover(false)}}>
         <p className='font-bold text-2xl text-white sm:text-2xl lg:text-4xl text-center'> 3D Studio</p>
       </div>
+      </Link>
       </div>
       </div>
     </>

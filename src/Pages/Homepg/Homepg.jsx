@@ -5,7 +5,7 @@ import Section1 from '../../components/Body/Section1/Section1';
 import Section2 from '../../components/Body/Section2/Section2';
 import Section3 from '../../components/Body/Section3/Section3';
 import Footers from '../../components/Footer/Footers';
-
+import Navbars2 from '../../components/Header/navbar/Navbar2';
 
 const HomePg = () => {
   const containerStyle = {

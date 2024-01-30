@@ -53,24 +53,33 @@ const Navbars = () => {
             <Navbar.Link className='text-lg divhead text-black '> Services</Navbar.Link>
           }
         >
+          <Link to={"/interiordesign"}>
           <Dropdown.Item >Interior Design</Dropdown.Item>
-
+          </Link>
+          <Link to={"/exteriordetails"}>
           <Dropdown.Item >Exterior Design</Dropdown.Item>
+          </Link>
+          <Link to={"/Architecturedetails"}>
           <Dropdown.Item>Architecture & Construction</Dropdown.Item>
+          </Link>
+          <Link to={"/Furnituredetails"}>
           <Dropdown.Item >Custom Made Furniture</Dropdown.Item>
-          <Dropdown.Item >Landscaping</Dropdown.Item>
+          </Link>
+          <Link to={"/Landscapingdetails"}>
+          <Dropdown.Item >Landscaping & Gardening</Dropdown.Item>
+          </Link>
+          <Link to={"/Studiodetails"}>
           <Dropdown.Item >3D Studio</Dropdown.Item>
-
+          </Link>
         </Dropdown>
         
-        <Link to={"/aboutus"}>
+        <Link to={"/Album"}>
         <Navbar.Link className='text-lg divhead text-black '> Gallery</Navbar.Link>
         </Link>
         <Link to={"/contact"}>
         <Navbar.Link className='text-lg divhead text-black '> Projects</Navbar.Link> </Link>
         
         <Navbar.Link className='text-lg divhead text-black '> Blogs</Navbar.Link>
-        <Navbar.Link className='text-lg divhead text-black '> Contact Us</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
 

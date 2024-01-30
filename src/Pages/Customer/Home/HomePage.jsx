@@ -6,6 +6,11 @@ import Section1 from '../../../components/Body/Section1/Section1';
 import Section2 from '../../../components/Body/Section2/Section2';
 import Section3 from '../../../components/Body/Section3/Section3';
 import Footers from '../../../components/Footer/Footers';
+import Corousel3 from '../../../components/Body/Corousel/Corousel3';
+import Imagetop from '../../../components/Body/Corousel/Imagetop';
+import Categories from '../../../components/Body/Corousel/Categories';
+import Subtypes from '../../../components/Body/Corousel/Subtypes';
+import Cardss from '../../../components/Body/Corousel/Cardss';
 
 const HomePage = () => {
   const containerStyle = {
@@ -16,6 +21,7 @@ const HomePage = () => {
   return (
     <div>
         <Navbarhead/>
+
 
         <Corousel2/>
         <Section1/>
